@@ -1,7 +1,15 @@
-import { Heading } from "@chakra-ui/react";
+import { Box, Heading, HStack } from "@chakra-ui/react";
 
 const Header = () => {
-    return <Heading>Les Miches à Micha</Heading>
+return (
+    <>
+      <Box as={'header'} bgColor={'yellow.100'}>
+        <HStack>
+          <Heading as={'h1'} bgColor={'yellow.100'}>Les Miches à Micha</Heading>
+        </HStack>
+      </Box>
+    </>
+  )
 }
 
 export default Header;
