@@ -16,7 +16,7 @@ const Header = () => {
               alignItems={'center'}
               display={{ base: 'none', md: 'flex' }}>
               {Links.map((link) => (
-                <span>{link}</span>
+                <span key={link}>{link}</span>
               ))}
             </HStack>
           {/* </HStack> */}
