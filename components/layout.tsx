@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Header from './header'
 import Footer from './footer'
+import { Container } from '@chakra-ui/react'
 
 type LayoutProps = {
   children: React.ReactNode
@@ -16,7 +17,8 @@ export default function Layout({ children }: LayoutProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main>{children}</main>
+      {/* <main>{children}</main> */}
+      <Container as={'main'} paddingTop={'20'} maxW={'1440'}>{children}</Container>
       <Footer />
     </>
   )
