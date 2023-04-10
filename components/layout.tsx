@@ -1,7 +1,7 @@
 import Head from 'next/head'
+import { Container } from '@chakra-ui/react'
 import Header from './header'
 import Footer from './footer'
-import { Container } from '@chakra-ui/react'
 
 type LayoutProps = {
   children: React.ReactNode
@@ -18,7 +18,7 @@ export default function Layout({ children }: LayoutProps) {
       </Head>
       <Header />
       {/* <main>{children}</main> */}
-      <Container as={'main'} paddingTop={'20'} maxW={'1440'}>{children}</Container>
+      <Container as={'main'} paddingTop={'20'} maxW={'1440'} minH={'100vh'}>{children}</Container>
       <Footer />
     </>
   )
