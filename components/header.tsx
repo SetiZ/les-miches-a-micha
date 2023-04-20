@@ -20,7 +20,7 @@ const Header = () => {
         position={'fixed'}
         backgroundColor="rgba(254, 252, 191, 0.7)"
         backdropFilter="saturate(180%) blur(5px)">
-        <HStack padding={'4'} justify={'space-between'} maxW={'1440'} alignItems={'center'} margin={'0 auto'}>
+        <HStack padding={'4'} h={'72px'} justify={'space-between'} maxW={'1440'} alignItems={'center'}  margin={'0 auto'}>
           <Heading as={'h1'} size='l'>Les Miches à Micha</Heading>
           <HStack
             as={'nav'}
@@ -31,38 +31,25 @@ const Header = () => {
             {Links.map((link) => (
               <Link key={link.link} href={`/${link.link}`}>{link.title}</Link>
             ))}
+            <Link href={`/cart`}><Icon as={CgShoppingCart} /></Link>
           </HStack>
-          <Link href={`/cart`}><Icon as={CgShoppingCart} /></Link>
-          <Menu>
-            {/* <MenuButton
-              as={IconButton}
-              aria-label='Options'
-              icon={<HamburgerIcon />}
-              variant='outline'
-            /> */}
-            <MenuButton
-              as={IconButton}
-              aria-label='Options'
-              // variant='outline'
-              colorScheme="yellow"
-            ><HamburgerIcon /></MenuButton>
-            <MenuList>
-              <MenuItem icon={<AddIcon />} command='⌘T'>
-                New Tab
-              </MenuItem>
-              <MenuItem icon={<ExternalLinkIcon />} command='⌘N'>
-                New Window
-              </MenuItem>
-              <MenuItem icon={<RepeatIcon />} command='⌘⇧N'>
-                Open Closed Tab
-              </MenuItem>
-              <MenuItem icon={<EditIcon />} command='⌘O'>
-                Open File...
-              </MenuItem>
-              <MenuItem as='a' href='#'>Link 1</MenuItem>
-              <MenuItem as='a' href='#'>Link 2</MenuItem>
-            </MenuList>
-          </Menu>
+          <HStack as={'nav'}
+            spacing={8} alignItems={'center'} hideFrom={'660px'}>
+            <Link href={`/cart`}><Icon as={CgShoppingCart} /></Link>
+            <Menu>
+              <MenuButton
+                as={IconButton}
+                aria-label='Options'
+                // variant='outline'
+                colorScheme="yellow"
+              ><HamburgerIcon /></MenuButton>
+              <MenuList>
+              {Links.map((link) => (
+                <MenuItem as='a' key={link.link} href={`/${link.link}`}>{link.title}</MenuItem>
+              ))}
+              </MenuList>
+            </Menu>
+          </HStack>
         </HStack>
       </Box>
   )
