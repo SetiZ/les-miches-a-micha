@@ -18,7 +18,7 @@ export default function Layout({ children }: LayoutProps) {
       </Head>
       <Header />
       {/* <main>{children}</main> */}
-      <Container as={'main'}m={0} p={0} maxW={'1440'} minH={'100vh'}>{children}</Container>
+      <Container as={'main'}m={0} p={0} maxW={'fit-content'} w={'full'} minH={'100vh'}>{children}</Container>
       <Footer />
     </>
   )

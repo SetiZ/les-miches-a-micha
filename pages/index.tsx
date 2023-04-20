@@ -6,6 +6,7 @@ export default function Home() {
     <Layout>
       <Box
         h={'100vh'}
+        // w={'full'}
         bgImage={'url("bread-bg.jpeg")'}
         bgAttachment={'fixed'}
         bgPos={'center'}
