@@ -6,18 +6,20 @@ export default function Home() {
     <Layout>
       <Box
         h={'100vh'}
-        // w={'full'}
-        bgImage={'url("bread-bg.jpeg")'}
-        bgAttachment={'fixed'}
-        bgPos={'center'}
-        bgRepeat={'no-repeat'}
-        bgSize={'cover'}
+        // w={'100vw'}
+        // bgImage={'url("bread-bg.jpeg")'}
+        // bgAttachment={'fixed'}
+        // bgPos={'center'}
+        // bgRepeat={'no-repeat'}
+        // bgSize={'cover'}
+        maxW={'1440'}
+        
         paddingTop={'20'}
         paddingInline={'4'}
       >
         <Heading as={'h2'}>Les Miches à Micha</Heading>
         <Text fontSize='2xl'>Micro-fournil artisanal</Text>
-        <Text>N’allez plus à la boulangerie – c’est elle qui vient à vous ! Livraison à domi- cile, commande personnalisée, conseils de dégustation, créativité. . . Ici, tout est fait main, à partir de matières premières bio, locales et nobles, pour vous proposer des pains savoureux, sains et originaux.</Text>
+        <Text>N’allez plus à la boulangerie – c’est elle qui vient à vous ! Livraison à domicile, commande personnalisée, conseils de dégustation, créativité. . . Ici, tout est fait main, à partir de matières premières bio, locales et nobles, pour vous proposer des pains savoureux, sains et originaux.</Text>
       </Box>
     </Layout>
   )
