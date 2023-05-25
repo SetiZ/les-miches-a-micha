@@ -1,6 +1,5 @@
-import { useRef } from "react";
-import { Box, IconButton, Heading, HStack, Icon, useDisclosure, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
-import { AddIcon, EditIcon, ExternalLinkIcon, HamburgerIcon, RepeatIcon } from "@chakra-ui/icons";
+import { Box, IconButton, Heading, HStack, Icon, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
+import { HamburgerIcon } from "@chakra-ui/icons";
 import { Link } from "@chakra-ui/next-js";
 import { CgShoppingCart } from "react-icons/cg";
 
@@ -21,13 +20,12 @@ const Header = () => {
         backgroundColor="rgba(254, 252, 191, 0.7)"
         backdropFilter="saturate(180%) blur(5px)">
         <HStack padding={'4'} h={'72px'} justify={'space-between'} maxW={'1440'} alignItems={'center'}  margin={'0 auto'}>
-          <Heading as={'h1'} size='l'>Les Miches à Micha</Heading>
+          <Link href={`/`} _hover={{ textDecoration: "none" }}><Heading as={'h1'} size='l'>Les Miches à Micha</Heading></Link>
           <HStack
             as={'nav'}
             spacing={8}
             alignItems={'center'}
             hideBelow={'660px'}>
-              {/* display={{ base: 'none', md: 'flex' }}  */}
             {Links.map((link) => (
               <Link key={link.link} href={`/${link.link}`}>{link.title}</Link>
             ))}
@@ -40,7 +38,6 @@ const Header = () => {
               <MenuButton
                 as={IconButton}
                 aria-label='Options'
-                // variant='outline'
                 colorScheme="yellow"
               ><HamburgerIcon /></MenuButton>
               <MenuList>
