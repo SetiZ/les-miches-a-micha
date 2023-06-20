@@ -17,9 +17,15 @@ export default function Layout({ children }: LayoutProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      {/* <main>{children}</main> */}
-      <Flex as={'main'} m={0} p={0} minH={'100vh'} 
-        w={'100vw'}
+      <Flex as={'main'}
+        m={0}
+        p={0}
+        paddingTop={20}
+        paddingBottom={16}
+        paddingInline={'4'}
+        minH={'100vh'}
+        h={'100vh'}
+        maxW={'1440'}
         bgImage={'url("bread-bg.jpeg")'}
         bgAttachment={'fixed'}
         bgPos={'center'}
