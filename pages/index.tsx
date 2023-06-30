@@ -1,4 +1,4 @@
-import { Box, Container, Heading, Icon, Text, VStack } from '@chakra-ui/react'
+import { Box, Heading, Icon, Text, VStack } from '@chakra-ui/react'
 import Layout from '../components/layout'
 import { Link } from "@chakra-ui/next-js"
 import { CgMail, CgSmartphone, CgSoftwareDownload } from "react-icons/cg"
@@ -9,20 +9,18 @@ export default function Home() {
       <Box backgroundColor="rgba(255, 255, 255, 0.5)"
         backdropFilter="saturate(180%) blur(3px)"
         p={'4'}>
-        <Container maxW='4xl'>
-          <Heading as={'h2'}>Les Miches à Micha</Heading>
-          <Text fontSize='2xl'>Micro-fournil artisanal</Text>
-          <Text>N’allez plus à la boulangerie – c’est elle qui vient à vous !</Text>
-          <Text>
-            Livraison à domicile, commande personnalisée, conseils de dégustation, créativité. . .
-            Ici, tout est fait main, à partir de matières premières bio, locales et nobles, pour vous proposer des pains savoureux, sains et originaux.
-          </Text>
-          <VStack align={'center'} paddingTop={16}>
-            <Link href={'les-miches-a-micha.pdf'} download='download'><Icon as={CgSoftwareDownload} /> Télécharger le menu</Link>
-            <Link href={'mailto:lesmichesamicha@gmail.com'}><Icon as={CgMail} /> Contacter par email</Link>
-            <Link href={'tel:0663354314'}><Icon as={CgSmartphone} /> Contacter par téléphone</Link>
-          </VStack>
-        </Container>
+        <Heading as={'h2'}>Les Miches à Micha</Heading>
+        <Text fontSize='2xl'>Micro-fournil artisanal</Text>
+        <Text>N’allez plus à la boulangerie – c’est elle qui vient à vous !</Text>
+        <Text>
+          Livraison à domicile, commande personnalisée, conseils de dégustation, créativité. . .
+          Ici, tout est fait main, à partir de matières premières bio, locales et nobles, pour vous proposer des pains savoureux, sains et originaux.
+        </Text>
+        <VStack align={'center'} paddingTop={16}>
+          <Link href={'les-miches-a-micha.pdf'} download='download'><Icon as={CgSoftwareDownload} /> Télécharger le menu</Link>
+          <Link href={'mailto:lesmichesamicha@gmail.com'}><Icon as={CgMail} /> Contacter par email</Link>
+          <Link href={'tel:0663354314'}><Icon as={CgSmartphone} /> Contacter par téléphone</Link>
+        </VStack>
       </Box>
     </Layout>
   )

@@ -26,7 +26,7 @@ export default function Layout({ children }: LayoutProps) {
         paddingInline={4}
         minH={'calc(100vh - calc(100vh - 100%))'}
         h={'100vh'}
-        maxW={'1440'}
+        // maxW={'1440'}
         bgImage={'url("bread-bg.jpeg")'}
         bgAttachment={'fixed'}
         bgPos={'center'}
