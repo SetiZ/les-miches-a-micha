@@ -21,7 +21,8 @@ const Header = () => {
         backdropFilter="saturate(180%) blur(5px)">
         <HStack padding={'4'} h={'72px'} justify={'space-between'} maxW={'1440'} alignItems={'center'}  margin={'0 auto'}>
           <Link href={`/`} _hover={{ textDecoration: "none" }}><Heading as={'h1'} size='l'>Les Miches à Micha</Heading></Link>
-          <HStack
+          {/* remove the menu for now */}
+          {/* <HStack
             as={'nav'}
             spacing={8}
             alignItems={'center'}
@@ -48,7 +49,7 @@ const Header = () => {
                 </MenuList>
               </Portal>
             </Menu>
-          </HStack>
+          </HStack> */}
         </HStack>
       </Box>
   )
