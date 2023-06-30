@@ -1,4 +1,4 @@
-import { Box, IconButton, Heading, HStack, Icon, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
+import { Box, IconButton, Heading, HStack, Icon, Menu, MenuButton, MenuItem, MenuList, Portal } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { Link } from "@chakra-ui/next-js";
 import { CgShoppingCart } from "react-icons/cg";
@@ -40,11 +40,13 @@ const Header = () => {
                 aria-label='Options'
                 colorScheme="yellow"
               ><HamburgerIcon /></MenuButton>
-              <MenuList>
-              {Links.map((link) => (
-                <MenuItem as='a' key={link.link} href={`/${link.link}`}>{link.title}</MenuItem>
-              ))}
-              </MenuList>
+              <Portal>
+                <MenuList>
+                {Links.map((link) => (
+                  <MenuItem as='a' key={link.link} href={`/${link.link}`}>{link.title}</MenuItem>
+                ))}
+                </MenuList>
+              </Portal>
             </Menu>
           </HStack>
         </HStack>
