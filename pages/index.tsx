@@ -20,6 +20,7 @@ export default function Home() {
           <Link href={'les-miches-a-micha.pdf'} download='download'><Icon as={CgSoftwareDownload} /> Télécharger le menu</Link>
           <Link href={'mailto:lesmichesamicha@gmail.com'}><Icon as={CgMail} /> Contacter par email</Link>
           <Link href={'tel:0663354314'}><Icon as={CgSmartphone} /> Contacter par téléphone</Link>
+          <Link href={'https://www.instagram.com/lesmichesamicha/'} S'abonner à l'instagram</Link>
         </VStack>
       </Box>
     </Layout>
