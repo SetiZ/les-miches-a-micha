@@ -1,7 +1,7 @@
 import { Box, Heading, Icon, Text, VStack } from '@chakra-ui/react'
 import Layout from '../components/layout'
 import { Link } from "@chakra-ui/next-js"
-import { CgMail, CgSmartphone, CgSoftwareDownload } from "react-icons/cg"
+import { CgInstagram, CgMail, CgSmartphone, CgSoftwareDownload } from "react-icons/cg"
 
 export default function Home() {
   return (
@@ -17,9 +17,10 @@ export default function Home() {
           Ici, tout est fait main, à partir de matières premières bio, locales et nobles, pour vous proposer des pains savoureux, sains et originaux.
         </Text>
         <VStack align={'center'} paddingTop={16}>
-          <Link href={'les-miches-a-micha.pdf'} download='download'><Icon as={CgSoftwareDownload} /> Télécharger le menu</Link>
+          <Link href={'les-miches-a-micha.pdf'} download='download' target='_blank'><Icon as={CgSoftwareDownload} /> Télécharger le menu</Link>
           <Link href={'mailto:lesmichesamicha@gmail.com'}><Icon as={CgMail} /> Contacter par email</Link>
           <Link href={'tel:0663354314'}><Icon as={CgSmartphone} /> Contacter par téléphone</Link>
+          <Link href={'https://www.instagram.com/lesmichesamicha/'} target='_blank'><Icon as={CgInstagram} /> S'abonner à l'instagram</Link>
         </VStack>
       </Box>
     </Layout>
