@@ -30,7 +30,7 @@ export default function Home() {
             <Icon as={CgInstagram} /> {'S\'abonner à l\'instagram'}
           </Link>
           <Link href={'https://g.page/r/CQP-U6UnJ-McEAI/review/'} target='_blank'>
-            <Icon as={CgInstagram} /> {'Laisser un avis sur google maps (ou chercher "Les Miches à Micha" sur google}
+            <Icon as={CgInstagram} /> {'Laisser un avis sur google maps (ou chercher \"Les Miches à Micha\" sur google'}
           </Link>         
         </VStack>
       </Box>
