@@ -1,7 +1,7 @@
 import { Box, Heading, Icon, Text, VStack } from '@chakra-ui/react'
 import Layout from '../components/layout'
 import { Link } from "@chakra-ui/next-js"
-import { CgInstagram, CgMail, CgSmartphone, CgSoftwareDownload } from "react-icons/cg"
+import { CgInstagram, CgMail, CgSmartphone, CgSoftwareDownload, CgPin } from "react-icons/cg"
 
 export default function Home() {
   return (
@@ -29,9 +29,10 @@ export default function Home() {
           <Link href={'https://www.instagram.com/lesmichesamicha/'} target='_blank'>
             <Icon as={CgInstagram} /> {'S\'abonner à l\'instagram'}
           </Link>
-          <Link href={'https://g.page/r/CQP-U6UnJ-McEAI/review/'} target='_blank'>
-            <Icon as={CgInstagram} /> {'Laisser un avis sur google maps (ou chercher \"Les Miches à Micha\" sur google'}
-          </Link>         
+          <Link href={'https://g.page/r/CQP-U6UnJ-McEAI/review/'} target='_blank' textAlign={'center'}>
+            <Icon as={CgPin} /> {'Laisser un avis sur google maps'}
+            <br/>{'(ou chercher \"Les Miches à Micha\" sur google)'}
+          </Link>
         </VStack>
       </Box>
     </Layout>
