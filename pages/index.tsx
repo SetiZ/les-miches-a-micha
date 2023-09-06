@@ -8,7 +8,8 @@ export default function Home() {
     <Layout>
       <Box backgroundColor="rgba(255, 255, 255, 0.5)"
         backdropFilter="saturate(180%) blur(3px)"
-        p={'4'}>
+        p={'4'}
+        maxW={'1440'}>
         <Heading as={'h2'}>Les Miches à Micha</Heading>
         <Text fontSize='2xl'>Micro-fournil artisanal</Text>
         <Text>N’allez plus à la boulangerie – c’est elle qui vient à vous !</Text>
@@ -20,10 +21,10 @@ export default function Home() {
           <Link href={'les-miches-a-micha.pdf'} download='download' target='_blank'>
             <Icon as={CgSoftwareDownload} /> Télécharger le menu
           </Link>
-          <Link href={'mailto:lesmichesamicha@gmail.com'}>
+          <Link href={'mailto:lesmichesamicha@gmail.com'} target='_blank'>
             <Icon as={CgMail} /> Contacter par email
           </Link>
-          <Link href={'tel:0663354314'}>
+          <Link href={'tel:0663354314'} target='_blank'>
             <Icon as={CgSmartphone} /> Contacter par téléphone
           </Link>
           <Link href={'https://www.instagram.com/lesmichesamicha/'} target='_blank'>
