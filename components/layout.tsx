@@ -21,11 +21,11 @@ export default function Layout({ children }: LayoutProps) {
         m={0}
         p={0}
         paddingTop={20}
-        // paddingBottom={16}
-        paddingBottom={4}
+        paddingBottom={16}
+        // paddingBottom={4}
         paddingInline={4}
         minH={'calc(100vh - calc(100vh - 100%))'}
-        h={'100vh'}
+        // h={'100vh'}
         // maxW={'1440'}
         bgImage={'url("bread-bg.jpeg")'}
         bgAttachment={'fixed'}

@@ -17,6 +17,7 @@ const Header = () => {
         as={'header'}
         w={'full'}
         position={'fixed'}
+        zIndex={10}
         backgroundColor="rgba(254, 252, 191, 0.7)"
         backdropFilter="saturate(180%) blur(5px)">
         <HStack padding={'4'} h={'72px'} justify={'space-between'} maxW={'1440'} alignItems={'center'}  margin={'0 auto'}>
