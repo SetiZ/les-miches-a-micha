@@ -14,15 +14,15 @@ export default function Layout({ children }: LayoutProps) {
         <title>Les Miches à Micha - Micro-fournil artisanal</title>
         <meta name="description" content="N’allez plus à la boulangerie – c’est elle qui vient à vous ! Livraison à domicile, commande personnalisée, conseils de dégustation, créativité. . . Ici, tout est fait main, à partir de matières premières bio, locales et nobles, pour vous proposer des pains savoureux, sains et originaux." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/breads.png" />
+        <link rel="icon" href="/miches_blanc_no_text.png" />
       </Head>
       <Header />
       <Flex as={'main'}
         m={0}
         p={0}
         paddingTop={20}
-        paddingBottom={16}
-        // paddingBottom={4}
+        // paddingBottom={16}
+        paddingBottom={4}
         paddingInline={4}
         minH={'calc(100vh - calc(100vh - 100%))'}
         // h={'100vh'}
@@ -35,7 +35,7 @@ export default function Layout({ children }: LayoutProps) {
         justifyContent={'center'}>
         {children}
       </Flex>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }
