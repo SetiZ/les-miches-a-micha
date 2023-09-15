@@ -9,7 +9,7 @@ const Footer = () => {
         w={'full'}
         bgColor={'gray.600'}
         color={'gray.100'}
-        position={'absolute'}
+        position={'fixed'}
         bottom={0}>
         <HStack padding={'4'} justify={'space-between'} maxW={'1440'} alignItems={'center'} margin={'0 auto'}>
           <span>Les miches à Micha - {year}</span>
