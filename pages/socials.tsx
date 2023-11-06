@@ -35,7 +35,7 @@ export default function Home() {
             icon={<CgInstagram />} />
           <SocialButton
             text={'Laisser un avis sur google maps'}
-            link={'https://g.page/r/CQP-U6UnJ-McEAI/review/'}
+            link={'https://g.page/r/CQP-U6UnJ-McEB0/review'}
             icon={<CgPin />} />
         </VStack>
       </ContainerBox>
