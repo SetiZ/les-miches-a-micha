@@ -17,7 +17,7 @@ export default function Home() {
         <Text textAlign={'center'}>N’allez plus à la boulangerie<br />c’est elle qui vient à vous !</Text>
         <VStack align={'center'} paddingTop={16}>
           <SocialButton
-            text={'Carte des fêtes 2023'}
+            text={'.:*~*:._.:*~*:._.:*~*:. !! CARTE DES FÊTES 2023 !! .:*~*:._.:*~*:._.:*~*:.'}
             link={'carte_fetes_2023.pdf'}
             icon={<CgSoftwareDownload />}
             options={{download: true}} />
