@@ -1,7 +1,7 @@
 import { Heading, Text, VStack, Flex } from '@chakra-ui/react'
 import { CgInstagram, CgMail, CgSmartphone, CgSoftwareDownload, CgPin } from "react-icons/cg"
 import Layout from '@/components/layout'
-import SocialButton from '@/components/socialButton'
+import SocialButton, { Events } from '@/components/socialButton'
 import ContainerBox from '@/components/containerBox'
 import { Image } from '@chakra-ui/next-js'
 
@@ -19,7 +19,7 @@ export default function Home() {
           <SocialButton
             text={'.:*~*:_:*~* !! CARTE DES FÊTES 2023 !! *~*:_:*~*:.'}
             link={'carte_fetes_2023.pdf'}
-            icon={<CgSoftwareDownload />}
+            event={Events.Christmas}
             options={{download: true}} />
           <SocialButton
             text={'Télécharger le menu'}
