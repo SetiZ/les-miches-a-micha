@@ -1,9 +1,5 @@
-import Layout from '@/components/layout'
+import Layout from '@/components/layout';
 
 export default function Cart() {
-  return (
-    <Layout>
-      Cart
-    </Layout>
-  )
+	return <Layout>Cart</Layout>;
 }

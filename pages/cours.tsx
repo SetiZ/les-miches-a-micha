@@ -1,9 +1,5 @@
-import Layout from '@/components/layout'
+import Layout from '@/components/layout';
 
 export default function Cours() {
-  return (
-    <Layout>
-      cours
-    </Layout>
-  )
+	return <Layout>cours</Layout>;
 }

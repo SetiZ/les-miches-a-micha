@@ -27,5 +27,8 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
     "typescript": "5.0.3"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.4.1"
   }
 }
