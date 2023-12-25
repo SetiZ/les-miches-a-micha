@@ -17,10 +17,10 @@ import { CgShoppingCart } from 'react-icons/cg';
 
 const Header = () => {
 	const Links = [
-		{ title: 'Le Concept', link: 'concept' },
+		// { title: 'Le Concept', link: 'concept' },
 		{ title: 'La carte', link: 'carte' },
-		{ title: 'Abonnements', link: 'abonnements' },
-		{ title: 'Les cours', link: 'cours' },
+		// { title: 'Abonnements', link: 'abonnements' },
+		// { title: 'Les cours', link: 'cours' },
 	];
 
 	return (
@@ -34,7 +34,7 @@ const Header = () => {
 			<HStack
 				padding={'4'}
 				h={'72px'}
-				justify={['center', 'center', 'center', 'space-between']}
+				justify={['space-between', 'space-between', 'space-between', 'space-between']}
 				maxW={'1440'}
 				alignItems={'center'}
 				margin={'0 auto'}>
@@ -55,7 +55,7 @@ const Header = () => {
 					</HStack>
 				</Link>
 				{/* remove the menu for now */}
-				{/* <HStack
+				<HStack
             as={'nav'}
             spacing={8}
             alignItems={'center'}
@@ -82,7 +82,7 @@ const Header = () => {
                 </MenuList>
               </Portal>
             </Menu>
-          </HStack> */}
+          </HStack>
 			</HStack>
 		</Box>
 	);

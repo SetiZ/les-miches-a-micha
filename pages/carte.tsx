@@ -9,9 +9,6 @@ const fetcher = (url: string) => fetch(url).then((res) => res.json());
 export default function Carte() {
 	const { data, error } = useSWR('/api/static', fetcher);
 
-	if (error) return <div>Failed to load</div>;
-	if (!data) return <div>Loading...</div>;
-
 	return (
 		<Layout>
 			<ContainerBox>
