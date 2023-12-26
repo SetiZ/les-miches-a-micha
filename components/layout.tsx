@@ -1,7 +1,7 @@
 import { Flex } from '@chakra-ui/react';
 import Head from 'next/head';
-import Footer from './footer';
 import Header from './header';
+import Footer from './footer';
 
 type LayoutProps = {
 	children: React.ReactNode;
@@ -26,7 +26,7 @@ export default function Layout({ children }: LayoutProps) {
 				p={0}
 				paddingTop={20}
 				// paddingBottom={16}
-				paddingBottom={4}
+				paddingBottom={2}
 				paddingInline={4}
 				minH={'calc(100vh - calc(100vh - 100%))'}
 				// h={'100vh'}
@@ -39,7 +39,7 @@ export default function Layout({ children }: LayoutProps) {
 				justifyContent={'center'}>
 				{children}
 			</Flex>
-			{/* <Footer /> */}
+			<Footer />
 		</>
 	);
 }

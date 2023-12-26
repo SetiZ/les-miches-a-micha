@@ -9,12 +9,14 @@ import {
 	HStack,
 	Heading,
 	SimpleGrid,
+	Stack,
+	StackDivider,
 	Text,
 	VStack,
 	Wrap,
 	WrapItem,
 } from '@chakra-ui/react';
-import { Image } from '@chakra-ui/next-js';
+import { Image, Link } from '@chakra-ui/next-js';
 import useSWR from 'swr';
 // import Router from 'next/router';
 
@@ -23,9 +25,9 @@ const fetcher = (url: string) => fetch(url).then((res) => res.json());
 export default function Home() {
 	const { data, error } = useSWR('/api/static', fetcher);
 
-	// if (typeof window !== 'undefined') {
-	//   window.location.replace('/socials');
-	// }
+	if (typeof window !== 'undefined') {
+	  window.location.replace('/socials');
+	}
 
 	return (
 		<Layout>
@@ -43,7 +45,7 @@ export default function Home() {
 					c’est elle qui vient à vous !
 				</Text>
 				<VStack align={'center'} paddingTop={16} spacing={12}>
-					<Container maxW="80vw" textAlign={'center'}>
+					<Container maxW="80vw" textAlign={'center'} fontSize="lg">
 						Livraison à domicile, commande personnalisée, conseils de
 						dégustation, créativité. . . Ici, tout est fait main, à partir de
 						matières premières bio, locales et nobles, pour vous proposer des
@@ -114,11 +116,17 @@ export default function Home() {
 						)}
 					</Container> */}
 					<Container maxW="80vw" textAlign={'center'}>
-						<Heading as="h3" size="sm" textAlign={'center'}>
+						<Heading as="h3" size="md" textAlign={'center'}>
 							Plus d’informations ou pour passer commande
 						</Heading>
-						Tél : 06.63.35.43.14 Mél : lesmichesamicha@gmail.com. Instagram :
-						https://www.instagram.com/lesmichesamicha/ Siret : 90464809400020
+						<Stack direction={['column', 'row']} paddingTop={4} justify={'center'}>
+							<Link href={'tel:0663354314'}>
+								06.63.35.43.14		
+							</Link>
+							<Link href={'mailto:lesmichesamicha@gmail.com'}>
+								lesmichesamicha@gmail.com
+							</Link>
+						</Stack>
 					</Container>
 				</VStack>
 			</ContainerBox>
