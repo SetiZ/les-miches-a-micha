@@ -22,14 +22,14 @@ const Footer = () => {
 				<Text fontWeight={'600'}>Siret : 90464809400020</Text>
 				{/* <Text fontWeight={'600'}>Les miches à Micha</Text> */}
 				<Button
-				as={'a'}
-				w={'min'}
-				variant="link"
-				color={'white'}
-				leftIcon={<CgInstagram />}
-				href={'https://www.instagram.com/lesmichesamicha/'}
-				target="_blank">
-				{'@lesmichesamicha'}
+					as={'a'}
+					w={'min'}
+					variant="link"
+					color={'white'}
+					leftIcon={<CgInstagram />}
+					href={'https://www.instagram.com/lesmichesamicha/'}
+					target="_blank">
+					{'@lesmichesamicha'}
 				</Button>
 			</Stack>
 		</Box>

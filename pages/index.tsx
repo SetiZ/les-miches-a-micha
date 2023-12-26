@@ -26,7 +26,7 @@ export default function Home() {
 	const { data, error } = useSWR('/api/static', fetcher);
 
 	if (typeof window !== 'undefined') {
-	  window.location.replace('/socials');
+		window.location.replace('/socials');
 	}
 
 	return (
@@ -119,10 +119,11 @@ export default function Home() {
 						<Heading as="h3" size="md" textAlign={'center'}>
 							Plus d’informations ou pour passer commande
 						</Heading>
-						<Stack direction={['column', 'row']} paddingTop={4} justify={'center'}>
-							<Link href={'tel:0663354314'}>
-								06.63.35.43.14		
-							</Link>
+						<Stack
+							direction={['column', 'row']}
+							paddingTop={4}
+							justify={'center'}>
+							<Link href={'tel:0663354314'}>06.63.35.43.14</Link>
 							<Link href={'mailto:lesmichesamicha@gmail.com'}>
 								lesmichesamicha@gmail.com
 							</Link>

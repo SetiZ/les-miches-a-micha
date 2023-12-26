@@ -64,7 +64,7 @@ const Header = () => {
 							{link.title}
 						</Link>
 					))} */}
-					{/* <Link href={`/cart`} height={'16px'}>
+				{/* <Link href={`/cart`} height={'16px'}>
 						<Icon as={CgShoppingCart} />
 					</Link> */}
 				{/* </HStack> */}
