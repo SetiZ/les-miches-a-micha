@@ -34,7 +34,12 @@ const Header = () => {
 			<HStack
 				padding={'4'}
 				h={'72px'}
-				justify={['space-between', 'space-between', 'space-between', 'space-between']}
+				justify={[
+					'space-between',
+					'space-between',
+					'space-between',
+					'space-between',
+				]}
 				maxW={'1440'}
 				alignItems={'center'}
 				margin={'0 auto'}>
@@ -56,33 +61,41 @@ const Header = () => {
 				</Link>
 				{/* remove the menu for now */}
 				<HStack
-            as={'nav'}
-            spacing={8}
-            alignItems={'center'}
-            hideBelow={'660px'}>
-            {Links.map((link) => (
-              <Link key={link.link} href={`/${link.link}`}>{link.title}</Link>
-            ))}
-            <Link href={`/cart`}><Icon as={CgShoppingCart} /></Link>
-          </HStack>
-          <HStack as={'nav'}
-            spacing={8} alignItems={'center'} hideFrom={'660px'}>
-            <Link href={`/cart`}><Icon as={CgShoppingCart} /></Link>
-            <Menu>
-              <MenuButton
-                as={IconButton}
-                aria-label='Options'
-                colorScheme="yellow"
-              ><HamburgerIcon /></MenuButton>
-              <Portal>
-                <MenuList>
-                {Links.map((link) => (
-                  <MenuItem as='a' key={link.link} href={`/${link.link}`}>{link.title}</MenuItem>
-                ))}
-                </MenuList>
-              </Portal>
-            </Menu>
-          </HStack>
+					as={'nav'}
+					spacing={8}
+					alignItems={'center'}
+					hideBelow={'660px'}>
+					{Links.map((link) => (
+						<Link key={link.link} href={`/${link.link}`}>
+							{link.title}
+						</Link>
+					))}
+					<Link href={`/cart`}>
+						<Icon as={CgShoppingCart} />
+					</Link>
+				</HStack>
+				<HStack as={'nav'} spacing={8} alignItems={'center'} hideFrom={'660px'}>
+					<Link href={`/cart`}>
+						<Icon as={CgShoppingCart} />
+					</Link>
+					<Menu>
+						<MenuButton
+							as={IconButton}
+							aria-label="Options"
+							colorScheme="yellow">
+							<HamburgerIcon />
+						</MenuButton>
+						<Portal>
+							<MenuList>
+								{Links.map((link) => (
+									<MenuItem as="a" key={link.link} href={`/${link.link}`}>
+										{link.title}
+									</MenuItem>
+								))}
+							</MenuList>
+						</Portal>
+					</Menu>
+				</HStack>
 			</HStack>
 		</Box>
 	);
