@@ -54,7 +54,7 @@ const Header = () => {
 						</Heading>
 					</HStack>
 				</Link>
-				<HStack
+				{/* <HStack
 					as={'nav'}
 					spacing={8}
 					// hideBelow={'660px'}
@@ -63,11 +63,11 @@ const Header = () => {
 						<Link key={link.link} href={`/${link.link}`} fontSize={'lg'}>
 							{link.title}
 						</Link>
-					))}
+					))} */}
 					{/* <Link href={`/cart`} height={'16px'}>
 						<Icon as={CgShoppingCart} />
 					</Link> */}
-				</HStack>
+				{/* </HStack> */}
 				{/* <HStack as={'nav'} spacing={8} alignItems={'center'} hideFrom={'660px'}>
 					<Link href={`/cart`} height={'16px'}>
 						<Icon as={CgShoppingCart} />
