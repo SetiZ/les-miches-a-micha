@@ -2,7 +2,6 @@ import { HamburgerIcon } from '@chakra-ui/icons';
 import { Image, Link } from '@chakra-ui/next-js';
 import {
 	Box,
-	Flex,
 	HStack,
 	Heading,
 	Icon,
@@ -17,10 +16,11 @@ import { CgShoppingCart } from 'react-icons/cg';
 
 const Header = () => {
 	const Links = [
-		{ title: 'Le Concept', link: 'concept' },
-		{ title: 'La carte', link: 'carte' },
-		{ title: 'Abonnements', link: 'abonnements' },
-		{ title: 'Les cours', link: 'cours' },
+		// { title: 'Le Concept', link: 'concept' },
+		// { title: 'La carte', link: 'carte' },
+		{ title: 'Liens', link: 'socials' },
+		// { title: 'Abonnements', link: 'abonnements' },
+		// { title: 'Les cours', link: 'cours' },
 	];
 
 	return (
@@ -34,10 +34,10 @@ const Header = () => {
 			<HStack
 				padding={'4'}
 				h={'72px'}
-				justify={['center', 'center', 'center', 'space-between']}
+				justify={'space-between'}
 				maxW={'1440'}
 				alignItems={'center'}
-				margin={'0 auto'}>
+				fontWeight={'600'}>
 				<Link href={'/'} _hover={{ textDecoration: 'none' }}>
 					<HStack alignItems={'end'}>
 						<Image
@@ -49,40 +49,47 @@ const Header = () => {
 						<Heading
 							as={'h1'}
 							display={['none', 'none', 'none', 'inline-block']}
-							size="l">
+							fontSize="lg">
 							Les Miches à Micha
 						</Heading>
 					</HStack>
 				</Link>
-				{/* remove the menu for now */}
 				{/* <HStack
-            as={'nav'}
-            spacing={8}
-            alignItems={'center'}
-            hideBelow={'660px'}>
-            {Links.map((link) => (
-              <Link key={link.link} href={`/${link.link}`}>{link.title}</Link>
-            ))}
-            <Link href={`/cart`}><Icon as={CgShoppingCart} /></Link>
-          </HStack>
-          <HStack as={'nav'}
-            spacing={8} alignItems={'center'} hideFrom={'660px'}>
-            <Link href={`/cart`}><Icon as={CgShoppingCart} /></Link>
-            <Menu>
-              <MenuButton
-                as={IconButton}
-                aria-label='Options'
-                colorScheme="yellow"
-              ><HamburgerIcon /></MenuButton>
-              <Portal>
-                <MenuList>
-                {Links.map((link) => (
-                  <MenuItem as='a' key={link.link} href={`/${link.link}`}>{link.title}</MenuItem>
-                ))}
-                </MenuList>
-              </Portal>
-            </Menu>
-          </HStack> */}
+					as={'nav'}
+					spacing={8}
+					// hideBelow={'660px'}
+					alignItems={'center'}>
+					{Links.map((link) => (
+						<Link key={link.link} href={`/${link.link}`} fontSize={'lg'}>
+							{link.title}
+						</Link>
+					))} */}
+				{/* <Link href={`/cart`} height={'16px'}>
+						<Icon as={CgShoppingCart} />
+					</Link> */}
+				{/* </HStack> */}
+				{/* <HStack as={'nav'} spacing={8} alignItems={'center'} hideFrom={'660px'}>
+					<Link href={`/cart`} height={'16px'}>
+						<Icon as={CgShoppingCart} />
+					</Link>
+					<Menu>
+						<MenuButton
+							as={IconButton}
+							aria-label="Options"
+							colorScheme="yellow">
+							<HamburgerIcon />
+						</MenuButton>
+						<Portal>
+							<MenuList>
+								{Links.map((link) => (
+									<MenuItem as="a" key={link.link} href={`/${link.link}`}>
+										{link.title}
+									</MenuItem>
+								))}
+							</MenuList>
+						</Portal>
+					</Menu>
+				</HStack> */}
 			</HStack>
 		</Box>
 	);

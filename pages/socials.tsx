@@ -19,10 +19,10 @@ export default function Home() {
 				<Flex as={'h1'} justify={'center'}>
 					<Image src={'/miches_blanc.png'} alt={''} width={260} height={260} />
 				</Flex>
-				<Text fontSize="2xl" textAlign={'center'}>
+				<Heading as="h2" size="xl" textAlign={'center'}>
 					Micro-fournil artisanal
-				</Text>
-				<Text textAlign={'center'}>
+				</Heading>
+				<Text textAlign={'center'} fontSize="xl">
 					N’allez plus à la boulangerie
 					<br />
 					c’est elle qui vient à vous !
