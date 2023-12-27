@@ -1,0 +1,43 @@
+{
+    "trusted": [
+        {
+            "title": "Le Curieux Orchestre",
+            "url": "https://www.instagram.com/curieux_orchestre"
+        },
+        {
+            "title": "Le V&B Nanterre",
+            "url": "https://vandb.fr/v-and-b-nanterre.html"
+        },
+        {
+            "title": "SOSA",
+            "url": "https://www.sosa-paris.fr/",
+            "description": "traiteur bio et éco-responsable à Paris",
+            "order": "pre"
+        },
+        {
+            "title": "L'ENSCI - les ateliers",
+            "url": "https://www.ensci.com/",
+            "description": "pour les soutenances de leurs élèves",
+            "order": "pre"
+        },
+        {
+            "title": "Suresnescalade",
+            "url": "https://suresnes-escalade.fr/",
+            "description": "Les grimpeurs de ",
+            "order": "post"
+        },
+        {
+            "description": "L'association des jeux mathématiques du collège les Hauts Grillets"
+        },
+        {
+            "title": "Neve Shalom",
+            "url": "https://www.neve-shalom.org/",
+            "description": "La communauté ",
+            "order": "pre"
+        },
+        {
+            "title": "Le club d'aikido de Nanterre",
+            "url": "http://www.aikidonanterre.com/"
+        }
+    ]
+}

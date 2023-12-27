@@ -23,7 +23,9 @@ import useSWR from 'swr';
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 export default function Home() {
-	const { data, error } = useSWR('/api/static', fetcher);
+	// const { data, error } = useSWR('/api/static', fetcher);
+
+	const { data, error } = useSWR('/api/static/trusted.json', fetcher);
 
 	if (typeof window !== 'undefined') {
 		window.location.replace('/socials');
@@ -55,42 +57,19 @@ export default function Home() {
 						<Heading as="h3" size="lg" textAlign={'center'}>
 							Ils nous font confiance
 						</Heading>
+						{data && (
 						<Wrap spacing="30px" paddingTop={8} justify={'center'}>
-							<WrapItem>
-								<Center w="200px">Le Curieux Orchestre</Center>
-							</WrapItem>
-							<WrapItem>
-								<Center w="200px">Le V&B Nanterre</Center>
-							</WrapItem>
-							<WrapItem>
+							{data.trusted.map((trust: any, index: any) => (
+							<WrapItem key={index}>
 								<Center w="200px">
-									SOSA, traiteur bio et éco-responsable à Paris
+									<Link href={trust.url}>
+									{trust.title}
+									</Link> {trust.description}
 								</Center>
 							</WrapItem>
-							<WrapItem>
-								<Center w="200px">
-									{
-										"L'ENSCI - les ateliers, pour les soutenances de leurs élèves"
-									}
-								</Center>
-							</WrapItem>
-							<WrapItem>
-								<Center w="200px">Les grimpeurs de Suresnescalade</Center>
-							</WrapItem>
-							<WrapItem>
-								<Center w="200px">
-									{
-										"L'association des jeux mathématiques du collège les Hauts Grillets"
-									}
-								</Center>
-							</WrapItem>
-							<WrapItem>
-								<Center w="200px">La communauté Neve Shalom</Center>
-							</WrapItem>
-							<WrapItem>
-								<Center w="200px">{"Le club d'aikido de Nanterre"}</Center>
-							</WrapItem>
+							))}
 						</Wrap>
+						)}
 					</Container>
 					{/* <Container maxW="80vw" textAlign={'center'}>
 						{!data && <p>Loading...</p>}
