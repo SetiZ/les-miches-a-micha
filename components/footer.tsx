@@ -13,7 +13,7 @@ const Footer = () => {
       // position={'fixed'}
       bottom={0}>
       <Stack
-        direction={['column', 'row']}
+        direction={['column-reverse', 'row']}
         padding={'4'}
         justify={'space-between'}
         maxW={'1440'}

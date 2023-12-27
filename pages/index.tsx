@@ -1,32 +1,19 @@
 import ContainerBox from '@/components/containerBox';
 import Layout from '@/components/layout';
 import {
-  AspectRatio,
   Box,
-  Center,
   Container,
   Flex,
-  HStack,
   Heading,
-  SimpleGrid,
   Stack,
-  StackDivider,
   Text,
   VStack,
   Wrap,
   WrapItem,
 } from '@chakra-ui/react';
 import { Image, Link } from '@chakra-ui/next-js';
-// import useSWR from 'swr';
-// import Router from 'next/router';
 import trusted from '@/data/trusted.json';
-
-// const fetcher = (url: string) => fetch('url/trusted.json').then((res) => res.json());
-
 export default function Home() {
-  // const { data, error } = useSWR('/api/static', fetcher);
-
-  console.log(trusted);
   // if (typeof window !== 'undefined') {
   // 	window.location.replace('/socials');
   // }
