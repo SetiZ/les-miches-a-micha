@@ -12,7 +12,7 @@ import {
   MenuList,
   Portal,
 } from '@chakra-ui/react';
-import { CgShoppingCart } from 'react-icons/cg';
+import { CgShoppingCart, CgIcecream } from 'react-icons/cg';
 
 const Header = () => {
   const Links = [
@@ -54,20 +54,21 @@ const Header = () => {
             </Heading>
           </HStack>
         </Link>
-        {/* <HStack
-					as={'nav'}
-					spacing={8}
-					// hideBelow={'660px'}
-					alignItems={'center'}>
-					{Links.map((link) => (
-						<Link key={link.link} href={`/${link.link}`} fontSize={'lg'}>
-							{link.title}
-						</Link>
-					))} */}
-        {/* <Link href={`/cart`} height={'16px'}>
+        <HStack
+          as={'nav'}
+          spacing={8}
+          // hideBelow={'660px'}
+          alignItems={'center'}>
+          {Links.map((link) => (
+            <Link key={link.link} href={`/${link.link}`} fontSize={'lg'}>
+              {/* {link.title} */}
+              <Icon as={CgIcecream} />
+            </Link>
+          ))}
+          {/* <Link href={`/cart`} height={'16px'}>
 						<Icon as={CgShoppingCart} />
 					</Link> */}
-        {/* </HStack> */}
+        </HStack>
         {/* <HStack as={'nav'} spacing={8} alignItems={'center'} hideFrom={'660px'}>
 					<Link href={`/cart`} height={'16px'}>
 						<Icon as={CgShoppingCart} />
