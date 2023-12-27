@@ -27,9 +27,9 @@ export default function Home() {
 
 	const { data, error } = useSWR('/api/static/trusted.json', fetcher);
 
-	if (typeof window !== 'undefined') {
-		window.location.replace('/socials');
-	}
+	// if (typeof window !== 'undefined') {
+	// 	window.location.replace('/socials');
+	// }
 
 	return (
 		<Layout>
