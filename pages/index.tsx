@@ -20,12 +20,12 @@ import { Image, Link } from '@chakra-ui/next-js';
 import useSWR from 'swr';
 // import Router from 'next/router';
 
-const fetcher = (url: string) => fetch(url).then((res) => res.json());
+const fetcher = (url: string) => fetch('url/trusted.json').then((res) => res.json());
 
 export default function Home() {
 	// const { data, error } = useSWR('/api/static', fetcher);
 
-	const { data, error } = useSWR('/api/static/trusted.json', fetcher);
+	const { data, error, isLoading } = useSWR('/api/static', fetcher);
 
 	// if (typeof window !== 'undefined') {
 	// 	window.location.replace('/socials');
