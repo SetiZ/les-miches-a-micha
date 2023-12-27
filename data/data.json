@@ -1,18 +1,18 @@
 {
-	"products": [
-		{
-			"title": "Baguette de tradition",
-			"prix": "1,25",
-			"poids": 300,
-			"description": "Le classique, renommé mondialement, et respectant le décret « tradition » du 13 septembre 1993. Farine de trad’ T65 bio, eau, sel, levain – et c’est tout ! Possibilité de façonner en épi, ou formes esthétiques (tresse, tabatière, auvergnat etc.). Un assortiment de pains-serviette individuels, tous façonnés différemment, est idéal pour donner un cachet « gastronomique » à vos soirées.",
-			"category": "pain courant"
-		},
-		{
-			"title": "Tradition céréales",
-			"prix": "1,50",
-			"poids": 330,
-			"description": "La baguette de tradition, avec un assortiment soigneusement choisi de graines (lin, tournesol, soja, courge, millet, quinoa, sésame), ou simplement du sésame grillé. . . – voire, sur demande, avec des grains de cumin – un délice avec du fromage !",
-			"category": "pain courant"
-		}
-	]
+  "products": [
+    {
+      "title": "Baguette de tradition",
+      "prix": "1,25",
+      "poids": 300,
+      "description": "Le classique, renommé mondialement, et respectant le décret « tradition » du 13 septembre 1993. Farine de trad’ T65 bio, eau, sel, levain – et c’est tout ! Possibilité de façonner en épi, ou formes esthétiques (tresse, tabatière, auvergnat etc.). Un assortiment de pains-serviette individuels, tous façonnés différemment, est idéal pour donner un cachet « gastronomique » à vos soirées.",
+      "category": "pain courant"
+    },
+    {
+      "title": "Tradition céréales",
+      "prix": "1,50",
+      "poids": 330,
+      "description": "La baguette de tradition, avec un assortiment soigneusement choisi de graines (lin, tournesol, soja, courge, millet, quinoa, sésame), ou simplement du sésame grillé. . . – voire, sur demande, avec des grains de cumin – un délice avec du fromage !",
+      "category": "pain courant"
+    }
+  ]
 }

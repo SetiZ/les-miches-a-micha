@@ -7,33 +7,33 @@ import { Image } from '@chakra-ui/next-js';
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 export default function Carte() {
-	const { data, error } = useSWR('/api/static', fetcher);
+  const { data, error } = useSWR('/api/static', fetcher);
 
-	return (
-		<Layout>
-			<ContainerBox>
-				{/* <Flex as={'h1'} justify={'center'}>
+  return (
+    <Layout>
+      <ContainerBox>
+        {/* <Flex as={'h1'} justify={'center'}>
           <Image src={'/miches_blanc.png'} alt={''} width={260} height={260} />
         </Flex> */}
-				{!data && <p>Loading...</p>}
-				{error && <p>Loading failed : {error}</p>}
-				{data && (
-					<SimpleGrid minChildWidth="120px" spacing="40px">
-						{data.products.map((prod: any, index: any) => (
-							<Box key={index} p="5" maxW="320px" borderWidth="1px">
-								{prod.title}
-								<Image
-									src={'/miches_blanc.png'}
-									alt={''}
-									width={260}
-									height={260}
-									borderRadius="md"
-								/>
-							</Box>
-						))}
-					</SimpleGrid>
-				)}
-			</ContainerBox>
-		</Layout>
-	);
+        {!data && <p>Loading...</p>}
+        {error && <p>Loading failed : {error}</p>}
+        {data && (
+          <SimpleGrid minChildWidth="120px" spacing="40px">
+            {data.products.map((prod: any, index: any) => (
+              <Box key={index} p="5" maxW="320px" borderWidth="1px">
+                {prod.title}
+                <Image
+                  src={'/miches_blanc.png'}
+                  alt={''}
+                  width={260}
+                  height={260}
+                  borderRadius="md"
+                />
+              </Box>
+            ))}
+          </SimpleGrid>
+        )}
+      </ContainerBox>
+    </Layout>
+  );
 }
