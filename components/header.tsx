@@ -62,7 +62,7 @@ const Header = () => {
           {Links.map((link) => (
             <Link key={link.link} href={`/${link.link}`} fontSize={'lg'}>
               {/* {link.title} */}
-              <Icon as={CgIcecream} />
+              <Icon as={CgIcecream} w={8} h={8} />
             </Link>
           ))}
           {/* <Link href={`/cart`} height={'16px'}>
