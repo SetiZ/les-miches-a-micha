@@ -17,16 +17,16 @@ import {
 	WrapItem,
 } from '@chakra-ui/react';
 import { Image, Link } from '@chakra-ui/next-js';
-import useSWR from 'swr';
+// import useSWR from 'swr';
 // import Router from 'next/router';
+import trusted from '@/data/trusted.json';
 
-const fetcher = (url: string) => fetch('url/trusted.json').then((res) => res.json());
+// const fetcher = (url: string) => fetch('url/trusted.json').then((res) => res.json());
 
 export default function Home() {
 	// const { data, error } = useSWR('/api/static', fetcher);
 
-	const { data, error, isLoading } = useSWR('/api/static', fetcher);
-
+	console.log(trusted);
 	// if (typeof window !== 'undefined') {
 	// 	window.location.replace('/socials');
 	// }
@@ -57,18 +57,30 @@ export default function Home() {
 						<Heading as="h3" size="lg" textAlign={'center'}>
 							Ils nous font confiance
 						</Heading>
-						{data && (
-						<Wrap spacing="30px" paddingTop={8} justify={'center'}>
-							{data.trusted.map((trust: any, index: any) => (
-							<WrapItem key={index}>
-								<Center w="200px">
-									<Link href={trust.url}>
-									{trust.title}
-									</Link> {trust.description}
-								</Center>
-							</WrapItem>
-							))}
-						</Wrap>
+						{trusted && (
+							<Wrap spacing="30px" paddingTop={8} justify={'center'}>
+								{trusted.trusted.map((trust: any, index: any) => (
+									<WrapItem key={index}>
+										<Box w="200px">
+											{trust.order === 'pre' ? (
+												<>
+													<Link href={trust.url} target="_blank">
+														{trust.title}
+													</Link>
+													, {trust.description}
+												</>
+											) : (
+												<>
+													{trust.description}{' '}
+													<Link href={trust.url} target="_blank">
+														{trust.title}
+													</Link>
+												</>
+											)}
+										</Box>
+									</WrapItem>
+								))}
+							</Wrap>
 						)}
 					</Container>
 					{/* <Container maxW="80vw" textAlign={'center'}>
