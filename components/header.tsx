@@ -1,74 +1,75 @@
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { Image, Link } from '@chakra-ui/next-js';
 import {
-	Box,
-	HStack,
-	Heading,
-	Icon,
-	IconButton,
-	Menu,
-	MenuButton,
-	MenuItem,
-	MenuList,
-	Portal,
+  Box,
+  HStack,
+  Heading,
+  Icon,
+  IconButton,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
+  Portal,
 } from '@chakra-ui/react';
-import { CgShoppingCart } from 'react-icons/cg';
+import { CgShoppingCart, CgIcecream } from 'react-icons/cg';
 
 const Header = () => {
-	const Links = [
-		// { title: 'Le Concept', link: 'concept' },
-		// { title: 'La carte', link: 'carte' },
-		{ title: 'Liens', link: 'socials' },
-		// { title: 'Abonnements', link: 'abonnements' },
-		// { title: 'Les cours', link: 'cours' },
-	];
+  const Links = [
+    // { title: 'Le Concept', link: 'concept' },
+    // { title: 'La carte', link: 'carte' },
+    { title: 'Liens', link: 'socials' },
+    // { title: 'Abonnements', link: 'abonnements' },
+    // { title: 'Les cours', link: 'cours' },
+  ];
 
-	return (
-		<Box
-			as={'header'}
-			w={'full'}
-			position={'fixed'}
-			zIndex={10}
-			backgroundColor="rgba(254, 252, 191, 0.7)"
-			backdropFilter="saturate(180%) blur(5px)">
-			<HStack
-				padding={'4'}
-				h={'72px'}
-				justify={'space-between'}
-				maxW={'1440'}
-				alignItems={'center'}
-				fontWeight={'600'}>
-				<Link href={'/'} _hover={{ textDecoration: 'none' }}>
-					<HStack alignItems={'end'}>
-						<Image
-							src={'/miches_blanc_no_text.png'}
-							alt={'bread'}
-							width={65}
-							height={50}
-						/>
-						<Heading
-							as={'h1'}
-							display={['none', 'none', 'none', 'inline-block']}
-							fontSize="lg">
-							Les Miches à Micha
-						</Heading>
-					</HStack>
-				</Link>
-				{/* <HStack
-					as={'nav'}
-					spacing={8}
-					// hideBelow={'660px'}
-					alignItems={'center'}>
-					{Links.map((link) => (
-						<Link key={link.link} href={`/${link.link}`} fontSize={'lg'}>
-							{link.title}
-						</Link>
-					))} */}
-				{/* <Link href={`/cart`} height={'16px'}>
+  return (
+    <Box
+      as={'header'}
+      w={'full'}
+      position={'fixed'}
+      zIndex={10}
+      backgroundColor="rgba(254, 252, 191, 0.7)"
+      backdropFilter="saturate(180%) blur(5px)">
+      <HStack
+        padding={'4'}
+        h={'72px'}
+        justify={'space-between'}
+        maxW={'1440'}
+        alignItems={'center'}
+        fontWeight={'600'}>
+        <Link href={'/'} _hover={{ textDecoration: 'none' }}>
+          <HStack alignItems={'end'}>
+            <Image
+              src={'/miches_blanc_no_text.png'}
+              alt={'bread'}
+              width={65}
+              height={50}
+            />
+            <Heading
+              as={'h1'}
+              display={['none', 'none', 'none', 'inline-block']}
+              fontSize="lg">
+              Les Miches à Micha
+            </Heading>
+          </HStack>
+        </Link>
+        <HStack
+          as={'nav'}
+          spacing={8}
+          // hideBelow={'660px'}
+          alignItems={'center'}>
+          {Links.map((link) => (
+            <Link key={link.link} href={`/${link.link}`} fontSize={'lg'} h={6}>
+              <Icon as={CgIcecream} w={6} h={6} />
+              {/* {link.title} */}
+            </Link>
+          ))}
+          {/* <Link href={`/cart`} height={'16px'}>
 						<Icon as={CgShoppingCart} />
 					</Link> */}
-				{/* </HStack> */}
-				{/* <HStack as={'nav'} spacing={8} alignItems={'center'} hideFrom={'660px'}>
+        </HStack>
+        {/* <HStack as={'nav'} spacing={8} alignItems={'center'} hideFrom={'660px'}>
 					<Link href={`/cart`} height={'16px'}>
 						<Icon as={CgShoppingCart} />
 					</Link>
@@ -90,9 +91,9 @@ const Header = () => {
 						</Portal>
 					</Menu>
 				</HStack> */}
-			</HStack>
-		</Box>
-	);
+      </HStack>
+    </Box>
+  );
 };
 
 export default Header;
