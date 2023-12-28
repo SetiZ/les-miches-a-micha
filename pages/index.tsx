@@ -13,6 +13,8 @@ import {
 } from '@chakra-ui/react';
 import { Image, Link } from '@chakra-ui/next-js';
 import trusted from '@/data/trusted.json';
+import SocialButton, { Events } from '@/components/socialButton';
+import { CgSoftwareDownload } from 'react-icons/cg';
 export default function Home() {
   // if (typeof window !== 'undefined') {
   // 	window.location.replace('/socials');
@@ -39,6 +41,25 @@ export default function Home() {
             dégustation, créativité. . . Ici, tout est fait main, à partir de
             matières premières bio, locales et nobles, pour vous proposer des
             pains savoureux, sains et originaux.
+          </Container>
+          <Container maxW="80vw" textAlign={'center'}>
+            <Heading as="h3" size="lg" textAlign={'center'}>
+              Retrouvez notre carte
+            </Heading>
+            <VStack align={'center'} paddingTop={16}>
+              <SocialButton
+                text={'.:*~*:_:*~* !! CARTE DES FÊTES 2023 !! *~*:_:*~*:.'}
+                link={'carte_fetes_2023.pdf'}
+                event={Events.Christmas}
+                options={{ download: true }}
+              />
+              <SocialButton
+                text={'Télécharger le menu'}
+                link={'les-miches-a-micha.pdf'}
+                icon={<CgSoftwareDownload />}
+                options={{ download: true }}
+              />
+            </VStack>
           </Container>
           <Container maxW="80vw" textAlign={'center'}>
             <Heading as="h3" size="lg" textAlign={'center'}>
