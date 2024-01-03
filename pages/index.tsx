@@ -26,7 +26,13 @@ export default function Home() {
       <ContainerBox>
         {/* <Heading as={'h1'} textAlign={'center'}>Les Miches à Micha</Heading> */}
         <Flex as={'h1'} justify={'center'}>
-          <Image src={'/miches_blanc.png'} alt={''} width={260} height={260} />
+          <Image
+            src={'/miches_blanc.png'}
+            alt={''}
+            width={260}
+            height={260}
+            loading="eager"
+          />
         </Flex>
         <Heading as="h2" size="xl" textAlign={'center'}>
           Micro-fournil artisanal
