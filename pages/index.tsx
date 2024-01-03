@@ -12,9 +12,10 @@ import {
   WrapItem,
 } from '@chakra-ui/react';
 import { Image, Link } from '@chakra-ui/next-js';
-import trusted from '@/data/trusted.json';
-import SocialButton, { Events } from '@/components/socialButton';
 import { CgSoftwareDownload } from 'react-icons/cg';
+import SocialButton, { Events } from '@/components/socialButton';
+import trusted from '@/data/trusted.json';
+
 export default function Home() {
   // if (typeof window !== 'undefined') {
   // 	window.location.replace('/socials');
@@ -91,29 +92,6 @@ export default function Home() {
               </Wrap>
             )}
           </Container>
-          {/* <Container maxW="80vw" textAlign={'center'}>
-						{!data && <p>Loading...</p>}
-						{error && <p>Loading failed : {error}</p>}
-						{data && (
-							<SimpleGrid minChildWidth="120px" spacing="40px">
-								{data.products.map((prod: any, index: any) => (
-									<Box key={index} p="5" maxW="320px" borderWidth="1px">
-										{prod.title}
-										<AspectRatio maxW="260px" ratio={1}>
-											<Image
-												src={'/miches_blanc.png'}
-												alt={''}
-												width={260}
-												height={260}
-												borderRadius="md"
-											/>
-										</AspectRatio>
-										{prod.prix}€ - {prod.poids}gr
-									</Box>
-								))}
-							</SimpleGrid>
-						)}
-					</Container> */}
           <Container maxW="80vw" textAlign={'center'}>
             <Heading as="h3" size="md" textAlign={'center'}>
               Plus d’informations ou pour passer commande

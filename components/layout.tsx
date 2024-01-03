@@ -31,7 +31,8 @@ export default function Layout({ children }: LayoutProps) {
         minH={'calc(100vh - calc(100vh - 100%))'}
         // h={'100vh'}
         // maxW={'1440'}
-        bgImage={'url("bread-bg.jpeg")'}
+        // comment workaround
+        bgImage='/**/url("https://img.perceptpixel.com/mehdi-edwrkbpj/f_auto,q_auto:eco/photo-1523294587484-bae6cc870010.jpeg")'
         bgAttachment={'fixed'}
         bgPos={'center'}
         bgRepeat={'no-repeat'}

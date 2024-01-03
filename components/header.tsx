@@ -42,7 +42,7 @@ const Header = () => {
           <HStack alignItems={'end'}>
             <Image
               src={'/miches_blanc_no_text.png'}
-              alt={'bread'}
+              alt={'les miches à micha'}
               width={65}
               height={50}
             />
@@ -60,8 +60,14 @@ const Header = () => {
           // hideBelow={'660px'}
           alignItems={'center'}>
           {Links.map((link) => (
-            <Link key={link.link} href={`/${link.link}`} fontSize={'lg'} h={6}>
-              <Icon as={CgIcecream} w={6} h={6} />
+            <Link key={link.link} href={`/${link.link}`}>
+              {/* <Icon as={CgIcecream} w={6} h={6} /> */}
+              <Image
+                src={'/breads.png'}
+                alt={'social links'}
+                width={50}
+                height={50}
+              />
               {/* {link.title} */}
             </Link>
           ))}
