@@ -55,8 +55,8 @@ export default function Home() {
             </Heading>
             <VStack align={'center'} paddingTop={16}>
               <SocialButton
-                text={'.: !! CARTE DES FÊTES 2023 !! :.'}
-                link={'carte_fetes_2023.pdf'}
+                text={'.: !! CARTE ÉPIPHANIE 2024 !! :.'}
+                link={'epiphanie_2024.pdf'}
                 event={Events.Christmas}
                 options={{ download: true }}
               />
