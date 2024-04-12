@@ -1,5 +1,8 @@
 import ContainerBox from '@/components/containerBox';
 import Layout from '@/components/layout';
+import SocialButton, { Events } from '@/components/socialButton';
+import trusted from '@/data/trusted.json';
+import { Image, Link } from '@chakra-ui/next-js';
 import {
   Box,
   Container,
@@ -11,10 +14,7 @@ import {
   Wrap,
   WrapItem,
 } from '@chakra-ui/react';
-import { Image, Link } from '@chakra-ui/next-js';
 import { CgSoftwareDownload } from 'react-icons/cg';
-import SocialButton, { Events } from '@/components/socialButton';
-import trusted from '@/data/trusted.json';
 
 export default function Home() {
   // if (typeof window !== 'undefined') {
@@ -79,7 +79,10 @@ export default function Home() {
                     <Box w="200px">
                       {trust.order === 'pre' ? (
                         <>
-                          <Link href={trust.url} target="_blank">
+                          <Link
+                            href={trust.url}
+                            target="_blank"
+                            textDecoration={'underline'}>
                             {trust.title}
                           </Link>
                           , {trust.description}
@@ -87,7 +90,10 @@ export default function Home() {
                       ) : (
                         <>
                           {trust.description}{' '}
-                          <Link href={trust.url} target="_blank">
+                          <Link
+                            href={trust.url}
+                            target="_blank"
+                            textDecoration={'underline'}>
                             {trust.title}
                           </Link>
                         </>

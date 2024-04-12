@@ -1,7 +1,7 @@
 import { Flex } from '@chakra-ui/react';
 import Head from 'next/head';
-import Header from './header';
 import Footer from './footer';
+import Header from './header';
 
 type LayoutProps = {
   children: React.ReactNode;
