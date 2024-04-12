@@ -1,5 +1,5 @@
-import path from 'path';
 import { promises as fs } from 'fs';
+import path from 'path';
 
 export default async function handler(req: any, res: any) {
   //Find the absolute path of the json directory

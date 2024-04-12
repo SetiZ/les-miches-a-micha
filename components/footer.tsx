@@ -1,4 +1,4 @@
-import { Box, Button, Text, Stack } from '@chakra-ui/react';
+import { Box, Button, Stack, Text } from '@chakra-ui/react';
 import { CgInstagram } from 'react-icons/cg';
 
 const Footer = () => {
