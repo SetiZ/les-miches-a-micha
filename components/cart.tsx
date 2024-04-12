@@ -1,25 +1,25 @@
 import { useCartStore } from '@/utils/store';
-import { CalendarIcon, EmailIcon, InfoIcon, PhoneIcon } from '@chakra-ui/icons';
 import {
-  Box,
-  Button,
-  Divider,
   Drawer,
   DrawerBody,
-  DrawerCloseButton,
-  DrawerContent,
   // DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
-  HStack,
-  Heading,
+  DrawerContent,
+  DrawerCloseButton,
   Input,
+  Button,
+  Box,
+  HStack,
+  VStack,
+  Stack,
+  Divider,
   InputGroup,
   InputLeftElement,
-  Stack,
+  Heading,
   Textarea,
-  VStack,
 } from '@chakra-ui/react';
+import { PhoneIcon, EmailIcon, InfoIcon, CalendarIcon } from '@chakra-ui/icons';
 import { FormEvent } from 'react';
 interface CartProps {
   isOpen: boolean;
@@ -59,10 +59,9 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
     <Drawer isOpen={isOpen} onClose={onClose} size={'lg'}>
       <DrawerOverlay />
       <DrawerContent>
-        // backgroundColor="rgba(254, 252, 191, 0.7)" //
-        backdropFilter="saturate(180%) blur(5px)"
         <DrawerCloseButton />
         <DrawerHeader>Panier</DrawerHeader>
+
         <DrawerBody>
           <VStack spacing={4}>
             {cart.map((item) => (
