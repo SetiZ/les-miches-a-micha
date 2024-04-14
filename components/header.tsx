@@ -1,6 +1,6 @@
 import Cart from '@/components/cart';
 import { useCartStore } from '@/utils/store';
-import { HamburgerIcon } from '@chakra-ui/icons';
+// import { HamburgerIcon } from '@chakra-ui/icons';
 import { Image, Link } from '@chakra-ui/next-js';
 import {
   Badge,
@@ -17,7 +17,8 @@ import {
   Portal,
   useDisclosure,
 } from '@chakra-ui/react';
-import { CgIcecream, CgShoppingCart } from 'react-icons/cg';
+import { CgShoppingCart } from 'react-icons/cg';
+import { useEffect, useState } from 'react';
 
 const Header = () => {
   const Links = [
@@ -29,9 +30,13 @@ const Header = () => {
   ];
 
   // const totalItems = 3;
+  //
+  const [hydrated, setHydrated] = useState<boolean>(false);
+  useEffect(() => {
+    setHydrated(true);
+  }, []);
 
   const { count: cartCount } = useCartStore();
-  console.log(cartCount());
 
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -85,7 +90,7 @@ const Header = () => {
           ))}
           <Box pos="relative" as="button" height={'16px'} onClick={onOpen}>
             <Icon aria-label="Panier" as={CgShoppingCart} boxSize={8} />
-            {cartCount() > 0 ? (
+            {hydrated && cartCount() > 0 ? (
               <Badge
                 colorScheme="red"
                 pos="absolute"
