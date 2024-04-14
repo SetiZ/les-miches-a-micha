@@ -1,7 +1,7 @@
-import { Flex } from "@chakra-ui/react";
-import Head from "next/head";
-import Footer from "./footer";
-import Header from "./header";
+import { Flex } from '@chakra-ui/react';
+import Head from 'next/head';
+import Footer from './footer';
+import Header from './header';
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -25,23 +25,22 @@ export default function Layout({ children }: LayoutProps) {
       </Head>
       <Header />
       <Flex
-        as={"main"}
+        as={'main'}
         m={0}
         p={0}
         paddingTop={20}
         // paddingBottom={16}
         paddingBottom={2}
         paddingInline={4}
-        minH={"calc(100vh - calc(100vh - 100%))"}
+        minH={'calc(100vh - calc(100vh - 100%))'}
         // h={'100vh'}
         // maxW={'1440'}
         bgImage='url("bread-bg.jpeg")'
-        bgAttachment={"fixed"}
-        bgPos={"center"}
-        bgRepeat={"no-repeat"}
-        bgSize={"cover"}
-        justifyContent={"center"}
-      >
+        bgAttachment={'fixed'}
+        bgPos={'center'}
+        bgRepeat={'no-repeat'}
+        bgSize={'cover'}
+        justifyContent={'center'}>
         {children}
       </Flex>
       <Footer />
