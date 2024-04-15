@@ -5,13 +5,18 @@ export const config = {
 };
 
 export default async function handler() {
+  const imageData = await fetch(
+    new URL('./miches_noir.png', import.meta.url),
+  ).then((res) => res.arrayBuffer());
+
   return new ImageResponse(
     <div
       style={{
         display: 'flex',
-        fontSize: 40,
+        fontSize: 30,
         color: 'black',
         background: '#fefcbfb3',
+        backgroundImage: 'linear-gradient(to bottom, #fefcbf, #B7791F)',
         width: '100%',
         height: '100%',
         padding: '50px 200px',
@@ -21,12 +26,12 @@ export default async function handler() {
         flexDirection: 'column',
       }}>
       <img
-        src="https://les-miches-a-micha.vercel.app/miches_noir.png"
+        src={imageData && (imageData as never as string)}
         alt="les miches a micha"
-        width="500"
-        height="410"
+        width="50%"
       />
-      <p>N’allez plus à la boulangerie – c’est elle qui vient à vous !</p>
+      <p>N’allez plus à la boulangerie</p>
+      <p>c’est elle qui vient à vous !</p>
     </div>,
     {
       width: 1200,
