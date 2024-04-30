@@ -1,37 +1,36 @@
 import { useCartStore } from '@/utils/store';
 import {
-  Drawer,
-  DrawerBody,
-  // DrawerFooter,
-  DrawerHeader,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
-  Input,
-  Button,
-  Grid,
-  GridItem,
-  Box,
-  HStack,
-  VStack,
-  Text,
-  Stack,
-  Divider,
-  Center,
-  InputGroup,
-  InputLeftElement,
-  Heading,
-  Textarea,
-  IconButton,
-} from '@chakra-ui/react';
-import {
-  PhoneIcon,
+  AddIcon,
+  CalendarIcon,
   EmailIcon,
   InfoIcon,
-  CalendarIcon,
   MinusIcon,
-  AddIcon,
+  PhoneIcon,
 } from '@chakra-ui/icons';
+import {
+  Box,
+  Button,
+  Center,
+  Divider,
+  Drawer,
+  DrawerBody,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerHeader,
+  DrawerOverlay,
+  Grid,
+  GridItem,
+  HStack,
+  Heading,
+  IconButton,
+  Input,
+  InputGroup,
+  InputLeftElement,
+  Stack,
+  Text,
+  Textarea,
+  VStack,
+} from '@chakra-ui/react';
 import { FormEvent } from 'react';
 
 interface CartProps {
@@ -115,7 +114,11 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                     </Grid>
                   );
                 })}
-                <Text alignSelf={'end'}>total: {total()} €</Text>
+                <Text alignSelf={'end'}>Total: {total()} €</Text>
+                <Text alignSelf={'end'}>
+                  Ce total est à titre indicatif. Des frais de Livraison
+                  pourront être rajoutés.
+                </Text>
               </>
             )}
             {/* <Divider my={8} borderColor={"gray.600"} /> */}
@@ -125,6 +128,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
             <form onSubmit={sendOrder}>
               <Stack spacing={4}>
                 <Heading size={'md'}>Veuillez rentrer vos informations</Heading>
+                <Text>Un email vous sera par la suite pour les détails</Text>
                 <InputGroup>
                   <InputLeftElement pointerEvents="none">
                     <InfoIcon color="gray.600" />
@@ -163,9 +167,9 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                     <CalendarIcon color="gray.600" />
                   </InputLeftElement>
                   <Input
-                    type="date"
+                    type="datetime-local"
                     name="date"
-                    placeholder="date"
+                    placeholder="date et heure"
                     borderColor={'gray.600'}
                   />
                 </InputGroup>

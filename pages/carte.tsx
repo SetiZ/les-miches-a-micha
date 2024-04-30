@@ -34,11 +34,11 @@ export default function Carte() {
         </Heading> */}
         {carte && (
           <SimpleGrid minChildWidth="260px" spacing="20" paddingTop={16}>
-            {carte.products.map((prod: any, index: any) => {
+            {carte.products.map((prod: any) => {
               return (
                 prod.visible && (
                   <ProductBox
-                    key={index}
+                    key={prod.id}
                     id={prod.id}
                     title={prod.title}
                     category={prod.category}

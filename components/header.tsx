@@ -17,8 +17,8 @@ import {
   Portal,
   useDisclosure,
 } from '@chakra-ui/react';
-import { CgShoppingCart } from 'react-icons/cg';
 import { useEffect, useState } from 'react';
+import { CgShoppingCart } from 'react-icons/cg';
 
 const Header = () => {
   const Links = [
