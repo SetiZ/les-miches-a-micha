@@ -2,6 +2,7 @@ import ContainerBox from '@/components/containerBox';
 import Layout from '@/components/layout';
 import ProductBox from '@/components/product';
 import carte from '@/data/carte.json';
+import { supabase } from '@/utils/api';
 import { imageLoader, supabaseLoader } from '@/utils/image-loader';
 import { Image } from '@chakra-ui/next-js';
 import {
@@ -13,9 +14,54 @@ import {
   Text,
   WrapItem,
 } from '@chakra-ui/react';
+import { QueryData } from '@supabase/supabase-js';
 import NextImage from 'next/image';
+import { useState, useEffect } from 'react';
 
 export default function Carte() {
+  const productsWithCategoryQuery = supabase
+    .from('product')
+    .select(`
+        id,
+        name,
+        description,
+        price,
+        weight,
+        visible,
+        category (id, name)
+      `)
+    .eq('visible', true);
+  type ProductsWithCategories = QueryData<typeof productsWithCategoryQuery>;
+
+  const [products, setProducts] = useState<ProductsWithCategories>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  async function fetchProducts() {
+    // const productsWithCategoryQuery = supabase
+    //   .from('product')
+    //   .select(`
+    //     id,
+    //     name,
+    //     description,
+    //     price,
+    //     weight,
+    //     visible,
+    //     category (id, name)
+    //   `)
+    //   .eq('visible', true)
+    // type ProductsWithCategories = QueryData<typeof productsWithCategoryQuery>
+    const { data, error } = await productsWithCategoryQuery;
+    setProducts(data as ProductsWithCategories);
+    setLoading(false);
+    if (error) throw error;
+  }
+
+  console.log(products);
+
   return (
     <Layout>
       <ContainerBox>
