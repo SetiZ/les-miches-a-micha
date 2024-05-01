@@ -128,7 +128,10 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
             <form onSubmit={sendOrder}>
               <Stack spacing={4}>
                 <Heading size={'md'}>Veuillez rentrer vos informations</Heading>
-                <Text>Un email vous sera par la suite pour les détails</Text>
+                <Text>
+                  Un email vous sera envoyé par la suite pour le paiement et la
+                  livraison
+                </Text>
                 <InputGroup>
                   <InputLeftElement pointerEvents="none">
                     <InfoIcon color="gray.600" />

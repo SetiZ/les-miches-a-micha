@@ -4,6 +4,7 @@ import { AddIcon } from '@chakra-ui/icons';
 import { Image } from '@chakra-ui/next-js';
 import { Box, Button, Tag, Text } from '@chakra-ui/react';
 import NextImage from 'next/image';
+import { useEffect, useState } from 'react';
 
 interface ProductProps {
   id: number;
@@ -11,7 +12,7 @@ interface ProductProps {
   title: string;
   category: string;
   prix: number;
-  poids: number;
+  poids: number | null;
 }
 
 const ProductBox = ({
@@ -25,6 +26,14 @@ const ProductBox = ({
   const { add: handleAddToCart } = useCartStore();
   // const product = {id, name, price} as Product;
 
+  const [imgSrc, set_imgSrc] = useState(images);
+
+  useEffect(() => {
+    set_imgSrc(images);
+  }, [images]);
+
+  const fallbackSrc = '0000_miches.png';
+
   return (
     <Box
       bgColor="white"
@@ -37,12 +46,22 @@ const ProductBox = ({
         as={NextImage}
         loader={supabaseLoader}
         loading="lazy"
-        src={images}
+        // src={images}
+        src={imgSrc}
         alt={''}
         width={260}
         height={260}
         borderTopRadius="md"
         placeholder="empty"
+        onLoadingComplete={(result) => {
+          if (result.naturalWidth === 0) {
+            // Broken image
+            set_imgSrc(fallbackSrc);
+          }
+        }}
+        onError={() => {
+          set_imgSrc(fallbackSrc);
+        }}
         objectFit="cover"
       />
       {/* </Box> */}
@@ -58,7 +77,7 @@ const ProductBox = ({
         <Tag colorScheme="yellow">{category}</Tag>
         <Box display="flex" alignItems="baseline" gap={2}>
           <Text>{prix}€</Text>
-          <Text>{poids}gr</Text>
+          {poids && <Text>{poids}gr</Text>}
         </Box>
         <Box display="flex" alignItems="baseline" gap={2} mt={4}>
           <Button
