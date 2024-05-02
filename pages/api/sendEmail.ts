@@ -10,7 +10,7 @@ export default async function handler(
 ) {
 
   const { data, error } = await resend.emails.send({
-    from: 'Les miches <lesmichesamicha@gmail.com>',
+    from: 'Les Miches <onboarding@resend.dev>',
     to: ['lesmichesamicha@gmail.com'],
     subject: `Commande du ${new Date()}`,
     react: EmailTemplate(JSON.parse(req.body)),
