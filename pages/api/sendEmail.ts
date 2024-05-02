@@ -8,7 +8,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
-  console.log('req', JSON.parse(req.body));
+
   const { data, error } = await resend.emails.send({
     from: 'Les miches <lesmichesamicha@gmail.com>',
     to: ['lesmichesamicha@gmail.com'],

@@ -75,7 +75,7 @@ export default function Home() {
             {trusted && (
               <Wrap spacing="30px" paddingTop={8} justify={'center'}>
                 {trusted.trusted.map((trust) => (
-                  <WrapItem key={trust.title}>
+                  <WrapItem key={trust.id}>
                     <Box w="200px">
                       {trust.order === 'pre' ? (
                         <>

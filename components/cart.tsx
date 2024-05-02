@@ -40,7 +40,7 @@ interface CartProps {
 }
 
 const Cart = ({ isOpen, onClose }: CartProps) => {
-  const { cart, total, count, add, remove } = useCartStore();
+  const { cart, total, count, add, remove, removeAll } = useCartStore();
   const toast = useToast()
 
   function sendOrder(e: FormEvent<HTMLFormElement>) {
@@ -74,6 +74,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
           isClosable: true,
         })
       }
+      removeAll();
       onClose();
     });
   }
