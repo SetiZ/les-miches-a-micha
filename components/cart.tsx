@@ -30,6 +30,7 @@ import {
   Text,
   Textarea,
   VStack,
+  useToast,
 } from '@chakra-ui/react';
 import { FormEvent } from 'react';
 
@@ -40,6 +41,7 @@ interface CartProps {
 
 const Cart = ({ isOpen, onClose }: CartProps) => {
   const { cart, total, count, add, remove } = useCartStore();
+  const toast = useToast()
 
   function sendOrder(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -47,12 +49,13 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
 
     const postData = async () => {
       const data = {
-        nom: formData.get('nom'),
-        tel: formData.get('tel'),
+        name: formData.get('nom'),
+        phoneNumber: formData.get('tel'),
         email: formData.get('email'),
         date: formData.get('date'),
         comment: formData.get('comment'),
-        // totalCart,
+        total: total(),
+        cart: cart,
       };
 
       const response = await fetch('/api/sendEmail', {
@@ -62,8 +65,16 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
       return response.json();
     };
     postData().then((data) => {
-      alert(data.message);
-      // onClose();
+      if (data.id) {
+        toast({
+          title: 'Commande envoyé !',
+          description: "Vous allez bientot recevoir un email de confirmation",
+          status: 'success',
+          duration: 9000,
+          isClosable: true,
+        })
+      }
+      onClose();
     });
   }
 
@@ -108,13 +119,13 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                         </HStack>
                       </GridItem>
                       <GridItem colEnd={7} colSpan={2} justifySelf={'end'}>
-                        {item.price * item.count} €
+                        {(item.price * item.count).toFixed(2)} €
                       </GridItem>
                       {/* </HStack> */}
                     </Grid>
                   );
                 })}
-                <Text alignSelf={'end'}>Total: {total()} €</Text>
+                <Text alignSelf={'end'}>Total: {total().toFixed(2)} €</Text>
                 <Text alignSelf={'end'}>
                   Ce total est à titre indicatif. Des frais de Livraison
                   pourront être rajoutés.

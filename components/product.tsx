@@ -76,7 +76,7 @@ const ProductBox = ({
         </Text>
         <Tag colorScheme="yellow">{category}</Tag>
         <Box display="flex" alignItems="baseline" gap={2}>
-          <Text>{prix}€</Text>
+          <Text>{prix.toFixed(2)}€</Text>
           {poids && <Text>{poids}gr</Text>}
         </Box>
         <Box display="flex" alignItems="baseline" gap={2} mt={4}>

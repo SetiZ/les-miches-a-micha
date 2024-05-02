@@ -8,12 +8,12 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
-  console.log('req', req.body);
+  console.log('req', JSON.parse(req.body));
   const { data, error } = await resend.emails.send({
-    from: 'Acme <onboarding@resend.dev>',
-    to: ['funkysetiz@gmail.com'],
+    from: 'Les miches <lesmichesamicha@gmail.com>',
+    to: ['lesmichesamicha@gmail.com'],
     subject: `Commande du ${new Date()}`,
-    react: EmailTemplate({ firstName: 'John' }),
+    react: EmailTemplate(JSON.parse(req.body)),
     text: 'coucou',
   });
 
