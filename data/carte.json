@@ -319,6 +319,146 @@
       "images": "702_pistache.jpeg",
       "category": "Doux mélanges",
       "visible": true
+    },
+    {
+      "id": 33,
+      "title": "Grignette",
+      "prix": 3,
+      "poids": null,
+      "description": "Une baguette de tradition entière, généreusement fourrée, l’idéal pour vos apéritifs – compter 1⁄2 par personne. Passez-les simplement 3 minutes au four puis découpez-les aux ciseaux en bouchées avant de servir, elles ne feront pas long feu ! Chorizo/paprika fumé, lardons, olives/herbes de Provence, tomates sé- chées/pignons de pin, pomme/camembert, chèvre/miel, pesto au basilic frais du jardin, mozzarella ou raclette grillée/cumin. . . Possibilités infinies !",
+      "images": "801_grignette.png",
+      "category": "Apéritif",
+      "visible": true
+    },
+    {
+      "id": 34,
+      "title": "Préfou",
+      "prix": 4,
+      "poids": 300,
+      "description": "pur beurre aillé",
+      "images": "802_prefou.png",
+      "category": "Apéritif",
+      "visible": true
+    },
+    {
+      "id": 35,
+      "title": "Focaccia",
+      "prix": 22,
+      "poids": 1500,
+      "description": "Une plaque de 1,5 kg, avec du romarin incorporé dans une pâte fondante et épaisse ; tomates cerises ou séchées, mozzarella, jambon de Parme sur de- mande (supp. 3€).",
+      "images": "803_focaccia.png",
+      "category": "Apéritif",
+      "visible": true
+    },
+    {
+      "id": 36,
+      "title": "Samoussas",
+      "prix": 1.25,
+      "poids": null,
+      "description": "Triangles de feuille de brick maison, sans huile de palme, pliés à la main, far- cis et frits. Différentes saveurs : légumes croquants et curry, chèvre-épinard, crevette, poulet-coco, boeuf... Parfait pour l’apéritif !",
+      "images": "",
+      "category": "Apéritif",
+      "visible": true
+    },
+    {
+      "id": 37,
+      "title": "Crackers de levain",
+      "prix": 4,
+      "poids": 150,
+      "description": "Plutôt que de servir des habituels biscuits apéritifs, pourquoi ne pas vous laisser surprendre par cette recette saine, digeste et savoureuse? Réalisés exclusivement à partir de Zoë, le levain de blé de 5 ans maintenant, et agré- mentés de fleur de sel et d’herbes de Provence, qui équilibreront l’acidité délicate et caractéristique du levain, ils se garderont sans soucis trois jours dans leur joli sachet !",
+      "images": "",
+      "category": "Apéritif",
+      "visible": true
+    },
+    {
+      "id": 38,
+      "title": "Pain de mie, nature",
+      "prix": 4,
+      "poids": 500,
+      "description": "Façonné en pavé pour des canapés, ou bombé pour des croque-monsieur.",
+      "images": "",
+      "category": "Autres gourmandises",
+      "visible": true
+    },
+    {
+      "id": 39,
+      "title": "Pain de mie, aux graines",
+      "prix": 6,
+      "poids": 500,
+      "description": "Pour plus de caractère.",
+      "images": "",
+      "category": "Autres gourmandises",
+      "visible": true
+    },
+    {
+      "id": 40,
+      "title": "Pain de mie, pointe de seigle et figues séchée",
+      "prix": 6,
+      "poids": 500,
+      "description": "fondant, légèrement sucré, savoureux et délicieux pour des toasts ou des canapés raffinés !",
+      "images": "",
+      "category": "Autres gourmandises",
+      "visible": true
+    },
+    {
+      "id": 41,
+      "title": "Bretzels",
+      "prix": 1,
+      "poids": null,
+      "description": "nature, au gros sel ou au sésame",
+      "images": "903_bretzels.png",
+      "category": "Autres gourmandises",
+      "visible": true
+    },
+    {
+      "id": 42,
+      "title": "Buns",
+      "prix": 1.5,
+      "poids": null,
+      "description": "Légèrement briochés, pour les burgers maison. Sésame, blanc ou noir, en top- ping.",
+      "images": "904b_buns.jpeg",
+      "category": "Autres gourmandises",
+      "visible": true
+    },
+    {
+      "id": 43,
+      "title": "Mini-buns",
+      "prix": 0.7,
+      "poids": null,
+      "description": "Légèrement briochés, pour les burgers maison. Sésame, blanc ou noir, en top- ping.",
+      "images": "904_buns.jpeg",
+      "category": "Autres gourmandises",
+      "visible": true
+    },
+    {
+      "id": 44,
+      "title": "Pâte à pizza",
+      "prix": 4.5,
+      "poids": 500,
+      "description": "Il n’y a plus qu’à l’étaler, la garnir et la réchauffer ! Livrée fraîchement pétrie pour une utilisation dans la journée, ou surgelée.",
+      "images": "",
+      "category": "Autres gourmandises",
+      "visible": true
+    },
+    {
+      "id": 45,
+      "title": "Pain sans gluten",
+      "prix": 8,
+      "poids": 600,
+      "description": "Confectionné exclusivement avec des farines dépourvues de gluten – riz, pois chiche, sarrasin, quinoa ; mélange maison de graines toastées.",
+      "images": "906_ss_gluten.jpeg",
+      "category": "Autres gourmandises",
+      "visible": true
+    },
+    {
+      "id": 46,
+      "title": "Galettes des rois",
+      "prix": 20,
+      "poids": null,
+      "description": "Pâte feuilletée 100% maison, beurre AOP de Charente ; la frangipane est pure crème d’amandes (pas d’arômes artificiels), amandes bio, avec une pointe d’éclats d’amandes torréfiées pour la texture.",
+      "images": "907_galette_rois.png",
+      "category": "Autres gourmandises",
+      "visible": true
     }
   ]
 }
