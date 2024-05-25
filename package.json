@@ -18,6 +18,7 @@
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
+    "@react-email/render": "^0.0.15",
     "@types/node": "^20.11.5",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
@@ -28,6 +29,7 @@
     "eslint-config-next": "^13.5.6",
     "framer-motion": "^10.18.0",
     "next": "13.4.7",
+    "nodemailer": "^6.9.13",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
@@ -37,6 +39,6 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.5.2",
-    "resend": "^3.2.0"
+    "@types/nodemailer": "^6.4.15"
   }
 }

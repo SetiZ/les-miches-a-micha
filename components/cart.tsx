@@ -41,7 +41,7 @@ interface CartProps {
 
 const Cart = ({ isOpen, onClose }: CartProps) => {
   const { cart, total, count, add, remove, removeAll } = useCartStore();
-  const toast = useToast()
+  const toast = useToast();
 
   function sendOrder(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -68,14 +68,14 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
       if (data.id) {
         toast({
           title: 'Commande envoyé !',
-          description: "Vous allez bientot recevoir un email de confirmation",
+          description: 'Vous allez bientot recevoir un email de confirmation',
           status: 'success',
           duration: 9000,
           isClosable: true,
-        })
+        });
+        removeAll();
+        onClose();
       }
-      removeAll();
-      onClose();
     });
   }
 
