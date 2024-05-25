@@ -33,9 +33,9 @@ export default async function handler(
 
   const info = await transporter.sendMail({
     from: 'Les Miches à Micha <lesmichesamicha@gmail.com>',
-    // to: ['lesmichesamicha@gmail.com'],
-    to: ['mehdi.fekih@gmail.com'],
-    subject: `Commande du ${new Date().toLocaleTimeString([], {
+    to: ['lesmichesamicha@gmail.com'],
+    // to: ['mehdi.fekih@gmail.com'],
+    subject: `Commande du ${new Date().toLocaleTimeString('fr-FR', {
       year: 'numeric',
       month: 'numeric',
       day: 'numeric',

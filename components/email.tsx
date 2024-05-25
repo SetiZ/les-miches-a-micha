@@ -35,7 +35,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
         <dd>{email}</dd>
         <dt>Date</dt>
         <dd>
-          {new Date(date).toLocaleTimeString([], {
+          {new Date(date).toLocaleTimeString('fr-FR', {
             year: 'numeric',
             month: 'numeric',
             day: 'numeric',
@@ -51,7 +51,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
         {cart.map((item) => (
           <tr key={item.id}>
             <td>
-              {new Date(date).toLocaleTimeString([], {
+              {new Date(date).toLocaleTimeString('fr-FR', {
                 year: 'numeric',
                 month: 'numeric',
                 day: 'numeric',
