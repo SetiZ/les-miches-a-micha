@@ -53,12 +53,11 @@ export default function Home() {
             <Heading as="h3" size="lg" textAlign={'center'}>
               Retrouvez notre carte
             </Heading>
-            <VStack align={'center'} paddingTop={16}>
+            <VStack align={'center'} paddingTop={8}>
               <SocialButton
-                text={'.: !! CARTE ÉPIPHANIE 2024 !! :.'}
-                link={'epiphanie_2024.pdf'}
-                event={Events.Christmas}
-                options={{ download: true }}
+                text={'Nos produits'}
+                link={'/carte'}
+                options={{ in: true }}
               />
               <SocialButton
                 text={'Télécharger le menu'}
