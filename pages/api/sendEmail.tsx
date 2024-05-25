@@ -32,9 +32,9 @@ export default async function handler(
   );
 
   const info = await transporter.sendMail({
-    from: 'Les Miches <lesmichesamicha@gmail.com>',
-    // to: ['lesmichesamicha@gmail.com'],
-    to: ['mehdi.fekih@gmail.com'],
+    from: 'Les Miches à Micha <lesmichesamicha@gmail.com>',
+    to: ['lesmichesamicha@gmail.com'],
+    // to: ['mehdi.fekih@gmail.com'],
     subject: `Commande du ${new Date().toLocaleTimeString([], {
       year: 'numeric',
       month: 'numeric',

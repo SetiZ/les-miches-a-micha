@@ -67,7 +67,7 @@
       "poids": null,
       "description": "Un pavé riche en graines, à la mie brune et au cœur tendre, entre farines de froment, d’orge et de seigle. Un ingrédient secret est ajouté lors du pétrissage, découvrez-le et gagnez une baguette de tradition !",
       "images": "301_viking.png",
-      "category": " autres pains spéciaux",
+      "category": "autres pains spéciaux",
       "visible": true
     },
     {
@@ -107,7 +107,7 @@
       "poids": null,
       "description": "La farine est obtenue là en broyant les grains de blé une seule fois sous une meule de pierre, plutôt que classiquement en les éclatant par des cylindres successifs. Respectueux des arômes céréaliers, cela permet de garder toutes les saveurs et les qualités du blé, que l’on retrouvera directement dans le pain.",
       "images": "401_tourte_meule.jpeg",
-      "category": "Farines anciennes, semences paysannes",
+      "category": "farines anciennes, semences paysannes",
       "visible": true
     },
     {
@@ -117,7 +117,7 @@
       "poids": null,
       "description": "Apparue il y a 5000 ans en Mésopotamie, cette variété ancestrale de blé n’a jamais été modifiée ou hybridée ; elle offre un pain noble, naturellement riche en minéraux et à la douce saveur de noisette.",
       "images": "402_khorasan.png",
-      "category": "Farines anciennes, semences paysannes",
+      "category": "farines anciennes, semences paysannes",
       "visible": true
     },
     {
@@ -127,7 +127,7 @@
       "poids": null,
       "description": "Riche en protéines, pauvre en gluten, aidant la digestion, à l’indice glycé- mique très bas, rempli de minéraux... une céréale ancienne et noble, qui donne un pavé parfumé, à la mie dorée et lumineuse et au parfum reconnais- sable entre tous de fruit sec toasté. Un pain d’exception.",
       "images": "403_petit_epeautre.png",
-      "category": "Farines anciennes, semences paysannes",
+      "category": "farines anciennes, semences paysannes",
       "visible": true
     },
     {
@@ -137,7 +137,7 @@
       "poids": null,
       "description": "Originaire du Gers, le blé rouge est une variété de blé rustique et ancienne qui avait quasiment disparue, pour être remise au goût du jour par quelques passionnés, sensibles à ses qualités boulangères, gustatives et nutritives, ex- cellentes.",
       "images": "",
-      "category": "Farines anciennes, semences paysannes",
+      "category": "farines anciennes, semences paysannes",
       "visible": true
     },
     {
@@ -147,7 +147,7 @@
       "poids": null,
       "description": "La Face Nord de la boulangerie ! 100% de seigle intégral, très riche en miné- raux et en fibres, naturellement pauvre en gluten, fabuleusement aromatique, aux saveurs uniques et puissantes. . . Une dominante douce de miel, d’épices et de caramel tout d’abord, puis des notes plus acides qui charpentent la sensation générale, une croûte dure et sombre qui cache une mie humide et fondante...",
       "images": "404_tourte_seigle.png",
-      "category": "Farines anciennes, semences paysannes",
+      "category": "farines anciennes, semences paysannes",
       "visible": true
     },
     {
@@ -157,7 +157,7 @@
       "poids": 500,
       "description": "",
       "images": "501_brioche.png",
-      "category": "Brioches",
+      "category": "brioches",
       "visible": true
     },
     {
@@ -167,7 +167,7 @@
       "poids": 550,
       "description": "",
       "images": "",
-      "category": "Brioches",
+      "category": "brioches",
       "visible": true
     },
     {
@@ -177,7 +177,7 @@
       "poids": 100,
       "description": "",
       "images": "",
-      "category": "Brioches",
+      "category": "brioches",
       "visible": true
     },
     {
@@ -187,7 +187,7 @@
       "poids": 150,
       "description": "",
       "images": "502_viennoise.png",
-      "category": "Brioches",
+      "category": "brioches",
       "visible": true
     },
     {
@@ -197,7 +197,7 @@
       "poids": 160,
       "description": "",
       "images": "",
-      "category": "Brioches",
+      "category": "brioches",
       "visible": true
     },
     {
@@ -207,7 +207,7 @@
       "poids": null,
       "description": "",
       "images": "503_pain_lait.png",
-      "category": "Brioches",
+      "category": "brioches",
       "visible": true
     },
     {
@@ -217,7 +217,7 @@
       "poids": null,
       "description": "",
       "images": "504_kanelbullar.png",
-      "category": "Brioches",
+      "category": "brioches",
       "visible": true
     },
     {
@@ -227,7 +227,7 @@
       "poids": 350,
       "description": "Délicieux pain moelleux avec une croûte croustillante et une mie tendre, proche de la brioche, c’est un pain traditionnel juif consommé lors du shab- bat. Sans produits laitiers, il peut être mangé en toutes occasions.",
       "images": "505_hallah.jpeg",
-      "category": "Brioches",
+      "category": "brioches",
       "visible": true
     },
     {
@@ -237,7 +237,7 @@
       "poids": 550,
       "description": "Brioche au beurre, tressée et originaire de Pologne, étymologiquement « grand-mère », fourrée ici avec une pâte à la cannelle et à la cardamome, rappelant celle des Kannelbullar scandinaves. Au choix, on pourra y ajouter également des amandes effilées ou du chocolat pour plus de gourmandise !",
       "images": "506_babka.jpeg",
-      "category": "Brioches",
+      "category": "brioches",
       "visible": true
     },
     {
@@ -247,7 +247,7 @@
       "poids": null,
       "description": "Galette briochée typiquement provençale, parfumée à l’eau de fleur d’oranger, réalisée pour le réveillon de Noël et faisant partie des 13 desserts traditionnels.",
       "images": "",
-      "category": "Brioches",
+      "category": "brioches",
       "visible": true
     },
     {
@@ -257,7 +257,7 @@
       "poids": null,
       "description": "",
       "images": "601_croissant.png",
-      "category": "Vinnoiseries",
+      "category": "viennoiseries",
       "visible": true
     },
     {
@@ -267,7 +267,7 @@
       "poids": null,
       "description": "trois barrettes de chocolat par pure gourmandise ico- noclaste",
       "images": "602_pain_choco.jpeg",
-      "category": "Vinnoiseries",
+      "category": "viennoiseries",
       "visible": true
     },
     {
@@ -277,7 +277,7 @@
       "poids": null,
       "description": "avec possibilité d’aromatiser au rhum",
       "images": "603_pain_raisin.png",
-      "category": "Vinnoiseries",
+      "category": "viennoiseries",
       "visible": true
     },
     {
@@ -287,7 +287,7 @@
       "poids": null,
       "description": "au feuilletage orthogonal, façon Cédric Grolet",
       "images": "604_suisse.jpeg",
-      "category": "Vinnoiseries",
+      "category": "viennoiseries",
       "visible": true
     },
     {
@@ -297,7 +297,7 @@
       "poids": null,
       "description": "Mini-croissants et pains au chocolat, pour le team-building lors des morning meetings en présentiel, ou pour soudoyer vos amis et les remercier de vous aider à déménager un samedi matin !",
       "images": "",
-      "category": "Vinnoiseries",
+      "category": "viennoiseries",
       "visible": true
     },
     {
@@ -327,7 +327,7 @@
       "poids": null,
       "description": "Une baguette de tradition entière, généreusement fourrée, l’idéal pour vos apéritifs – compter 1⁄2 par personne. Passez-les simplement 3 minutes au four puis découpez-les aux ciseaux en bouchées avant de servir, elles ne feront pas long feu ! Chorizo/paprika fumé, lardons, olives/herbes de Provence, tomates sé- chées/pignons de pin, pomme/camembert, chèvre/miel, pesto au basilic frais du jardin, mozzarella ou raclette grillée/cumin. . . Possibilités infinies !",
       "images": "801_grignette.png",
-      "category": "Apéritif",
+      "category": "apéritif",
       "visible": true
     },
     {
@@ -337,7 +337,7 @@
       "poids": 300,
       "description": "pur beurre aillé",
       "images": "802_prefou.png",
-      "category": "Apéritif",
+      "category": "apéritif",
       "visible": true
     },
     {
@@ -347,7 +347,7 @@
       "poids": 1500,
       "description": "Une plaque de 1,5 kg, avec du romarin incorporé dans une pâte fondante et épaisse ; tomates cerises ou séchées, mozzarella, jambon de Parme sur de- mande (supp. 3€).",
       "images": "803_focaccia.png",
-      "category": "Apéritif",
+      "category": "apéritif",
       "visible": true
     },
     {
@@ -357,7 +357,7 @@
       "poids": null,
       "description": "Triangles de feuille de brick maison, sans huile de palme, pliés à la main, far- cis et frits. Différentes saveurs : légumes croquants et curry, chèvre-épinard, crevette, poulet-coco, boeuf... Parfait pour l’apéritif !",
       "images": "",
-      "category": "Apéritif",
+      "category": "apéritif",
       "visible": true
     },
     {
@@ -367,7 +367,7 @@
       "poids": 150,
       "description": "Plutôt que de servir des habituels biscuits apéritifs, pourquoi ne pas vous laisser surprendre par cette recette saine, digeste et savoureuse? Réalisés exclusivement à partir de Zoë, le levain de blé de 5 ans maintenant, et agré- mentés de fleur de sel et d’herbes de Provence, qui équilibreront l’acidité délicate et caractéristique du levain, ils se garderont sans soucis trois jours dans leur joli sachet !",
       "images": "",
-      "category": "Apéritif",
+      "category": "apéritif",
       "visible": true
     },
     {
@@ -377,7 +377,7 @@
       "poids": 500,
       "description": "Façonné en pavé pour des canapés, ou bombé pour des croque-monsieur.",
       "images": "",
-      "category": "Autres gourmandises",
+      "category": "autres gourmandises",
       "visible": true
     },
     {
@@ -387,7 +387,7 @@
       "poids": 500,
       "description": "Pour plus de caractère.",
       "images": "",
-      "category": "Autres gourmandises",
+      "category": "autres gourmandises",
       "visible": true
     },
     {
@@ -397,7 +397,7 @@
       "poids": 500,
       "description": "fondant, légèrement sucré, savoureux et délicieux pour des toasts ou des canapés raffinés !",
       "images": "",
-      "category": "Autres gourmandises",
+      "category": "autres gourmandises",
       "visible": true
     },
     {
@@ -407,7 +407,7 @@
       "poids": null,
       "description": "nature, au gros sel ou au sésame",
       "images": "903_bretzels.png",
-      "category": "Autres gourmandises",
+      "category": "autres gourmandises",
       "visible": true
     },
     {
@@ -417,7 +417,7 @@
       "poids": null,
       "description": "Légèrement briochés, pour les burgers maison. Sésame, blanc ou noir, en top- ping.",
       "images": "904b_buns.jpeg",
-      "category": "Autres gourmandises",
+      "category": "autres gourmandises",
       "visible": true
     },
     {
@@ -427,7 +427,7 @@
       "poids": null,
       "description": "Légèrement briochés, pour les burgers maison. Sésame, blanc ou noir, en top- ping.",
       "images": "904_buns.jpeg",
-      "category": "Autres gourmandises",
+      "category": "autres gourmandises",
       "visible": true
     },
     {
@@ -437,7 +437,7 @@
       "poids": 500,
       "description": "Il n’y a plus qu’à l’étaler, la garnir et la réchauffer ! Livrée fraîchement pétrie pour une utilisation dans la journée, ou surgelée.",
       "images": "",
-      "category": "Autres gourmandises",
+      "category": "autres gourmandises",
       "visible": true
     },
     {
@@ -447,7 +447,7 @@
       "poids": 600,
       "description": "Confectionné exclusivement avec des farines dépourvues de gluten – riz, pois chiche, sarrasin, quinoa ; mélange maison de graines toastées.",
       "images": "906_ss_gluten.jpeg",
-      "category": "Autres gourmandises",
+      "category": "autres gourmandises",
       "visible": true
     },
     {
@@ -457,7 +457,7 @@
       "poids": null,
       "description": "Pâte feuilletée 100% maison, beurre AOP de Charente ; la frangipane est pure crème d’amandes (pas d’arômes artificiels), amandes bio, avec une pointe d’éclats d’amandes torréfiées pour la texture.",
       "images": "907_galette_rois.png",
-      "category": "Autres gourmandises",
+      "category": "autres gourmandises",
       "visible": true
     }
   ]

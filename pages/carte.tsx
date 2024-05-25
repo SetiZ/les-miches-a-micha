@@ -1,4 +1,5 @@
 import ContainerBox from '@/components/containerBox';
+import { Filter } from '@/components/filter';
 import Layout from '@/components/layout';
 import ProductBox from '@/components/product';
 import carte from '@/data/carte.json';
@@ -14,8 +15,31 @@ import {
   WrapItem,
 } from '@chakra-ui/react';
 import NextImage from 'next/image';
+import { useState } from 'react';
 
 export default function Carte() {
+  const [filteredProducts, setFilteredProducts] = useState(-1);
+  const [carteList, setCarteList] = useState<any[]>(carte.products || []);
+  const categories = [
+    'pain courant',
+    'pains spéciaux',
+    'autres pains spéciaux',
+    'farines anciennes, semences paysannes',
+    'brioches',
+    'viennoiseries',
+    'apéritif',
+    'autres gourmandises',
+  ];
+
+  const changeFilteredProducts = async (index: number) => {
+    setFilteredProducts(index);
+    setCarteList(
+      carte.products.filter(
+        (it) => index < 0 || it.category === categories[index],
+      ),
+    );
+  };
+
   return (
     <Layout>
       <ContainerBox>
@@ -32,9 +56,14 @@ export default function Carte() {
         {/* <Heading as="h2" size="xl" textAlign={'center'}>
           Micro-fournil artisanal
         </Heading> */}
+        <Filter
+          categories={categories}
+          filteredProducts={filteredProducts}
+          onClick={changeFilteredProducts}
+        />
         {carte && (
           <SimpleGrid minChildWidth="260px" spacing="20" paddingTop={16}>
-            {carte.products.map((prod) => {
+            {carteList.map((prod) => {
               return (
                 prod.visible && (
                   <ProductBox
