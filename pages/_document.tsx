@@ -1,3 +1,4 @@
+import Hydration from '@/utils/hydration';
 import { Head, Html, Main, NextScript } from 'next/document';
 
 export default function Document() {
@@ -5,6 +6,7 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <body>
+        <Hydration />
         <Main />
         <NextScript />
       </body>

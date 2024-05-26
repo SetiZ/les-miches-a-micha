@@ -1,7 +1,11 @@
-import { HamburgerIcon } from '@chakra-ui/icons';
+import Cart from '@/components/cart';
+import { useCartStore } from '@/utils/store';
+// import { HamburgerIcon } from '@chakra-ui/icons';
 import { Image, Link } from '@chakra-ui/next-js';
 import {
+  Badge,
   Box,
+  Button,
   HStack,
   Heading,
   Icon,
@@ -11,8 +15,10 @@ import {
   MenuItem,
   MenuList,
   Portal,
+  useDisclosure,
 } from '@chakra-ui/react';
-import { CgShoppingCart, CgIcecream } from 'react-icons/cg';
+import { useEffect, useState } from 'react';
+import { CgShoppingCart } from 'react-icons/cg';
 
 const Header = () => {
   const Links = [
@@ -22,6 +28,17 @@ const Header = () => {
     // { title: 'Abonnements', link: 'abonnements' },
     // { title: 'Les cours', link: 'cours' },
   ];
+
+  // const totalItems = 3;
+  //
+  const [hydrated, setHydrated] = useState<boolean>(false);
+  useEffect(() => {
+    setHydrated(true);
+  }, []);
+
+  const { count: cartCount } = useCartStore();
+
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <Box
@@ -71,9 +88,20 @@ const Header = () => {
               {/* {link.title} */}
             </Link>
           ))}
-          {/* <Link href={`/cart`} height={'16px'}>
-						<Icon as={CgShoppingCart} />
-					</Link> */}
+          <Box pos="relative" as="button" height={'16px'} onClick={onOpen}>
+            <Icon aria-label="Panier" as={CgShoppingCart} boxSize={8} />
+            {hydrated && cartCount() > 0 ? (
+              <Badge
+                colorScheme="red"
+                pos="absolute"
+                variant="solid"
+                bgColor="red.500"
+                right={-1}
+                top={-1}>
+                {cartCount()}
+              </Badge>
+            ) : null}
+          </Box>
         </HStack>
         {/* <HStack as={'nav'} spacing={8} alignItems={'center'} hideFrom={'660px'}>
 					<Link href={`/cart`} height={'16px'}>
@@ -98,6 +126,7 @@ const Header = () => {
 					</Menu>
 				</HStack> */}
       </HStack>
+      <Cart isOpen={isOpen} onClose={onClose} />
     </Box>
   );
 };

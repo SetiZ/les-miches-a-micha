@@ -31,7 +31,7 @@ const SocialButton = ({
       href={link}
       bgColor={event}
       download={options.download}
-      target="_blank">
+      target={options.in ? '' : '_blank'}>
       {text}
     </Button>
   );

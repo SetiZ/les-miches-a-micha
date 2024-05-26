@@ -1,5 +1,8 @@
 import ContainerBox from '@/components/containerBox';
 import Layout from '@/components/layout';
+import SocialButton, { Events } from '@/components/socialButton';
+import trusted from '@/data/trusted.json';
+import { Image, Link } from '@chakra-ui/next-js';
 import {
   Box,
   Container,
@@ -11,10 +14,7 @@ import {
   Wrap,
   WrapItem,
 } from '@chakra-ui/react';
-import { Image, Link } from '@chakra-ui/next-js';
 import { CgSoftwareDownload } from 'react-icons/cg';
-import SocialButton, { Events } from '@/components/socialButton';
-import trusted from '@/data/trusted.json';
 
 export default function Home() {
   // if (typeof window !== 'undefined') {
@@ -53,12 +53,11 @@ export default function Home() {
             <Heading as="h3" size="lg" textAlign={'center'}>
               Retrouvez notre carte
             </Heading>
-            <VStack align={'center'} paddingTop={16}>
+            <VStack align={'center'} paddingTop={8}>
               <SocialButton
-                text={'.: !! CARTE ÉPIPHANIE 2024 !! :.'}
-                link={'epiphanie_2024.pdf'}
-                event={Events.Christmas}
-                options={{ download: true }}
+                text={'Nos produits'}
+                link={'/carte'}
+                options={{ in: true }}
               />
               <SocialButton
                 text={'Télécharger le menu'}
@@ -74,12 +73,15 @@ export default function Home() {
             </Heading>
             {trusted && (
               <Wrap spacing="30px" paddingTop={8} justify={'center'}>
-                {trusted.trusted.map((trust: any, index: any) => (
-                  <WrapItem key={index}>
+                {trusted.trusted.map((trust) => (
+                  <WrapItem key={trust.id}>
                     <Box w="200px">
                       {trust.order === 'pre' ? (
                         <>
-                          <Link href={trust.url} target="_blank">
+                          <Link
+                            href={trust.url}
+                            target="_blank"
+                            textDecoration={'underline'}>
                             {trust.title}
                           </Link>
                           , {trust.description}
@@ -87,7 +89,10 @@ export default function Home() {
                       ) : (
                         <>
                           {trust.description}{' '}
-                          <Link href={trust.url} target="_blank">
+                          <Link
+                            href={trust.url}
+                            target="_blank"
+                            textDecoration={'underline'}>
                             {trust.title}
                           </Link>
                         </>
