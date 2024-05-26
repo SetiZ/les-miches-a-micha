@@ -1,4 +1,5 @@
 import { Box } from '@chakra-ui/react';
+import type * as React from 'react';
 
 type LayoutProps = {
   children: React.ReactNode;

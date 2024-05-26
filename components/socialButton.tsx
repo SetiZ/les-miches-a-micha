@@ -1,7 +1,8 @@
 import { Button } from '@chakra-ui/react';
-import { ReactElement } from 'react';
+import type { ReactElement } from 'react';
 
 export enum Events {
+  // eslint-disable-next-line no-unused-vars
   Christmas = 'green.300',
 }
 

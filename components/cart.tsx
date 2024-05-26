@@ -32,7 +32,7 @@ import {
   VStack,
   useToast,
 } from '@chakra-ui/react';
-import { FormEvent } from 'react';
+import type { FormEvent } from 'react';
 
 interface CartProps {
   isOpen: boolean;

@@ -1,3 +1,4 @@
+import type * as React from 'react';
 interface CartItem {
   id: string;
   name: string;

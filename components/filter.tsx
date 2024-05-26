@@ -3,6 +3,7 @@ import { HStack, Tag, Text } from '@chakra-ui/react';
 interface FilterProps {
   categories: string[];
   filteredProducts: number;
+  // eslint-disable-next-line no-unused-vars
   onClick: (index: number) => void;
 }
 
@@ -11,7 +12,6 @@ export const Filter = ({
   filteredProducts,
   onClick,
 }: FilterProps) => {
-  console.log(filteredProducts);
   return (
     <HStack wrap={'wrap'}>
       <Text>Filtrer par :</Text>

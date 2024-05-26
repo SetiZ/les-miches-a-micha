@@ -5,16 +5,9 @@ import { Image, Link } from '@chakra-ui/next-js';
 import {
   Badge,
   Box,
-  Button,
   HStack,
   Heading,
   Icon,
-  IconButton,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
-  Portal,
   useDisclosure,
 } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
