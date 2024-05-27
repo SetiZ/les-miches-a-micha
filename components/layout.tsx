@@ -30,7 +30,21 @@ export default function Layout({ children }: LayoutProps) {
         />
         <meta
           property="og:url"
-          content="https://les-miches-a-micha.vercel.app"></meta>
+          content="https://les-miches-a-micha.vercel.app"
+        />
+        <meta
+          property="twitter:image"
+          content="https://les-miches-a-micha.vercel.app/api/og"
+        />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:title"
+          content="https://les-miches-a-micha.vercel.app"
+        />
+        <meta
+          property="twitter:description"
+          content="N’allez plus à la boulangerie – c’est elle qui vient à vous ! Livraison à domicile, commande personnalisée, conseils de dégustation, créativité. . . Ici, tout est fait main, à partir de matières premières bio, locales et nobles, pour vous proposer des pains savoureux, sains et originaux."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
