@@ -1,10 +1,8 @@
-import { supabaseLoader } from '@/utils/image-loader';
 import { useCartStore } from '@/utils/store';
 import { AddIcon } from '@chakra-ui/icons';
 import { Image } from '@chakra-ui/next-js';
 import { Box, Button, Tag, Text } from '@chakra-ui/react';
 import NextImage from 'next/image';
-import { useEffect, useState } from 'react';
 
 interface ProductProps {
   id: number;
@@ -24,13 +22,6 @@ const ProductBox = ({
   poids,
 }: ProductProps) => {
   const { add: handleAddToCart } = useCartStore();
-  // const product = {id, name, price} as Product;
-
-  const [imgSrc, set_imgSrc] = useState(images);
-
-  useEffect(() => {
-    set_imgSrc(images);
-  }, [images]);
 
   const fallbackSrc = '0000_miches.png';
 
@@ -44,24 +35,16 @@ const ProductBox = ({
       {/* <Box position={"relative"} width={"260px"} height={"260px"}> */}
       <Image
         as={NextImage}
-        loader={supabaseLoader}
+        // loader={supabaseLoader}
         loading="lazy"
         // src={images}
-        src={imgSrc}
+        src={`/images/${images.length > 0 ? images : fallbackSrc}`}
+        placeholder="blur"
+        blurDataURL={`/images/${fallbackSrc}`}
         alt={''}
         width={260}
         height={260}
         borderTopRadius="md"
-        placeholder="empty"
-        onLoadingComplete={(result) => {
-          if (result.naturalWidth === 0) {
-            // Broken image
-            set_imgSrc(fallbackSrc);
-          }
-        }}
-        onError={() => {
-          set_imgSrc(fallbackSrc);
-        }}
         objectFit="cover"
       />
       {/* </Box> */}
