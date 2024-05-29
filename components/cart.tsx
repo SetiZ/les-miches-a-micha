@@ -67,8 +67,8 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
     postData().then((data) => {
       if (data.id) {
         toast({
-          title: 'Commande envoyé !',
-          description: 'Vous allez bientot recevoir un email de confirmation',
+          title: 'Commande envoyée !',
+          description: 'Vous allez bientôt recevoir un mél de confirmation',
           status: 'success',
           duration: 9000,
           isClosable: true,
@@ -128,8 +128,8 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                 })}
                 <Text alignSelf={'end'}>Total: {total().toFixed(2)} €</Text>
                 <Text alignSelf={'end'}>
-                  Ce total est à titre indicatif. Des frais de Livraison
-                  pourront être rajoutés.
+                  Ce total est à titre indicatif. Des frais de livraison
+                  pourront être rajoutés le cas échéant.
                 </Text>
               </>
             )}
@@ -139,10 +139,9 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
           <Box>
             <form onSubmit={sendOrder}>
               <Stack spacing={4}>
-                <Heading size={'md'}>Veuillez rentrer vos informations</Heading>
+                <Heading size={'md'}>Veuillez entrer vos informations</Heading>
                 <Text>
-                  Un email vous sera envoyé par la suite pour le paiement et la
-                  livraison
+                  Un mél vous sera envoyé par la suite pour confirmer votre commande.
                 </Text>
                 <InputGroup>
                   <InputLeftElement pointerEvents="none">
@@ -190,7 +189,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                 </InputGroup>
                 <Textarea
                   name="comment"
-                  placeholder="un commentaire ?"
+                  placeholder="Un commentaire, un souhait de personnalisation, une question, ou toute autre information utile"
                   borderColor={'gray.600'}
                 />
                 <Button type="submit" colorScheme="yellow">
