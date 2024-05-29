@@ -35,10 +35,9 @@ export default function Home() {
         </Text>
         <VStack align={'center'} paddingTop={16}>
           <SocialButton
-            text={'.:*~*:_:*~* !! CARTE DES FÊTES 2023 !! *~*:_:*~*:.'}
-            link={'carte_fetes_2023.pdf'}
-            event={Events.Christmas}
-            options={{ download: true }}
+            text={'Pour commander en ligne'}
+            link={'/carte'}
+            options={{ in: true }}
           />
           <SocialButton
             text={'Télécharger le menu'}
