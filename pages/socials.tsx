@@ -37,7 +37,6 @@ export default function Home() {
           <SocialButton
             text={'Pour commander en ligne'}
             link={'/carte'}
-            options={{ in: true }}
           />
           <SocialButton
             text={'Télécharger le menu'}
