@@ -1,6 +1,6 @@
 import ContainerBox from '@/components/containerBox';
 import Layout from '@/components/layout';
-import SocialButton, { Events } from '@/components/socialButton';
+import SocialButton from '@/components/socialButton';
 import { Image } from '@chakra-ui/next-js';
 import { Flex, Heading, Text, VStack } from '@chakra-ui/react';
 import {
@@ -34,10 +34,7 @@ export default function Home() {
           c’est elle qui vient à vous !
         </Text>
         <VStack align={'center'} paddingTop={16}>
-          <SocialButton
-            text={'Pour commander en ligne'}
-            link={'/carte'}
-          />
+          <SocialButton text={'Pour commander en ligne'} link={'/carte'} />
           <SocialButton
             text={'Télécharger le menu'}
             link={'les-miches-a-micha.pdf'}

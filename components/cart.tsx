@@ -141,7 +141,8 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
               <Stack spacing={4}>
                 <Heading size={'md'}>Veuillez entrer vos informations</Heading>
                 <Text>
-                  Un mél vous sera envoyé par la suite pour confirmer votre commande.
+                  Un mél vous sera envoyé par la suite pour confirmer votre
+                  commande.
                 </Text>
                 <InputGroup>
                   <InputLeftElement pointerEvents="none">
