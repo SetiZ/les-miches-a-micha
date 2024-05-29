@@ -55,7 +55,7 @@ export default function Home() {
             </Heading>
             <VStack align={'center'} paddingTop={8}>
               <SocialButton
-                text={'Nos produits'}
+                text={'Pour commander en ligne'}
                 link={'/carte'}
                 options={{ in: true }}
               />
@@ -111,7 +111,7 @@ export default function Home() {
               direction={['column', 'row']}
               paddingTop={4}
               justify={'center'}>
-              <Link href={'tel:0663354314'}>06.63.35.43.14</Link>
+              <Link href={'tel:0663354314'}>06.52.39.48.79</Link>
               <Link href={'mailto:lesmichesamicha@gmail.com'}>
                 lesmichesamicha@gmail.com
               </Link>
