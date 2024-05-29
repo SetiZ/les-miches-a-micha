@@ -3,7 +3,7 @@
     {
       "id": 101,
       "title": "Baguette de tradition",
-      "prix": 1,25,
+      "prix": 1.25,
       "poids": 300,
       "description": "Le classique, renommé mondialement, et respectant le décret « tradition » du 13 septembre 1993. Farine de trad’ T65 bio, eau, sel, levain – et c’est tout ! Possibilité de façonner en épi, ou formes esthétiques (tresse, tabatière, auvergnat etc.).",
       "images": "101a_trad.png",
