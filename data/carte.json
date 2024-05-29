@@ -1,27 +1,37 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": 101,
       "title": "Baguette de tradition",
-      "prix": 1.25,
+      "prix": 1,25,
       "poids": 300,
-      "description": "Le classique, renommé mondialement, et respectant le décret « tradition » du 13 septembre 1993. Farine de trad’ T65 bio, eau, sel, levain – et c’est tout ! Possibilité de façonner en épi, ou formes esthétiques (tresse, tabatière, auvergnat etc.). Un assortiment de pains-serviette individuels, tous façonnés différemment, est idéal pour donner un cachet « gastronomique » à vos soirées.",
+      "description": "Le classique, renommé mondialement, et respectant le décret « tradition » du 13 septembre 1993. Farine de trad’ T65 bio, eau, sel, levain – et c’est tout ! Possibilité de façonner en épi, ou formes esthétiques (tresse, tabatière, auvergnat etc.).",
       "images": "101a_trad.png",
       "category": "pain courant",
       "visible": true
     },
     {
-      "id": 2,
-      "title": "Tradition céréales",
-      "prix": 1.5,
-      "poids": 330,
-      "description": "La baguette de tradition, avec un assortiment soigneusement choisi de graines (lin, tournesol, soja, courge, millet, quinoa, sésame), ou simplement du sésame grillé. . . – voire, sur demande, avec des grains de cumin – un délice avec du fromage !",
+      "id": 102,
+      "title": "Pains serviette",
+      "prix": 1,
+      "poids": 100,
+      "description": "Pains-serviette individuels, tous façonnés différemment, idéal pour donner un cachet « gastronomique » à vos soirées.",
       "images": "101b_trad_serviette.png",
       "category": "pain courant",
       "visible": true
     },
     {
-      "id": 3,
+      "id": 103,
+      "title": "Tradition céréales",
+      "prix": 1.5,
+      "poids": 330,
+      "description": "La baguette de tradition, avec un assortiment soigneusement choisi de graines (lin, tournesol, soja, courge, millet, quinoa, sésame), ou simplement du sésame grillé. . . – voire, sur demande, avec des grains de cumin – un délice avec du fromage !",
+      "images": "",
+      "category": "pain courant",
+      "visible": true
+    },
+    {
+      "id": 201,
       "title": "Pain complet",
       "prix": 5.0,
       "poids": 500,
