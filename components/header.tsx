@@ -14,13 +14,13 @@ import { useEffect, useState } from 'react';
 import { CgShoppingCart } from 'react-icons/cg';
 
 const Header = () => {
-  const Links = [
-    // { title: 'Le Concept', link: 'concept' },
-    // { title: 'La carte', link: 'carte' },
-    { title: 'Liens', link: 'socials' },
-    // { title: 'Abonnements', link: 'abonnements' },
-    // { title: 'Les cours', link: 'cours' },
-  ];
+  // const Links = [
+  //   // { title: 'Le Concept', link: 'concept' },
+  //   // { title: 'La carte', link: 'carte' },
+  //   // { title: 'Liens', link: 'socials' },
+  //   // { title: 'Abonnements', link: 'abonnements' },
+  //   // { title: 'Les cours', link: 'cours' },
+  // ];
 
   // const totalItems = 3;
   //
@@ -47,7 +47,8 @@ const Header = () => {
         justify={'space-between'}
         maxW={'1440'}
         alignItems={'center'}
-        fontWeight={'600'}>
+        fontWeight={'600'}
+        margin={'0 auto'}>
         <Link href={'/'} _hover={{ textDecoration: 'none' }}>
           <HStack alignItems={'end'}>
             <Image
@@ -69,18 +70,18 @@ const Header = () => {
           spacing={8}
           // hideBelow={'660px'}
           alignItems={'center'}>
-          {Links.map((link) => (
-            <Link key={link.link} href={`/${link.link}`}>
-              {/* <Icon as={CgIcecream} w={6} h={6} /> */}
-              <Image
-                src={'/breads.png'}
-                alt={'social links'}
-                width={50}
-                height={50}
-              />
-              {/* {link.title} */}
-            </Link>
-          ))}
+          {/* {Links.map((link) => ( */}
+          <Link href={`/carte`}>
+            {/* <Icon as={CgIcecream} w={6} h={6} /> */}
+            <Image
+              src={'/breads.png'}
+              alt={'la carte'}
+              width={50}
+              height={50}
+            />
+            {/* {link.title} */}
+          </Link>
+          {/* ))} */}
           <Box pos="relative" as="button" height={'16px'} onClick={onOpen}>
             <Icon aria-label="Panier" as={CgShoppingCart} boxSize={8} />
             {hydrated && cartCount() > 0 ? (
