@@ -56,6 +56,8 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
                 year: 'numeric',
                 month: 'numeric',
                 day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
               })}
             </td>
             <td>{item.name}</td>
@@ -66,7 +68,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
           </tr>
         ))}
       </table>
-      <h2>Total : {total}€</h2>
+      <h2>Total : {total.toFixed(2)}€</h2>
     </div>
   );
 };
