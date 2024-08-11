@@ -71,7 +71,7 @@ const Header = () => {
           // hideBelow={'660px'}
           alignItems={'center'}>
           {/* {Links.map((link) => ( */}
-          <Link href={`/carte`}>
+          <Link href={'/carte'}>
             {/* <Icon as={CgIcecream} w={6} h={6} /> */}
             <Image
               src={'/breads.png'}

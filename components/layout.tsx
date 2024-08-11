@@ -56,7 +56,7 @@ export default function Layout({ children }: LayoutProps) {
         // paddingBottom={16}
         paddingBottom={2}
         paddingInline={4}
-        minH={'calc(100vh - calc(100vh - 100%))'}
+        minH={'calc(calc(100vh - calc(100vh - 100%)) - 56px)'}
         // h={'100vh'}
         // maxW={'1440'}
         bgImage='url("bread-bg.jpeg")'
