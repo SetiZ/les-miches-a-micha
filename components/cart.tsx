@@ -128,7 +128,9 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                 })}
                 <Text alignSelf={'end'}>Total: {total().toFixed(2)} €</Text>
                 <Text alignSelf={'end'}>
-                  {'Ce total est donné à titre indicatif, en fonction de la personnalisation de vos produits notamment. Des frais de livraison pourront être ajoutés le cas échéant.'}
+                  {
+                    'Ce total est donné à titre indicatif, en fonction de la personnalisation de vos produits notamment. Des frais de livraison pourront être ajoutés le cas échéant.'
+                  }
                 </Text>
               </>
             )}

@@ -14,7 +14,12 @@ import {
   Wrap,
   WrapItem,
 } from '@chakra-ui/react';
-import { CgInstagram, CgPin, CgSoftwareDownload } from 'react-icons/cg';
+import {
+  CgBrowse,
+  CgInstagram,
+  CgPin,
+  CgSoftwareDownload,
+} from 'react-icons/cg';
 
 export default function Home() {
   // if (typeof window !== 'undefined') {
@@ -57,6 +62,7 @@ export default function Home() {
               <SocialButton
                 text={'Commander en ligne'}
                 link={'/carte'}
+                icon={<CgBrowse />}
                 options={{ in: true }}
               />
               <SocialButton
@@ -118,12 +124,12 @@ export default function Home() {
             </Stack>
             <VStack align={'center'} paddingTop={8}>
               <SocialButton
-                text={"S'abonner à l'instagram"}
+                text={"S'abonner à Instagram"}
                 link={'https://www.instagram.com/lesmichesamicha/'}
                 icon={<CgInstagram />}
               />
               <SocialButton
-                text={'Laisser un avis sur google maps'}
+                text={'Laisser un avis sur Google Maps'}
                 link={'https://g.page/r/CQP-U6UnJ-McEB0/review'}
                 icon={<CgPin />}
               />
