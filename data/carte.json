@@ -6,7 +6,7 @@
       "prix": 9,
       "poids": 600,
       "description": "La célèbre brioche d'inspiration polonaise, en version salée, déclinée avec une farce à la purée d'aubergines, féta et noix.",
-      "images": "001_babka_salee",
+      "images": "001_babka_salee.png",
       "category": "pain du mois",
       "visible": true
     },
@@ -96,7 +96,7 @@
       "prix": 6.0,
       "poids": 500,
       "description": "Noix, figues, raisins sec et noisettes. . . Toutes les variations sont possibles.",
-      "images": "302_campagne_noix.jpeg",
+      "images": "302_campagne_noix.png",
       "category": "autres pains spéciaux",
       "visible": true
     },
@@ -276,7 +276,7 @@
       "prix": 9.0,
       "poids": 550,
       "description": "Brioche au beurre, tressée et originaire de Pologne, étymologiquement « grand-mère », fourrée ici avec une pâte à la cannelle et à la cardamome, rappelant celle des Kannelbullar scandinaves. Au choix, on pourra y ajouter également des amandes effilées ou du chocolat pour plus de gourmandise !",
-      "images": "506b_babka.png",
+      "images": "506_babka.png",
       "category": "brioches",
       "visible": true
     },
