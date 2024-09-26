@@ -32,7 +32,7 @@ import {
   VStack,
   useToast,
 } from '@chakra-ui/react';
-import type { FormEvent } from 'react';
+import { useState, type FormEvent } from 'react';
 
 interface CartProps {
   isOpen: boolean;
@@ -40,11 +40,13 @@ interface CartProps {
 }
 
 const Cart = ({ isOpen, onClose }: CartProps) => {
+  const [isLoading, setIsLoading] = useState(false);
   const { cart, total, count, add, remove, removeAll } = useCartStore();
   const toast = useToast();
 
   function sendOrder(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setIsLoading(true);
     const formData = new FormData(e.currentTarget);
 
     const postData = async () => {
@@ -154,6 +156,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                     placeholder="nom"
                     name="nom"
                     borderColor={'gray.600'}
+                    required
                   />
                 </InputGroup>
                 <InputGroup>
@@ -165,6 +168,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                     name="tel"
                     placeholder="numéro de téléphone"
                     borderColor={'gray.600'}
+                    required
                   />
                 </InputGroup>
                 <InputGroup>
@@ -176,6 +180,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                     name="email"
                     placeholder="email"
                     borderColor={'gray.600'}
+                    required
                   />
                 </InputGroup>
                 <Text>
@@ -190,6 +195,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                     name="date"
                     placeholder="date et heure"
                     borderColor={'gray.600'}
+                    required
                   />
                 </InputGroup>
                 <Textarea
@@ -197,7 +203,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                   placeholder="Un commentaire, un souhait de personnalisation, une question, ou toute autre information utile"
                   borderColor={'gray.600'}
                 />
-                <Button type="submit" colorScheme="yellow">
+                <Button type="submit" colorScheme="yellow" isLoading={isLoading}>
                   Envoyer
                 </Button>
               </Stack>
