@@ -2,7 +2,6 @@ import ContainerBox from '@/components/containerBox';
 import Layout from '@/components/layout';
 import SocialButton from '@/components/socialButton';
 import trusted from '@/data/trusted.json';
-import { Image, Link } from '@chakra-ui/next-js';
 import {
   Box,
   Container,
@@ -14,6 +13,9 @@ import {
   Wrap,
   WrapItem,
 } from '@chakra-ui/react';
+// import { Image, Link } from '@chakra-ui/next-js';
+import Image from 'next/image';
+import Link from 'next/link';
 import {
   CgBrowse,
   CgInstagram,
@@ -87,7 +89,7 @@ export default function Home() {
                           <Link
                             href={trust.url}
                             target="_blank"
-                            textDecoration={'underline'}>
+                            style={{ textDecoration: 'underline' }}>
                             {trust.title}
                           </Link>
                           , {trust.description}
@@ -98,7 +100,7 @@ export default function Home() {
                           <Link
                             href={trust.url}
                             target="_blank"
-                            textDecoration={'underline'}>
+                            style={{ textDecoration: 'underline' }}>
                             {trust.title}
                           </Link>
                         </>
