@@ -11,6 +11,7 @@ export default function Carte() {
   const [filteredProducts, setFilteredProducts] = useState(-1);
   const [carteList, setCarteList] = useState<any[]>(carte.products || []);
   const categories = [
+    'pain du mois',
     'pain courant',
     'pains spéciaux',
     'autres pains spéciaux',
