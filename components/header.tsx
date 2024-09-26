@@ -1,7 +1,7 @@
 import Cart from '@/components/cart';
 import { useCartStore } from '@/utils/store';
-// import { HamburgerIcon } from '@chakra-ui/icons';
-import { Image, Link } from '@chakra-ui/next-js';
+import Image from 'next/image';
+import Link from 'next/link';
 import {
   Badge,
   Box,
@@ -14,16 +14,6 @@ import { useEffect, useState } from 'react';
 import { CgShoppingCart } from 'react-icons/cg';
 
 const Header = () => {
-  // const Links = [
-  //   // { title: 'Le Concept', link: 'concept' },
-  //   // { title: 'La carte', link: 'carte' },
-  //   // { title: 'Liens', link: 'socials' },
-  //   // { title: 'Abonnements', link: 'abonnements' },
-  //   // { title: 'Les cours', link: 'cours' },
-  // ];
-
-  // const totalItems = 3;
-  //
   const [hydrated, setHydrated] = useState<boolean>(false);
   useEffect(() => {
     setHydrated(true);
@@ -49,7 +39,7 @@ const Header = () => {
         alignItems={'center'}
         fontWeight={'600'}
         margin={'0 auto'}>
-        <Link href={'/'} _hover={{ textDecoration: 'none' }}>
+        <Link href={'/'} >
           <HStack alignItems={'end'}>
             <Image
               src={'/miches_blanc_no_text.png'}

@@ -19,7 +19,7 @@ export default async function handler(
   });
 
   const parsed = JSON.parse(req.body);
-  const emailHtml = render(
+  const emailHtml = await render(
     <EmailTemplate
       name={parsed.name}
       phoneNumber={parsed.phoneNumber}

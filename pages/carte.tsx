@@ -3,7 +3,7 @@ import { Filter } from '@/components/filter';
 import Layout from '@/components/layout';
 import ProductBox from '@/components/product';
 import carte from '@/data/carte.json';
-import { Image } from '@chakra-ui/next-js';
+import Image from 'next/image';
 import { Flex, SimpleGrid } from '@chakra-ui/react';
 import { useState } from 'react';
 
