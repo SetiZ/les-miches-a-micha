@@ -11,7 +11,8 @@ const Footer = () => {
       bgColor={'gray.600'}
       color={'gray.100'}
       // position={'fixed'}
-      bottom={0}>
+      bottom={0}
+    >
       <Stack
         direction={['column-reverse', 'row']}
         padding={'4'}

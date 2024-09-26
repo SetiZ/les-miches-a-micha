@@ -9,8 +9,8 @@
     "lint": "next lint",
     "biome": "biome format pages/ components/ data/",
     "biome:write": "biome format --write pages/ components/ data/",
-    "biome:lint": "biome lint --apply pages/ components/ data/",
-    "biome:check": "biome check --apply pages/ components/ data/"
+    "biome:lint": "biome lint --write pages/ components/ data/",
+    "biome:check": "biome check --write pages/ components/ data/"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",

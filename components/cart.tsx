@@ -32,7 +32,7 @@ import {
   VStack,
   useToast,
 } from '@chakra-ui/react';
-import { useState, type FormEvent } from 'react';
+import { type FormEvent, useState } from 'react';
 
 interface CartProps {
   isOpen: boolean;
@@ -102,7 +102,8 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                       templateColumns="repeat(6, 1fr)"
                       gap={3}
                       w={'full'}
-                      alignItems={'center'}>
+                      alignItems={'center'}
+                    >
                       <GridItem colSpan={3}>{item.name}</GridItem>
                       <GridItem colStart={4} colSpan={1}>
                         <HStack>
@@ -203,7 +204,10 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                   placeholder="Un commentaire, un souhait de personnalisation, une question, ou toute autre information utile"
                   borderColor={'gray.600'}
                 />
-                <Button type="submit" colorScheme="yellow" isLoading={isLoading}>
+                <Button
+                  type="submit"
+                  colorScheme="yellow"
+                  isLoading={isLoading}>
                   Envoyer
                 </Button>
               </Stack>
