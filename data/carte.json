@@ -5,7 +5,7 @@
       "title": "Pain du moment - Babka salée",
       "prix": 9,
       "poids": 600,
-      "description": "La célèbre brioche d'inspiration polonaise, en version salée, déclinée avec une farce à la purée d'aubergines, féta et noix.",
+      "description": "La célèbre brioche d'inspiration polonaise, en version salée, déclinée avec une farce à la purée d'aubergines, féta et noix.\nEt modif test",
       "images": "001_babka_salee.png",
       "category": "pain du mois",
       "visible": true
@@ -43,7 +43,7 @@
     {
       "id": 201,
       "title": "Pain complet",
-      "prix": 5.0,
+      "prix": 5,
       "poids": 500,
       "description": "La baguette de tradition, avec un assortiment soigneusement choisi de graines (lin, tournesol, soja, courge, millet, quinoa, sésame), ou simplement du sésame grillé. . . – voire, sur demande, avec des grains de cumin – un délice avec du fromage !",
       "images": "201_complet.png",
@@ -53,7 +53,7 @@
     {
       "id": 202,
       "title": "Pain de campagne",
-      "prix": 5.0,
+      "prix": 5,
       "poids": 500,
       "description": "La baguette de tradition, avec un assortiment soigneusement choisi de graines (lin, tournesol, soja, courge, millet, quinoa, sésame), ou simplement du sésame grillé. . . – voire, sur demande, avec des grains de cumin – un délice avec du fromage !",
       "images": "202b_campagne.png",
@@ -63,7 +63,7 @@
     {
       "id": 203,
       "title": "Pain de Méteil",
-      "prix": 5.0,
+      "prix": 5,
       "poids": 500,
       "description": "La baguette de tradition, avec un assortiment soigneusement choisi de graines (lin, tournesol, soja, courge, millet, quinoa, sésame), ou simplement du sésame grillé. . . – voire, sur demande, avec des grains de cumin – un délice avec du fromage !",
       "images": "203_meteil.png",
@@ -73,7 +73,7 @@
     {
       "id": 204,
       "title": "Pain brié",
-      "prix": 5.0,
+      "prix": 5,
       "poids": 500,
       "description": "La baguette de tradition, avec un assortiment soigneusement choisi de graines (lin, tournesol, soja, courge, millet, quinoa, sésame), ou simplement du sésame grillé. . . – voire, sur demande, avec des grains de cumin – un délice avec du fromage !",
       "images": "204_brie.png",
@@ -83,7 +83,7 @@
     {
       "id": 301,
       "title": "Pain viking",
-      "prix": 6.0,
+      "prix": 6,
       "poids": 500,
       "description": "Un pavé riche en graines, à la mie brune et au cœur tendre, entre farines de froment, d’orge et de seigle. Un ingrédient secret est ajouté lors du pétrissage, découvrez-le et gagnez une baguette de tradition !",
       "images": "301_viking.png",
@@ -93,7 +93,7 @@
     {
       "id": 302,
       "title": "Pavés en mélanges, sur base de pain de campagne",
-      "prix": 6.0,
+      "prix": 6,
       "poids": 500,
       "description": "Noix, figues, raisins sec et noisettes. . . Toutes les variations sont possibles.",
       "images": "302_campagne_noix.png",
@@ -103,7 +103,7 @@
     {
       "id": 303,
       "title": "Pain du sportif",
-      "prix": 6.0,
+      "prix": 6,
       "poids": 500,
       "description": "Pain au fruits secs et aux graines, idéal au petit déjeuner, au goûter ou après le sport : un mélange de farines nobles (sarrasin, orge, seigle et petit épeautre), de graines (tournesol, sésame, lins brun et jaune), de fruits secs (figues, abricots, cranberries, raisins secs, noisettes grillées), comme une tar- tine de muesli pleine d’énergie !",
       "images": "303_sportif.png",
@@ -113,7 +113,7 @@
     {
       "id": 304,
       "title": "Pain au maïs",
-      "prix": 6.0,
+      "prix": 6,
       "poids": 600,
       "description": "Un pavé généreux, à la mie dorée et à la croûte tigrée. La farine de maïs est torréfiée avant pétrissage, pour un délicieux goût de pop-corn, souligné par des graines de courge toastées, des billettes de maïs et une pointe de curcuma.",
       "images": "304_mais.png",
@@ -123,7 +123,7 @@
     {
       "id": 305,
       "title": "Pain de châtaigne",
-      "prix": 8.0,
+      "prix": 8,
       "poids": 600,
       "description": "Naturellement sucrée, la farine de châtaigne va libérer des arômes doux et délicats, soulignés par des éclats de marrons à l’intérieur!",
       "images": "305_chataigne.png",
@@ -133,7 +133,7 @@
     {
       "id": 306,
       "title": "Pain sans sel",
-      "prix": 6.0,
+      "prix": 6,
       "poids": 600,
       "description": "Farine complète et graines toastées, entièrement sans sel",
       "images": "306_Sans_sel.png",
@@ -143,7 +143,7 @@
     {
       "id": 401,
       "title": "Tourte de meule",
-      "prix": 7.0,
+      "prix": 7,
       "poids": 600,
       "description": "La farine est obtenue là en broyant les grains de blé une seule fois sous une meule de pierre, plutôt que classiquement en les éclatant par des cylindres successifs. Respectueux des arômes céréaliers, cela permet de garder toutes les saveurs et les qualités du blé, que l’on retrouvera directement dans le pain.",
       "images": "401_tourte_meule.png",
@@ -153,7 +153,7 @@
     {
       "id": 402,
       "title": "Pain au khorasan",
-      "prix": 7.0,
+      "prix": 7,
       "poids": 600,
       "description": "Apparue il y a 5000 ans en Mésopotamie, cette variété ancestrale de blé n’a jamais été modifiée ou hybridée ; elle offre un pain noble, naturellement riche en minéraux et à la douce saveur de noisette.",
       "images": "402_khorasan.png",
@@ -163,7 +163,7 @@
     {
       "id": 403,
       "title": "Pavé au petit épeautre",
-      "prix": 7.0,
+      "prix": 7,
       "poids": 600,
       "description": "Riche en protéines, pauvre en gluten, aidant la digestion, à l’indice glycé- mique très bas, rempli de minéraux... une céréale ancienne et noble, qui donne un pavé parfumé, à la mie dorée et lumineuse et au parfum reconnais- sable entre tous de fruit sec toasté. Un pain d’exception.",
       "images": "403_petit_epeautre.png",
@@ -173,7 +173,7 @@
     {
       "id": 404,
       "title": "Boule de campagne au blé rouge de Bordeaux",
-      "prix": 7.0,
+      "prix": 7,
       "poids": 600,
       "description": "Originaire du Gers, le blé rouge est une variété de blé rustique et ancienne qui avait quasiment disparue, pour être remise au goût du jour par quelques passionnés, sensibles à ses qualités boulangères, gustatives et nutritives, ex- cellentes.",
       "images": "404_ble_rouge.png",
@@ -183,8 +183,7 @@
     {
       "id": 405,
       "title": "Tourte de seigle",
-      "prix": 7.0,
-      "poids": null,
+      "prix": 7,
       "description": "La Face Nord de la boulangerie ! 100% de seigle intégral, très riche en miné- raux et en fibres, naturellement pauvre en gluten, fabuleusement aromatique, aux saveurs uniques et puissantes. . . Une dominante douce de miel, d’épices et de caramel tout d’abord, puis des notes plus acides qui charpentent la sensation générale, une croûte dure et sombre qui cache une mie humide et fondante...",
       "images": "405_tourte_seigle.png",
       "category": "farines anciennes, semences paysannes",
@@ -195,7 +194,6 @@
       "title": "Brioche nature, tressée ou en «Nanterre»",
       "prix": 6.5,
       "poids": 500,
-      "description": "",
       "images": "501_brioche.png",
       "category": "brioches",
       "visible": true
@@ -203,19 +201,16 @@
     {
       "id": 502,
       "title": "Brioche au chocolat",
-      "prix": 7.0,
+      "prix": 7,
       "poids": 550,
-      "description": "",
-      "images": "",
       "category": "brioches",
       "visible": true
     },
     {
       "id": 503,
       "title": "Brioche à la praline",
-      "prix": 7.0,
+      "prix": 7,
       "poids": 550,
-      "description": "",
       "images": "503_brioche_praline.png",
       "category": "brioches",
       "visible": true
@@ -225,7 +220,6 @@
       "title": "Brioche individuelle",
       "prix": 1.1,
       "poids": 100,
-      "description": "",
       "images": "504_brioche_indiv.png",
       "category": "brioches",
       "visible": true
@@ -235,7 +229,6 @@
       "title": "Baguette viennoise nature ou au chocolat",
       "prix": 1.3,
       "poids": 150,
-      "description": "",
       "images": "502_viennoise.png",
       "category": "brioches",
       "visible": true
@@ -244,8 +237,6 @@
       "id": 506,
       "title": "Petit pain au lait, façonné en «picot»",
       "prix": 1.1,
-      "poids": null,
-      "description": "",
       "images": "503_pain_lait.png",
       "category": "brioches",
       "visible": true
@@ -254,8 +245,6 @@
       "id": 507,
       "title": "Kanelbullar",
       "prix": 1.2,
-      "poids": null,
-      "description": "",
       "images": "504_kanelbullar.png",
       "category": "brioches",
       "visible": true
@@ -263,7 +252,7 @@
     {
       "id": 508,
       "title": "'Halla, aux deux sésames",
-      "prix": 4.0,
+      "prix": 4,
       "poids": 350,
       "description": "Délicieux pain moelleux avec une croûte croustillante et une mie tendre, proche de la brioche, c’est un pain traditionnel juif consommé lors du shab- bat. Sans produits laitiers, il peut être mangé en toutes occasions.",
       "images": "505_hallah.jpeg",
@@ -273,7 +262,7 @@
     {
       "id": 509,
       "title": "Babka à la cannelle",
-      "prix": 9.0,
+      "prix": 9,
       "poids": 550,
       "description": "Brioche au beurre, tressée et originaire de Pologne, étymologiquement « grand-mère », fourrée ici avec une pâte à la cannelle et à la cardamome, rappelant celle des Kannelbullar scandinaves. Au choix, on pourra y ajouter également des amandes effilées ou du chocolat pour plus de gourmandise !",
       "images": "506_babka.png",
@@ -283,7 +272,7 @@
     {
       "id": 510,
       "title": "Pompe à l'huile",
-      "prix": 8.0,
+      "prix": 8,
       "poids": 750,
       "description": "Galette briochée typiquement provençale, parfumée à l’eau de fleur d’oranger, réalisée pour le réveillon de Noël et faisant partie des 13 desserts traditionnels.",
       "images": "510_pompe.png",
@@ -294,8 +283,6 @@
       "id": 601,
       "title": "Croissant",
       "prix": 1.1,
-      "poids": null,
-      "description": "",
       "images": "601_croissant.png",
       "category": "viennoiseries",
       "visible": true
@@ -304,7 +291,6 @@
       "id": 602,
       "title": "Pain au chocolat",
       "prix": 1.1,
-      "poids": null,
       "description": "trois barrettes de chocolat par pure gourmandise ico- noclaste",
       "images": "602_pain_choco.jpeg",
       "category": "viennoiseries",
@@ -314,7 +300,6 @@
       "id": 603,
       "title": "Pain aux raisins",
       "prix": 1.3,
-      "poids": null,
       "description": "avec possibilité d’aromatiser au rhum",
       "images": "603_pain_raisin.png",
       "category": "viennoiseries",
@@ -324,7 +309,6 @@
       "id": 604,
       "title": "Pain suisse",
       "prix": 1.3,
-      "poids": null,
       "description": "au feuilletage orthogonal, façon Cédric Grolet",
       "images": "604_suisse.jpeg",
       "category": "viennoiseries",
@@ -334,9 +318,7 @@
       "id": 605,
       "title": "Mini-viennoiseries",
       "prix": 0.7,
-      "poids": null,
       "description": "Mini-croissants et pains au chocolat, pour le team-building lors des morning meetings en présentiel, ou pour soudoyer vos amis et les remercier de vous aider à déménager un samedi matin !",
-      "images": "",
       "category": "viennoiseries",
       "visible": true
     },
@@ -344,7 +326,6 @@
       "id": 606,
       "title": "Cruffin choco / pistache",
       "prix": 2,
-      "poids": null,
       "description": "Un mélange moderne entre le croissant et le muffin, création personnelle, fourrage pâte à pistache grillées et ganache au chocolat et noisettes toastées, entre chaque feuillet",
       "images": "606_cruffin.png",
       "category": "viennoiseries",
@@ -374,7 +355,6 @@
       "id": 801,
       "title": "Grignette apéro",
       "prix": 3,
-      "poids": null,
       "description": "Une baguette de tradition entière, généreusement fourrée, l’idéal pour vos apéritifs – compter 1⁄2 par personne. Passez-les simplement 3 minutes au four puis découpez-les aux ciseaux en bouchées avant de servir, elles ne feront pas long feu ! Chorizo/paprika fumé, lardons, olives/herbes de Provence, tomates sé- chées/pignons de pin, pomme/camembert, chèvre/miel, pesto au basilic frais du jardin, mozzarella ou raclette grillée/cumin. . . Possibilités infinies !",
       "images": "801_grignette.png",
       "category": "apéritif",
@@ -404,9 +384,7 @@
       "id": 804,
       "title": "Samoussas",
       "prix": 1.25,
-      "poids": null,
       "description": "Triangles de feuille de brick maison, sans huile de palme, pliés à la main, far- cis et frits. Différentes saveurs : légumes croquants et curry, chèvre-épinard, crevette, poulet-coco, boeuf... Parfait pour l’apéritif !",
-      "images": "",
       "category": "apéritif",
       "visible": true
     },
@@ -416,7 +394,6 @@
       "prix": 4,
       "poids": 150,
       "description": "Plutôt que de servir des habituels biscuits apéritifs, pourquoi ne pas vous laisser surprendre par cette recette saine, digeste et savoureuse? Réalisés exclusivement à partir de Zoë, le levain de blé de 5 ans maintenant, et agré- mentés de fleur de sel et d’herbes de Provence, qui équilibreront l’acidité délicate et caractéristique du levain, ils se garderont sans soucis trois jours dans leur joli sachet !",
-      "images": "",
       "category": "apéritif",
       "visible": true
     },
@@ -424,7 +401,6 @@
       "id": 806,
       "title": "Fricassées tunisiennes",
       "prix": 3,
-      "poids": null,
       "description": "Avec ou sans harissa",
       "images": "806_fricassees.jpeg",
       "category": "apéritif",
@@ -446,7 +422,6 @@
       "prix": 6,
       "poids": 500,
       "description": "Pour plus de caractère.",
-      "images": "",
       "category": "autres gourmandises",
       "visible": true
     },
@@ -456,7 +431,6 @@
       "prix": 6,
       "poids": 500,
       "description": "fondant, légèrement sucré, savoureux et délicieux pour des toasts ou des canapés raffinés !",
-      "images": "",
       "category": "autres gourmandises",
       "visible": true
     },
@@ -464,7 +438,6 @@
       "id": 904,
       "title": "Bretzels",
       "prix": 1,
-      "poids": null,
       "description": "nature, au gros sel ou au sésame",
       "images": "903_bretzels.png",
       "category": "autres gourmandises",
@@ -474,7 +447,6 @@
       "id": 905,
       "title": "Buns",
       "prix": 1.5,
-      "poids": null,
       "description": "Légèrement briochés, pour les burgers maison. Sésame, blanc ou noir, en top- ping.",
       "images": "904b_buns.jpeg",
       "category": "autres gourmandises",
@@ -484,7 +456,6 @@
       "id": 906,
       "title": "Mini-buns",
       "prix": 0.7,
-      "poids": null,
       "description": "Légèrement briochés, pour les burgers maison. Sésame, blanc ou noir, en top- ping.",
       "images": "904_buns.jpeg",
       "category": "autres gourmandises",
@@ -496,7 +467,6 @@
       "prix": 4.5,
       "poids": 500,
       "description": "Il n’y a plus qu’à l’étaler, la garnir et la réchauffer ! Livrée fraîchement pétrie pour une utilisation dans la journée, ou surgelée.",
-      "images": "",
       "category": "autres gourmandises",
       "visible": true
     },
@@ -514,7 +484,6 @@
       "id": 909,
       "title": "Cannelés bordelais",
       "prix": 1.5,
-      "poids": null,
       "description": "Vanille et pointe de rhum",
       "images": "909_canneles.png",
       "category": "autres gourmandises",
@@ -524,7 +493,6 @@
       "id": 910,
       "title": "Macarons",
       "prix": 1.2,
-      "poids": null,
       "description": "Parfums selon demande... et inspiration !",
       "images": "910_macarons.png",
       "category": "autres gourmandises",
@@ -534,7 +502,6 @@
       "id": 1009,
       "title": "Galettes des rois",
       "prix": 20,
-      "poids": null,
       "description": "Pâte feuilletée 100% maison, beurre AOP de Charente ; la frangipane est pure crème d’amandes (pas d’arômes artificiels), amandes bio, avec une pointe d’éclats d’amandes torréfiées pour la texture.",
       "images": "907_galette_rois.png",
       "category": "autres gourmandises",
