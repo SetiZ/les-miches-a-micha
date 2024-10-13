@@ -4,4 +4,4 @@ content:
    label: Carte
    path: data/carte.json
    type: file
- 
+   fields: [id, title, prix, poids, description, images, category, visible]
