@@ -19,7 +19,7 @@ content:
        - name: poids
          type: number
        - name: description
-         type: string
+         type: text
          #images
        - name: category
          type: string
