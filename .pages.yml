@@ -1,41 +1,50 @@
 media: public/images
 content:
- - name: carte
-   label: Carte
-   path: data/carte.json
-   type: file
-   fields:
-    - name: products
-      label: Produits
-      type: object
-      list: true
-      fields:
-       - name: id
-         type: number
-       - name: title
-         type: string
-       - name: prix
-         type: number
-       - name: poids
-         type: number
-       - name: description
-         type: text
-       - name: images
-         type: image
-         list: true
-       - name: category
-         type: select
-         options:
-           values: [
-            'pain du mois',
-            'pain courant',
-            'pains spéciaux',
-            'autres pains spéciaux',
-            'farines anciennes, semences paysannes',
-            'brioches',
-            'viennoiseries',
-            'apéritif',
-            'autres gourmandises',
-          ]
-       - name: visible
-         type: boolean
+  - name: carte
+    label: Carte
+    path: data/carte.json
+    type: file
+    fields:
+      - name: products
+        label: Produits
+        type: object
+        list: true
+        fields:
+          - name: id
+            label: Id
+            type: number
+          - name: title
+            label: Titre
+            type: string
+          - name: prix
+            label: Prix
+            type: number
+          - name: poids
+            label: Poids
+            type: number
+          - name: description
+            label: Description
+            type: text
+          - name: images
+            label: Images
+            type: image
+            options:
+            path: src/media/screenshots
+            extensions: [ jpg, jpeg, png ]
+          - name: category
+            label: Catégorie
+            type: select
+            options:
+              values:
+                - pain du mois
+                - pain courant
+                - pains spéciaux
+                - autres pains spéciaux
+                - farines anciennes, semences paysannes
+                - brioches
+                - viennoiseries
+                - apéritif
+                - autres gourmandises
+          - name: visible
+            label: Visible
+            type: boolean
