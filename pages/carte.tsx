@@ -9,7 +9,7 @@ import { useState } from 'react';
 
 export default function Carte() {
   const [filteredProducts, setFilteredProducts] = useState(-1);
-  const [carteList, setCarteList] = useState<any[]>(carte || []);
+  const [carteList, setCarteList] = useState<any[]>(carte.products || []);
   const categories = [
     'pain du mois',
     'pain courant',
@@ -25,7 +25,7 @@ export default function Carte() {
   const changeFilteredProducts = async (index: number) => {
     setFilteredProducts(index);
     setCarteList(
-      carte.filter(
+      carte.products.filter(
         (it) => index < 0 || it.category === categories[index],
       ),
     );
