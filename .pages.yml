@@ -8,7 +8,6 @@ content:
     - name: products
       label: Produits
       type: object
-      list: true
       fields:
        - name: id
          type: number
