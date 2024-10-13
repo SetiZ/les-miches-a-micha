@@ -9,7 +9,7 @@ content:
       label: Banner
       type: object
       list: true
-      fileds:
+      fields:
        - name: id
          type: number
        - name: title
