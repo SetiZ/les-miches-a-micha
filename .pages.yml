@@ -22,6 +22,7 @@ content:
          type: text
        - name: images
          type: image
+         list: true
        - name: category
          type: select
          options:
