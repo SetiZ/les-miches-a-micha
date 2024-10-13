@@ -22,6 +22,18 @@ content:
          type: text
          #images
        - name: category
-         type: string
+         type: select
+         options:
+           values: [
+            'pain du mois',
+            'pain courant',
+            'pains spéciaux',
+            'autres pains spéciaux',
+            'farines anciennes, semences paysannes',
+            'brioches',
+            'viennoiseries',
+            'apéritif',
+            'autres gourmandises',
+          ]
        - name: visible
          type: boolean
