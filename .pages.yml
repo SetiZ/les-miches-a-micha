@@ -28,6 +28,8 @@ content:
           - name: images
             label: Images
             type: image
+            input: public/images
+            output: public/images
             options:
               path: public/images
               extensions: [ jpg, jpeg, png ]
