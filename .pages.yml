@@ -28,7 +28,7 @@ content:
           - name: images
             label: Images
             type: image
-            output: ''
+            output: /
             options:
               #path: public/images
               extensions: [ jpg, jpeg, png ]
