@@ -28,7 +28,7 @@ content:
           - name: images
             label: Images
             type: image
-            input: public/images
+            input: ''
             output: ''
             options:
               path: public/images
