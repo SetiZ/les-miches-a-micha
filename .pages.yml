@@ -28,9 +28,9 @@ content:
           - name: images
             label: Images
             type: image
-            output: /
             options:
-              #path: public/images
+              path: public/images
+              output: ''
               extensions: [ jpg, jpeg, png ]
           - name: category
             label: Catégorie
