@@ -6,7 +6,7 @@
       "prix": 99,
       "poids": 600,
       "description": "La célèbre brioche d'inspiration polonaise, en version salée, déclinée avec une farce à la purée d'aubergines, féta et noix.\nEt modif test",
-      "images": "001_babka_salee.png",
+      "images": "/public/images/001_babka_salee.png",
       "category": "pain du mois",
       "visible": true
     },
