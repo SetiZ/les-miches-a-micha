@@ -29,8 +29,8 @@ content:
             label: Images
             type: image
             options:
-            path: src/media/screenshots
-            extensions: [ jpg, jpeg, png ]
+              path: public/images
+              extensions: [ jpg, jpeg, png ]
           - name: category
             label: Catégorie
             type: select
