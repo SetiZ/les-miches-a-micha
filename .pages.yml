@@ -29,7 +29,7 @@ content:
             label: Images
             type: image
             input: public/images
-            output: public/images
+            output: ''
             options:
               path: public/images
               extensions: [ jpg, jpeg, png ]
