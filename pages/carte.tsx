@@ -9,7 +9,9 @@ import { useState } from 'react';
 
 export default function Carte() {
   const [filteredProducts, setFilteredProducts] = useState(-1);
-  const [carteList, setCarteList] = useState<any[]>(carte.products || []);
+  const [carteList, setCarteList] = useState<typeof carte.products>(
+    carte.products || [],
+  );
   const categories = [
     'pain du mois',
     'pain courant',

@@ -1,16 +1,16 @@
 import { useCartStore } from '@/utils/store';
 import { AddIcon } from '@chakra-ui/icons';
-import { Image } from '@chakra-ui/next-js';
+// import { Image } from '@chakra-ui/next-js';
 import { Box, Button, Tag, Text } from '@chakra-ui/react';
-import NextImage from 'next/image';
+import Image from 'next/image';
 
 interface ProductProps {
   id: number;
-  images: string;
+  images?: string;
   title: string;
   category: string;
   prix: number;
-  poids: number | null;
+  poids?: number | null;
 }
 
 const ProductBox = ({
@@ -34,18 +34,23 @@ const ProductBox = ({
       justifySelf={'center'}>
       {/* <Box position={"relative"} width={"260px"} height={"260px"}> */}
       <Image
-        as={NextImage}
+        // as={NextImage}
         // loader={supabaseLoader}
         loading="lazy"
         // src={images}
-        src={images && images.length >0 ? `/images/${images}` : `/images/${fallbackSrc}`}
+        src={
+          images && images.length > 0
+            ? `/images/${images}`
+            : `/images/${fallbackSrc}`
+        }
         placeholder="blur"
         blurDataURL={`/images/${fallbackSrc}`}
         alt={''}
         width={260}
         height={260}
-        borderTopRadius="md"
-        objectFit="cover"
+        style={{ objectFit: 'cover', width: '260px', height: '260px' }}
+        // borderTopRadius="md"
+        // objectFit="cover"
       />
       {/* </Box> */}
       <Box p="4">
