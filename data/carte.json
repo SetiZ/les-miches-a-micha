@@ -4,9 +4,21 @@
       "id": 1,
       "title": "Pain du moment - Babka salée",
       "prix": 9,
+      "title": "Pain du moment - Pain citrouille",
+      "prix": 8,
       "poids": 600,
       "description": "La célèbre brioche d'inspiration polonaise, en version salée, déclinée avec une farce à la purée d'aubergines, féta et noix.\nEt modif test",
       "images": "/001_babka_salee.png",
+      "description": "Pain à la citrouille pour Halloween",
+      "images": "/001_pain_citrouille.png",
+      "category": "pain du mois",
+      "visible": true
+    },
+    {
+      "id": 2,
+      "title": "Pour octobre rose, 1€ reversé pour chaque brioche !",
+      "description": "Pour octobre rose",
+      "images": "/503_brioche_praline.png",
       "category": "pain du mois",
       "visible": true
     },
