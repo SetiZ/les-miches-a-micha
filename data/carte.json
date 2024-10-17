@@ -340,6 +340,13 @@
       "visible": true
     },
     {
+      "id": 607,
+      "title": "Pâte feuilletée - taille et format à préciser",
+      "description": "Pâte feuilletée, qualité boulangère",
+      "category": "viennoiseries",
+      "visible": true
+    },
+    {
       "id": 701,
       "title": "Pain au cacao",
       "prix": 3.5,
@@ -503,6 +510,14 @@
       "prix": 1.25,
       "description": "Parfums selon demande... et inspiration !",
       "images": "/910_macarons.png",
+      "category": "autres gourmandises",
+      "visible": true
+    },
+    {
+      "id": 911,
+      "title": "Quiche - parfum à définir ensemble",
+      "prix": 10,
+      "description": "Epinards, thon...",
       "category": "autres gourmandises",
       "visible": true
     },
