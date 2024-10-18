@@ -13,6 +13,7 @@
     {
       "id": 2,
       "title": "Pour octobre rose, 1€ reversé pour chaque brioche !",
+      "prix": 7,
       "description": "Pour octobre rose",
       "images": "503_brioche_praline.png",
       "category": "pain du mois",
@@ -342,6 +343,7 @@
     {
       "id": 607,
       "title": "Pâte feuilletée - taille et format à préciser",
+      "prix": 7,
       "description": "Pâte feuilletée, qualité boulangère",
       "category": "viennoiseries",
       "visible": true
