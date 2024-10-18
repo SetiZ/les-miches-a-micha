@@ -30,7 +30,7 @@ content:
             type: image
             options:
               path: public/images/
-              output: ''
+              output: /
               extensions: [ jpg, jpeg, png ]
           - name: category
             label: Catégorie
