@@ -12,10 +12,10 @@
     },
     {
       "id": 2,
-      "title": "Pour octobre rose, 1€ reversé pour chaque brioche !",
+      "title": "Pain à la châtaigne - nature ou au choix figues, noix, abricots, etc.",
       "prix": 7,
-      "description": "Pour octobre rose",
-      "images": "503_brioche_praline.png",
+      "description": "",
+      "images": "305_chataigne.png",
       "category": "pain du mois",
       "visible": true
     },
