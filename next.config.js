@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	reactStrictMode: true,
-	bundlePagesRouterDependencies: true,
-	serverExternalPackages: ['framer-motion'],
+	transpilePackages: ['framer-motion'],
 	experimental: {
     optimizePackageImports: ['react-icons'],
   },
