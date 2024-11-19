@@ -11,21 +11,21 @@
       "visible": true
     },
     {
+      "id": 2,
+      "title": "Pain à la châtaigne - nature ou au choix figues, noix, abricots, etc.",
+      "prix": 7,
+      "description": "",
+      "images": "305_chataigne.png",
+      "category": "pain du mois",
+      "visible": true
+    },
+    {
       "id": 3,
       "title": "Pour Halloween - Pain citrouille",
       "prix": 8,
       "poids": 600,
       "description": "Pain à la citrouille pour Halloween",
       "images": "001_pain_citrouille.png",
-      "category": "pain du mois",
-      "visible": true
-    },
-    {
-      "id": 2,
-      "title": "Pain à la châtaigne - nature ou au choix figues, noix, abricots, etc.",
-      "prix": 7,
-      "description": "",
-      "images": "305_chataigne.png",
       "category": "pain du mois",
       "visible": true
     },
