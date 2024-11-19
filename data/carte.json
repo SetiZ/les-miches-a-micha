@@ -1,8 +1,18 @@
 {
   "products": [
-    {
+      {
       "id": 1,
-      "title": "Pain du moment - Pain citrouille",
+      "title": "Pain du moment - Tradigraine au cumin",
+      "prix": 6,
+      "poids": 600,
+      "description": "Pain à la citrouille pour Halloween",
+      "images": "",
+      "category": "pain du mois",
+      "visible": true
+    },
+    {
+      "id": 3,
+      "title": "Pour Halloween - Pain citrouille",
       "prix": 8,
       "poids": 600,
       "description": "Pain à la citrouille pour Halloween",
