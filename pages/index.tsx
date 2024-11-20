@@ -73,6 +73,12 @@ export default function Home() {
                 icon={<CgSoftwareDownload />}
                 options={{ download: true }}
               />
+              <SocialButton
+                text={'.:*~*:. Carte des fêtes 2024 .:*~*:.'}
+                link={'carte_fetes_2024.pdf'}
+                icon={<CgSoftwareDownload />}
+                options={{ download: true }}
+              />
             </VStack>
           </Container>
           <Container maxW="80vw" textAlign={'center'}>
