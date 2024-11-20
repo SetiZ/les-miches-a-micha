@@ -14,6 +14,7 @@ export default function Carte() {
   );
   const categories = [
     'pain du mois',
+    'Noël 2024',
     'pain courant',
     'pains spéciaux',
     'autres pains spéciaux',
@@ -22,7 +23,6 @@ export default function Carte() {
     'viennoiseries',
     'apéritif',
     'autres gourmandises',
-    'Noël 2024',
   ];
 
   const changeFilteredProducts = async (index: number) => {
