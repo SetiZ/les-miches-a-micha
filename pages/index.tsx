@@ -1,6 +1,6 @@
 import ContainerBox from '@/components/containerBox';
 import Layout from '@/components/layout';
-import SocialButton from '@/components/socialButton';
+import SocialButton, { Events } from '@/components/socialButton';
 import trusted from '@/data/trusted.json';
 import {
   Box,
@@ -66,6 +66,13 @@ export default function Home() {
                 link={'/carte'}
                 icon={<CgBrowse />}
                 options={{ in: true }}
+              />
+              <SocialButton
+                text={'.:*~*:. Carte des fêtes 2024 .:*~*:.'}
+                link={'carte_fetes_2024.pdf'}
+                icon={<CgSoftwareDownload />}
+                options={{ download: true }}
+                event={Events.Christmas}
               />
               <SocialButton
                 text={'Télécharger le menu'}

@@ -14,6 +14,7 @@ export default function Carte() {
   );
   const categories = [
     'pain du mois',
+    'Noël 2024',
     'pain courant',
     'pains spéciaux',
     'autres pains spéciaux',

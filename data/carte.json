@@ -20,16 +20,6 @@
       "visible": true
     },
     {
-      "id": 3,
-      "title": "Pour Halloween - Pain citrouille",
-      "prix": 8,
-      "poids": 600,
-      "description": "Pain à la citrouille pour Halloween",
-      "images": "001_pain_citrouille.png",
-      "category": "pain du mois",
-      "visible": true
-    },
-    {
       "id": 101,
       "title": "Baguette de tradition",
       "prix": 1.25,
@@ -482,7 +472,7 @@
     {
       "id": 906,
       "title": "Mini-buns",
-      "prix": 0.7,
+      "prix": 0.75,
       "description": "Légèrement briochés, pour les burgers maison. Sésame, blanc ou noir, en top- ping.",
       "images": "904_buns.jpeg",
       "category": "autres gourmandises",
@@ -540,6 +530,66 @@
       "description": "Pâte feuilletée 100% maison, beurre AOP de Charente ; la frangipane est pure crème d’amandes (pas d’arômes artificiels), amandes bio, avec une pointe d’éclats d’amandes torréfiées pour la texture.",
       "images": "907_galette_rois.png",
       "category": "autres gourmandises",
+      "visible": false
+    },
+    
+    {
+      "id": 1001,
+      "title": "Pain d'épices",
+      "prix": 25,
+      "description": "(prix au kg, taille personnalisable) - 50% pur miel bio, farine de seigle et possibilité de garnir de figues, fruits confits, chocolat, etc.",
+      "images": "1001_epices.jpg",
+      "category": "Noël 2024",
+      "visible": true
+    },
+    {
+      "id": 1002,
+      "title": "Pompe à l'huile",
+      "prix": 8,
+      "poids": 750,
+      "description": "Galette briochée typiquement provençale, parfumée à l’eau de fleur d’oranger, réalisée pour le réveillon de Noël et faisant partie des 13 desserts traditionnels.",
+      "images": "510_pompe.png",
+      "category": "Noël 2024",
+      "visible": true
+    },
+    {
+      "id": 1003,
+      "title": "Tourte de seigle au citron",
+      "prix": 9,
+      "poids": 600,
+      "description": "Tourte de seigle intégral, zestes de citron, idéale pour le saumon ou lres fruits de mer.",
+      "images": "405_tourte_seigle.png",
+      "category": "Noël 2024",
+      "visible": true
+    },
+    {
+      "id": 1004,
+      "title": "Babka à la cannelle (ou choco)",
+      "prix": 9,
+      "poids": 550,
+      "description": "Brioche au beurre, tressée et originaire de Pologne, étymologiquement « grand-mère », fourrée ici avec une pâte à la cannelle et à la cardamome, rappelant celle des Kannelbullar scandinaves. Au choix, on pourra y ajouter également des amandes effilées ou du chocolat pour plus de gourmandise !",
+      "images": "506_babka.png",
+      "category": "Noël 2024",
+      "visible": true
+    },
+    {
+      "id": 1005,
+      "title": "Pain de mie seigle / figues",
+      "prix": 6,
+      "poids": 500,
+      "description": "fondant, légèrement sucré, savoureux et délicieux pour des toasts ou des canapés raffinés !",
+      "images": "1005_mie_seigle.jpg",
+      "category": "Noël 2024",
+      "visible": true
+    },
+    {
+      "id": 1006,
+      "title": "Brioche Père Noël",
+      "prix": 10,
+      "poids": 500,
+      "description": "",
+      "images": "1006_briochePereNoel.jpg",
+      "category": "Noël 2024",
       "visible": true
     }
   ]
