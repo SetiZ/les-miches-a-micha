@@ -22,6 +22,7 @@ export default function Carte() {
     'viennoiseries',
     'apéritif',
     'autres gourmandises',
+    'Noël 2024',
   ];
 
   const changeFilteredProducts = async (index: number) => {
