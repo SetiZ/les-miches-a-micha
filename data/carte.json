@@ -531,7 +531,7 @@
       "images": "907_galette_rois.png",
       "category": "autres gourmandises",
       "visible": false
-    }
+    },
     
     {
       "id": 1001,
@@ -541,7 +541,7 @@
       "images": "1001_epices.jpg",
       "category": "Noël 2024",
       "visible": true
-    }
+    },
     {
       "id": 1002,
       "title": "Pompe à l'huile",
@@ -551,7 +551,7 @@
       "images": "510_pompe.png",
       "category": "Noël 2024",
       "visible": true
-    }
+    },
     {
       "id": 1003,
       "title": "Tourte de seigle au citron",
@@ -561,7 +561,7 @@
       "images": "405_tourte_seigle.png",
       "category": "Noël 2024",
       "visible": true
-    }
+    },
     {
       "id": 1004,
       "title": "Babka à la cannelle (ou choco)",
