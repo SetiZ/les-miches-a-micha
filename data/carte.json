@@ -598,7 +598,7 @@
       "prix": 1.5,
       "description": "Vanille et pointe de rhum",
       "images": "909_canneles.png",
-      "category": "autres gourmandises",
+      "category": "Noël 2024",
       "visible": true
     },
     {
@@ -607,7 +607,7 @@
       "prix": 1.25,
       "description": "Parfums selon demande... et inspiration !",
       "images": "910_macarons.png",
-      "category": "autres gourmandises",
+      "category": "Noël 2024",
       "visible": true
     }
   ]
