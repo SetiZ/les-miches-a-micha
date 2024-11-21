@@ -591,6 +591,24 @@
       "images": "1006_briochePereNoel.jpg",
       "category": "Noël 2024",
       "visible": true
+    },
+    {
+      "id": 1007,
+      "title": "Cannelés bordelais",
+      "prix": 1.5,
+      "description": "Vanille et pointe de rhum",
+      "images": "909_canneles.png",
+      "category": "autres gourmandises",
+      "visible": true
+    },
+    {
+      "id": 1008,
+      "title": "Macarons",
+      "prix": 1.25,
+      "description": "Parfums selon demande... et inspiration !",
+      "images": "910_macarons.png",
+      "category": "autres gourmandises",
+      "visible": true
     }
   ]
 }
