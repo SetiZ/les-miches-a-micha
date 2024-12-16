@@ -77,7 +77,7 @@ export default function Home() {
               <SocialButton
                 text={'Télécharger le menu'}
                 link={'les-miches-a-micha.pdf'}
-                icon={<CgSoftwareDownload />}
+                icon={<CgShare />}
                 options={{ download: true }}
               />
               <SocialButton
