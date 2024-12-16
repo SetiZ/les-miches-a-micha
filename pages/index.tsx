@@ -80,6 +80,12 @@ export default function Home() {
                 icon={<CgSoftwareDownload />}
                 options={{ download: true }}
               />
+              <SocialButton
+                text={'Les ateliers'}
+                link={'Ateliers_boulanj.pdf'}
+                icon={<CgSoftwareDownload />}
+                options={{ download: true }}
+              />
             </VStack>
           </Container>
           <Container maxW="80vw" textAlign={'center'}>
