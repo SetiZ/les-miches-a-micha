@@ -77,13 +77,13 @@ export default function Home() {
               <SocialButton
                 text={'Télécharger le menu'}
                 link={'les-miches-a-micha.pdf'}
-                icon={<CgShare />}
+                icon={<CgSoftwareDownload />}
                 options={{ download: true }}
               />
               <SocialButton
                 text={'Les ateliers'}
                 link={'Ateliers_boulanj.pdf'}
-                icon={<CgSoftwareDownload />}
+                icon={<CgSmileMouthOpen />}
                 options={{ download: true }}
               />
             </VStack>
