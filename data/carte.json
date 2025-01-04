@@ -1,6 +1,6 @@
 {
   "products": [
-      {
+    {
       "id": 1,
       "title": "Pain du moment - Tradigraine au cumin",
       "prix": 6,
@@ -532,7 +532,6 @@
       "category": "autres gourmandises",
       "visible": false
     },
-    
     {
       "id": 1001,
       "title": "Pain d'épices (prix au kg)",
