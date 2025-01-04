@@ -42,6 +42,7 @@ const Choc = () => {
       </Flex>
     );
   };
+
   return (
     // <Flex
     //   bg="#edf3f8"
@@ -94,7 +95,7 @@ const Choc = () => {
               gridRowGap={{ md: 10 }}
             >
               <Feature
-                title="Competitive exchange rates"
+                title="Initiation au pain courant"
                 // icon={
                 //   <path
                 //     strokeLinecap="round"
@@ -104,13 +105,11 @@ const Choc = () => {
                 //   />
                 // }
               >
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Maiores impedit perferendis suscipit eaque, iste dolor
-                cupiditate blanditiis ratione.
+                façonnez vos premières baguettes, épis, formes régionales…
               </Feature>
 
               <Feature
-                title=" No hidden fees"
+                title="Secrets des pains spéciaux"
                 // icon={
                 //   <path
                 //     strokeLinecap="round"
@@ -120,13 +119,11 @@ const Choc = () => {
                 //   />
                 // }
               >
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Maiores impedit perferendis suscipit eaque, iste dolor
-                cupiditate blanditiis ratione.
+                campagne, complet, ou encore pain de mie, tout au levain.
               </Feature>
 
               <Feature
-                title="Transfers are instant"
+                title="Brioches et tressages artistique"
                 // icon={
                 //   <path
                 //     strokeLinecap="round"
@@ -136,13 +133,11 @@ const Choc = () => {
                 //   />
                 // }
               >
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Maiores impedit perferendis suscipit eaque, iste dolor
-                cupiditate blanditiis ratione.
+                sucré et ludique, confection d’animaux en brioche !
               </Feature>
 
               <Feature
-                title="Mobile notifications"
+                title="Viennoiseries maison"
                 // icon={
                 //   <path
                 //     strokeLinecap="round"
@@ -152,9 +147,7 @@ const Choc = () => {
                 //   />
                 // }
               >
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Maiores impedit perferendis suscipit eaque, iste dolor
-                cupiditate blanditiis ratione.
+                croissants, pains au chocolat, et plus encore.
               </Feature>
             </Stack>
           </Box>
