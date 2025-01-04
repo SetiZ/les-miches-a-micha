@@ -20,8 +20,8 @@ import {
   CgBrowse,
   CgInstagram,
   CgPin,
-  CgSoftwareDownload,
   CgSmileMouthOpen,
+  CgSoftwareDownload,
 } from 'react-icons/cg';
 
 export default function Home() {
