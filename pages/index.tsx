@@ -71,7 +71,7 @@ export default function Home() {
               <SocialButton
                 text={'.:*~*:. Épiphanie 2025 .:*~*:.'}
                 link={'/carte'}
-                icon={<CgBrowse />}
+                icon={<CgCrown />}
                 options={{ in: true }}
                 event={Events.Christmas}
               />
