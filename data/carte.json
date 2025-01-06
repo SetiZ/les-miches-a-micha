@@ -1,21 +1,56 @@
 {
   "products": [
-      {
+    {
       "id": 1,
-      "title": "Pain du moment - Tradigraine au cumin",
-      "prix": 6,
-      "poids": 600,
-      "description": "Pain à la citrouille pour Halloween",
-      "images": "",
+      "title": "Pain d'épices (prix au kg)",
+      "prix": 25,
+      "description": "(prix au kg, taille personnalisable) - 50% pur miel bio, farine de seigle et possibilité de garnir de figues, fruits confits, chocolat, etc.",
+      "images": "1001_epices.jpg",
       "category": "pain du mois",
       "visible": true
     },
     {
       "id": 2,
-      "title": "Pain à la châtaigne - nature ou au choix figues, noix, abricots, etc.",
-      "prix": 7,
-      "description": "",
-      "images": "305_chataigne.png",
+      "title": "Galettes des rois 4-6 pers",
+      "prix": 20,
+      "description": "Pâte feuilletée 100% maison, beurre AOP de Charente ; la frangipane est pure crème d’amandes (pas d’arômes artificiels), amandes bio, avec une pointe d’éclats d’amandes torréfiées pour la texture.",
+      "images": "907_galette_rois.png",
+      "category": "pain du mois",
+      "visible": true
+    },
+    {
+      "id": 2,
+      "title": "Galettes des rois 6-8 pers",
+      "prix": 28,
+      "description": "Pâte feuilletée 100% maison, beurre AOP de Charente ; la frangipane est pure crème d’amandes (pas d’arômes artificiels), amandes bio, avec une pointe d’éclats d’amandes torréfiées pour la texture.",
+      "images": "907_galette_rois.png",
+      "category": "pain du mois",
+      "visible": true
+    },
+    {
+      "id": 3,
+      "title": "Galettes des rois 8-10 pers",
+      "prix": 35,
+      "description": "Pâte feuilletée 100% maison, beurre AOP de Charente ; la frangipane est pure crème d’amandes (pas d’arômes artificiels), amandes bio, avec une pointe d’éclats d’amandes torréfiées pour la texture.",
+      "images": "907_galette_rois.png",
+      "category": "pain du mois",
+      "visible": true
+    },
+    {
+      "id": 4,
+      "title": "Galettes des rois 10-12 pers",
+      "prix": 42,
+      "description": "Pâte feuilletée 100% maison, beurre AOP de Charente ; la frangipane est pure crème d’amandes (pas d’arômes artificiels), amandes bio, avec une pointe d’éclats d’amandes torréfiées pour la texture.",
+      "images": "907_galette_rois.png",
+      "category": "pain du mois",
+      "visible": true
+    },
+    {
+      "id": 5,
+      "title": "Couronne des rois provençale",
+      "prix": 20,
+      "description": "Brioche provençale pour l'épiphanie, aux fruits confits et à la fleur d'oranger",
+      "images": "999_couronne_rois.jpg",
       "category": "pain du mois",
       "visible": true
     },
@@ -532,7 +567,6 @@
       "category": "autres gourmandises",
       "visible": false
     },
-    
     {
       "id": 1001,
       "title": "Pain d'épices (prix au kg)",
@@ -540,7 +574,7 @@
       "description": "(prix au kg, taille personnalisable) - 50% pur miel bio, farine de seigle et possibilité de garnir de figues, fruits confits, chocolat, etc.",
       "images": "1001_epices.jpg",
       "category": "Noël 2024",
-      "visible": true
+      "visible": false
     },
     {
       "id": 1002,
@@ -550,7 +584,7 @@
       "description": "Galette briochée typiquement provençale, parfumée à l’eau de fleur d’oranger, réalisée pour le réveillon de Noël et faisant partie des 13 desserts traditionnels.",
       "images": "510_pompe.png",
       "category": "Noël 2024",
-      "visible": true
+      "visible": false
     },
     {
       "id": 1003,
@@ -560,7 +594,7 @@
       "description": "Tourte de seigle intégral, zestes de citron, idéale pour le saumon ou lres fruits de mer.",
       "images": "405_tourte_seigle.png",
       "category": "Noël 2024",
-      "visible": true
+      "visible": false
     },
     {
       "id": 1004,
@@ -570,7 +604,7 @@
       "description": "Brioche au beurre, tressée et originaire de Pologne, étymologiquement « grand-mère », fourrée ici avec une pâte à la cannelle et à la cardamome, rappelant celle des Kannelbullar scandinaves. Au choix, on pourra y ajouter également des amandes effilées ou du chocolat pour plus de gourmandise !",
       "images": "506_babka.png",
       "category": "Noël 2024",
-      "visible": true
+      "visible": false
     },
     {
       "id": 1005,
@@ -580,7 +614,7 @@
       "description": "fondant, légèrement sucré, savoureux et délicieux pour des toasts ou des canapés raffinés !",
       "images": "1005_mie_seigle.jpg",
       "category": "Noël 2024",
-      "visible": true
+      "visible": false
     },
     {
       "id": 1006,
@@ -590,7 +624,7 @@
       "description": "",
       "images": "1006_briochePereNoel.jpg",
       "category": "Noël 2024",
-      "visible": true
+      "visible": false
     },
     {
       "id": 1007,
@@ -599,7 +633,7 @@
       "description": "Vanille et pointe de rhum",
       "images": "909_canneles.png",
       "category": "Noël 2024",
-      "visible": true
+      "visible": false
     },
     {
       "id": 1008,
@@ -608,7 +642,7 @@
       "description": "Parfums selon demande... et inspiration !",
       "images": "910_macarons.png",
       "category": "Noël 2024",
-      "visible": true
+      "visible": false
     }
   ]
 }
