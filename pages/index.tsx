@@ -69,10 +69,10 @@ export default function Home() {
                 options={{ in: true }}
               />
               <SocialButton
-                text={'.:*~*:. Carte des fêtes 2024 .:*~*:.'}
-                link={'carte_fetes_2024.pdf'}
-                icon={<CgSoftwareDownload />}
-                options={{ download: true }}
+                text={'.:*~*:. Épiphanie 2025 .:*~*:.'}
+                link={'/carte'}
+                icon={<CgBrowse />}
+                options={{ in: true }}
                 event={Events.Christmas}
               />
               <SocialButton
