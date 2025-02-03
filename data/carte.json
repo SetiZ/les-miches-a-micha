@@ -7,52 +7,7 @@
       "description": "(prix au kg, taille personnalisable) - 50% pur miel bio, farine de seigle et possibilité de garnir de figues, fruits confits, chocolat, etc.",
       "images": "1001_epices.jpg",
       "category": "pain du mois",
-      "visible": true
-    },
-    {
-      "id": 2,
-      "title": "Galettes des rois 4-6 pers",
-      "prix": 20,
-      "description": "Pâte feuilletée 100% maison, beurre AOP de Charente ; la frangipane est pure crème d’amandes (pas d’arômes artificiels), amandes bio, avec une pointe d’éclats d’amandes torréfiées pour la texture.",
-      "images": "907_galette_rois.png",
-      "category": "pain du mois",
-      "visible": true
-    },
-    {
-      "id": 2,
-      "title": "Galettes des rois 6-8 pers",
-      "prix": 28,
-      "description": "Pâte feuilletée 100% maison, beurre AOP de Charente ; la frangipane est pure crème d’amandes (pas d’arômes artificiels), amandes bio, avec une pointe d’éclats d’amandes torréfiées pour la texture.",
-      "images": "907_galette_rois.png",
-      "category": "pain du mois",
-      "visible": true
-    },
-    {
-      "id": 3,
-      "title": "Galettes des rois 8-10 pers",
-      "prix": 35,
-      "description": "Pâte feuilletée 100% maison, beurre AOP de Charente ; la frangipane est pure crème d’amandes (pas d’arômes artificiels), amandes bio, avec une pointe d’éclats d’amandes torréfiées pour la texture.",
-      "images": "907_galette_rois.png",
-      "category": "pain du mois",
-      "visible": true
-    },
-    {
-      "id": 4,
-      "title": "Galettes des rois 10-12 pers",
-      "prix": 42,
-      "description": "Pâte feuilletée 100% maison, beurre AOP de Charente ; la frangipane est pure crème d’amandes (pas d’arômes artificiels), amandes bio, avec une pointe d’éclats d’amandes torréfiées pour la texture.",
-      "images": "907_galette_rois.png",
-      "category": "pain du mois",
-      "visible": true
-    },
-    {
-      "id": 5,
-      "title": "Couronne des rois provençale",
-      "prix": 20,
-      "description": "Brioche provençale pour l'épiphanie, aux fruits confits et à la fleur d'oranger",
-      "images": "999_couronne_rois.jpg",
-      "category": "pain du mois",
-      "visible": true
+      "visible": false
     },
     {
       "id": 101,
