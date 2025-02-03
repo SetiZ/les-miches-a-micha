@@ -22,7 +22,6 @@ import {
   CgPin,
   CgSoftwareDownload,
   CgSmileMouthOpen,
-  CgCrown,
 } from 'react-icons/cg';
 
 export default function Home() {
