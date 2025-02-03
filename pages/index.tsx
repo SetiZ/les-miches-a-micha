@@ -22,6 +22,7 @@ import {
   CgPin,
   CgSoftwareDownload,
   CgSmileMouthOpen,
+  CgCrown,
 } from 'react-icons/cg';
 
 export default function Home() {
@@ -67,6 +68,13 @@ export default function Home() {
                 link={'/carte'}
                 icon={<CgBrowse />}
                 options={{ in: true }}
+              />
+              <SocialButton
+                text={'.:*~*:. Épiphanie 2025 .:*~*:.'}
+                link={'/carte'}
+                icon={<CgCrown />}
+                options={{ in: true }}
+                event={Events.Christmas}
               />
               <SocialButton
                 text={'Télécharger le menu'}
