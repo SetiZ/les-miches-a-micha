@@ -25,10 +25,10 @@ export const Filter = ({
       </Tag>
       {categories.map((category, index) => (
         <Tag
+          key={category}
           size={'lg'}
           variant={filteredProducts === index ? 'solid' : 'subtle'}
           colorScheme="yellow"
-          key={index}
           onClick={() => onClick(index)}
           cursor={'pointer'}>
           {category}

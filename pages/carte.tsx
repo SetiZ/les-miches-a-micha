@@ -41,6 +41,8 @@ export default function Carte() {
             width={260}
             height={260}
             loading="eager"
+            priority={true}
+            style={{ objectFit: 'cover', width: '260px', height: '260px' }}
           />
         </Flex>
         {/* <Heading as="h2" size="xl" textAlign={'center'}>
