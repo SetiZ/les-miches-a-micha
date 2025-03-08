@@ -4,6 +4,10 @@ const nextConfig = {
 	transpilePackages: ['framer-motion'],
 	experimental: {
     optimizePackageImports: ['react-icons'],
+    turbo: {
+      // Example: adding an alias and custom file extension
+      resolveExtensions: ['.mdx', '.tsx', '.ts', '.jsx', '.js', '.json'],
+    }
   },
 };
 

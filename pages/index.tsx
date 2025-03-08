@@ -18,11 +18,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {
   CgBrowse,
+  CgCrown,
   CgInstagram,
   CgPin,
-  CgSoftwareDownload,
   CgSmileMouthOpen,
-  CgCrown,
+  CgSoftwareDownload,
 } from 'react-icons/cg';
 
 export default function Home() {

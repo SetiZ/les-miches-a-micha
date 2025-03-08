@@ -12,18 +12,14 @@ export default function Carte() {
   const [carteList, setCarteList] = useState<typeof carte.products>(
     carte.products || [],
   );
-  const categories = [
-    'pain du mois',
-    'Noël 2024',
-    'pain courant',
-    'pains spéciaux',
-    'autres pains spéciaux',
-    'farines anciennes, semences paysannes',
-    'brioches',
-    'viennoiseries',
-    'apéritif',
-    'autres gourmandises',
-  ];
+
+  const categories = Array.from(
+    new Set(
+      carte.products
+        .filter((product) => product.visible)
+        .map((product) => product.category),
+    ),
+  );
 
   const changeFilteredProducts = async (index: number) => {
     setFilteredProducts(index);
