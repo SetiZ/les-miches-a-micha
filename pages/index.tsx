@@ -1,6 +1,6 @@
 import ContainerBox from '@/components/containerBox';
 import Layout from '@/components/layout';
-import SocialButton, { Events } from '@/components/socialButton';
+import SocialButton from '@/components/socialButton';
 import trusted from '@/data/trusted.json';
 import {
   Box,
@@ -18,7 +18,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {
   CgBrowse,
-  CgCrown,
+  // CgCrown,
   CgInstagram,
   CgPin,
   CgSmileMouthOpen,
@@ -70,17 +70,16 @@ export default function Home() {
                 options={{ in: true }}
               />
               <SocialButton
-                text={'.:*~*:. Épiphanie 2025 .:*~*:.'}
-                link={'/carte'}
-                icon={<CgCrown />}
-                options={{ in: true }}
-                event={Events.Christmas}
-              />
-              <SocialButton
                 text={'Télécharger le menu'}
                 link={'les-miches-a-micha.pdf'}
                 icon={<CgSoftwareDownload />}
                 options={{ download: true }}
+              />
+              <SocialButton
+                text={'Vente de farines'}
+                link={'Carte_des_farines.pdf'}
+                icon={<CgSoftwareDownload />}
+                options={{ in: true }}
               />
               <SocialButton
                 text={'Les ateliers'}
