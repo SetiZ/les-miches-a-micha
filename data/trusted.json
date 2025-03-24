@@ -23,6 +23,13 @@
       "url": "https://amaplibertesuresnes.wordpress.com/"
     },
     {
+      "id": 10,
+      "title": "Aurore - tiers-lieu Faitout",
+      "url": "https://www.aurore.asso.fr/formation/maison-faitout-un-nouveau-tiers-lieu-solidaire-au-coeur-du-20eme-a-paris"
+      "description": "L'association ",
+      "order": "pre"
+    },
+    {
       "id": 4,
       "title": "L'ENSCI - les ateliers",
       "url": "https://www.ensci.com/",
