@@ -27,7 +27,7 @@
       "title": "Aurore - tiers-lieu Faitout",
       "url": "https://www.aurore.asso.fr/formation/maison-faitout-un-nouveau-tiers-lieu-solidaire-au-coeur-du-20eme-a-paris",
       "description": "L'association ",
-      "order": "pre"
+      "order": "post"
     },
     {
       "id": 4,
