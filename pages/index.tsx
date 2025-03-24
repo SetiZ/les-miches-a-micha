@@ -1,6 +1,6 @@
 import ContainerBox from '@/components/containerBox';
 import Layout from '@/components/layout';
-import SocialButton, { Events } from '@/components/socialButton';
+import SocialButton from '@/components/socialButton';
 import trusted from '@/data/trusted.json';
 import {
   Box,
@@ -18,7 +18,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {
   CgBrowse,
-  CgCrown,
+  // CgCrown,
   CgInstagram,
   CgPin,
   CgSmileMouthOpen,
