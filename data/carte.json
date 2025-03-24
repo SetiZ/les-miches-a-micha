@@ -2,12 +2,21 @@
   "products": [
     {
       "id": 1,
-      "title": "Pain d'épices (prix au kg)",
-      "prix": 25,
+      "title": "Petit épeautre 100% intégral",
+      "prix": 8,
       "description": "(prix au kg, taille personnalisable) - 50% pur miel bio, farine de seigle et possibilité de garnir de figues, fruits confits, chocolat, etc.",
-      "images": "1001_epices.jpg",
+      "images": "403_petit_epeautre.png",
       "category": "pain du mois",
-      "visible": false
+      "visible": true
+    },
+    {
+      "id": 2,
+      "title": "Vente de farines bio - sur demande",
+      "prix": 1,
+      "description": "(prix au kg, taille personnalisable) - 50% pur miel bio, farine de seigle et possibilité de garnir de figues, fruits confits, chocolat, etc.",
+      "images": "999_sacs_farines.jpeg",
+      "category": "pain du mois",
+      "visible": true
     },
     {
       "id": 101,
