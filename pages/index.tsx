@@ -70,17 +70,16 @@ export default function Home() {
                 options={{ in: true }}
               />
               <SocialButton
-                text={'.:*~*:. Épiphanie 2025 .:*~*:.'}
-                link={'/carte'}
-                icon={<CgCrown />}
-                options={{ in: true }}
-                event={Events.Christmas}
-              />
-              <SocialButton
                 text={'Télécharger le menu'}
                 link={'les-miches-a-micha.pdf'}
                 icon={<CgSoftwareDownload />}
                 options={{ download: true }}
+              />
+              <SocialButton
+                text={'Vente de farines'}
+                link={'Carte_des_farines.pdf'}
+                icon={<CgSoftwareDownload />}
+                options={{ in: true }}
               />
               <SocialButton
                 text={'Les ateliers'}
