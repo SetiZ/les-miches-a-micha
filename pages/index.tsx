@@ -83,9 +83,9 @@ export default function Home() {
               />
               <SocialButton
                 text={'Les ateliers'}
-                link={'Ateliers_boulanj.pdf'}
+                link={'/ateliers'}
                 icon={<CgSmileMouthOpen />}
-                options={{ download: true }}
+                options={{ in: true }}
               />
             </VStack>
           </Container>
