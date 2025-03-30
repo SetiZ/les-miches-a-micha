@@ -71,11 +71,14 @@ export default function Layout({ children }: LayoutProps) {
         minH={'calc(calc(100vh - calc(100vh - 100%)) - 56px)'}
         // h={'100vh'}
         // maxW={'1440'}
-        bgImage='url("bread-bg.jpeg")'
-        bgAttachment={'fixed'}
-        bgPos={'center'}
-        bgRepeat={'no-repeat'}
-        bgSize={'cover'}
+        // bgGradient='linear(yellow.100 0%, orange.100 25%, yellow.700 50%)'
+        bgGradient='linear(yellow.800 0%, orange.100 25%, whiteAlpha.300 50%)'
+        // removing background and adding gradient
+        // bgImage='url("bread-bg.jpeg")'
+        // bgAttachment={'fixed'}
+        // bgPos={'center'}
+        // bgRepeat={'no-repeat'}
+        // bgSize={'cover'}
         justifyContent={'center'}>
         {children}
       </Flex>

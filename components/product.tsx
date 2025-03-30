@@ -27,11 +27,13 @@ const ProductBox = ({
 
   return (
     <Box
+      as="a"
       bgColor="white"
       boxShadow="md"
       rounded="md"
       width={'260px'}
-      justifySelf={'center'}>
+      justifySelf={'center'}
+      href={`/carte/${id}`}>
       {/* <Box position={"relative"} width={"260px"} height={"260px"}> */}
       <Image
         // as={NextImage}
