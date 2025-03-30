@@ -3,7 +3,7 @@ content:
   - name: carte
     label: Carte
     path: data/carte.json
-    type: collection
+    type: file
     fields:
       - name: products
         label: Produits
