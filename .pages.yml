@@ -4,7 +4,7 @@ content:
     label: Carte
     path: data/carte.json
     type: file
-    format: datagrid
+    format: json
     fields:
       - name: products
         label: Produits
