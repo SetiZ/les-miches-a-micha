@@ -23,6 +23,7 @@ import {
   CgPin,
   CgSmileMouthOpen,
   CgSoftwareDownload,
+  CgPen,
 } from 'react-icons/cg';
 
 export default function Home() {
@@ -81,6 +82,13 @@ export default function Home() {
                 icon={<CgSoftwareDownload />}
                 options={{ in: true }}
               />
+              <SocialButton
+                text={'Matsot - pain azyme'}
+                link={'Chttps://forms.gle/mFq3NwwSp4uwBn3c8'}
+                icon={<CgPen />}
+                options={{ in: true }}
+              />
+              
               <SocialButton
                 text={'Les ateliers'}
                 link={'Ateliers_boulanj.pdf'}
