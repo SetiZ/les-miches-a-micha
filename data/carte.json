@@ -2,10 +2,9 @@
   "products": [
     {
       "id": 1,
-      "title": "Petit épeautre 100% intégral",
-      "prix": 8,
-      "description": "(prix au kg, taille personnalisable) - 50% pur miel bio, farine de seigle et possibilité de garnir de figues, fruits confits, chocolat, etc.",
-      "images": "403_petit_epeautre.png",
+      "title": "Pain d'apéritif printanier",
+      "prix": 7,
+      "description": "(en baguette ou sur 500g) - petits morceaux de tomates confites, de parmesan, et de ciboulette",
       "category": "pain du mois",
       "visible": true
     },
@@ -13,7 +12,7 @@
       "id": 2,
       "title": "Vente de farines bio - sur demande",
       "prix": 1,
-      "description": "(prix au kg, taille personnalisable) - 50% pur miel bio, farine de seigle et possibilité de garnir de figues, fruits confits, chocolat, etc.",
+      "description": "Voir formulaire de commande de farines sur la page principale",
       "images": "999_sacs_farines.jpeg",
       "category": "pain du mois",
       "visible": true
