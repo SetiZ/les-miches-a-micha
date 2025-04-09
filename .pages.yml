@@ -2,7 +2,7 @@ media: public/images
 content:
   - name: carte
     label: Carte
-    path: data/carte.scv
+    path: data/carte.csv
     type: file
     format: datagrid
     fields:
