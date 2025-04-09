@@ -119,12 +119,12 @@ export default function Home() {
                       ) : (
                         <>
                           {trust.description}{' '}
-                          <Link
+                          {trust.url && <Link
                             href={trust.url}
                             target="_blank"
                             style={{ textDecoration: 'underline' }}>
                             {trust.title}
-                          </Link>
+                          </Link>}
                         </>
                       )}
                     </Box>
