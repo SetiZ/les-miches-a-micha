@@ -84,7 +84,7 @@ export default function Home() {
               />
               <SocialButton
                 text={'Matsot - pain azyme'}
-                link={'Chttps://forms.gle/mFq3NwwSp4uwBn3c8'}
+                link={'https://forms.gle/mFq3NwwSp4uwBn3c8'}
                 icon={<CgPen />}
                 options={{ in: true }}
               />
