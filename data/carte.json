@@ -2,6 +2,16 @@
   "products": [
     {
       "id": 1,
+      "title": "Lapin de Pâques en brioche",
+      "prix": 2,
+      "description": "Lapin de Pâques en brioche, pour les chercheurs d'oeufs plein de gourmandise !",
+      "images": "999_brioche_lapin.jpg",
+      "category": "pain du mois",
+      "visible": true
+    },
+    
+    {
+      "id": 2,
       "title": "Pain d'apéritif printanier",
       "prix": 7,
       "description": "(en baguette ou sur 500g) - petits morceaux de tomates confites, de parmesan, et de ciboulette",
@@ -9,7 +19,7 @@
       "visible": true
     },
     {
-      "id": 2,
+      "id": 99,
       "title": "Vente de farines bio - sur demande",
       "prix": 1,
       "description": "Voir formulaire de commande de farines sur la page principale",
