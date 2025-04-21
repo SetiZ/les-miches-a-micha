@@ -74,7 +74,7 @@ export default function Layout({ children }: LayoutProps) {
         // bgGradient='linear(yellow.100 0%, orange.100 25%, yellow.700 50%)'
         bgGradient="linear(yellow.800 0%, orange.100 25%, whiteAlpha.300 50%)"
         // removing background and adding gradient
-        // bgImage='url("bread-bg.jpeg")'
+         bgImage='url("bread-bg.jpeg")'
         // bgAttachment={'fixed'}
         // bgPos={'center'}
         // bgRepeat={'no-repeat'}
