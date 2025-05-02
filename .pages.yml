@@ -2,9 +2,9 @@ media: public/images
 content:
   - name: carte
     label: Carte
-    path: data/carte.csv
+    path: data/carte.json
     type: file
-    format: datagrid
+    format: json
     fields:
       - name: products
         label: Produits
