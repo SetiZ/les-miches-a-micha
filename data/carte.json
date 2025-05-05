@@ -2,16 +2,26 @@
   "products": [
     {
       "id": 1,
-      "title": "Lapin de Pâques en brioche",
-      "prix": 2,
-      "description": "Lapin de Pâques en brioche, pour les chercheurs d'oeufs plein de gourmandise !",
-      "images": "999_brioche_lapin.jpg",
+      "title": "Pavé au cacao",
+      "prix": 7,
+      "poids": 550,
+      "description": "Pavé plein de gourmandise, sur base de tradition, avec de la pâte de cacao et sans sucre ajouté",
+      "images": "",
       "category": "pain du mois",
       "visible": true
     },
-    
     {
       "id": 2,
+      "title": "Pavé au cacao - dés d'oranges confites",
+      "prix": 8,
+      "poids": 550,
+      "description": "Pavé plein de gourmandise, sur base de tradition, avec de la pâte de cacao et sans sucre ajouté - avec des dés d'oranges confites !",
+      "images": "",
+      "category": "pain du mois",
+      "visible": true
+    },
+    {
+      "id": 3,
       "title": "Pain d'apéritif printanier",
       "prix": 7,
       "description": "(en baguette ou sur 500g) - petits morceaux de tomates confites, de parmesan, et de ciboulette",
