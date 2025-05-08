@@ -74,7 +74,10 @@ const ProductBox = ({
             colorScheme="yellow"
             leftIcon={<AddIcon />}
             width={'full'}
-            onClick={() => handleAddToCart({ id, name: title, price: +prix })}>
+            onClick={(e) => {
+              e.preventDefault();
+              handleAddToCart({ id, name: title, price: +prix });
+            }}>
             Ajouter au panier
           </Button>
         </Box>

@@ -88,7 +88,7 @@ export default function Home() {
                 icon={<CgPen />}
                 options={{ in: true }}
               />
-              
+
               <SocialButton
                 text={'Les ateliers'}
                 link={'Ateliers_boulanj.pdf'}
@@ -119,12 +119,14 @@ export default function Home() {
                       ) : (
                         <>
                           {trust.description}{' '}
-                          {trust.url && <Link
-                            href={trust.url}
-                            target="_blank"
-                            style={{ textDecoration: 'underline' }}>
-                            {trust.title}
-                          </Link>}
+                          {trust.url && (
+                            <Link
+                              href={trust.url}
+                              target="_blank"
+                              style={{ textDecoration: 'underline' }}>
+                              {trust.title}
+                            </Link>
+                          )}
                         </>
                       )}
                     </Box>
