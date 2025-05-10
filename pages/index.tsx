@@ -23,7 +23,6 @@ import {
   CgPin,
   CgSmileMouthOpen,
   CgSoftwareDownload,
-  CgPen,
 } from 'react-icons/cg';
 
 export default function Home() {
@@ -54,9 +53,10 @@ export default function Home() {
         </Text>
         <VStack align={'center'} paddingTop={16} spacing={12}>
           <Container maxW="80vw" textAlign={'center'} fontSize="lg">
-            Le fournil sera exceptionnellement fermé du jeudi 15/05 au lundi 19/05. Dernière livraison possible jeudi 15 midi. À bientôt !<br />
+            Le fournil sera exceptionnellement fermé du jeudi 15/05 au lundi
+            19/05. Dernière livraison possible jeudi 15 midi. À bientôt !<br />
             Livraison à domicile, commande personnalisée, conseils de
-            dégustation, créativité. . .  Ici, tout est fait main, à partir de
+            dégustation, créativité. . . Ici, tout est fait main, à partir de
             matières premières bio, locales et nobles, pour vous proposer des
             pains savoureux, sains et originaux.
           </Container>
