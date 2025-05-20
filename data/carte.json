@@ -526,6 +526,15 @@
     },
     {
       "id": 910,
+      "title": "Mini-cannelés",
+      "prix": 0.6,
+      "description": "Vanille et pointe de rhum",
+      "images": "909_canneles.png",
+      "category": "autres gourmandises",
+      "visible": true
+    },
+    {
+      "id": 911,
       "title": "Macarons",
       "prix": 1.25,
       "description": "Parfums selon demande... et inspiration !",
@@ -534,7 +543,7 @@
       "visible": true
     },
     {
-      "id": 911,
+      "id": 912,
       "title": "Quiche - parfum à définir ensemble",
       "prix": 10,
       "description": "Epinards, thon...",
