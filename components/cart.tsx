@@ -1,23 +1,8 @@
 import { useCartStore } from '@/utils/store';
 import {
-  AddIcon,
-  CalendarIcon,
-  EmailIcon,
-  InfoIcon,
-  MinusIcon,
-  PhoneIcon,
-} from '@chakra-ui/icons';
-import {
   Box,
   Button,
   Center,
-  Divider,
-  Drawer,
-  DrawerBody,
-  DrawerCloseButton,
-  DrawerContent,
-  DrawerHeader,
-  DrawerOverlay,
   Grid,
   GridItem,
   HStack,
@@ -26,6 +11,7 @@ import {
   Input,
   InputGroup,
   InputLeftElement,
+  Separator, // Changed Divider to Separator
   Stack,
   Text,
   Textarea,
@@ -33,6 +19,23 @@ import {
   useToast,
 } from '@chakra-ui/react';
 import { type FormEvent, useState } from 'react';
+import {
+  FaCalendarAlt,
+  FaEnvelope,
+  FaInfoCircle,
+  FaMinus,
+  FaPhoneAlt,
+  FaPlus,
+} from 'react-icons/fa';
+import {
+  DrawerBackdrop,
+  DrawerBody,
+  DrawerCloseTrigger,
+  DrawerContent,
+  DrawerHeader,
+  DrawerRoot,
+} from '../components/ui/drawer'; // Assuming cart.tsx is in components/
+import { Field } from '../components/ui/field'; // Assuming cart.tsx is in components/
 
 interface CartProps {
   isOpen: boolean;
@@ -82,10 +85,13 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
   }
 
   return (
-    <Drawer isOpen={isOpen} onClose={onClose} size={'lg'}>
-      <DrawerOverlay />
+    <DrawerRoot
+      open={isOpen}
+      onOpenChange={(open) => !open && onClose()}
+      size={'lg'}>
+      <DrawerBackdrop />
       <DrawerContent>
-        <DrawerCloseButton />
+        <DrawerCloseTrigger />
         <DrawerHeader>Panier</DrawerHeader>
 
         <DrawerBody>
@@ -110,14 +116,14 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                           <IconButton
                             aria-label="minus"
                             size="xs"
-                            icon={<MinusIcon />}
+                            icon={<FaMinus />}
                             onClick={() => remove(item.id)}
                           />
                           <Text>{item.count}</Text>
                           <IconButton
                             aria-label="add"
                             size="xs"
-                            icon={<AddIcon />}
+                            icon={<FaPlus />}
                             onClick={() => add(item)}
                           />
                         </HStack>
@@ -139,7 +145,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
             )}
             {/* <Divider my={8} borderColor={"gray.600"} /> */}
           </VStack>
-          <Divider my={8} borderColor={'gray.600'} />
+          <Separator my={8} borderColor={'gray.600'} />
           <Box>
             <form onSubmit={sendOrder}>
               <Stack spacing={4}>
@@ -148,65 +154,75 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                   Un mél vous sera envoyé par la suite pour confirmer votre
                   commande.
                 </Text>
-                <InputGroup>
-                  <InputLeftElement pointerEvents="none">
-                    <InfoIcon color="gray.600" />
-                  </InputLeftElement>
-                  <Input
-                    type="text"
-                    placeholder="nom"
-                    name="nom"
-                    borderColor={'gray.600'}
-                    required
-                  />
-                </InputGroup>
-                <InputGroup>
-                  <InputLeftElement pointerEvents="none">
-                    <PhoneIcon color="gray.600" />
-                  </InputLeftElement>
-                  <Input
-                    type="tel"
-                    name="tel"
-                    placeholder="numéro de téléphone"
-                    borderColor={'gray.600'}
-                    required
-                  />
-                </InputGroup>
-                <InputGroup>
-                  <InputLeftElement pointerEvents="none">
-                    <EmailIcon color="gray.600" />
-                  </InputLeftElement>
-                  <Input
-                    type="email"
-                    name="email"
-                    placeholder="email"
-                    borderColor={'gray.600'}
-                    required
-                  />
-                </InputGroup>
+                <Field>
+                  <InputGroup>
+                    <InputLeftElement pointerEvents="none">
+                      <FaInfoCircle color="gray.600" />
+                    </InputLeftElement>
+                    <Input
+                      type="text"
+                      placeholder="nom"
+                      name="nom"
+                      borderColor={'gray.600'}
+                      required
+                    />
+                  </InputGroup>
+                </Field>
+                <Field>
+                  <InputGroup>
+                    <InputLeftElement pointerEvents="none">
+                      <FaPhoneAlt color="gray.600" />
+                    </InputLeftElement>
+                    <Input
+                      type="tel"
+                      name="tel"
+                      placeholder="numéro de téléphone"
+                      borderColor={'gray.600'}
+                      required
+                    />
+                  </InputGroup>
+                </Field>
+                <Field>
+                  <InputGroup>
+                    <InputLeftElement pointerEvents="none">
+                      <FaEnvelope color="gray.600" />
+                    </InputLeftElement>
+                    <Input
+                      type="email"
+                      name="email"
+                      placeholder="email"
+                      borderColor={'gray.600'}
+                      required
+                    />
+                  </InputGroup>
+                </Field>
                 <Text>
                   {`Veuillez spécifier l'heure de livraison souhaitée - comptez un minimum de 12h pour laisser au boulanger le temps de faire votre pain !`}
                 </Text>
-                <InputGroup>
-                  <InputLeftElement pointerEvents="none">
-                    <CalendarIcon color="gray.600" />
-                  </InputLeftElement>
-                  <Input
-                    type="datetime-local"
-                    name="date"
-                    placeholder="date et heure"
+                <Field>
+                  <InputGroup>
+                    <InputLeftElement pointerEvents="none">
+                      <FaCalendarAlt color="gray.600" />
+                    </InputLeftElement>
+                    <Input
+                      type="datetime-local"
+                      name="date"
+                      placeholder="date et heure"
+                      borderColor={'gray.600'}
+                      required
+                    />
+                  </InputGroup>
+                </Field>
+                <Field>
+                  <Textarea
+                    name="comment"
+                    placeholder="Un commentaire, un souhait de personnalisation, une question, ou toute autre information utile"
                     borderColor={'gray.600'}
-                    required
                   />
-                </InputGroup>
-                <Textarea
-                  name="comment"
-                  placeholder="Un commentaire, un souhait de personnalisation, une question, ou toute autre information utile"
-                  borderColor={'gray.600'}
-                />
+                </Field>
                 <Button
                   type="submit"
-                  colorScheme="yellow"
+                  colorPalette="yellow"
                   isLoading={isLoading}>
                   Envoyer
                 </Button>
@@ -215,7 +231,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
           </Box>
         </DrawerBody>
       </DrawerContent>
-    </Drawer>
+    </DrawerRoot>
   );
 };
 

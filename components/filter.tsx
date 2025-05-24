@@ -18,7 +18,7 @@ export const Filter = ({
       <Tag
         size={'lg'}
         variant={filteredProducts === -1 ? 'solid' : 'subtle'}
-        colorScheme="yellow"
+        colorPalette="yellow"
         onClick={() => onClick(-1)}
         cursor={'pointer'}>
         tous
@@ -28,7 +28,7 @@ export const Filter = ({
           key={category}
           size={'lg'}
           variant={filteredProducts === index ? 'solid' : 'subtle'}
-          colorScheme="yellow"
+          colorPalette="yellow"
           onClick={() => onClick(index)}
           cursor={'pointer'}>
           {category}

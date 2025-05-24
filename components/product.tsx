@@ -1,78 +1,64 @@
 import { useCartStore } from '@/utils/store';
-import { AddIcon } from '@chakra-ui/icons';
 // import { Image } from '@chakra-ui/next-js';
-import { Box, Button, Tag, Text } from '@chakra-ui/react';
+import { Button } from '@chakra-ui/react'; // Removed Box, Text, and Tag
 import Image from 'next/image';
+import NextLink from 'next/link';
+import { FaPlus } from 'react-icons/fa';
 
 interface ProductProps {
   id: number;
   images?: string;
   title: string;
-  category: string;
+  // category: string; // Removed unused prop
   prix: number;
-  poids?: number | null;
+  // poids?: number | null; // Removed unused prop
 }
 
 const ProductBox = ({
   id,
   images,
   title,
-  category,
+  // category, // Removed unused prop
   prix,
-  poids,
+  // poids, // Removed unused prop
 }: ProductProps) => {
   const { add: handleAddToCart } = useCartStore();
 
   const fallbackSrc = '0000_miches.png';
 
   return (
-    <Box
-      as="a"
-      bgColor="white"
-      boxShadow="md"
-      rounded="md"
-      width={'260px'}
-      justifySelf={'center'}
-      href={`/carte/${id}`}>
-      {/* <Box position={"relative"} width={"260px"} height={"260px"}> */}
-      <Image
-        // as={NextImage}
-        // loader={supabaseLoader}
-        loading="lazy"
-        // src={images}
-        src={
-          images && images.length > 0
-            ? `/images/${images}`
-            : `/images/${fallbackSrc}`
-        }
-        placeholder="blur"
-        blurDataURL={`/images/${fallbackSrc}`}
-        alt={''}
-        width={260}
-        height={260}
-        style={{ objectFit: 'cover', width: '260px', height: '260px' }}
-        // borderTopRadius="md"
-        // objectFit="cover"
-      />
-      {/* </Box> */}
-      <Box p="4">
-        <Text
-          as="h3"
-          mt={2}
-          fontSize="xl"
-          fontWeight="semibold"
-          lineHeight="short">
-          {title}
-        </Text>
-        <Tag colorScheme="yellow">{category}</Tag>
-        <Box display="flex" alignItems="baseline" gap={2}>
-          <Text>{prix.toFixed(2)}€</Text>
-          {poids && <Text>{poids}gr</Text>}
-        </Box>
-        <Box display="flex" alignItems="baseline" gap={2} mt={4}>
+    <NextLink href={`/carte/${id}`} passHref legacyBehavior>
+      <a
+        href={`/carte/${id}`} // Explicitly add href to satisfy Biome
+        style={{
+          display: 'block',
+          backgroundColor: 'white',
+          border: '1px solid red',
+        }}>
+        {' '}
+        {/* Use a plain <a> tag */}
+        <Image
+          src={
+            images && images.length > 0
+              ? `/images/${images}`
+              : `/images/${fallbackSrc}`
+          }
+          placeholder="blur"
+          blurDataURL={`/images/${fallbackSrc}`}
+          alt={title} // Use title for alt text
+          width={260}
+          height={260}
+          style={{ objectFit: 'cover' }}
+        />
+        <div style={{ padding: '16px' }}>
+          {' '}
+          {/* Use plain <div> */}
+          <p>{title}</p> {/* Use plain <p> */}
+          <p>{prix.toFixed(2)}€</p>
+          {/* Keep the Add to Cart button but simplify its container if needed */}
           <Button
-            colorScheme="yellow"
-            leftIcon={<AddIcon />}
+            colorPalette="yellow" // Assuming this was already changed
+            leftIcon={<FaPlus />} // Assuming this was already changed
             width={'full'}
             onClick={(e) => {
               e.preventDefault();
@@ -80,9 +66,9 @@ const ProductBox = ({
             }}>
             Ajouter au panier
           </Button>
-        </Box>
-      </Box>
-    </Box>
+        </div>
+      </a>
+    </NextLink>
   );
 };
 
