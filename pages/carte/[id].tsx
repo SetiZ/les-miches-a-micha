@@ -2,7 +2,6 @@ import ContainerBox from '@/components/containerBox';
 import Layout from '@/components/layout';
 import carte from '@/data/carte.json';
 import { useCartStore } from '@/utils/store';
-import { AddIcon } from '@chakra-ui/icons';
 import {
   Badge,
   Box,
@@ -17,6 +16,7 @@ import {
 } from '@chakra-ui/react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import { FaPlus } from 'react-icons/fa';
 
 export default function Carte() {
   const router = useRouter();
@@ -31,7 +31,7 @@ export default function Carte() {
     <Layout>
       <ContainerBox>
         <Box pb={4}>
-          <Button colorScheme="black" variant="link" as={'a'} href={'/carte'}>
+          <Button colorPalette="black" variant="link" as={'a'} href={'/carte'}>
             Revenir à la Carte
           </Button>
         </Box>
@@ -70,7 +70,7 @@ export default function Carte() {
             <VStack align="start" spacing={6} flex="1">
               <HStack spacing={4}>
                 <Badge
-                  colorScheme="yellow"
+                  colorPalette="yellow"
                   px={3}
                   py={1}
                   rounded="full"
@@ -117,8 +117,8 @@ export default function Carte() {
                 </HStack>
                 <Spacer />
                 <Button
-                  colorScheme="yellow"
-                  leftIcon={<AddIcon />}
+                  colorPalette="yellow"
+                  leftIcon={<FaPlus />}
                   // width={'fit-content'}
                   width={{ base: 'full', lg: 'fit-content' }}
                   onClick={() =>

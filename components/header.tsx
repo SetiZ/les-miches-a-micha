@@ -12,6 +12,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { CgShoppingCart } from 'react-icons/cg';
+import { ColorModeButton } from './ui/color-mode'; // Assuming header.tsx is in components/
 
 const Header = () => {
   const [hydrated, setHydrated] = useState<boolean>(false);
@@ -77,7 +78,7 @@ const Header = () => {
             <Icon aria-label="Panier" as={CgShoppingCart} boxSize={8} />
             {hydrated && cartCount() > 0 ? (
               <Badge
-                colorScheme="red"
+                colorPalette="red"
                 pos="absolute"
                 variant="solid"
                 bgColor="red.500"
@@ -87,6 +88,7 @@ const Header = () => {
               </Badge>
             ) : null}
           </Box>
+          <ColorModeButton />
         </HStack>
         {/* <HStack as={'nav'} spacing={8} alignItems={'center'} hideFrom={'660px'}>
 					<Link href={`/cart`} height={'16px'}>
