@@ -2,29 +2,21 @@
   "products": [
     {
       "id": 1,
-      "title": "Pavé au cacao",
-      "prix": 7,
+      "title": "Boule au sarrasin grillé",
+      "prix": 5.50,
       "poids": 550,
-      "description": "Pavé plein de gourmandise, sur base de tradition, avec de la pâte de cacao et sans sucre ajouté",
-      "images": "",
+      "description": "Mi-blé mi-farine de sarrasin, torréfiée pour un délicieux goût caractéristique de blé noir, comme une galette bretonne !",
+      "images": "202b_campagne.png",
       "category": "pain du mois",
       "visible": true
     },
     {
       "id": 2,
-      "title": "Pavé au cacao - dés d'oranges confites",
-      "prix": 8,
+      "title": "Boule au sarrasin grillé - noix, figues, graines...",
+      "prix": 6.50,
       "poids": 550,
-      "description": "Pavé plein de gourmandise, sur base de tradition, avec de la pâte de cacao et sans sucre ajouté - avec des dés d'oranges confites !",
-      "images": "",
-      "category": "pain du mois",
-      "visible": true
-    },
-    {
-      "id": 3,
-      "title": "Pain d'apéritif printanier",
-      "prix": 3,
-      "description": "(en baguette ou sur 500g) - petits morceaux de tomates confites, de parmesan, et de ciboulette",
+      "description": "Mi-blé mi-farine de sarrasin, torréfiée pour un délicieux goût caractéristique de blé noir, comme une galette bretonne - garni de noix, figues, graines, abricots, sur demande !",
+      "images": "302_campagne_noix.png",
       "category": "pain du mois",
       "visible": true
     },
@@ -378,6 +370,16 @@
     },
     {
       "id": 702,
+      "title": "Pavé au cacao - cranberries ou oranges confites sur demande",
+      "prix": 7,
+      "poids": 550,
+      "description": "Pavé plein de gourmandise, sur base de tradition, avec de la pâte de cacao et sans sucre ajouté",
+      "images": "",
+      "category": "Doux mélanges",
+      "visible": true
+    },
+    {
+      "id": 703,
       "title": "Pain à la pistache",
       "prix": 3.5,
       "poids": 300,
