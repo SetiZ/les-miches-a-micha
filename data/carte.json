@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Boule au sarrasin grillé",
-      "prix": 5.50,
+      "prix": 5.5,
       "poids": 550,
       "description": "Mi-blé mi-farine de sarrasin, torréfiée pour un délicieux goût caractéristique de blé noir, comme une galette bretonne !",
       "images": "202b_campagne.png",
@@ -13,7 +13,7 @@
     {
       "id": 2,
       "title": "Boule au sarrasin grillé - noix, figues, graines...",
-      "prix": 6.50,
+      "prix": 6.5,
       "poids": 550,
       "description": "Mi-blé mi-farine de sarrasin, torréfiée pour un délicieux goût caractéristique de blé noir, comme une galette bretonne - garni de noix, figues, graines, abricots, sur demande !",
       "images": "302_campagne_noix.png",
