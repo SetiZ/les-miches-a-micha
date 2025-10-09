@@ -2,13 +2,24 @@
   "products": [
     {
       "id": 1,
+      "title": "Pain à la courge",
+      "prix": 8,
+      "poids": 550,
+      "description": "De la vraie purée de courge fraîche dans la pâte à la farine semi-complète T80 sur meule de pierre, une mie orangée, des graines de courge grillées et une pointe de muscade, pour un mélange étonnant et savoureux.",
+      "images": "1102_citrouille.png",
+      "category": "pain du mois",
+      "visible": false
+    },
+    
+    {
+      "id": 1,
       "title": "Boule au sarrasin grillé",
       "prix": 5.5,
       "poids": 550,
       "description": "Mi-blé mi-farine de sarrasin, torréfiée pour un délicieux goût caractéristique de blé noir, comme une galette bretonne !",
       "images": "202b_campagne.png",
       "category": "pain du mois",
-      "visible": true
+      "visible": false
     },
     {
       "id": 2,
@@ -18,7 +29,7 @@
       "description": "Mi-blé mi-farine de sarrasin, torréfiée pour un délicieux goût caractéristique de blé noir, comme une galette bretonne - garni de noix, figues, graines, abricots, sur demande !",
       "images": "302_campagne_noix.png",
       "category": "pain du mois",
-      "visible": true
+      "visible": false
     },
     {
       "id": 99,
