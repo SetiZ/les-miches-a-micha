@@ -10,7 +10,94 @@
       "category": "pain du mois",
       "visible": true
     },
+    {
+      "id": 2,
+      "title": "Pain curcuma-noisette",
+      "prix": 8,
+      "poids": 550,
+      "description": "Un pain unique, la puissance aromatique du curcuma, le croquant des noisettes, sur une base de meule",
+      "images": "",
+      "category": "pain du mois",
+      "visible": true
+    },
     
+    {
+      "id": 11,
+      "title": "Pain d'épices (prix au kg)",
+      "prix": 28,
+      "description": "(prix au kg, taille personnalisable) - 50% pur miel bio, farine de seigle et possibilité de garnir de figues, fruits confits, chocolat, etc.",
+      "images": "1001_epices.jpg",
+      "category": "Noël 2025",
+      "visible": true
+    },
+    {
+      "id": 12,
+      "title": "Pompe à l'huile",
+      "prix": 8,
+      "poids": 750,
+      "description": "Galette briochée typiquement provençale, parfumée à l’eau de fleur d’oranger, réalisée pour le réveillon de Noël et faisant partie des 13 desserts traditionnels.",
+      "images": "510_pompe.png",
+      "category": "Noël 2025",
+      "visible": true
+    },
+    {
+      "id": 13,
+      "title": "Tourte de seigle au citron",
+      "prix": 9,
+      "poids": 600,
+      "description": "Tourte de seigle intégral, zestes de citron, idéale pour le saumon ou lres fruits de mer.",
+      "images": "405_tourte_seigle.png",
+      "category": "Noël 2025",
+      "visible": true
+    },
+    {
+      "id": 14,
+      "title": "Babka à la cannelle (ou choco)",
+      "prix": 9,
+      "poids": 550,
+      "description": "Brioche au beurre, tressée et originaire de Pologne, étymologiquement « grand-mère », fourrée ici avec une pâte à la cannelle et à la cardamome, rappelant celle des Kannelbullar scandinaves. Au choix, on pourra y ajouter également des amandes effilées ou du chocolat pour plus de gourmandise !",
+      "images": "506_babka.png",
+      "category": "Noël 2025",
+      "visible": true
+    },
+    {
+      "id": 15,
+      "title": "Pain de mie seigle / figues",
+      "prix": 6,
+      "poids": 500,
+      "description": "fondant, légèrement sucré, savoureux et délicieux pour des toasts ou des canapés raffinés !",
+      "images": "1005_mie_seigle.jpg",
+      "category": "Noël 2025",
+      "visible": true
+    },
+    {
+      "id": 16,
+      "title": "Brioche Père Noël",
+      "prix": 10,
+      "poids": 500,
+      "description": "",
+      "images": "1006_briochePereNoel.jpg",
+      "category": "Noël 2025",
+      "visible": true
+    },
+    {
+      "id": 17,
+      "title": "Canelés bordelais",
+      "prix": 1.5,
+      "description": "Vanille et pointe de rhum",
+      "images": "909_canneles.png",
+      "category": "Noël 2025",
+      "visible": true
+    },
+    {
+      "id": 18,
+      "title": "Macarons",
+      "prix": 1.25,
+      "description": "Parfums selon demande... et inspiration !",
+      "images": "910_macarons.png",
+      "category": "Noël 2025",
+      "visible": true
+    },
 
     {
       "id": 99,
@@ -552,83 +639,6 @@
       "images": "907_galette_rois.png",
       "category": "autres gourmandises",
       "visible": false
-    },
-    {
-      "id": 11,
-      "title": "Pain d'épices (prix au kg)",
-      "prix": 28,
-      "description": "(prix au kg, taille personnalisable) - 50% pur miel bio, farine de seigle et possibilité de garnir de figues, fruits confits, chocolat, etc.",
-      "images": "1001_epices.jpg",
-      "category": "Noël 2025",
-      "visible": true
-    },
-    {
-      "id": 12,
-      "title": "Pompe à l'huile",
-      "prix": 8,
-      "poids": 750,
-      "description": "Galette briochée typiquement provençale, parfumée à l’eau de fleur d’oranger, réalisée pour le réveillon de Noël et faisant partie des 13 desserts traditionnels.",
-      "images": "510_pompe.png",
-      "category": "Noël 2025",
-      "visible": true
-    },
-    {
-      "id": 13,
-      "title": "Tourte de seigle au citron",
-      "prix": 9,
-      "poids": 600,
-      "description": "Tourte de seigle intégral, zestes de citron, idéale pour le saumon ou lres fruits de mer.",
-      "images": "405_tourte_seigle.png",
-      "category": "Noël 2025",
-      "visible": true
-    },
-    {
-      "id": 14,
-      "title": "Babka à la cannelle (ou choco)",
-      "prix": 9,
-      "poids": 550,
-      "description": "Brioche au beurre, tressée et originaire de Pologne, étymologiquement « grand-mère », fourrée ici avec une pâte à la cannelle et à la cardamome, rappelant celle des Kannelbullar scandinaves. Au choix, on pourra y ajouter également des amandes effilées ou du chocolat pour plus de gourmandise !",
-      "images": "506_babka.png",
-      "category": "Noël 2025",
-      "visible": true
-    },
-    {
-      "id": 15,
-      "title": "Pain de mie seigle / figues",
-      "prix": 6,
-      "poids": 500,
-      "description": "fondant, légèrement sucré, savoureux et délicieux pour des toasts ou des canapés raffinés !",
-      "images": "1005_mie_seigle.jpg",
-      "category": "Noël 2025",
-      "visible": true
-    },
-    {
-      "id": 16,
-      "title": "Brioche Père Noël",
-      "prix": 10,
-      "poids": 500,
-      "description": "",
-      "images": "1006_briochePereNoel.jpg",
-      "category": "Noël 2025",
-      "visible": true
-    },
-    {
-      "id": 17,
-      "title": "Canelés bordelais",
-      "prix": 1.5,
-      "description": "Vanille et pointe de rhum",
-      "images": "909_canneles.png",
-      "category": "Noël 2025",
-      "visible": true
-    },
-    {
-      "id": 18,
-      "title": "Macarons",
-      "prix": 1.25,
-      "description": "Parfums selon demande... et inspiration !",
-      "images": "910_macarons.png",
-      "category": "Noël 2025",
-      "visible": true
     }
   ]
 }
