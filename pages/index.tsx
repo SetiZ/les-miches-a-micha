@@ -23,6 +23,7 @@ import {
   CgPin,
   CgSmileMouthOpen,
   CgSoftwareDownload,
+  CgGift,
 } from 'react-icons/cg';
 
 export default function Home() {
@@ -74,6 +75,12 @@ export default function Home() {
                 text={'Télécharger le menu'}
                 link={'les-miches-a-micha.pdf'}
                 icon={<CgSoftwareDownload />}
+                options={{ download: true }}
+              />
+              <SocialButton
+                text={'.:*~*:. Carte des fêtes 2024 .:*~*:.'}
+                link={'carte_fetes_2025.pdf'}
+                icon={<CgGift />}
                 options={{ download: true }}
               />
               <SocialButton

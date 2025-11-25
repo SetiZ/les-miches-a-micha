@@ -11,26 +11,7 @@
       "visible": true
     },
     
-    {
-      "id": 1,
-      "title": "Boule au sarrasin grillé",
-      "prix": 5.5,
-      "poids": 550,
-      "description": "Mi-blé mi-farine de sarrasin, torréfiée pour un délicieux goût caractéristique de blé noir, comme une galette bretonne !",
-      "images": "202b_campagne.png",
-      "category": "pain du mois",
-      "visible": false
-    },
-    {
-      "id": 2,
-      "title": "Boule au sarrasin grillé - noix, figues, graines...",
-      "prix": 6.5,
-      "poids": 550,
-      "description": "Mi-blé mi-farine de sarrasin, torréfiée pour un délicieux goût caractéristique de blé noir, comme une galette bretonne - garni de noix, figues, graines, abricots, sur demande !",
-      "images": "302_campagne_noix.png",
-      "category": "pain du mois",
-      "visible": false
-    },
+
     {
       "id": 99,
       "title": "Vente de farines bio - sur demande",
@@ -248,7 +229,7 @@
     {
       "id": 504,
       "title": "Brioche individuelle",
-      "prix": 1.3,
+      "prix": 1.5,
       "poids": 100,
       "images": "504_brioche_indiv.png",
       "category": "brioches",
@@ -257,7 +238,7 @@
     {
       "id": 505,
       "title": "Baguette viennoise nature ou au chocolat",
-      "prix": 1.5,
+      "prix": 1.6,
       "poids": 150,
       "images": "502_viennoise.png",
       "category": "brioches",
@@ -274,7 +255,7 @@
     {
       "id": 507,
       "title": "Kanelbullar",
-      "prix": 1.5,
+      "prix": 1.75,
       "images": "504_kanelbullar.png",
       "category": "brioches",
       "visible": true
@@ -312,7 +293,7 @@
     {
       "id": 601,
       "title": "Croissant",
-      "prix": 1.2,
+      "prix": 1.3,
       "images": "601_croissant.png",
       "category": "viennoiseries",
       "visible": true
@@ -320,7 +301,7 @@
     {
       "id": 602,
       "title": "Pain au chocolat",
-      "prix": 1.2,
+      "prix": 1.3,
       "description": "trois barrettes de chocolat par pure gourmandise ico- noclaste",
       "images": "602_pain_choco.jpeg",
       "category": "viennoiseries",
@@ -329,7 +310,7 @@
     {
       "id": 603,
       "title": "Pain aux raisins",
-      "prix": 1.5,
+      "prix": 1.6,
       "description": "avec possibilité d’aromatiser au rhum",
       "images": "603_pain_raisin.png",
       "category": "viennoiseries",
@@ -338,7 +319,7 @@
     {
       "id": 604,
       "title": "Pain suisse",
-      "prix": 1.5,
+      "prix": 1.6,
       "description": "au feuilletage orthogonal, façon Cédric Grolet",
       "images": "604_suisse.jpeg",
       "category": "viennoiseries",
@@ -355,7 +336,7 @@
     {
       "id": 606,
       "title": "Cruffin choco / pistache",
-      "prix": 2,
+      "prix": 2.25,
       "description": "Un mélange moderne entre le croissant et le muffin, création personnelle, fourrage pâte à pistache grillées et ganache au chocolat et noisettes toastées, entre chaque feuillet",
       "images": "606_cruffin.png",
       "category": "viennoiseries",
@@ -457,7 +438,7 @@
     {
       "id": 901,
       "title": "Pain de mie, nature",
-      "prix": 4,
+      "prix": 4.5,
       "poids": 600,
       "description": "Façonné en pavé pour des canapés, ou bombé pour des croque-monsieur.",
       "images": "901_pain_de_mie.png",
@@ -530,7 +511,7 @@
     },
     {
       "id": 909,
-      "title": "Cannelés bordelais",
+      "title": "Canelés bordelais",
       "prix": 1.5,
       "description": "Vanille et pointe de rhum",
       "images": "909_canneles.png",
@@ -539,7 +520,7 @@
     },
     {
       "id": 910,
-      "title": "Mini-cannelés",
+      "title": "Mini-canelés",
       "prix": 0.6,
       "description": "Vanille et pointe de rhum",
       "images": "909_canneles.png",
@@ -558,7 +539,7 @@
     {
       "id": 912,
       "title": "Quiche - parfum à définir ensemble",
-      "prix": 10,
+      "prix": 17,
       "description": "Epinards, thon...",
       "category": "autres gourmandises",
       "visible": true
@@ -575,11 +556,11 @@
     {
       "id": 1001,
       "title": "Pain d'épices (prix au kg)",
-      "prix": 25,
+      "prix": 28,
       "description": "(prix au kg, taille personnalisable) - 50% pur miel bio, farine de seigle et possibilité de garnir de figues, fruits confits, chocolat, etc.",
       "images": "1001_epices.jpg",
-      "category": "Noël 2024",
-      "visible": false
+      "category": "Noël 2025",
+      "visible": true
     },
     {
       "id": 1002,
@@ -588,8 +569,8 @@
       "poids": 750,
       "description": "Galette briochée typiquement provençale, parfumée à l’eau de fleur d’oranger, réalisée pour le réveillon de Noël et faisant partie des 13 desserts traditionnels.",
       "images": "510_pompe.png",
-      "category": "Noël 2024",
-      "visible": false
+      "category": "Noël 2025",
+      "visible": true
     },
     {
       "id": 1003,
@@ -598,8 +579,8 @@
       "poids": 600,
       "description": "Tourte de seigle intégral, zestes de citron, idéale pour le saumon ou lres fruits de mer.",
       "images": "405_tourte_seigle.png",
-      "category": "Noël 2024",
-      "visible": false
+      "category": "Noël 2025",
+      "visible": true
     },
     {
       "id": 1004,
@@ -608,8 +589,8 @@
       "poids": 550,
       "description": "Brioche au beurre, tressée et originaire de Pologne, étymologiquement « grand-mère », fourrée ici avec une pâte à la cannelle et à la cardamome, rappelant celle des Kannelbullar scandinaves. Au choix, on pourra y ajouter également des amandes effilées ou du chocolat pour plus de gourmandise !",
       "images": "506_babka.png",
-      "category": "Noël 2024",
-      "visible": false
+      "category": "Noël 2025",
+      "visible": true
     },
     {
       "id": 1005,
@@ -618,8 +599,8 @@
       "poids": 500,
       "description": "fondant, légèrement sucré, savoureux et délicieux pour des toasts ou des canapés raffinés !",
       "images": "1005_mie_seigle.jpg",
-      "category": "Noël 2024",
-      "visible": false
+      "category": "Noël 2025",
+      "visible": true
     },
     {
       "id": 1006,
@@ -628,17 +609,17 @@
       "poids": 500,
       "description": "",
       "images": "1006_briochePereNoel.jpg",
-      "category": "Noël 2024",
-      "visible": false
+      "category": "Noël 2025",
+      "visible": true
     },
     {
       "id": 1007,
-      "title": "Cannelés bordelais",
+      "title": "Canelés bordelais",
       "prix": 1.5,
       "description": "Vanille et pointe de rhum",
       "images": "909_canneles.png",
-      "category": "Noël 2024",
-      "visible": false
+      "category": "Noël 2025",
+      "visible": true
     },
     {
       "id": 1008,
@@ -646,8 +627,8 @@
       "prix": 1.25,
       "description": "Parfums selon demande... et inspiration !",
       "images": "910_macarons.png",
-      "category": "Noël 2024",
-      "visible": false
+      "category": "Noël 2025",
+      "visible": true
     }
   ]
 }
