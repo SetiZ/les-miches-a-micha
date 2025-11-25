@@ -554,7 +554,7 @@
       "visible": false
     },
     {
-      "id": 1001,
+      "id": 11,
       "title": "Pain d'épices (prix au kg)",
       "prix": 28,
       "description": "(prix au kg, taille personnalisable) - 50% pur miel bio, farine de seigle et possibilité de garnir de figues, fruits confits, chocolat, etc.",
@@ -563,7 +563,7 @@
       "visible": true
     },
     {
-      "id": 1002,
+      "id": 12,
       "title": "Pompe à l'huile",
       "prix": 8,
       "poids": 750,
@@ -573,7 +573,7 @@
       "visible": true
     },
     {
-      "id": 1003,
+      "id": 13,
       "title": "Tourte de seigle au citron",
       "prix": 9,
       "poids": 600,
@@ -583,7 +583,7 @@
       "visible": true
     },
     {
-      "id": 1004,
+      "id": 14,
       "title": "Babka à la cannelle (ou choco)",
       "prix": 9,
       "poids": 550,
@@ -593,7 +593,7 @@
       "visible": true
     },
     {
-      "id": 1005,
+      "id": 15,
       "title": "Pain de mie seigle / figues",
       "prix": 6,
       "poids": 500,
@@ -603,7 +603,7 @@
       "visible": true
     },
     {
-      "id": 1006,
+      "id": 16,
       "title": "Brioche Père Noël",
       "prix": 10,
       "poids": 500,
@@ -613,7 +613,7 @@
       "visible": true
     },
     {
-      "id": 1007,
+      "id": 17,
       "title": "Canelés bordelais",
       "prix": 1.5,
       "description": "Vanille et pointe de rhum",
@@ -622,7 +622,7 @@
       "visible": true
     },
     {
-      "id": 1008,
+      "id": 18,
       "title": "Macarons",
       "prix": 1.25,
       "description": "Parfums selon demande... et inspiration !",
