@@ -18,7 +18,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {
   CgBrowse,
-  // CgCrown,
+  CgCrown,
   CgInstagram,
   CgPin,
   CgSmileMouthOpen,
@@ -75,6 +75,12 @@ export default function Home() {
                 text={'Télécharger le menu'}
                 link={'les-miches-a-micha.pdf'}
                 icon={<CgSoftwareDownload />}
+                options={{ download: true }}
+              />
+              <SocialButton
+                text={'.:*~*:. Épiphanie 2025 .:*~*:.'}
+                link={'epiphanie_2025.pdf'}
+                icon={<CgCrown />}
                 options={{ download: true }}
               />
               <SocialButton
