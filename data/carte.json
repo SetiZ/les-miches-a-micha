@@ -2,16 +2,56 @@
   "products": [
     {
       "id": 1,
-      "title": "Pain à la courge",
-      "prix": 8,
-      "poids": 550,
-      "description": "De la vraie purée de courge fraîche dans la pâte à la farine semi-complète T80 sur meule de pierre, une mie orangée, des graines de courge grillées et une pointe de muscade, pour un mélange étonnant et savoureux.",
-      "images": "1102_citrouille.png",
+      "title": "Galette frangipane 4-6 pers",
+      "prix": 21,
+      "poids": 4-6,
+      "description": "Galette traditionnelle, pur crème d'amandes, sans arôme artificiel.",
+      "images": "907_galette_rois.png",
       "category": "pain du mois",
       "visible": true
     },
     {
       "id": 2,
+      "title": "Galette frangipane 6-8 pers",
+      "prix": 29,
+      "poids": 6-8,
+      "description": "Galette traditionnelle, pur crème d'amandes, sans arôme artificiel.",
+      "images": "907_galette_rois.png",
+      "category": "pain du mois",
+      "visible": true
+    },
+    {
+      "id": 3,
+      "title": "Galette frangipane 8-10 pers",
+      "prix": 36,
+      "poids": 8-10,
+      "description": "Galette traditionnelle, pur crème d'amandes, sans arôme artificiel.",
+      "images": "907_galette_rois.png",
+      "category": "pain du mois",
+      "visible": true
+    },
+    {
+      "id": 4,
+      "title": "Galette frangipane 10-12 pers",
+      "prix": 42,
+      "poids": 10-12,
+      "description": "Galette traditionnelle, pur crème d'amandes, sans arôme artificiel.",
+      "images": "907_galette_rois.png",
+      "category": "pain du mois",
+      "visible": true
+    },
+    {
+      "id": 5,
+      "title": "Couronne des rois",
+      "prix": 20,
+      "poids": 6-8,
+      "description": "Couronne des rois provençale, aux fruits confits et fleur d'oranger",
+      "images": "907b_galette_rois.png",
+      "category": "pain du mois",
+      "visible": true
+    },
+    {
+      "id": 6,
       "title": "Pain curcuma-noisette",
       "prix": 8,
       "poids": 550,
@@ -20,7 +60,6 @@
       "category": "pain du mois",
       "visible": true
     },
-    
     {
       "id": 11,
       "title": "Pain d'épices (prix au kg)",
