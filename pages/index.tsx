@@ -78,18 +78,6 @@ export default function Home() {
                 options={{ download: true }}
               />
               <SocialButton
-                text={'.:*~*:. Épiphanie 2025 .:*~*:.'}
-                link={'epiphanie_2025.pdf'}
-                icon={<CgCrown />}
-                options={{ download: true }}
-              />
-              <SocialButton
-                text={'.:*~*:. Carte des fêtes 2025 .:*~*:.'}
-                link={'carte_fetes_2025.pdf'}
-                icon={<CgGift />}
-                options={{ download: true }}
-              />
-              <SocialButton
                 text={'Vente de farines'}
                 link={'Carte_des_farines.pdf'}
                 icon={<CgSoftwareDownload />}
