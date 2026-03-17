@@ -2,51 +2,11 @@
   "products": [
     {
       "id": 1,
-      "title": "Galette frangipane 4-6 pers",
-      "prix": 21,
-      "poids": 4,
-      "description": "Galette traditionnelle, pur crème d'amandes, sans arôme artificiel.",
-      "images": "907_galette_rois.png",
-      "category": "pain du mois",
-      "visible": true
-    },
-    {
-      "id": 2,
-      "title": "Galette frangipane 6-8 pers",
-      "prix": 29,
-      "poids": 6,
-      "description": "Galette traditionnelle, pur crème d'amandes, sans arôme artificiel.",
-      "images": "907_galette_rois.png",
-      "category": "pain du mois",
-      "visible": true
-    },
-    {
-      "id": 3,
-      "title": "Galette frangipane 8-10 pers",
-      "prix": 36,
-      "poids": 8,
-      "description": "Galette traditionnelle, pur crème d'amandes, sans arôme artificiel.",
-      "images": "907_galette_rois.png",
-      "category": "pain du mois",
-      "visible": true
-    },
-    {
-      "id": 4,
-      "title": "Galette frangipane 10-12 pers",
-      "prix": 42,
-      "poids": 10,
-      "description": "Galette traditionnelle, pur crème d'amandes, sans arôme artificiel.",
-      "images": "907_galette_rois.png",
-      "category": "pain du mois",
-      "visible": true
-    },
-    {
-      "id": 5,
-      "title": "Couronne des rois",
-      "prix": 20,
-      "poids": 6,
-      "description": "Couronne des rois provençale, aux fruits confits et fleur d'oranger",
-      "images": "907b_galette_rois.png",
+      "title": "Pain à la pistache",
+      "prix": 3.5,
+      "poids": 350,
+      "description": "Sur base de tradition, pétrie avec une pâte à pistache maison, des pistaches grillées, abricots secs et cranberries. Une mie verte, étonnante et savoureuse, des pistaches craquantes et le sucré des fruits secs, un régal au goûter, pour une gourmandise unique !",
+      "images": "702_pistache.jpeg",
       "category": "pain du mois",
       "visible": true
     },
