@@ -73,7 +73,7 @@
       "title": "Pain complet",
       "prix": 5.5,
       "poids": 500,
-      "description": "La baguette de tradition, avec un assortiment soigneusement choisi de graines (lin, tournesol, soja, courge, millet, quinoa, sésame), ou simplement du sésame grillé. . . – voire, sur demande, avec des grains de cumin – un délice avec du fromage !",
+      "description": "Réalisé avec une farine T150 à la meule, contenant l'intégralité du grain de blé y compris le son et le germe. Plus nutritif que le pain blanc, un indice glycémique bas et plein de fibres et de nutriments, sain et délicieux.",
       "images": "201_complet.png",
       "category": "pains spéciaux",
       "visible": true
@@ -83,7 +83,7 @@
       "title": "Pain de campagne",
       "prix": 5.5,
       "poids": 500,
-      "description": "La baguette de tradition, avec un assortiment soigneusement choisi de graines (lin, tournesol, soja, courge, millet, quinoa, sésame), ou simplement du sésame grillé. . . – voire, sur demande, avec des grains de cumin – un délice avec du fromage !",
+      "description": "Ici, notre pain de campagne est réalisé avec de la farine de sarrasin torréfiée à sec, pour retrouver la saveur inimitable des galettes de blé noir.",
       "images": "202b_campagne.png",
       "category": "pains spéciaux",
       "visible": true
@@ -93,7 +93,7 @@
       "title": "Pain de Méteil",
       "prix": 5.5,
       "poids": 500,
-      "description": "La baguette de tradition, avec un assortiment soigneusement choisi de graines (lin, tournesol, soja, courge, millet, quinoa, sésame), ou simplement du sésame grillé. . . – voire, sur demande, avec des grains de cumin – un délice avec du fromage !",
+      "description": "Le pain de méteil, ancré dans l'histoire française, est né dans les campagnes aux XVIIIe et XIXe siècles avec le mélange naturel dans les champs de blé et de seigle. Comme tous nos autres pains, il est fait à la demande au levain naturel, pour un pain qui peut se consommer à tout moment de la journée.",
       "images": "203_meteil.png",
       "category": "pains spéciaux",
       "visible": true
@@ -103,7 +103,7 @@
       "title": "Pain brié",
       "prix": 5.5,
       "poids": 500,
-      "description": "La baguette de tradition, avec un assortiment soigneusement choisi de graines (lin, tournesol, soja, courge, millet, quinoa, sésame), ou simplement du sésame grillé. . . – voire, sur demande, avec des grains de cumin – un délice avec du fromage !",
+      "description": "Un pain originaire de Normandie, reconnaissable à sa croûte blonde et striée comme la coque d'un bâteau. C'était un pain apprécié des marins-pêcheurs, puisqu'il conserve son moelleux même après plusieurs jours à l'air libre.",
       "images": "204_brie.png",
       "category": "pains spéciaux",
       "visible": true
