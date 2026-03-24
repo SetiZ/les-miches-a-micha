@@ -59,6 +59,8 @@ export default function Home() {
             dégustation, créativité. . . Ici, tout est fait main, à partir de
             matières premières bio, locales et nobles, pour vous proposer des
             pains savoureux, sains et originaux.
+            <br /><br />
+            <b>Attention : le fournil sera en congés du samedi 28/03 au dimanche 05/04 !</b>
           </Container>
           <Container maxW="80vw" textAlign={'center'}>
             <Heading as="h3" size="lg" textAlign={'center'}>
