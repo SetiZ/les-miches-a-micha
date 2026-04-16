@@ -60,7 +60,7 @@ export default function Home() {
             matières premières bio, locales et nobles, pour vous proposer des
             pains savoureux, sains et originaux.
             <br /><br />
-            <b>Attention : le fournil est fermé ce mois d'avril ! Notre boulanger est en convalescence :)</b>
+            Attention : le fournil est fermé ce mois d'avril ! Notre boulanger est en convalescence :)
           </Container>
           <Container maxW="80vw" textAlign={'center'}>
             <Heading as="h3" size="lg" textAlign={'center'}>
