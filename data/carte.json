@@ -2,31 +2,31 @@
   "products": [
     {
       "id": 1,
-      "title": "Pain à la pistache",
-      "prix": 3.5,
-      "poids": 350,
-      "description": "Sur base de tradition, pétrie avec une pâte à pistache maison, des pistaches grillées, abricots secs et cranberries. Une mie verte, étonnante et savoureuse, des pistaches craquantes et le sucré des fruits secs, un régal au goûter, pour une gourmandise unique !",
-      "images": "702_pistache.jpeg",
+      "title": "Babka salée",
+      "prix": 9,
+      "poids": 600,
+      "description": "Babka revisitée en version salée, au zaatar et sésame",
+      "images": "999-babka_salee.png",
       "category": "pain du mois",
       "visible": true
     },
     {
-      "id": 6,
-      "title": "Pain curcuma-noisette",
-      "prix": 8,
-      "poids": 550,
-      "description": "Un pain unique, la puissance aromatique du curcuma, le croquant des noisettes, sur une base de meule",
-      "images": "",
+      "id": 2,
+      "title": "Roulés au zaatar",
+      "prix": 2.25,
+      "poids": 120,
+      "description": "La déclinaison individuelle, en chignons",
+      "images": "999-roules_zaatar.png",
       "category": "pain du mois",
       "visible": true
     },
     {
-      "id": 11,
-      "title": "Pain d'épices (prix au kg)",
-      "prix": 28,
-      "description": "(prix au kg, taille personnalisable) - 50% pur miel bio, farine de seigle et possibilité de garnir de figues, fruits confits, chocolat, etc.",
-      "images": "1001_epices.jpg",
-      "category": "Noël 2025",
+      "id": 3,
+      "title": "Pain méditerranéen",
+      "prix": 7,
+      "description": "Un pain méditerranéen, dés d'abricot et romrain, et un moelleux assuré par une touche d'huile d’olive",
+      "images": "999-abricot_romarin.png",
+      "category": "pain du mois",
       "visible": true
     },
     {
