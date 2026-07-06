@@ -25,7 +25,13 @@ import {
   CgSoftwareDownload,
 } from 'react-icons/cg';
 
-export default function HomePage() {
+interface HomePageProps {
+  title: string;
+  tagline?: string;
+  intro?: string;
+}
+
+export default function HomePage({ title, tagline, intro }: HomePageProps) {
   return (
     <ChakraProvider>
       <SpeedInsights />
@@ -53,22 +59,19 @@ export default function HomePage() {
             />
           </Flex>
           <Heading as="h2" size="xl" textAlign={'center'}>
-            Micro-fournil artisanal
+            {title}
           </Heading>
           <Text textAlign={'center'} fontSize="xl">
-            N&rsquo;allez plus à la boulangerie
-            <br />
-            c&rsquo;est elle qui vient à vous !
+            {tagline?.split('\n').map((line, i) => (
+              <span key={i}>
+                {i > 0 && <br />}
+                {line}
+              </span>
+            ))}
           </Text>
           <VStack align={'center'} paddingTop={16} spacing={12}>
             <Container maxW="80vw" textAlign={'center'} fontSize="lg">
-              Le fournil est ouvert !<br />
-              Livraison à domicile, commande personnalisée, conseils de
-              dégustation, créativité. . . Ici, tout est fait main, à partir de
-              matières premières bio, locales et nobles, pour vous proposer des
-              pains savoureux, sains et originaux.
-              <br /><br />
-              <b>{`Le fournil est ouvert !`}</b>
+              <span dangerouslySetInnerHTML={{ __html: intro?.replace(/\n\n/g, '<br/><br/>') || '' }} />
             </Container>
             <Container maxW="80vw" textAlign={'center'}>
               <Heading as="h3" size="lg" textAlign={'center'}>

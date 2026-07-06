@@ -52,14 +52,14 @@ content:
             type: boolean
   - name: ateliers
     label: Ateliers
-    path: src/data/ateliers.json
+    path: src/content/pages/ateliers.md
     type: file
-    format: json
+    format: markdown
     fields:
-      - name: heroTitle
-        label: Titre principal
+      - name: title
+        label: Titre
         type: string
-      - name: heroSubtitle
+      - name: subtitle
         label: Sous-titre
         type: string
       - name: intro
@@ -90,18 +90,27 @@ content:
           - name: price
             label: Prix
             type: string
-      - name: ctaText
-        label: Texte d'appel à l'action
-        type: string
       - name: contactPhone
         label: Téléphone de contact
         type: string
       - name: contactEmail
         label: Email de contact
         type: string
-      - name: pdfUrl
-        label: URL du PDF
-        type: string
       - name: outro
         label: Texte de conclusion
+        type: text
+  - name: home
+    label: Accueil
+    path: src/content/pages/home.md
+    type: file
+    format: markdown
+    fields:
+      - name: title
+        label: Titre
+        type: string
+      - name: tagline
+        label: Slogan
+        type: text
+      - name: intro
+        label: Introduction
         type: text
