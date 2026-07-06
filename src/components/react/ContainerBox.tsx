@@ -1,25 +1,21 @@
-import { Box } from '@chakra-ui/react';
-import type * as React from 'react';
+import type { ReactNode } from 'react';
 
-type LayoutProps = {
-  children: React.ReactNode;
-};
+interface LayoutProps {
+  children: ReactNode;
+}
 
 const ContainerBox = ({ children }: LayoutProps) => {
   return (
-    <Box
-      backdropFilter="blur(7px)"
-      bgColor={'rgba(255, 255, 255, 0.5)'}
-      boxShadow={'0 4px 30px rgba(0, 0, 0, 0.1)'}
-      borderRadius={16}
-      borderWidth={'1'}
-      borderStyle={'solid'}
-      borderColor={'rgba(255, 255, 255, 0.3)'}
-      p={'4'}
-      maxW={'1440'}
-      width={'full'}>
+    <div
+      className="w-full max-w-[1440px] p-4 rounded-2xl border border-white/30"
+      style={{
+        backdropFilter: 'blur(7px)',
+        backgroundColor: 'rgba(255, 255, 255, 0.5)',
+        boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+      }}
+    >
       {children}
-    </Box>
+    </div>
   );
 };
 

@@ -1,38 +1,28 @@
-import { HStack, Tag, Text } from '@chakra-ui/react';
-
 interface FilterProps {
   categories: string[];
   filteredProducts: number;
   onClick: (index: number) => void;
 }
 
-export const Filter = ({
-  categories,
-  filteredProducts,
-  onClick,
-}: FilterProps) => {
+export const Filter = ({ categories, filteredProducts, onClick }: FilterProps) => {
   return (
-    <HStack wrap={'wrap'}>
-      <Text>Filtrer par :</Text>
-      <Tag
-        size={'lg'}
-        variant={filteredProducts === -1 ? 'solid' : 'subtle'}
-        colorScheme="yellow"
+    <div className="flex flex-wrap items-center gap-2">
+      <span>Filtrer par :</span>
+      <button
+        className={`badge badge-lg cursor-pointer ${filteredProducts === -1 ? 'badge-warning' : 'badge-outline'}`}
         onClick={() => onClick(-1)}
-        cursor={'pointer'}>
+      >
         tous
-      </Tag>
+      </button>
       {categories.map((category, index) => (
-        <Tag
+        <button
           key={category}
-          size={'lg'}
-          variant={filteredProducts === index ? 'solid' : 'subtle'}
-          colorScheme="yellow"
+          className={`badge badge-lg cursor-pointer ${filteredProducts === index ? 'badge-warning' : 'badge-outline'}`}
           onClick={() => onClick(index)}
-          cursor={'pointer'}>
+        >
           {category}
-        </Tag>
+        </button>
       ))}
-    </HStack>
+    </div>
   );
 };

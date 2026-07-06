@@ -1,38 +1,7 @@
 import { useCartStore } from '@/utils/store';
-import {
-  AddIcon,
-  CalendarIcon,
-  EmailIcon,
-  InfoIcon,
-  MinusIcon,
-  PhoneIcon,
-} from '@chakra-ui/icons';
-import {
-  Box,
-  Button,
-  Center,
-  Divider,
-  Drawer,
-  DrawerBody,
-  DrawerCloseButton,
-  DrawerContent,
-  DrawerHeader,
-  DrawerOverlay,
-  Grid,
-  GridItem,
-  HStack,
-  Heading,
-  IconButton,
-  Input,
-  InputGroup,
-  InputLeftElement,
-  Stack,
-  Text,
-  Textarea,
-  VStack,
-  useToast,
-} from '@chakra-ui/react';
+import { useToast } from '@/components/react/ToastProvider';
 import { type FormEvent, useState } from 'react';
+import { CgAdd, CgRemove, CgMail, CgPhone, CgCalendarDates, CgInfo } from 'react-icons/cg';
 
 interface CartProps {
   isOpen: boolean;
@@ -72,171 +41,119 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
         if (data.id) {
           toast({
             title: 'Commande envoyée !',
-            description:
-              'Vous allez bientôt recevoir un email de confirmation',
+            description: 'Vous allez bientôt recevoir un email de confirmation',
             status: 'success',
-            duration: 9000,
-            isClosable: true,
           });
           removeAll();
           onClose();
         } else {
           toast({
             title: 'Erreur',
-            description:
-              data.error ||
-              'Une erreur est survenue. Veuillez réessayer ou nous contacter directement.',
+            description: data.error || 'Une erreur est survenue. Veuillez réessayer ou nous contacter directement.',
             status: 'error',
-            duration: 9000,
-            isClosable: true,
           });
         }
       })
       .catch(() => {
         toast({
           title: 'Erreur',
-          description:
-            "Impossible d'envoyer la commande. Veuillez réessayer ou nous contacter au 06.52.39.48.79.",
+          description: "Impossible d'envoyer la commande. Veuillez réessayer ou nous contacter au 06.52.39.48.79.",
           status: 'error',
-          duration: 9000,
-          isClosable: true,
         });
       })
       .finally(() => setIsLoading(false));
   }
 
-  return (
-    <Drawer isOpen={isOpen} onClose={onClose} size={'lg'}>
-      <DrawerOverlay />
-      <DrawerContent>
-        <DrawerCloseButton />
-        <DrawerHeader>Panier</DrawerHeader>
+  const inputClass = 'input input-bordered w-full border-gray-600';
+  const labelClass = 'flex items-center gap-2';
 
-        <DrawerBody>
-          <VStack spacing={4}>
+  return (
+    <>
+      {isOpen && (
+        <div className="fixed inset-0 z-40" onClick={onClose}>
+          <div className="absolute inset-0 bg-black/40" />
+        </div>
+      )}
+      <div
+        className={`fixed top-0 right-0 z-50 h-full w-full max-w-lg bg-white shadow-xl transform transition-transform duration-300 ${
+          isOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
+        <div className="flex items-center justify-between p-4 border-b">
+          <h2 className="text-xl font-semibold">Panier</h2>
+          <button onClick={onClose} className="btn btn-sm btn-ghost">✕</button>
+        </div>
+
+        <div className="p-4 overflow-y-auto h-[calc(100%-4rem)]">
+          <div className="flex flex-col gap-4">
             {count() === 0 ? (
-              <Center>Panier vide</Center>
+              <div className="text-center py-8 text-gray-500">Panier vide</div>
             ) : (
               <>
-                {cart.map((item) => {
-                  return (
-                    <Grid
-                      key={item.id}
-                      templateColumns="repeat(6, 1fr)"
-                      gap={3}
-                      w={'full'}
-                      alignItems={'center'}
-                    >
-                      <GridItem colSpan={3}>{item.name}</GridItem>
-                      <GridItem colStart={4} colSpan={1}>
-                        <HStack>
-                          <IconButton
-                            aria-label="minus"
-                            size="xs"
-                            icon={<MinusIcon />}
-                            onClick={() => remove(item.id)}
-                          />
-                          <Text>{item.count}</Text>
-                          <IconButton
-                            aria-label="add"
-                            size="xs"
-                            icon={<AddIcon />}
-                            onClick={() => add(item)}
-                          />
-                        </HStack>
-                      </GridItem>
-                      <GridItem colEnd={7} colSpan={2} justifySelf={'end'}>
-                        {(item.price * item.count).toFixed(2)} €
-                      </GridItem>
-                    </Grid>
-                  );
-                })}
-                <Text alignSelf={'end'}>Total: {total().toFixed(2)} €</Text>
-                <Text alignSelf={'end'}>
-                  {
-                    'Ce total est donné à titre indicatif, en fonction de la personnalisation de vos produits notamment. Des frais de livraison pourront être ajoutés le cas échéant.'
-                  }
-                </Text>
+                {cart.map((item) => (
+                  <div key={item.id} className="grid grid-cols-6 gap-3 w-full items-center">
+                    <span className="col-span-3">{item.name}</span>
+                    <div className="col-start-4 col-span-1 flex items-center gap-1">
+                      <button className="btn btn-xs btn-ghost" onClick={() => remove(item.id)} aria-label="minus">
+                        <CgRemove className="size-3" />
+                      </button>
+                      <span className="text-sm">{item.count}</span>
+                      <button className="btn btn-xs btn-ghost" onClick={() => add(item)} aria-label="add">
+                        <CgAdd className="size-3" />
+                      </button>
+                    </div>
+                    <span className="col-end-7 col-span-2 justify-self-end">
+                      {(item.price * item.count).toFixed(2)} €
+                    </span>
+                  </div>
+                ))}
+                <p className="self-end font-semibold">Total: {total().toFixed(2)} €</p>
+                <p className="self-end text-sm text-gray-600">
+                  Ce total est donné à titre indicatif, en fonction de la personnalisation de vos produits notamment. Des frais de livraison pourront être ajoutés le cas échéant.
+                </p>
               </>
             )}
-          </VStack>
-          <Divider my={8} borderColor={'gray.600'} />
-          <Box>
-            <form onSubmit={sendOrder}>
-              <Stack spacing={4}>
-                <Heading size={'md'}>Veuillez entrer vos informations</Heading>
-                <Text>
-                  Un email vous sera envoyé par la suite pour confirmer votre
-                  commande.
-                </Text>
-                <InputGroup>
-                  <InputLeftElement pointerEvents="none">
-                    <InfoIcon color="gray.600" />
-                  </InputLeftElement>
-                  <Input
-                    type="text"
-                    placeholder="nom"
-                    name="nom"
-                    borderColor={'gray.600'}
-                    required
-                  />
-                </InputGroup>
-                <InputGroup>
-                  <InputLeftElement pointerEvents="none">
-                    <PhoneIcon color="gray.600" />
-                  </InputLeftElement>
-                  <Input
-                    type="tel"
-                    name="tel"
-                    placeholder="numéro de téléphone"
-                    borderColor={'gray.600'}
-                    required
-                  />
-                </InputGroup>
-                <InputGroup>
-                  <InputLeftElement pointerEvents="none">
-                    <EmailIcon color="gray.600" />
-                  </InputLeftElement>
-                  <Input
-                    type="email"
-                    name="email"
-                    placeholder="email"
-                    borderColor={'gray.600'}
-                    required
-                  />
-                </InputGroup>
-                <Text>
-                  {`Veuillez spécifier l'heure de livraison souhaitée - comptez un minimum de 12h pour laisser au boulanger le temps de faire votre pain !`}
-                </Text>
-                <InputGroup>
-                  <InputLeftElement pointerEvents="none">
-                    <CalendarIcon color="gray.600" />
-                  </InputLeftElement>
-                  <Input
-                    type="datetime-local"
-                    name="date"
-                    placeholder="date et heure"
-                    borderColor={'gray.600'}
-                    required
-                  />
-                </InputGroup>
-                <Textarea
-                  name="comment"
-                  placeholder="Un commentaire, un souhait de personnalisation, une question, ou toute autre information utile"
-                  borderColor={'gray.600'}
-                />
-                <Button
-                  type="submit"
-                  colorScheme="yellow"
-                  isLoading={isLoading}>
-                  Envoyer
-                </Button>
-              </Stack>
-            </form>
-          </Box>
-        </DrawerBody>
-      </DrawerContent>
-    </Drawer>
+          </div>
+
+          <div className="divider my-8 border-gray-600" />
+
+          <form onSubmit={sendOrder}>
+            <div className="flex flex-col gap-4">
+              <h3 className="text-lg font-semibold">Veuillez entrer vos informations</h3>
+              <p className="text-sm">Un email vous sera envoyé par la suite pour confirmer votre commande.</p>
+
+              <label className={labelClass}>
+                <CgInfo className="text-gray-600 size-5" />
+                <input type="text" placeholder="nom" name="nom" className={inputClass} required />
+              </label>
+              <label className={labelClass}>
+                <CgPhone className="text-gray-600 size-5" />
+                <input type="tel" name="tel" placeholder="numéro de téléphone" className={inputClass} required />
+              </label>
+              <label className={labelClass}>
+                <CgMail className="text-gray-600 size-5" />
+                <input type="email" name="email" placeholder="email" className={inputClass} required />
+              </label>
+              <p className="text-sm">
+                Veuillez spécifier l'heure de livraison souhaitée - comptez un minimum de 12h pour laisser au boulanger le temps de faire votre pain !
+              </p>
+              <label className={labelClass}>
+                <CgCalendarDates className="text-gray-600 size-5" />
+                <input type="datetime-local" name="date" placeholder="date et heure" className={inputClass} required />
+              </label>
+              <textarea
+                name="comment"
+                placeholder="Un commentaire, un souhait de personnalisation, une question, ou toute autre information utile"
+                className="textarea textarea-bordered w-full border-gray-600"
+              />
+              <button type="submit" className={`btn btn-warning ${isLoading ? 'btn-disabled' : ''}`}>
+                {isLoading ? <span className="loading loading-spinner" /> : 'Envoyer'}
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </>
   );
 };
 
