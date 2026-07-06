@@ -2,6 +2,7 @@ import type { APIRoute } from 'astro';
 import { render } from '@react-email/render';
 import nodemailer from 'nodemailer';
 import { EmailTemplate, CustomerEmailTemplate } from '../../components/react/EmailTemplate';
+import { createElement } from 'react';
 
 const GMAIL_USER = process.env.GMAIL_USER || 'lesmichesamicha@gmail.com';
 const GMAIL_PASS = process.env.GMAIL_API_PASS;
@@ -47,7 +48,7 @@ export const POST: APIRoute = async ({ request }) => {
     });
 
     const emailHtml = await render(
-      EmailTemplate({
+      createElement(EmailTemplate, {
         name: parsed.name,
         phoneNumber: parsed.phoneNumber,
         email: parsed.email,
@@ -59,7 +60,7 @@ export const POST: APIRoute = async ({ request }) => {
     );
 
     const customerEmailHtml = await render(
-      CustomerEmailTemplate({
+      createElement(CustomerEmailTemplate, {
         name: parsed.name,
         date: parsed.date,
         total: parsed.total,
