@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProductDetailPage from '../../components/react/ProductPage';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const { default: carte } = await import('../../data/carte.json');
+  const paths = carte.products
+    .filter((p: { visible: boolean }) => p.visible)
+    .map((p: { id: number }) => ({
+      params: { id: String(p.id) },
+    }));
+  return paths;
+}
+
+const { id } = Astro.params;
+---
+
+<Layout>
+  <ProductDetailPage client:load id={Number(id)} />
+</Layout>

@@ -1,0 +1,36 @@
+import { Box, Button, Stack, Text } from '@chakra-ui/react';
+import { CgInstagram } from 'react-icons/cg';
+
+const Footer = () => {
+  return (
+    <Box
+      as={'footer'}
+      w={'full'}
+      bgColor={'gray.600'}
+      color={'gray.100'}
+      bottom={0}
+    >
+      <Stack
+        direction={['column-reverse', 'row']}
+        padding={'4'}
+        justify={'space-between'}
+        maxW={'1440'}
+        alignItems={'center'}
+        margin={'0 auto'}>
+        <Text fontWeight={'600'}>Siret : 90464809400020</Text>
+        <Button
+          as={'a'}
+          w={'min'}
+          variant="link"
+          color={'white'}
+          leftIcon={<CgInstagram />}
+          href={'https://www.instagram.com/lesmichesamicha/'}
+          target="_blank">
+          {'@lesmichesamicha'}
+        </Button>
+      </Stack>
+    </Box>
+  );
+};
+
+export default Footer;

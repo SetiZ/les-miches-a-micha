@@ -2,7 +2,7 @@ media: public/images
 content:
   - name: carte
     label: Carte
-    path: data/carte.json
+    path: src/data/carte.json
     type: file
     format: json
     fields:
