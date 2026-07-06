@@ -27,8 +27,8 @@ const ProductBox = ({ id, images, title, category, prix, poids }: ProductProps) 
         height={260}
         className="object-cover w-[260px] h-[260px] rounded-t-md"
       />
-      <div className="p-4">
-        <h3 className="mt-2 text-xl font-semibold leading-tight">{title}</h3>
+      <div className="p-4 text-base-content">
+          <h3 className="mt-2 text-xl font-semibold leading-tight">{title}</h3>
         <span className="badge badge-warning badge-sm">{category}</span>
         <div className="flex items-baseline gap-2 mt-1">
           <span>{prix.toFixed(2)}€</span>
