@@ -125,7 +125,7 @@ export default function Carte() {
                     handleAddToCart({
                       id: product.id,
                       name: product.title,
-                      price: +product.prix,
+                      price: product.prix,
                     })
                   }>
                   Ajouter au panier

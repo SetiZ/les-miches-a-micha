@@ -76,7 +76,7 @@ const ProductBox = ({
             width={'full'}
             onClick={(e) => {
               e.preventDefault();
-              handleAddToCart({ id, name: title, price: +prix });
+              handleAddToCart({ id, name: title, price: prix });
             }}>
             Ajouter au panier
           </Button>

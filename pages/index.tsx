@@ -139,7 +139,7 @@ export default function Home() {
               direction={['column', 'row']}
               paddingTop={4}
               justify={'center'}>
-              <Link href={'tel:0663354314'}>06.52.39.48.79</Link>
+              <Link href={'tel:+33652394879'}>06.52.39.48.79</Link>
               <Link href={'mailto:lesmichesamicha@gmail.com'}>
                 lesmichesamicha@gmail.com
               </Link>
