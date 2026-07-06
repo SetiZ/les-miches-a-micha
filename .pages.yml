@@ -50,3 +50,58 @@ content:
           - name: visible
             label: Visible
             type: boolean
+  - name: ateliers
+    label: Ateliers
+    path: src/data/ateliers.json
+    type: file
+    format: json
+    fields:
+      - name: heroTitle
+        label: Titre principal
+        type: string
+      - name: heroSubtitle
+        label: Sous-titre
+        type: string
+      - name: intro
+        label: Introduction
+        type: text
+      - name: workshops
+        label: Ateliers
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Titre
+            type: string
+          - name: description
+            label: Description
+            type: text
+      - name: formats
+        label: Formats
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Titre
+            type: string
+          - name: description
+            label: Description
+            type: text
+          - name: price
+            label: Prix
+            type: string
+      - name: ctaText
+        label: Texte d'appel à l'action
+        type: string
+      - name: contactPhone
+        label: Téléphone de contact
+        type: string
+      - name: contactEmail
+        label: Email de contact
+        type: string
+      - name: pdfUrl
+        label: URL du PDF
+        type: string
+      - name: outro
+        label: Texte de conclusion
+        type: text

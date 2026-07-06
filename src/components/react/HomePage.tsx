@@ -95,8 +95,14 @@ export default function HomePage() {
                 />
                 <SocialButton
                   text={'Les ateliers'}
-                  link={'Ateliers_boulanj.pdf'}
+                  link={'/ateliers'}
                   icon={<CgSmileMouthOpen />}
+                  options={{ in: true }}
+                />
+                <SocialButton
+                  text={'Télécharger la carte ateliers'}
+                  link={'Ateliers_boulanj.pdf'}
+                  icon={<CgSoftwareDownload />}
                   options={{ download: true }}
                 />
               </VStack>
