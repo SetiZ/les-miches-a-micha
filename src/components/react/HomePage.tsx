@@ -28,10 +28,10 @@ import {
 interface HomePageProps {
   title: string;
   tagline?: string;
-  intro?: string;
+  introHtml?: string;
 }
 
-export default function HomePage({ title, tagline, intro }: HomePageProps) {
+export default function HomePage({ title, tagline, introHtml }: HomePageProps) {
   return (
     <ChakraProvider>
       <SpeedInsights />
@@ -71,7 +71,7 @@ export default function HomePage({ title, tagline, intro }: HomePageProps) {
           </Text>
           <VStack align={'center'} paddingTop={16} spacing={12}>
             <Container maxW="80vw" textAlign={'center'} fontSize="lg">
-              <span dangerouslySetInnerHTML={{ __html: intro?.replace(/\n\n/g, '<br/><br/>') || '' }} />
+              <span dangerouslySetInnerHTML={{ __html: introHtml || '' }} />
             </Container>
             <Container maxW="80vw" textAlign={'center'}>
               <Heading as="h3" size="lg" textAlign={'center'}>
