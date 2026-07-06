@@ -1,0 +1,10 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HomePage from '../components/react/HomePage';
+
+export const prerender = true;
+---
+
+<Layout>
+  <HomePage client:load />
+</Layout>

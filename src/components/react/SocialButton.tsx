@@ -2,7 +2,6 @@ import { Button } from '@chakra-ui/react';
 import type { ReactElement } from 'react';
 
 export enum Events {
-  // eslint-disable-next-line no-unused-vars
   Christmas = 'green.300',
 }
 
@@ -26,7 +25,6 @@ const SocialButton = ({
       as={'a'}
       maxW={'sm'}
       width={'full'}
-      // variant={'outline'}
       colorScheme={'yellow'}
       leftIcon={icon}
       href={link}

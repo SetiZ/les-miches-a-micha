@@ -1,4 +1,4 @@
-import Cart from '@/components/cart';
+import Cart from '@/components/react/Cart';
 import { useCartStore } from '@/utils/store';
 import {
   Badge,
@@ -8,8 +8,6 @@ import {
   Icon,
   useDisclosure,
 } from '@chakra-ui/react';
-import Image from 'next/image';
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { CgShoppingCart } from 'react-icons/cg';
 
@@ -39,9 +37,9 @@ const Header = () => {
         alignItems={'center'}
         fontWeight={'600'}
         margin={'0 auto'}>
-        <Link href={'/'}>
+        <a href={'/'}>
           <HStack alignItems={'end'}>
-            <Image
+            <img
               src={'/miches_blanc_no_text.png'}
               alt={'les miches à micha'}
               width={65}
@@ -54,25 +52,20 @@ const Header = () => {
               Les Miches à Micha
             </Heading>
           </HStack>
-        </Link>
+        </a>
         <HStack
           as={'nav'}
           spacing={8}
-          // hideBelow={'660px'}
           alignItems={'center'}
         >
-          {/* {Links.map((link) => ( */}
-          <Link href={'/carte'}>
-            {/* <Icon as={CgIcecream} w={6} h={6} /> */}
-            <Image
+          <a href={'/carte'}>
+            <img
               src={'/breads.png'}
               alt={'la carte'}
               width={50}
               height={50}
             />
-            {/* {link.title} */}
-          </Link>
-          {/* ))} */}
+          </a>
           <Box pos="relative" as="button" height={'16px'} onClick={onOpen}>
             <Icon aria-label="Panier" as={CgShoppingCart} boxSize={8} />
             {hydrated && cartCount() > 0 ? (
@@ -88,28 +81,6 @@ const Header = () => {
             ) : null}
           </Box>
         </HStack>
-        {/* <HStack as={'nav'} spacing={8} alignItems={'center'} hideFrom={'660px'}>
-					<Link href={`/cart`} height={'16px'}>
-						<Icon as={CgShoppingCart} />
-					</Link>
-					<Menu>
-						<MenuButton
-							as={IconButton}
-							aria-label="Options"
-							colorScheme="yellow">
-							<HamburgerIcon />
-						</MenuButton>
-						<Portal>
-							<MenuList>
-								{Links.map((link) => (
-									<MenuItem as="a" key={link.link} href={`/${link.link}`}>
-										{link.title}
-									</MenuItem>
-								))}
-							</MenuList>
-						</Portal>
-					</Menu>
-				</HStack> */}
       </HStack>
       <Cart isOpen={isOpen} onClose={onClose} />
     </Box>

@@ -119,7 +119,6 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
               <>
                 {cart.map((item) => {
                   return (
-                    // <HStack key={item.id} justify={"space-between"} w={"full"}>
                     <Grid
                       key={item.id}
                       templateColumns="repeat(6, 1fr)"
@@ -148,7 +147,6 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                       <GridItem colEnd={7} colSpan={2} justifySelf={'end'}>
                         {(item.price * item.count).toFixed(2)} €
                       </GridItem>
-                      {/* </HStack> */}
                     </Grid>
                   );
                 })}
@@ -160,7 +158,6 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                 </Text>
               </>
             )}
-            {/* <Divider my={8} borderColor={"gray.600"} /> */}
           </VStack>
           <Divider my={8} borderColor={'gray.600'} />
           <Box>
@@ -168,7 +165,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
               <Stack spacing={4}>
                 <Heading size={'md'}>Veuillez entrer vos informations</Heading>
                 <Text>
-                  Un mél vous sera envoyé par la suite pour confirmer votre
+                  Un email vous sera envoyé par la suite pour confirmer votre
                   commande.
                 </Text>
                 <InputGroup>

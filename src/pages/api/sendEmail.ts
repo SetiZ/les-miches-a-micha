@@ -1,24 +1,20 @@
+import type { APIRoute } from 'astro';
 import { render } from '@react-email/render';
-import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
-import { EmailTemplate, CustomerEmailTemplate } from '../../components/email';
+import { EmailTemplate, CustomerEmailTemplate } from '../../components/react/EmailTemplate';
 
 const GMAIL_USER = process.env.GMAIL_USER || 'lesmichesamicha@gmail.com';
 const GMAIL_PASS = process.env.GMAIL_API_PASS;
 const BAKERY_EMAIL = process.env.BAKERY_EMAIL || 'lesmichesamicha@gmail.com';
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://les-miches-a-micha.vercel.app';
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
-
+export const POST: APIRoute = async ({ request }) => {
   if (!GMAIL_PASS) {
     console.error('GMAIL_API_PASS is not set');
-    return res.status(500).json({ error: 'Email service misconfigured' });
+    return new Response(JSON.stringify({ error: 'Email service misconfigured' }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' },
+    });
   }
 
   const transporter = nodemailer.createTransport({
@@ -33,10 +29,13 @@ export default async function handler(
   });
 
   try {
-    const parsed = JSON.parse(req.body);
+    const parsed = await request.json();
 
     if (!parsed.name || !parsed.email || !parsed.date) {
-      return res.status(400).json({ error: 'Missing required fields' });
+      return new Response(JSON.stringify({ error: 'Missing required fields' }), {
+        status: 400,
+        headers: { 'Content-Type': 'application/json' },
+      });
     }
 
     const orderDate = new Date().toLocaleTimeString('fr-FR', {
@@ -48,25 +47,25 @@ export default async function handler(
     });
 
     const emailHtml = await render(
-      <EmailTemplate
-        name={parsed.name}
-        phoneNumber={parsed.phoneNumber}
-        email={parsed.email}
-        date={parsed.date}
-        comment={parsed.comment}
-        total={parsed.total}
-        cart={parsed.cart}
-      />,
+      EmailTemplate({
+        name: parsed.name,
+        phoneNumber: parsed.phoneNumber,
+        email: parsed.email,
+        date: parsed.date,
+        comment: parsed.comment,
+        total: parsed.total,
+        cart: parsed.cart,
+      }),
     );
 
     const customerEmailHtml = await render(
-      <CustomerEmailTemplate
-        name={parsed.name}
-        date={parsed.date}
-        total={parsed.total}
-        cart={parsed.cart}
-        siteUrl={SITE_URL}
-      />,
+      CustomerEmailTemplate({
+        name: parsed.name,
+        date: parsed.date,
+        total: parsed.total,
+        cart: parsed.cart,
+        siteUrl: SITE_URL,
+      }),
     );
 
     await transporter.sendMail({
@@ -84,9 +83,15 @@ export default async function handler(
     });
 
     console.log('Order emails sent successfully');
-    res.status(200).json({ id: 'sent' });
+    return new Response(JSON.stringify({ id: 'sent' }), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' },
+    });
   } catch (error) {
     console.error('Failed to send order email:', error);
-    res.status(500).json({ error: 'Failed to send order email' });
+    return new Response(JSON.stringify({ error: 'Failed to send order email' }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' },
+    });
   }
-}
+};

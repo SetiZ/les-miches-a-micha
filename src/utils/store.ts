@@ -1,4 +1,3 @@
-// https://whateverittech.medium.com/manage-shopping-cart-in-nextjs-13-with-zustand-99421fc6a2ec
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 
@@ -54,7 +53,7 @@ export const useCartStore = create<CartStore>()(
       removeAll: () => set({ cart: [] }),
     }),
     {
-      name: "food-storage", // name of the item in the storage (must be unique)
+      name: "food-storage",
       storage: createJSONStorage(() => localStorage),
     },
   ),

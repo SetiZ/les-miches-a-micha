@@ -2,15 +2,12 @@ import { Box, Button, Stack, Text } from '@chakra-ui/react';
 import { CgInstagram } from 'react-icons/cg';
 
 const Footer = () => {
-  // const year: number = new Date().getFullYear();
-
   return (
     <Box
       as={'footer'}
       w={'full'}
       bgColor={'gray.600'}
       color={'gray.100'}
-      // position={'fixed'}
       bottom={0}
     >
       <Stack
@@ -21,7 +18,6 @@ const Footer = () => {
         alignItems={'center'}
         margin={'0 auto'}>
         <Text fontWeight={'600'}>Siret : 90464809400020</Text>
-        {/* <Text fontWeight={'600'}>Les miches à Micha</Text> */}
         <Button
           as={'a'}
           w={'min'}

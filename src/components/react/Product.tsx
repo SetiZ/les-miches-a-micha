@@ -1,8 +1,6 @@
 import { useCartStore } from '@/utils/store';
 import { AddIcon } from '@chakra-ui/icons';
-// import { Image } from '@chakra-ui/next-js';
 import { Box, Button, Tag, Text } from '@chakra-ui/react';
-import Image from 'next/image';
 
 interface ProductProps {
   id: number;
@@ -34,27 +32,18 @@ const ProductBox = ({
       width={'260px'}
       justifySelf={'center'}
       href={`/carte/${id}`}>
-      {/* <Box position={"relative"} width={"260px"} height={"260px"}> */}
-      <Image
-        // as={NextImage}
-        // loader={supabaseLoader}
+      <img
         loading="lazy"
-        // src={images}
         src={
           images && images.length > 0
             ? `/images/${images}`
             : `/images/${fallbackSrc}`
         }
-        placeholder="blur"
-        blurDataURL={`/images/${fallbackSrc}`}
         alt={''}
         width={260}
         height={260}
         style={{ objectFit: 'cover', width: '260px', height: '260px' }}
-        // borderTopRadius="md"
-        // objectFit="cover"
       />
-      {/* </Box> */}
       <Box p="4">
         <Text
           as="h3"
