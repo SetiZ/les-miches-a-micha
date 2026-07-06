@@ -26,12 +26,7 @@ export default function ProductDetailPage({ id }: ProductPageProps) {
         className="m-0 p-0 pt-20 pb-2 px-4 flex justify-center"
         style={{ minHeight: 'calc(100vh - 56px)' }}
       >
-        <div
-          className="w-full"
-          style={{
-            background: 'linear-gradient(to bottom, #b7791f 0%, #f6ad55 25%, rgba(255,255,255,0.3) 50%)',
-          }}
-        >
+        <div className="w-full">
           <ContainerBox>
             <div className="pb-4">
               <a href="/carte" className="text-gray-800 underline">

@@ -1,6 +1,37 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+@layer base {
+  :root {
+    --color-primary: oklch(0.55 0.15 70);
+    --color-primary-content: oklch(0.98 0 0);
+    --color-secondary: oklch(0.7 0.15 55);
+    --color-secondary-content: oklch(0.15 0.02 55);
+    --color-accent: oklch(0.75 0.13 50);
+    --color-accent-content: oklch(0.15 0.02 50);
+    --color-neutral: oklch(0.35 0.03 70);
+    --color-neutral-content: oklch(0.9 0.01 70);
+    --color-warning: oklch(0.72 0.14 72);
+    --color-warning-content: oklch(0.15 0.02 72);
+    --color-error: oklch(0.58 0.18 25);
+    --color-error-content: oklch(0.98 0 0);
+    --color-success: oklch(0.65 0.15 145);
+    --color-success-content: oklch(0.98 0 0);
+    --color-info: oklch(0.7 0.12 220);
+    --color-info-content: oklch(0.15 0.02 220);
+    --color-base-100: oklch(0.96 0.03 65);
+    --color-base-200: oklch(0.92 0.04 65);
+    --color-base-300: oklch(0.88 0.04 65);
+    --color-base-content: oklch(0.15 0.03 65);
+  }
+}
+
+body {
+  background: linear-gradient(to bottom, oklch(0.55 0.15 70 / 1) 0%, oklch(0.75 0.12 60 / 1) 25%, oklch(0.96 0.03 65 / 0.5) 50%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
 @keyframes slide-up {
   from {
     transform: translateY(100%);
