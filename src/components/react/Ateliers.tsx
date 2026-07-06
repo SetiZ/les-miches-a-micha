@@ -2,7 +2,6 @@ import ContainerBox from '@/components/react/ContainerBox';
 import SocialButton from '@/components/react/SocialButton';
 import Footer from '@/components/react/Footer';
 import Header from '@/components/react/Header';
-import ateliers from '@/data/ateliers.json';
 import {
   Box,
   ChakraProvider,
@@ -28,7 +27,18 @@ interface Format {
   price: string;
 }
 
-export default function AteliersPage() {
+interface AteliersPageProps {
+  title: string;
+  subtitle?: string;
+  intro?: string;
+  workshops?: Workshop[];
+  formats?: Format[];
+  contactPhone?: string;
+  contactEmail?: string;
+  outro?: string;
+}
+
+export default function AteliersPage({ title, subtitle, intro, workshops, formats, contactPhone, contactEmail, outro }: AteliersPageProps) {
   return (
     <ChakraProvider>
       <SpeedInsights />
@@ -55,81 +65,89 @@ export default function AteliersPage() {
               loading="eager"
             />
             <Heading as="h1" size="xl" textAlign={'center'}>
-              {ateliers.heroTitle}
+              {title}
             </Heading>
           </Flex>
           <VStack align={'center'} paddingTop={16} spacing={12}>
-            <Heading as="h2" size="lg" textAlign={'center'}>
-              {ateliers.heroSubtitle}
-            </Heading>
-            <Container maxW="80vw" textAlign={'center'} fontSize="lg">
-              {ateliers.intro}
-            </Container>
-            <Container maxW="80vw" fontSize="lg">
-              <Heading as="h3" size="lg" textAlign={'center'}>
-                Des idées d'ateliers :
+            {subtitle && (
+              <Heading as="h2" size="lg" textAlign={'center'}>
+                {subtitle}
               </Heading>
-              <Box mt={10}>
-                <Stack
-                  spacing={{ base: 10, md: 0 }}
-                  display={{ md: 'grid' }}
-                  gridTemplateColumns={{ md: 'repeat(2,1fr)' }}
-                  gridColumnGap={{ md: 8 }}
-                  gridRowGap={{ md: 10 }}
-                >
-                  {ateliers.workshops.map((workshop: Workshop) => (
-                    <Box key={workshop.title}>
-                      <Text fontWeight="bold" fontSize="lg">
-                        {workshop.title}
+            )}
+            <Container maxW="80vw" textAlign={'center'} fontSize="lg">
+              {intro}
+            </Container>
+            {workshops && workshops.length > 0 && (
+              <Container maxW="80vw" fontSize="lg">
+                <Heading as="h3" size="lg" textAlign={'center'}>
+                  Des idées d'ateliers :
+                </Heading>
+                <Box mt={10}>
+                  <Stack
+                    spacing={{ base: 10, md: 0 }}
+                    display={{ md: 'grid' }}
+                    gridTemplateColumns={{ md: 'repeat(2,1fr)' }}
+                    gridColumnGap={{ md: 8 }}
+                    gridRowGap={{ md: 10 }}
+                  >
+                    {workshops.map((workshop: Workshop) => (
+                      <Box key={workshop.title}>
+                        <Text fontWeight="bold" fontSize="lg">
+                          {workshop.title}
+                        </Text>
+                        <Text mt={2}>{workshop.description}</Text>
+                      </Box>
+                    ))}
+                  </Stack>
+                </Box>
+              </Container>
+            )}
+            {formats && formats.length > 0 && (
+              <Container maxW="80vw" textAlign={'center'}>
+                <Heading as="h3" size="lg" textAlign={'center'}>
+                  <b>Tarifs :</b>
+                </Heading>
+                <VStack align={'center'} paddingTop={8} spacing={8}>
+                  {formats.map((format: Format) => (
+                    <Box key={format.title}>
+                      <Text fontWeight="bold">{format.title}</Text>
+                      <Text mt={2}>{format.description}</Text>
+                      <Text mt={2} fontStyle="italic">
+                        {format.price}
                       </Text>
-                      <Text mt={2}>{workshop.description}</Text>
                     </Box>
                   ))}
-                </Stack>
-              </Box>
-            </Container>
+                </VStack>
+              </Container>
+            )}
             <Container maxW="80vw" textAlign={'center'}>
               <Heading as="h3" size="lg" textAlign={'center'}>
-                <b>Tarifs :</b>
-              </Heading>
-              <VStack align={'center'} paddingTop={8} spacing={8}>
-                {ateliers.formats.map((format: Format) => (
-                  <Box key={format.title}>
-                    <Text fontWeight="bold">{format.title}</Text>
-                    <Text mt={2}>{format.description}</Text>
-                    <Text mt={2} fontStyle="italic">
-                      {format.price}
-                    </Text>
-                  </Box>
-                ))}
-              </VStack>
-            </Container>
-            <Container maxW="80vw" textAlign={'center'}>
-              <Heading as="h3" size="lg" textAlign={'center'}>
-                <b>{ateliers.ctaText}</b>
+                <b>Réservez dès maintenant :</b>
               </Heading>
               <VStack align={'center'} paddingTop={8}>
                 <SocialButton
-                  text={`appelez au ${ateliers.contactPhone}`}
-                  link={`tel:${ateliers.contactPhone.replace(/[^0-9]/g, '')}`}
+                  text={`appelez au ${contactPhone}`}
+                  link={`tel:${contactPhone?.replace(/[^0-9]/g, '')}`}
                   icon={<CgPhone />}
                 />
                 <SocialButton
-                  text={`écrivez-nous à ${ateliers.contactEmail}`}
-                  link={`mailto:${ateliers.contactEmail}`}
+                  text={`écrivez-nous à ${contactEmail}`}
+                  link={`mailto:${contactEmail}`}
                   icon={<CgMail />}
                 />
                 <SocialButton
                   text={'Téléchargez notre carte ateliers'}
-                  link={ateliers.pdfUrl}
+                  link={'Ateliers_boulanj.pdf'}
                   icon={<CgSmileMouthOpen />}
                   options={{ download: true }}
                 />
               </VStack>
             </Container>
-            <Container maxW="80vw" textAlign={'center'} fontSize="lg">
-              {ateliers.outro}
-            </Container>
+            {outro && (
+              <Container maxW="80vw" textAlign={'center'} fontSize="lg">
+                {outro}
+              </Container>
+            )}
           </VStack>
         </ContainerBox>
       </Flex>
