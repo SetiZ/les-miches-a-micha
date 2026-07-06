@@ -1,11 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import AteliersPage from '../components/react/Ateliers';
-import { getEntryBySlug } from 'astro:content';
+import { getEntry } from 'astro:content';
 
 export const prerender = true;
 
-const page = await getEntryBySlug('pages', 'ateliers');
+const page = await getEntry('pages', 'ateliers');
 const { title, subtitle, intro, workshops, formats, contactPhone, contactEmail, outro } = page?.data || {};
 ---
 
