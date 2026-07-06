@@ -1,0 +1,10 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AteliersPage from '../components/react/Ateliers';
+
+export const prerender = true;
+---
+
+<Layout>
+  <AteliersPage client:load />
+</Layout>

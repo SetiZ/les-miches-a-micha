@@ -55,9 +55,12 @@ const Header = () => {
         </a>
         <HStack
           as={'nav'}
-          spacing={8}
+          spacing={6}
           alignItems={'center'}
         >
+          <a href={'/ateliers'} style={{ textDecoration: 'underline', fontSize: '0.95rem' }}>
+            Ateliers
+          </a>
           <a href={'/carte'}>
             <img
               src={'/breads.png'}
