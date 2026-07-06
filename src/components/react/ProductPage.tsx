@@ -17,75 +17,68 @@ export default function ProductDetailPage({ id }: ProductPageProps) {
   const fallbackSrc = '0000_miches.png';
   const { add: handleAddToCart } = useCartStore();
 
+  if (!product) {
+    return (
+      <ToastProvider>
+        <SpeedInsights />
+        <Analytics />
+        <Header />
+        <main className="min-h-screen pt-24 pb-12 px-margin-mobile md:px-margin-desktop flex justify-center">
+          <p className="font-headline text-hmd text-aged-parchment">Produit introuvable</p>
+        </main>
+        <Footer />
+      </ToastProvider>
+    );
+  }
+
   return (
     <ToastProvider>
       <SpeedInsights />
       <Analytics />
       <Header />
-      <main
-        className="m-0 p-0 pt-20 pb-2 px-4 flex justify-center"
-        style={{ minHeight: 'calc(100vh - 56px)' }}
-      >
-        <div className="w-full"
-          style={{ background: 'linear-gradient(to bottom, #b7791f 0%, #f6ad55 25%, rgba(255,255,255,0.3) 50%)' }}
-        >
+      <main className="min-h-screen pt-24 pb-12 px-margin-mobile md:px-margin-desktop flex justify-center">
+        <div className="w-full max-w-container-max">
+          <div className="mb-6">
+            <a href="/carte" className="font-label text-label text-iron-rim hover:text-fired-gold transition-colors uppercase tracking-[0.1em]">&larr; Revenir à la Carte</a>
+          </div>
           <ContainerBox>
-            <div className="pb-4">
-              <a href="/carte" className="text-gray-800 underline">
-                Revenir à la Carte
-              </a>
-            </div>
-            {!product ? (
-              <p>Ya rien</p>
-            ) : (
-              <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center lg:items-start">
-                <div className="rounded-xl overflow-hidden flex-1 max-w-full lg:max-w-[500px] shadow-2xl">
-                  <img
-                    loading="lazy"
-                    src={
-                      product.images && product.images.length > 0
-                        ? `/images/${product.images}`
-                        : `/images/${fallbackSrc}`
-                    }
-                    alt={product.title || ''}
-                    width={500}
-                    height={500}
-                    style={{ objectFit: 'cover', width: '500px', height: 'auto' }}
-                  />
-                </div>
-                <div className="flex flex-col items-start gap-6 flex-1">
-                  <span className="badge badge-warning px-3 py-1 rounded-full capitalize text-sm">
-                    {product.category}
-                  </span>
-                  <h1 className="text-3xl font-bold">{product.title}</h1>
-                  <div className="flex flex-col lg:flex-row gap-2 w-full justify-between">
-                    <div className="flex gap-2">
-                      <span className="text-3xl font-bold">{product.prix.toFixed(2)}€</span>
-                      {product.poids && (
-                        <span className="text-3xl">{product.poids} gr</span>
-                      )}
-                    </div>
-                    <button
-                      className="btn btn-warning w-full lg:w-fit"
-                      onClick={() =>
-                        handleAddToCart({
-                          id: product.id,
-                          name: product.title,
-                          price: product.prix,
-                        })
-                      }
-                    >
-                      <CgAdd className="size-4" />
-                      Ajouter au panier
-                    </button>
-                  </div>
-                  <div className="divider" />
-                  <div className="flex flex-col items-start gap-4">
-                    <p className="text-lg leading-relaxed">{product.description}</p>
-                  </div>
-                </div>
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center lg:items-start">
+              <div className="flex-1 max-w-full lg:max-w-[500px] border border-iron-rim overflow-hidden">
+                <img
+                  loading="lazy"
+                  src={
+                    product.images && product.images.length > 0
+                      ? `/images/${product.images}`
+                      : `/images/${fallbackSrc}`
+                  }
+                  alt={product.title || ''}
+                  width={500}
+                  height={500}
+                  className="object-cover w-full h-auto"
+                />
               </div>
-            )}
+              <div className="flex flex-col items-start gap-6 flex-1">
+                <span className="font-label text-[10px] text-ember-orange uppercase tracking-[0.1em]">{product.category}</span>
+                <h1 className="font-headline text-hxl-mobile md:text-hxl text-aged-parchment">{product.title}</h1>
+                <div className="flex items-center gap-4">
+                  <span className="font-headline text-3xl text-fired-gold">{product.prix.toFixed(2)}€</span>
+                  {product.poids && (
+                    <span className="font-body text-lg text-aged-parchment/60">{product.poids} gr</span>
+                  )}
+                </div>
+                <button
+                  className="forged-btn-primary px-8 py-4 font-label text-label tracking-[0.1em] uppercase flex items-center gap-2"
+                  onClick={() =>
+                    handleAddToCart({ id: product.id, name: product.title, price: product.prix })
+                  }
+                >
+                  <CgAdd className="size-4" />
+                  Ajouter au panier
+                </button>
+                <div className="separator" />
+                <p className="font-body text-body-lg text-aged-parchment/80 leading-relaxed">{product.description}</p>
+              </div>
+            </div>
           </ContainerBox>
         </div>
       </main>

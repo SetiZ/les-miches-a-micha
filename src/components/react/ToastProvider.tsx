@@ -39,16 +39,16 @@ export function ToastProvider({ children }: { children: ReactNode }) {
         {toasts.map((t) => (
           <div
             key={t.id}
-            className={`rounded-lg px-4 py-3 shadow-lg text-white max-w-sm animate-slide-up ${
-              t.status === 'success' ? 'bg-green-600' : 'bg-red-600'
+            className={`px-4 py-3 shadow-lg max-w-sm animate-slide-up border font-body ${
+              t.status === 'success' ? 'bg-surface border-fired-gold text-aged-parchment' : 'bg-surface border-ember-orange text-aged-parchment'
             }`}
           >
             <div className="flex justify-between items-start gap-2">
               <div>
-                <p className="font-semibold">{t.title}</p>
-                {t.description && <p className="text-sm mt-1 opacity-90">{t.description}</p>}
+                <p className="font-headline text-hmd">{t.title}</p>
+                {t.description && <p className="text-sm mt-1 opacity-70">{t.description}</p>}
               </div>
-              <button onClick={() => remove(t.id)} className="text-white/70 hover:text-white text-lg leading-none">&times;</button>
+              <button onClick={() => remove(t.id)} className="text-aged-parchment/50 hover:text-aged-parchment text-lg leading-none">&times;</button>
             </div>
           </div>
         ))}

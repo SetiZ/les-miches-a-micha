@@ -37,31 +37,22 @@ export default function CartePage() {
       <SpeedInsights />
       <Analytics />
       <Header />
-      <main
-        className="m-0 p-0 pt-20 pb-2 px-4 flex justify-center"
-        style={{ minHeight: 'calc(100vh - 56px)' }}
-      >
-        <div className="w-full"
-          style={{ background: 'linear-gradient(to bottom, #b7791f 0%, #f6ad55 25%, rgba(255,255,255,0.3) 50%)' }}
-        >
+      <main className="min-h-screen pt-24 pb-12 px-margin-mobile md:px-margin-desktop flex justify-center">
+        <div className="w-full max-w-container-max">
+          <div className="text-center mb-12">
+            <h1 className="font-headline text-hxl-mobile md:text-hxl text-aged-parchment ember-glow">La carte</h1>
+            <div className="w-24 h-1 bg-fired-gold mx-auto mt-4" />
+          </div>
           <ContainerBox>
-            <div className="flex justify-center">
-              <img
-                src="/miches_blanc.png"
-                alt=""
-                width={260}
-                height={260}
-                loading="eager"
-                style={{ objectFit: 'cover', width: '260px', height: '260px' }}
+            <div className="mb-8">
+              <Filter
+                categories={categories}
+                filteredProducts={filteredProducts}
+                onClick={changeFilteredProducts}
               />
             </div>
-            <Filter
-              categories={categories}
-              filteredProducts={filteredProducts}
-              onClick={changeFilteredProducts}
-            />
             {carte && (
-              <div className="grid grid-cols-[repeat(auto-fill,minmax(260px,1fr))] gap-20 pt-16">
+              <div className="grid grid-cols-[repeat(auto-fill,minmax(260px,1fr))] gap-8 pt-8">
                 {carteList.map((prod) => {
                   return (
                     prod.visible && (

@@ -6,10 +6,14 @@ interface FilterProps {
 
 export const Filter = ({ categories, filteredProducts, onClick }: FilterProps) => {
   return (
-    <div className="flex flex-wrap items-center gap-2">
-      <span>Filtrer par :</span>
+    <div className="flex flex-wrap items-center gap-3">
+      <span className="font-label text-label text-aged-parchment/70 uppercase tracking-[0.1em]">Filtrer par :</span>
       <button
-        className={`badge badge-lg cursor-pointer ${filteredProducts === -1 ? 'badge-warning' : 'badge-outline'}`}
+        className={`px-3 py-1 font-label text-xs uppercase tracking-[0.1em] border transition-all duration-300 cursor-pointer ${
+          filteredProducts === -1
+            ? 'bg-ember-orange border-fired-gold text-aged-parchment'
+            : 'border-iron-rim text-aged-parchment/70 hover:border-fired-gold hover:text-fired-gold'
+        }`}
         onClick={() => onClick(-1)}
       >
         tous
@@ -17,7 +21,11 @@ export const Filter = ({ categories, filteredProducts, onClick }: FilterProps) =
       {categories.map((category, index) => (
         <button
           key={category}
-          className={`badge badge-lg cursor-pointer ${filteredProducts === index ? 'badge-warning' : 'badge-outline'}`}
+          className={`px-3 py-1 font-label text-xs uppercase tracking-[0.1em] border transition-all duration-300 cursor-pointer ${
+            filteredProducts === index
+              ? 'bg-ember-orange border-fired-gold text-aged-parchment'
+              : 'border-iron-rim text-aged-parchment/70 hover:border-fired-gold hover:text-fired-gold'
+          }`}
           onClick={() => onClick(index)}
         >
           {category}

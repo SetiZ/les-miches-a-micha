@@ -28,7 +28,6 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
         total: total(),
         cart: cart,
       };
-
       const response = await fetch('/api/sendEmail', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -39,117 +38,99 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
     postData()
       .then((data) => {
         if (data.id) {
-          toast({
-            title: 'Commande envoyée !',
-            description: 'Vous allez bientôt recevoir un email de confirmation',
-            status: 'success',
-          });
+          toast({ title: 'Commande envoyée !', description: 'Vous allez bientôt recevoir un email de confirmation', status: 'success' });
           removeAll();
           onClose();
         } else {
-          toast({
-            title: 'Erreur',
-            description: data.error || 'Une erreur est survenue. Veuillez réessayer ou nous contacter directement.',
-            status: 'error',
-          });
+          toast({ title: 'Erreur', description: data.error || 'Une erreur est survenue.', status: 'error' });
         }
       })
       .catch(() => {
-        toast({
-          title: 'Erreur',
-          description: "Impossible d'envoyer la commande. Veuillez réessayer ou nous contacter au 06.52.39.48.79.",
-          status: 'error',
-        });
+        toast({ title: 'Erreur', description: "Impossible d'envoyer la commande.", status: 'error' });
       })
       .finally(() => setIsLoading(false));
   }
-
-  const inputClass = 'input input-bordered w-full border-gray-600';
-  const labelClass = 'flex items-center gap-2';
 
   return (
     <>
       {isOpen && (
         <div className="fixed inset-0 z-40" onClick={onClose}>
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-black/60" />
         </div>
       )}
       <div
-        className={`fixed top-0 right-0 z-50 h-full w-full max-w-lg bg-white shadow-xl text-base-content transform transition-transform duration-300 ${
+        className={`fixed top-0 right-0 z-50 h-full w-full max-w-lg bg-surface border-l-2 border-iron-rim shadow-2xl text-aged-parchment transform transition-transform duration-300 ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <div className="flex items-center justify-between p-4 border-b">
-          <h2 className="text-xl font-semibold">Panier</h2>
-          <button onClick={onClose} className="btn btn-sm btn-ghost">✕</button>
+        <div className="flex items-center justify-between p-4 border-b border-iron-rim">
+          <h2 className="font-headline text-hmd text-fired-gold">Panier</h2>
+          <button onClick={onClose} className="text-aged-parchment hover:text-fired-gold transition-colors">✕</button>
         </div>
 
-        <div className="p-4 overflow-y-auto h-[calc(100%-4rem)]">
-          <div className="flex flex-col gap-4">
-            {count() === 0 ? (
-              <div className="text-center py-8 text-gray-500">Panier vide</div>
-            ) : (
-              <>
-                {cart.map((item) => (
-                  <div key={item.id} className="grid grid-cols-6 gap-3 w-full items-center">
-                    <span className="col-span-3">{item.name}</span>
-                    <div className="col-start-4 col-span-1 flex items-center gap-1">
-                      <button className="btn btn-xs btn-ghost" onClick={() => remove(item.id)} aria-label="minus">
-                        <CgRemove className="size-3" />
-                      </button>
-                      <span className="text-sm">{item.count}</span>
-                      <button className="btn btn-xs btn-ghost" onClick={() => add(item)} aria-label="add">
-                        <CgAdd className="size-3" />
-                      </button>
-                    </div>
-                    <span className="col-end-7 col-span-2 justify-self-end">
-                      {(item.price * item.count).toFixed(2)} €
-                    </span>
+        <div className="p-4 overflow-y-auto h-[calc(100%-4rem)] space-y-6">
+          {count() === 0 ? (
+            <div className="text-center py-8 text-aged-parchment/50 font-headline">Panier vide</div>
+          ) : (
+            <div className="space-y-4">
+              {cart.map((item) => (
+                <div key={item.id} className="flex items-center gap-3 border border-iron-rim p-3">
+                  <span className="flex-1 font-body">{item.name}</span>
+                  <div className="flex items-center gap-1">
+                    <button className="p-1 text-aged-parchment/70 hover:text-fired-gold" onClick={() => remove(item.id)} aria-label="minus">
+                      <CgRemove className="size-3" />
+                    </button>
+                    <span className="font-label text-sm w-6 text-center">{item.count}</span>
+                    <button className="p-1 text-aged-parchment/70 hover:text-fired-gold" onClick={() => add(item)} aria-label="add">
+                      <CgAdd className="size-3" />
+                    </button>
                   </div>
-                ))}
-                <p className="self-end font-semibold">Total: {total().toFixed(2)} €</p>
-                <p className="self-end text-sm text-gray-600">
-                  Ce total est donné à titre indicatif, en fonction de la personnalisation de vos produits notamment. Des frais de livraison pourront être ajoutés le cas échéant.
-                </p>
-              </>
-            )}
-          </div>
-
-          <div className="divider my-8 border-gray-600" />
-
-          <form onSubmit={sendOrder}>
-            <div className="flex flex-col gap-4">
-              <h3 className="text-lg font-semibold">Veuillez entrer vos informations</h3>
-              <p className="text-sm">Un email vous sera envoyé par la suite pour confirmer votre commande.</p>
-
-              <label className={labelClass}>
-                <CgInfo className="text-gray-600 size-5" />
-                <input type="text" placeholder="nom" name="nom" className={inputClass} required />
-              </label>
-              <label className={labelClass}>
-                <CgPhone className="text-gray-600 size-5" />
-                <input type="tel" name="tel" placeholder="numéro de téléphone" className={inputClass} required />
-              </label>
-              <label className={labelClass}>
-                <CgMail className="text-gray-600 size-5" />
-                <input type="email" name="email" placeholder="email" className={inputClass} required />
-              </label>
-              <p className="text-sm">
-                Veuillez spécifier l'heure de livraison souhaitée - comptez un minimum de 12h pour laisser au boulanger le temps de faire votre pain !
+                  <span className="font-headline text-fired-gold w-20 text-right">
+                    {(item.price * item.count).toFixed(2)} €
+                  </span>
+                </div>
+              ))}
+              <p className="font-headline text-right text-fired-gold text-hmd">Total: {total().toFixed(2)} €</p>
+              <p className="font-body text-sm text-aged-parchment/50">
+                Ce total est donné à titre indicatif, en fonction de la personnalisation de vos produits notamment. Des frais de livraison pourront être ajoutés le cas échéant.
               </p>
-              <label className={labelClass}>
-                <CgCalendarDates className="text-gray-600 size-5" />
-                <input type="datetime-local" name="date" placeholder="date et heure" className={inputClass} required />
-              </label>
-              <textarea
-                name="comment"
-                placeholder="Un commentaire, un souhait de personnalisation, une question, ou toute autre information utile"
-                className="textarea textarea-bordered w-full border-gray-600"
-              />
-              <button type="submit" className={`btn btn-warning ${isLoading ? 'btn-disabled' : ''}`}>
-                {isLoading ? <span className="loading loading-spinner" /> : 'Envoyer'}
-              </button>
             </div>
+          )}
+
+          <div className="separator" />
+
+          <form onSubmit={sendOrder} className="space-y-4">
+            <h3 className="font-headline text-hmd text-aged-parchment">Veuillez entrer vos informations</h3>
+            <p className="font-body text-sm text-aged-parchment/70">Un email vous sera envoyé par la suite pour confirmer votre commande.</p>
+
+            <label className="flex items-center gap-2 border border-iron-rim p-3">
+              <CgInfo className="text-iron-rim size-5 shrink-0" />
+              <input type="text" placeholder="nom" name="nom" className="bg-transparent text-aged-parchment w-full outline-none font-body placeholder:text-aged-parchment/30" required />
+            </label>
+            <label className="flex items-center gap-2 border border-iron-rim p-3">
+              <CgPhone className="text-iron-rim size-5 shrink-0" />
+              <input type="tel" name="tel" placeholder="numéro de téléphone" className="bg-transparent text-aged-parchment w-full outline-none font-body placeholder:text-aged-parchment/30" required />
+            </label>
+            <label className="flex items-center gap-2 border border-iron-rim p-3">
+              <CgMail className="text-iron-rim size-5 shrink-0" />
+              <input type="email" name="email" placeholder="email" className="bg-transparent text-aged-parchment w-full outline-none font-body placeholder:text-aged-parchment/30" required />
+            </label>
+            <p className="font-body text-sm text-aged-parchment/70">
+              Veuillez spécifier l'heure de livraison souhaitée - comptez un minimum de 12h pour laisser au boulanger le temps de faire votre pain !
+            </p>
+            <label className="flex items-center gap-2 border border-iron-rim p-3">
+              <CgCalendarDates className="text-iron-rim size-5 shrink-0" />
+              <input type="datetime-local" name="date" className="bg-transparent text-aged-parchment w-full outline-none font-body [color-scheme:dark]" required />
+            </label>
+            <textarea
+              name="comment"
+              placeholder="Un commentaire, un souhait..."
+              className="w-full bg-transparent border border-iron-rim p-3 text-aged-parchment outline-none font-body placeholder:text-aged-parchment/30 resize-none"
+              rows={3}
+            />
+            <button type="submit" className={`forged-btn-primary w-full py-4 font-label text-label tracking-[0.1em] uppercase ${isLoading ? 'opacity-50 pointer-events-none' : ''}`}>
+              {isLoading ? 'Envoi...' : 'Envoyer'}
+            </button>
           </form>
         </div>
       </div>

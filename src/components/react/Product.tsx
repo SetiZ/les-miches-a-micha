@@ -17,35 +17,36 @@ const ProductBox = ({ id, images, title, category, prix, poids }: ProductProps) 
   return (
     <a
       href={`/carte/${id}`}
-      className="bg-white shadow-md rounded-md w-[260px] justify-self-center block"
+      className="stone-slab w-[260px] justify-self-center block group"
     >
-      <img
-        loading="lazy"
-        src={images ? `/images/${images}` : `/images/${fallbackSrc}`}
-        alt=""
-        width={260}
-        height={260}
-        className="object-cover w-[260px] h-[260px] rounded-t-md"
-      />
-      <div className="p-4 text-base-content">
-          <h3 className="mt-2 text-xl font-semibold leading-tight">{title}</h3>
-        <span className="badge badge-warning badge-sm">{category}</span>
-        <div className="flex items-baseline gap-2 mt-1">
-          <span>{prix.toFixed(2)}€</span>
-          {poids && <span>{poids}gr</span>}
+      <div className="relative overflow-hidden">
+        <img
+          loading="lazy"
+          src={images ? `/images/${images}` : `/images/${fallbackSrc}`}
+          alt=""
+          width={260}
+          height={260}
+          className="object-cover w-[260px] h-[260px] transition-transform duration-500 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent pointer-events-none" />
+      </div>
+      <div className="p-4 space-y-2">
+        <span className="font-label text-[10px] text-ember-orange uppercase tracking-[0.1em]">{category}</span>
+        <h3 className="font-headline text-hmd text-aged-parchment leading-tight">{title}</h3>
+        <div className="flex items-baseline gap-2">
+          <span className="font-headline text-lg text-fired-gold">{prix.toFixed(2)}€</span>
+          {poids && <span className="font-body text-sm text-aged-parchment/60">{poids}gr</span>}
         </div>
-        <div className="flex items-baseline gap-2 mt-4">
-          <button
-            className="btn btn-warning btn-sm w-full"
-            onClick={(e) => {
-              e.preventDefault();
-              handleAddToCart({ id, name: title, price: prix });
-            }}
-          >
-            <CgAdd className="size-4" />
-            Ajouter au panier
-          </button>
-        </div>
+        <button
+          className="forged-btn w-full py-2 font-label text-xs uppercase tracking-[0.1em] text-aged-parchment flex items-center justify-center gap-2 mt-4"
+          onClick={(e) => {
+            e.preventDefault();
+            handleAddToCart({ id, name: title, price: prix });
+          }}
+        >
+          <CgAdd className="size-4" />
+          Ajouter au panier
+        </button>
       </div>
     </a>
   );
