@@ -9,7 +9,7 @@ import {
   useDisclosure,
 } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
-import { CgShoppingCart } from 'react-icons/cg';
+import { CgBowl, CgShoppingCart } from 'react-icons/cg';
 
 const Header = () => {
   const [hydrated, setHydrated] = useState<boolean>(false);
@@ -58,8 +58,8 @@ const Header = () => {
           spacing={6}
           alignItems={'center'}
         >
-          <a href={'/ateliers'} style={{ textDecoration: 'underline', fontSize: '0.95rem' }}>
-            Ateliers
+          <a href={'/ateliers'}>
+            <Icon aria-label="Ateliers" as={CgBowl} boxSize={8} />
           </a>
           <a href={'/carte'}>
             <img
