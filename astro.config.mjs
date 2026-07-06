@@ -9,5 +9,8 @@ export default defineConfig({
   adapter: vercel(),
   vite: {
     plugins: [tailwindcss()],
+    server: {
+      allowedHosts: true,
+    },
   },
 });

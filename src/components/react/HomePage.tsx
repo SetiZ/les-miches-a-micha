@@ -13,8 +13,6 @@ interface HomePageProps {
   introHtml?: string;
 }
 
-const HERO_IMG = 'https://lh3.googleusercontent.com/aida-public/AB6AXuBHZR5F3o1pSyxZxyktDAks98foXUdMbW1h45KilZeTu1wXV4CSbZ84xvuvdXJagPsf8InfQbUXOBnzOdDVA2qUDWxi3jkyd52nySsrOmVrwcGbnR9yjG5WKIhE6d40ZHLNdwQ1WmzW_gckcEn8_HoYqFJM9jCg08WJBErTqYVlAuYf7MMPCo-MZkLUfbm-OA3ONSkbYeFHPa6RF6qDmmQgABhkaUsB1nFI4iJuIBmYcofZg-BxdC1Gww';
-
 const LOGO_IMG = 'https://lh3.googleusercontent.com/aida/AP1WRLtfJCcBwaxM3AFEaRPrEgiOE2y4rw0BuOkfV6Hs4vczr8DELrhOcpMoK4XplVe0rc8p2bfU1Uye_O5of_Vyjy6VOxvvMQ4aer-Kzb07cmjQDPtI2CC4nEpjjTWdizCrroVWOzCApVrMO7pPl2IKuEfO1LQNzWXLHFmSf-2emW9cEpk7RinJFeLbZNdc_TCsKLYF6kz6vB-WnUqkI3NzegLq1x7FbRlOfGC3lLkpC_UkFssdjexqO8GXsIQ';
 
 const WORKSHOP_IMG = 'https://lh3.googleusercontent.com/aida-public/AB6AXuAHen-rEOjjAYu45wjMJ44zuIuDXnPGNAxIMy1brzyvhXq6OPuxDmz6zfZkrb0icIElP5TQ5yVEh18WfFdLn246Y6AisJFbr-UuvlL98pZNrud0dWkh1GQr-AOG47La4umaKywzUx_m5kU0ZmLDptZw64gnz_5babZSYUG-DLcBlxhcy_J8oig-awKeHiPg65k03KcoG4Z-7mAFrekmqk-HdL8MLe6R3aLB37JA2CReYttFrikVHBO0lw';
@@ -30,10 +28,6 @@ export default function HomePage({ title, tagline, introHtml }: HomePageProps) {
       <section className="relative min-h-[90vh] flex items-center justify-center px-margin-mobile md:px-margin-desktop py-16 overflow-hidden mt-20">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-surface/60 to-surface z-10" />
-          <div
-            className="w-full h-full bg-cover bg-center grayscale opacity-40 mix-blend-overlay"
-            style={{ backgroundImage: `url('${HERO_IMG}')` }}
-          />
         </div>
         <div className="relative z-20 max-w-4xl text-center space-y-8">
           <div className="flex justify-center mb-4">
