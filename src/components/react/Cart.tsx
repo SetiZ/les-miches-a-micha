@@ -62,6 +62,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
 
       const response = await fetch('/api/sendEmail', {
         method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
       return response.json();
