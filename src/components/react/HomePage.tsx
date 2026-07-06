@@ -103,12 +103,35 @@ export default function HomePage({ title, tagline, introHtml }: HomePageProps) {
         <div className="max-w-container-max mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 opacity-80">
           {trusted.trusted.map((trust: { id: number; title?: string; url?: string; description?: string; order?: string }) => (
             <div key={trust.id} className="text-center p-4 stone-slab hover:border-fired-gold transition-colors duration-500">
-              <span className="font-label text-[10px] text-primary-fixed-dim block mb-2 uppercase tracking-[0.1em]">
-                {trust.order === 'pre' ? trust.description : 'Partenaire'}
-              </span>
-              <span className="font-body text-body font-medium text-aged-parchment">
-                {trust.order === 'pre' ? trust.title : trust.description}
-              </span>
+              {trust.order === 'pre' ? (
+                <>
+                  <span className="font-label text-[10px] text-primary-fixed-dim block mb-2 uppercase tracking-[0.1em">{trust.description}</span>
+                  {trust.url ? (
+                    <a href={trust.url} target="_blank" rel="noopener noreferrer" className="font-body text-body font-medium text-aged-parchment hover:text-fired-gold transition-colors">{trust.title}</a>
+                  ) : (
+                    <span className="font-body text-body font-medium text-aged-parchment">{trust.title}</span>
+                  )}
+                </>
+              ) : trust.order === 'post' ? (
+                <>
+                  {trust.url ? (
+                    <a href={trust.url} target="_blank" rel="noopener noreferrer" className="font-body text-body font-medium text-aged-parchment hover:text-fired-gold transition-colors">{trust.title}</a>
+                  ) : (
+                    <span className="font-body text-body font-medium text-aged-parchment">{trust.title}</span>
+                  )}
+                  {trust.description && <span className="font-label text-[10px] text-primary-fixed-dim block mt-2 uppercase tracking-[0.1em]">{trust.description}</span>}
+                </>
+              ) : (
+                <>
+                  {trust.url ? (
+                    <a href={trust.url} target="_blank" rel="noopener noreferrer" className="font-body text-body font-medium text-aged-parchment hover:text-fired-gold transition-colors">{trust.title}</a>
+                  ) : trust.title ? (
+                    <span className="font-body text-body font-medium text-aged-parchment">{trust.title}</span>
+                  ) : (
+                    <span className="font-label text-[10px] text-primary-fixed-dim uppercase tracking-[0.1em]">{trust.description}</span>
+                  )}
+                </>
+              )}
             </div>
           ))}
         </div>
