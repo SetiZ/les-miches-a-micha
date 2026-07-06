@@ -13,8 +13,8 @@ const Header = () => {
     <>
       <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-surface/90 backdrop-blur-sm border-b-2 border-iron-rim">
         <a href="/" className="flex items-center gap-4">
-          <span className="font-headline text-hxl text-fired-gold leading-none">M</span>
-          <span className="hidden md:block font-label text-label text-aged-parchment uppercase tracking-[0.1em]">Les Miches à Micha</span>
+          <img src="/miches_blanc_no_text.png" alt="Les Miches à Micha" width={45} height={45} className="object-contain" />
+          <span className="hidden md:block font-headline text-hmd text-aged-parchment">Les Miches à Micha</span>
         </a>
         <div className="flex gap-gutter items-center">
           <div className="hidden md:flex gap-8">

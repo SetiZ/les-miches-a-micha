@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer className="w-full py-16 px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter items-center text-center md:text-left bg-surface-container-lowest border-t-2 border-iron-rim">
       <div className="space-y-4">
-        <span className="font-headline text-hmd text-fired-gold uppercase">M THE FORGE</span>
+        <span className="font-headline text-hmd text-fired-gold">Les Miches à Micha</span>
         <p className="font-body text-body text-aged-parchment opacity-70">
           La boulangerie qui vient à vous.<br />
           Matières nobles & levains naturels.
@@ -19,7 +19,7 @@ const Footer = () => {
       </div>
       <div className="md:text-right space-y-4">
         <p className="font-label text-[10px] text-aged-parchment opacity-50 uppercase leading-relaxed tracking-[0.1em]">
-          &copy; MMXXIV THE FORGE BAKERY. ALL RIGHTS RESERVED.<br />
+          &copy; Les Miches à Micha<br />
           SIRET: 90464809400020
         </p>
         <div className="flex justify-center md:justify-end gap-4 text-iron-rim">
