@@ -66,19 +66,42 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
       });
       return response.json();
     };
-    postData().then((data) => {
-      if (data.id) {
+    postData()
+      .then((data) => {
+        if (data.id) {
+          toast({
+            title: 'Commande envoyée !',
+            description:
+              'Vous allez bientôt recevoir un email de confirmation',
+            status: 'success',
+            duration: 9000,
+            isClosable: true,
+          });
+          removeAll();
+          onClose();
+        } else {
+          toast({
+            title: 'Erreur',
+            description:
+              data.error ||
+              'Une erreur est survenue. Veuillez réessayer ou nous contacter directement.',
+            status: 'error',
+            duration: 9000,
+            isClosable: true,
+          });
+        }
+      })
+      .catch(() => {
         toast({
-          title: 'Commande envoyée !',
-          description: 'Vous allez bientôt recevoir un mél de confirmation',
-          status: 'success',
+          title: 'Erreur',
+          description:
+            "Impossible d'envoyer la commande. Veuillez réessayer ou nous contacter au 06.52.39.48.79.",
+          status: 'error',
           duration: 9000,
           isClosable: true,
         });
-        removeAll();
-        onClose();
-      }
-    });
+      })
+      .finally(() => setIsLoading(false));
   }
 
   return (
