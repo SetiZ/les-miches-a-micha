@@ -13,9 +13,6 @@ interface HomePageProps {
   introHtml?: string;
 }
 
-const LOGO_IMG = 'https://lh3.googleusercontent.com/aida/AP1WRLtfJCcBwaxM3AFEaRPrEgiOE2y4rw0BuOkfV6Hs4vczr8DELrhOcpMoK4XplVe0rc8p2bfU1Uye_O5of_Vyjy6VOxvvMQ4aer-Kzb07cmjQDPtI2CC4nEpjjTWdizCrroVWOzCApVrMO7pPl2IKuEfO1LQNzWXLHFmSf-2emW9cEpk7RinJFeLbZNdc_TCsKLYF6kz6vB-WnUqkI3NzegLq1x7FbRlOfGC3lLkpC_UkFssdjexqO8GXsIQ';
-
-const WORKSHOP_IMG = 'https://lh3.googleusercontent.com/aida-public/AB6AXuAHen-rEOjjAYu45wjMJ44zuIuDXnPGNAxIMy1brzyvhXq6OPuxDmz6zfZkrb0icIElP5TQ5yVEh18WfFdLn246Y6AisJFbr-UuvlL98pZNrud0dWkh1GQr-AOG47La4umaKywzUx_m5kU0ZmLDptZw64gnz_5babZSYUG-DLcBlxhcy_J8oig-awKeHiPg65k03KcoG4Z-7mAFrekmqk-HdL8MLe6R3aLB37JA2CReYttFrikVHBO0lw';
 
 export default function HomePage({ title, tagline, introHtml }: HomePageProps) {
   return (
@@ -31,7 +28,7 @@ export default function HomePage({ title, tagline, introHtml }: HomePageProps) {
         </div>
         <div className="relative z-20 max-w-4xl text-center space-y-8">
           <div className="flex justify-center mb-4">
-            <img src={LOGO_IMG} alt="M" className="w-48 h-auto drop-shadow-[0_0_20px_rgba(212,175,55,0.4)] animate-pulse invert" />
+            <img src="/miches_blanc_no_text.png" alt="M" className="w-48 h-auto drop-shadow-[0_0_20px_rgba(212,175,55,0.4)] animate-pulse invert" />
           </div>
           <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-ember-orange/30 bg-ember-orange/10 status-pulse">
             <span className="w-2 h-2 rounded-full bg-ember-orange shadow-[0_0_8px_#E65100]" />
