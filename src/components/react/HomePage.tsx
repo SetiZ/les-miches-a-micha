@@ -64,18 +64,14 @@ export default function HomePage({ title, tagline, introHtml }: HomePageProps) {
         <div className="max-w-container-max mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
             {/* Workshops Card */}
-            <div className="stone-slab md:col-span-2 p-12 flex flex-col justify-between">
-              <div>
+            <div className="stone-slab md:col-span-2 p-12 flex flex-col text-center justify-between">
+              {/* <div> */}
                 <h2 className="font-headline text-hlg text-fired-gold mb-6">LES ATELIERS BOULANJ&apos;</h2>
                 <p className="text-body-lg text-primary-fixed-dim max-w-xl mb-8">
                   Apprenez l&apos;art du pain au levain, la manipulation des farines anciennes et les secrets d&apos;une fermentation lente. Une immersion totale dans notre univers artisanal.
                 </p>
-              </div>
+
               <a href="/ateliers" className="forged-btn w-full py-4 font-label text-label uppercase text-aged-parchment">En savoir plus</a>
-              <div
-                className="absolute top-0 right-0 w-1/2 h-full opacity-20 grayscale transition-all duration-700 pointer-events-none bg-cover bg-right"
-                style={{ backgroundImage: `url('${WORKSHOP_IMG}')` }}
-              />
             </div>
             {/* Flour Card */}
             <div className="stone-slab p-12 flex flex-col items-center text-center justify-center">
