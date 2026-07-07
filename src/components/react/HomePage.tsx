@@ -71,7 +71,7 @@ export default function HomePage({ title, tagline, introHtml }: HomePageProps) {
                   Apprenez l&apos;art du pain au levain, la manipulation des farines anciennes et les secrets d&apos;une fermentation lente. Une immersion totale dans notre univers artisanal.
                 </p>
               </div>
-              <a href="/ateliers" className="forged-btn px-6 py-3 font-label text-label uppercase text-aged-parchment inline-block w-fit">En savoir plus</a>
+              <a href="/ateliers" className="forged-btn w-full py-4 font-label text-label uppercase text-aged-parchment">En savoir plus</a>
               <div
                 className="absolute top-0 right-0 w-1/2 h-full opacity-20 grayscale transition-all duration-700 pointer-events-none bg-cover bg-right"
                 style={{ backgroundImage: `url('${WORKSHOP_IMG}')` }}
