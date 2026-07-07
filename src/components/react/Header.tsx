@@ -13,7 +13,7 @@ const Header = () => {
     <>
       <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-surface/90 backdrop-blur-sm border-b-2 border-iron-rim">
         <a href="/" className="flex items-center gap-4">
-          <img src="/miches_noir_no_text.png" alt="Les Miches à Micha" width={45} height={45} className="object-contain" />
+          <img src="/miches_blanc_no_text.png" alt="Les Miches à Micha" width={45} height={45} className="object-contain invert" />
           <span className="hidden md:block font-headline text-hmd text-aged-parchment">Les Miches à Micha</span>
         </a>
         <div className="flex gap-gutter items-center">
