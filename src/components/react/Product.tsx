@@ -27,6 +27,7 @@ const ProductBox = ({ id, images, title, category, prix, poids }: ProductProps) 
           width={260}
           height={260}
           className="object-cover w-[260px] h-[260px] transition-transform duration-500 group-hover:scale-105"
+          style={{ viewTransitionName: `product-${id}` }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent pointer-events-none" />
       </div>
