@@ -39,5 +39,19 @@ const SITE_DESCRIPTION =
   </head>
   <body>
     <slot />
+    <script>
+      document.addEventListener('astro:before-swap', () => {
+        if (location.pathname === '/carte') {
+          sessionStorage.setItem('carte-scroll', window.scrollY);
+        }
+      });
+
+      document.addEventListener('astro:page-load', () => {
+        if (location.pathname === '/carte') {
+          const saved = sessionStorage.getItem('carte-scroll');
+          if (saved) requestAnimationFrame(() => window.scrollTo(0, +saved));
+        }
+      });
+    </script>
   </body>
 </html>
