@@ -6,20 +6,29 @@ Micro-fournil artisanal spécialisé dans les pains au levain naturel, fabriqué
 
 ## Pages principales
 
-- [Accueil](https://les-miches-a-micha.vercel.app/): Présentation du micro-fournil, philosophy et engagement bio
+- [Accueil](https://les-miches-a-micha.vercel.app/): N'allez plus à la boulangerie c'est elle qui vient à vous !
 - [La Carte](https://les-miches-a-micha.vercel.app/carte): Catalogue complet des pains, viennoiseries et gourmandises avec prix
-- [Ateliers Boulangers](https://les-miches-a-micha.vercel.app/ateliers): Cours et ateliers pour apprendre à faire son pain au levain
+- [Ateliers Boulangers](https://les-miches-a-micha.vercel.app/ateliers): Offrez un moment de gourmandise et de savoir-faire !
 
 ## Nos spécialités
 
-- [Baguette de tradition](https://les-miches-a-micha.vercel.app/carte/101): Baguette classique en farine T65 bio, eau, sel et levain uniquement
-- [Pain de campagne](https://les-miches-a-micha.vercel.app/carte/202): Pain campagnard à la farine de sarrasin torréfiée
-- [Tourte de meule](https://les-miches-a-micha.vercel.app/carte/401): Pain de meule en farine complète moulue pierre
-- [Pain au khorasan](https://les-miches-a-micha.vercel.app/carte/402): Variété ancestrale de blé, 5000 ans d'histoire
-- [Brioche tressée](https://les-miches-a-micha.vercel.app/carte/501): Brioche nature, tressée ou en Nanterre
-- [Croissant](https://les-miches-a-micha.vercel.app/carte/601): Viennoiserie classique beurrée
+- [Baguette de tradition](https://les-miches-a-micha.vercel.app/carte/101): Le classique, renommé mondialement, et respectant le décret « tradition » du 13 septembre 1993
+- [Pain de campagne](https://les-miches-a-micha.vercel.app/carte/202): Ici, notre pain de campagne est réalisé avec de la farine de sarrasin torréfiée à sec, pour retrouver la saveur inimitable des galettes de blé noir
+- [Tourte de meule](https://les-miches-a-micha.vercel.app/carte/401): La farine est obtenue là en broyant les grains de blé une seule fois sous une meule de pierre, plutôt que classiquement en les éclatant par des cylindres successifs
+- [Pain au khorasan](https://les-miches-a-micha.vercel.app/carte/402): Apparue il y a 5000 ans en Mésopotamie, cette variété ancestrale de blé n’a jamais été modifiée ou hybridée ; elle offre un pain noble, naturellement riche en minéraux et à la douce saveur de noisette
+- [Brioche nature, tressée ou en «Nanterre»](https://les-miches-a-micha.vercel.app/carte/501): brioches
+- [Croissant](https://les-miches-a-micha.vercel.app/carte/601): viennoiseries
 - [Canelés bordelais](https://les-miches-a-micha.vercel.app/carte/909): Vanille et pointe de rhum
 
 ## Optional
 
-- [Galettes des rois](https://les-miches-a-micha.vercel.app/carte/1009): Pâte feuilletée maison, frangipane aux amandes bio
+- [Babka salée](https://les-miches-a-micha.vercel.app/carte/1): Babka revisitée en version salée, au zaatar et sésame
+- [Roulés au zaatar](https://les-miches-a-micha.vercel.app/carte/2): La déclinaison individuelle, en chignons
+- [Pain méditerranéen](https://les-miches-a-micha.vercel.app/carte/3): Un pain méditerranéen, dés d'abricot et romrain, et un moelleux assuré par une touche d'huile d’olive
+- [Vente de farines bio - sur demande](https://les-miches-a-micha.vercel.app/carte/99): Voir formulaire de commande de farines sur la page principale
+- [Pains serviette](https://les-miches-a-micha.vercel.app/carte/103): Pains-serviette individuels, tous façonnés différemment, idéal pour donner un cachet « gastronomique » à vos soirées
+- [Tradition céréales](https://les-miches-a-micha.vercel.app/carte/102): La baguette de tradition, avec un assortiment soigneusement choisi de graines (lin, tournesol, soja, courge, millet, quinoa, sésame), ou simplement du sésame grillé
+- [Pain complet](https://les-miches-a-micha.vercel.app/carte/201): Réalisé avec une farine T150 à la meule, contenant l'intégralité du grain de blé y compris le son et le germe
+- [Pain de Méteil](https://les-miches-a-micha.vercel.app/carte/203): Le pain de méteil, ancré dans l'histoire française, est né dans les campagnes aux XVIIIe et XIXe siècles avec le mélange naturel dans les champs de blé et de seigle
+- [Pain brié](https://les-miches-a-micha.vercel.app/carte/204): Un pain originaire de Normandie, reconnaissable à sa croûte blonde et striée comme la coque d'un bâteau
+- [Pain viking](https://les-miches-a-micha.vercel.app/carte/301): Un pavé riche en graines, à la mie brune et au cœur tendre, entre farines de froment, d’orge et de seigle
