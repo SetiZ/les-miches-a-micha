@@ -35,11 +35,11 @@ const organizationSchema = {
   url: SITE_URL,
   logo: `${SITE_URL}/miches_blanc.png`,
   image: `${SITE_URL}/api/og.png`,
-  telephone: '+33612345678',
-  email: 'contact@les-miches-a-micha.fr',
+  telephone: '+33652394879',
+  email: 'lesmichesamicha@gmail.com',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Adresse à compléter',
+    streetAddress: '29 Rue Gambetta',
     addressLocality: 'Suresnes',
     postalCode: '92150',
     addressRegion: 'Île-de-France',
@@ -47,8 +47,8 @@ const organizationSchema = {
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 48.8686,
-    longitude: 2.2114,
+    latitude: 48.8714,
+    longitude: 2.2247,
   },
   openingHoursSpecification: [
     {
@@ -70,7 +70,10 @@ const organizationSchema = {
     '@type': 'Menu',
     url: `${SITE_URL}/carte`,
   },
-  sameAs: [],
+  sameAs: [
+    'https://www.instagram.com/lesmichesamicha/',
+    'https://g.page/r/CQP-U6UnJ-McEB0/review',
+  ],
   founder: {
     '@type': 'Person',
     name: 'Micha',
@@ -80,8 +83,8 @@ const organizationSchema = {
     '@type': 'GeoCircle',
     geoMidpoint: {
       '@type': 'GeoCoordinates',
-      latitude: 48.8686,
-      longitude: 2.2114,
+      latitude: 48.8714,
+      longitude: 2.2247,
     },
     geoRadius: '10000',
   },
