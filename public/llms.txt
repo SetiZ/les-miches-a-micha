@@ -1,0 +1,25 @@
+# Les Miches à Micha
+
+> Boulangerie artisanale à Suresnes : pains bio au levain, livraison à domicile et ateliers boulangers.
+
+Micro-fournil artisanal spécialisé dans les pains au levain naturel, fabriqués à la demande à partir de farines bio, locales et semences paysannes. Livraison à domicile sur Suresnes et alentours, ateliers boulangers pour apprendre à faire son pain.
+
+## Pages principales
+
+- [Accueil](https://les-miches-a-micha.vercel.app/): Présentation du micro-fournil, philosophy et engagement bio
+- [La Carte](https://les-miches-a-micha.vercel.app/carte): Catalogue complet des pains, viennoiseries et gourmandises avec prix
+- [Ateliers Boulangers](https://les-miches-a-micha.vercel.app/ateliers): Cours et ateliers pour apprendre à faire son pain au levain
+
+## Nos spécialités
+
+- [Baguette de tradition](https://les-miches-a-micha.vercel.app/carte/101): Baguette classique en farine T65 bio, eau, sel et levain uniquement
+- [Pain de campagne](https://les-miches-a-micha.vercel.app/carte/202): Pain campagnard à la farine de sarrasin torréfiée
+- [Tourte de meule](https://les-miches-a-micha.vercel.app/carte/401): Pain de meule en farine complète moulue pierre
+- [Pain au khorasan](https://les-miches-a-micha.vercel.app/carte/402): Variété ancestrale de blé, 5000 ans d'histoire
+- [Brioche tressée](https://les-miches-a-micha.vercel.app/carte/501): Brioche nature, tressée ou en Nanterre
+- [Croissant](https://les-miches-a-micha.vercel.app/carte/601): Viennoiserie classique beurrée
+- [Canelés bordelais](https://les-miches-a-micha.vercel.app/carte/909): Vanille et pointe de rhum
+
+## Optional
+
+- [Galettes des rois](https://les-miches-a-micha.vercel.app/carte/1009): Pâte feuilletée maison, frangipane aux amandes bio
