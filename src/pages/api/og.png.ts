@@ -5,7 +5,7 @@ import React from 'react';
 export const GET: APIRoute = async () => {
   try {
     const imageData = await fetch(
-      new URL('./miches_noir.png', import.meta.url),
+      new URL('./miches_blanc.png', import.meta.url),
     ).then((res) => res.arrayBuffer());
 
     const element = React.createElement(
@@ -14,9 +14,8 @@ export const GET: APIRoute = async () => {
         style: {
           display: 'flex',
           fontSize: 30,
-          color: 'black',
-          background: '#fefcbfb3',
-          backgroundImage: 'linear-gradient(to bottom, #fefcbf, #B7791F)',
+          color: '#F5E6D3',
+          background: '#141313',
           width: '100%',
           height: '100%',
           padding: '50px 200px',
@@ -29,10 +28,24 @@ export const GET: APIRoute = async () => {
       React.createElement('img', {
         src: imageData as unknown as string,
         alt: 'les miches a micha',
-        width: '50%',
+        width: '40%',
       }),
-      React.createElement('p', null, "N'allez plus à la boulangerie"),
-      React.createElement('p', null, "c'est elle qui vient à vous !"),
+      React.createElement('p', {
+        style: {
+          marginTop: '30px',
+          fontSize: '28px',
+          color: '#D4AF37',
+          fontFamily: 'sans-serif',
+          fontWeight: '600',
+        },
+      }, "N'allez plus à la boulangerie"),
+      React.createElement('p', {
+        style: {
+          fontSize: '24px',
+          color: '#c8c6c5',
+          fontFamily: 'sans-serif',
+        },
+      }, "c'est elle qui vient à vous !"),
     );
 
     return new ImageResponse(element, {
