@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import SEO from '../../components/SEO.astro';
 import ProductDetailPage from '../../components/react/ProductPage';
 
 export const prerender = true;
@@ -15,8 +16,27 @@ export async function getStaticPaths() {
 }
 
 const { id } = Astro.params;
+const { default: carte } = await import('../../data/carte.json');
+const product = carte.products.find((p: { id: number }) => p.id === Number(id));
 ---
 
-<Layout>
+<Layout
+  title={product?.title || 'Produit'}
+  description={product?.description || `Découvrez le ${product?.title || 'produit'} de Les Miches à Micha, boulangerie artisanale bio à Suresnes.`}
+  canonical={`/carte/${id}`}
+  ogType="product"
+>
+  <SEO
+    page="product"
+    productName={product?.title}
+    productDescription={product?.description}
+    productPrice={product?.prix}
+    productImage={product?.images ? `/images/${product.images}` : undefined}
+    breadcrumbs={[
+      { name: 'Accueil', url: '/' },
+      { name: 'La Carte', url: '/carte' },
+      { name: product?.title || 'Produit', url: `/carte/${id}` },
+    ]}
+  />
   <ProductDetailPage client:load id={Number(id)} />
 </Layout>

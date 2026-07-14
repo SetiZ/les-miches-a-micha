@@ -1,10 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SEO from '../components/SEO.astro';
 import CartePage from '../components/react/CartePage';
 
 export const prerender = true;
 ---
 
-<Layout>
+<Layout
+  title="La Carte"
+  description="Découvrez notre carte de pains artisanaux au levain : baguettes de tradition, pains spéciaux, brioches, viennoiseries et gourmandises. Tous fabriqués à la demande avec des farines bio."
+  canonical="/carte"
+>
+  <SEO
+    page="carte"
+    breadcrumbs={[
+      { name: 'Accueil', url: '/' },
+      { name: 'La Carte', url: '/carte' },
+    ]}
+  />
   <CartePage client:load />
 </Layout>

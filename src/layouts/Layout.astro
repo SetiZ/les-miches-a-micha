@@ -1,11 +1,35 @@
 ---
 import { ClientRouter } from 'astro:transitions';
 import '@/styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  structuredData?: Record<string, any>[];
+}
+
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || 'https://les-miches-a-micha.vercel.app';
 const SITE_NAME = 'Les Miches à Micha';
 const SITE_DESCRIPTION =
   "N'allez plus à la boulangerie – c'est elle qui vient à vous ! Livraison à domicile, commande personnalisée, conseils de dégustation, créativité. . . Ici, tout est fait main, à partir de matières premières bio, locales et nobles, pour vous proposer des pains savoureux, sains et originaux.";
+
+const {
+  title,
+  description,
+  canonical,
+  ogImage,
+  ogType = 'website',
+  structuredData = [],
+} = Astro.props;
+
+const pageTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} - Micro-fournil artisanal`;
+const pageDescription = description || SITE_DESCRIPTION;
+const pageUrl = canonical ? `${SITE_URL}${canonical}` : `${SITE_URL}${Astro.url.pathname}`;
+const pageOgImage = ogImage || `${SITE_URL}/api/og.png`;
 ---
 
 <!doctype html>
@@ -13,28 +37,30 @@ const SITE_DESCRIPTION =
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{SITE_NAME} - Micro-fournil artisanal</title>
-    <meta name="description" content={SITE_DESCRIPTION} />
-    <meta property="og:image" content={`${SITE_URL}/api/og.png`} />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
+    <link rel="canonical" href={pageUrl} />
+    <meta property="og:image" content={pageOgImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content={SITE_NAME} />
-    <meta property="og:title" content={SITE_NAME} />
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content={SITE_DESCRIPTION} />
-    <meta property="og:url" content={SITE_URL} />
-    <meta property="twitter:image" content={`${SITE_URL}/api/og.png`} />
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content={SITE_URL} />
-    <meta property="twitter:url" content={SITE_URL} />
-    <meta name="twitter:title" content={SITE_NAME} />
-    <meta property="twitter:title" content={SITE_URL} />
-    <meta property="twitter:description" content={SITE_DESCRIPTION} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:locale" content="fr_FR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
+    <meta name="twitter:image" content={pageOgImage} />
     <link rel="icon" href="/favicon.ico" />
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    {structuredData.map((data) => (
+      <script type="application/ld+json" set:html={JSON.stringify(data)} />
+    ))}
     <ClientRouter />
   </head>
   <body>
