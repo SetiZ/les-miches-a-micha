@@ -6,7 +6,12 @@ export const GET: APIRoute = async () => {
   try {
     const imageData = await fetch(
       new URL('./miches_blanc.png', import.meta.url),
-    ).then((res) => res.arrayBuffer());
+    ).then(async (res) => {
+      const buffer = await res.arrayBuffer();
+      const base64 = Buffer.from(buffer).toString('base64');
+      const contentType = res.headers.get('content-type') || 'image/png';
+      return `data:${contentType};base64,${base64}`;
+    });
 
     const element = React.createElement(
       'div',
