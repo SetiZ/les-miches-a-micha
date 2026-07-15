@@ -12,7 +12,9 @@ interface Props {
 }
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://les-miches-a-micha.vercel.app';
+  import.meta.env.SITE ||
+  (import.meta.env.VERCEL_URL && `https://${import.meta.env.VERCEL_URL}`) ||
+  'https://les-miches-a-micha.vercel.app';
 const SITE_NAME = 'Les Miches à Micha';
 const SITE_DESCRIPTION =
   "N'allez plus à la boulangerie – c'est elle qui vient à vous ! Livraison à domicile, commande personnalisée, conseils de dégustation, créativité. . . Ici, tout est fait main, à partir de matières premières bio, locales et nobles, pour vous proposer des pains savoureux, sains et originaux.";

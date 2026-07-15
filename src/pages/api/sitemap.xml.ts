@@ -1,7 +1,9 @@
 import type { APIRoute } from 'astro';
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://les-miches-a-micha.vercel.app';
+  import.meta.env.SITE ||
+  (import.meta.env.VERCEL_URL && `https://${import.meta.env.VERCEL_URL}`) ||
+  'https://les-miches-a-micha.vercel.app';
 
 const staticPages = ['/', '/carte', '/ateliers'];
 
