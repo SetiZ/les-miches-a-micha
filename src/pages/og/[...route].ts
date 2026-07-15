@@ -22,7 +22,7 @@ export const { getStaticPaths, GET } = await OGImageRoute({
     title: page.title,
     description: page.description,
     logo: {
-      path: './public/miches_noir.png',
+      path: './public/miches_noir_invert.png',
       size: [300],
     },
     bgGradient: [[20, 19, 19]],
