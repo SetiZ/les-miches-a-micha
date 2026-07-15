@@ -1,5 +1,7 @@
 import { OGImageRoute } from 'astro-og-canvas';
 
+export const prerender = true;
+
 export const { getStaticPaths, GET } = await OGImageRoute({
   pages: {
     index: {
@@ -12,7 +14,7 @@ export const { getStaticPaths, GET } = await OGImageRoute({
     },
     'ateliers': {
       title: 'Les Ateliers',
-      description: 'Apprenez l'art de la boulangerie avec nos ateliers participatifs.',
+      description: "Apprenez l'art de la boulangerie avec nos ateliers participatifs.",
     },
   },
 
