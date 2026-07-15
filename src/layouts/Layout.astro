@@ -17,7 +17,7 @@ const SITE_URL =
   'https://les-miches-a-micha.vercel.app';
 const SITE_NAME = 'Les Miches à Micha';
 const SITE_DESCRIPTION =
-  "N'allez plus à la boulangerie – c'est elle qui vient à vous ! Livraison à domicile, commande personnalisée, conseils de dégustation, créativité. . . Ici, tout est fait main, à partir de matières premières bio, locales et nobles, pour vous proposer des pains savoureux, sains et originaux.";
+  "Boulangerie artisanale bio à Suresnes. Pains au levain, viennoiseries et pâtisseries faits main avec des farines bio locales.";
 
 const {
   title,
@@ -28,7 +28,7 @@ const {
   structuredData = [],
 } = Astro.props;
 
-const pageTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} - Micro-fournil artisanal`;
+const pageTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} – Boulangerie artisanale bio à Suresnes`;
 const pageDescription = description || SITE_DESCRIPTION;
 const pageUrl = canonical ? `${SITE_URL}${canonical}` : `${SITE_URL}${Astro.url.pathname}`;
 const pageOgImage = ogImage || `${SITE_URL}/og/index.png`;

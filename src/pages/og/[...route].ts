@@ -5,8 +5,8 @@ export const prerender = true;
 export const { getStaticPaths, GET } = await OGImageRoute({
   pages: {
     index: {
-      title: 'Les Miches à Micha',
-      description: "N'allez plus à la boulangerie – c'est elle qui vient à vous !",
+      title: 'Les Miches à Micha – Boulangerie artisanale bio',
+      description: 'Pains au levain, viennoiseries et pâtisseries faits main.',
     },
     carte: {
       title: 'La Carte',
