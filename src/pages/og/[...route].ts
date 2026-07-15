@@ -22,12 +22,12 @@ export const { getStaticPaths, GET } = await OGImageRoute({
     title: page.title,
     description: page.description,
     logo: {
-      path: './public/miches_blanc.png',
+      path: './public/miches_noir.png',
       size: [300],
     },
-    bgGradient: [[20, 19, 19]],
+    bgGradient: [[254, 252, 191]],
     border: {
-      color: [212, 175, 55],
+      color: [183, 121, 31],
       width: 4,
       side: 'block-start',
     },
@@ -35,12 +35,12 @@ export const { getStaticPaths, GET } = await OGImageRoute({
       title: {
         size: 64,
         weight: 'Bold',
-        color: [245, 230, 211],
+        color: [20, 19, 19],
       },
       description: {
         size: 32,
         weight: 'Normal',
-        color: [200, 198, 197],
+        color: [80, 78, 77],
         lineHeight: 1.4,
       },
     },
