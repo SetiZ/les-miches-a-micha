@@ -25,9 +25,9 @@ export const { getStaticPaths, GET } = await OGImageRoute({
       path: './public/miches_noir.png',
       size: [300],
     },
-    bgGradient: [[254, 252, 191]],
+    bgGradient: [[20, 19, 19]],
     border: {
-      color: [183, 121, 31],
+      color: [212, 175, 55],
       width: 4,
       side: 'block-start',
     },
@@ -35,12 +35,12 @@ export const { getStaticPaths, GET } = await OGImageRoute({
       title: {
         size: 64,
         weight: 'Bold',
-        color: [20, 19, 19],
+        color: [245, 230, 211],
       },
       description: {
         size: 32,
         weight: 'Normal',
-        color: [80, 78, 77],
+        color: [200, 198, 197],
         lineHeight: 1.4,
       },
     },
