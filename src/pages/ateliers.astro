@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SEO from '../components/SEO.astro';
 import AteliersPage from '../components/react/Ateliers';
 import { getEntry } from 'astro:content';
 
@@ -9,7 +10,18 @@ const page = await getEntry('pages', 'ateliers');
 const { title, subtitle, intro, workshops, formats, contactPhone, contactEmail, outro } = page?.data || {};
 ---
 
-<Layout>
+<Layout
+  title="Ateliers Boulangers"
+  description="Ateliers de boulangerie artisanale à Suresnes. Apprenez à faire vos pains, brioches et viennoiseries au levain. Cours pour tous niveaux, demi-journées ou journées complètes."
+  canonical="/ateliers"
+>
+  <SEO
+    page="ateliers"
+    breadcrumbs={[
+      { name: 'Accueil', url: '/' },
+      { name: 'Ateliers', url: '/ateliers' },
+    ]}
+  />
   <AteliersPage
     client:load
     title={title}

@@ -1,143 +1,89 @@
 import ContainerBox from '@/components/react/ContainerBox';
 import Footer from '@/components/react/Footer';
 import Header from '@/components/react/Header';
+import { ToastProvider } from '@/components/react/ToastProvider';
 import carte from '@/data/carte.json';
 import { useCartStore } from '@/utils/store';
-import { AddIcon } from '@chakra-ui/icons';
-import {
-  Badge,
-  Box,
-  Button,
-  ChakraProvider,
-  Divider,
-  Flex,
-  HStack,
-  Heading,
-  Spacer,
-  Stack,
-  Text,
-  VStack,
-} from '@chakra-ui/react';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import { CgAdd } from 'react-icons/cg';
 
 interface ProductPageProps {
   id: number;
 }
 
 export default function ProductDetailPage({ id }: ProductPageProps) {
-  const product = carte.products.find(
-    (product) => product.id === id,
-  );
-
+  const product = carte.products.find((p) => p.id === id);
   const fallbackSrc = '0000_miches.png';
   const { add: handleAddToCart } = useCartStore();
 
+  if (!product) {
+    return (
+      <ToastProvider>
+        <SpeedInsights />
+        <Analytics />
+        <Header />
+        <main className="min-h-screen pt-24 pb-12 px-margin-mobile md:px-margin-desktop flex justify-center">
+          <p className="font-headline text-hmd text-aged-parchment">Produit introuvable</p>
+        </main>
+        <Footer />
+      </ToastProvider>
+    );
+  }
+
   return (
-    <ChakraProvider>
+    <ToastProvider>
       <SpeedInsights />
       <Analytics />
       <Header />
-      <Flex
-        as={'main'}
-        m={0}
-        p={0}
-        paddingTop={20}
-        paddingBottom={2}
-        paddingInline={4}
-        minH={'calc(calc(100vh - calc(100vh - 100%)) - 56px)'}
-        bgGradient="linear(yellow.800 0%, orange.100 25%, whiteAlpha.300 50%)"
-        justifyContent={'center'}
-      >
-        <ContainerBox>
-          <Box pb={4}>
-            <a href={'/carte'} style={{ color: '#1a202c', textDecoration: 'underline' }}>
-              Revenir à la Carte
-            </a>
-          </Box>
-          {!product ? (
-            <>Ya rien</>
-          ) : (
-            <Stack
-              direction={{ base: 'column', lg: 'row' }}
-              spacing={{ base: 8, lg: 16 }}
-              align={{ base: 'center', lg: 'start' }}>
-              <Box
-                rounded="xl"
-                overflow="hidden"
-                flex="1"
-                maxW={{ base: 'full', lg: '500px' }}
-                boxShadow="2xl">
+      <main className="min-h-screen pt-24 pb-12 px-margin-mobile md:px-margin-desktop flex justify-center">
+        <div className="w-full max-w-container-max">
+          <div className="mb-6">
+            <a href="/carte" className="font-label text-label text-iron-rim hover:text-fired-gold transition-colors uppercase tracking-[0.1em]">&larr; Revenir à la Carte</a>
+          </div>
+          <ContainerBox>
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center lg:items-start">
+              <div className="flex-1 max-w-full lg:max-w-[500px] border border-iron-rim overflow-hidden">
                 <img
                   loading="lazy"
                   src={
-                    product?.images && product.images.length > 0
+                    product.images && product.images.length > 0
                       ? `/images/${product.images}`
                       : `/images/${fallbackSrc}`
                   }
-                  alt={product?.title ? product?.title : ''}
+                  alt={product.title || ''}
                   width={500}
                   height={500}
-                  style={{ objectFit: 'cover', width: '500px', height: 'auto' }}
+                  className="object-cover w-full h-auto"
+                  style={{ viewTransitionName: `product-${id}` }}
                 />
-              </Box>
-              <VStack align="start" spacing={6} flex="1">
-                <HStack spacing={4}>
-                  <Badge
-                    colorScheme="yellow"
-                    px={3}
-                    py={1}
-                    rounded="full"
-                    textTransform="capitalize"
-                    fontSize="sm">
-                    {product?.category}
-                  </Badge>
-                </HStack>
-                <Heading as="h1" size="xl">
-                  {product?.title}
-                </Heading>
-                <Stack
-                  spacing={2}
-                  width={'full'}
-                  justify={'space-between'}
-                  direction={{ base: 'column', lg: 'row' }}>
-                  <HStack spacing={2} align="left">
-                    <Text fontSize="3xl" fontWeight="bold">
-                      {product?.prix.toFixed(2)}€
-                    </Text>
-                    {product.poids && (
-                      <Text fontSize="3xl">
-                        {product.poids} gr
-                      </Text>
-                    )}
-                  </HStack>
-                  <Spacer />
-                  <Button
-                    colorScheme="yellow"
-                    leftIcon={<AddIcon />}
-                    width={{ base: 'full', lg: 'fit-content' }}
-                    onClick={() =>
-                      handleAddToCart({
-                        id: product.id,
-                        name: product.title,
-                        price: product.prix,
-                      })
-                    }>
-                    Ajouter au panier
-                  </Button>
-                </Stack>
-                <Divider />
-                <VStack align="start" spacing={4}>
-                  <Text fontSize="lg" lineHeight="tall">
-                    {product?.description}
-                  </Text>
-                </VStack>
-              </VStack>
-            </Stack>
-          )}
-        </ContainerBox>
-      </Flex>
+              </div>
+              <div className="flex flex-col items-start gap-6 flex-1">
+                <span className="font-label text-[10px] text-ember-orange uppercase tracking-[0.1em]">{product.category}</span>
+                <h1 className="font-headline text-hxl-mobile md:text-hxl text-aged-parchment">{product.title}</h1>
+                <div className="flex items-center gap-4">
+                  <span className="font-headline text-3xl text-fired-gold">{product.prix.toFixed(2)}€</span>
+                  {product.poids && (
+                    <span className="font-body text-lg text-aged-parchment/60">{product.poids} gr</span>
+                  )}
+                </div>
+                <button
+                  className="forged-btn-primary px-8 py-4 font-label text-label tracking-[0.1em] uppercase flex items-center gap-2"
+                  onClick={() =>
+                    handleAddToCart({ id: product.id, name: product.title, price: product.prix })
+                  }
+                >
+                  <CgAdd className="size-4" />
+                  Ajouter au panier
+                </button>
+                <div className="separator" />
+                <p className="font-body text-body-lg text-aged-parchment/80 leading-relaxed">{product.description}</p>
+              </div>
+            </div>
+          </ContainerBox>
+        </div>
+      </main>
       <Footer />
-    </ChakraProvider>
+    </ToastProvider>
   );
 }

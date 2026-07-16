@@ -1,38 +1,26 @@
-import { Button } from '@chakra-ui/react';
 import type { ReactElement } from 'react';
-
-export enum Events {
-  Christmas = 'green.300',
-}
 
 interface SocialButtonProps {
   text: string;
   link: string;
   icon?: ReactElement;
-  options?: { [x: string]: unknown };
-  event?: Events;
+  options?: Record<string, unknown>;
+  event?: string;
 }
 
-const SocialButton = ({
-  text,
-  link,
-  icon,
-  event,
-  options = {},
-}: SocialButtonProps) => {
+const SocialButton = ({ text, link, icon, options = {} }: SocialButtonProps) => {
+  const isPrimary = options.in;
   return (
-    <Button
-      as={'a'}
-      maxW={'sm'}
-      width={'full'}
-      colorScheme={'yellow'}
-      leftIcon={icon}
+    <a
       href={link}
-      bgColor={event}
-      download={options.download}
-      target={options.in ? '' : '_blank'}>
+      className={`${isPrimary ? 'forged-btn-primary' : 'forged-btn text-aged-parchment'} px-8 py-4 font-label text-label tracking-[0.1em] flex items-center gap-2 uppercase`}
+      target={options.download ? undefined : '_blank'}
+      rel={options.download ? undefined : 'noopener noreferrer'}
+      download={options.download ? true : undefined}
+    >
+      {icon && <span className="[&>svg]:size-5">{icon}</span>}
       {text}
-    </Button>
+    </a>
   );
 };
 

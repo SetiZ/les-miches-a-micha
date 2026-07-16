@@ -1,0 +1,157 @@
+---
+const SITE_URL =
+  import.meta.env.SITE ||
+  (import.meta.env.VERCEL_URL && `https://${import.meta.env.VERCEL_URL}`) ||
+  'https://les-miches-a-micha.vercel.app';
+const SITE_NAME = 'Les Miches à Micha';
+
+export interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
+interface Props {
+  page: 'home' | 'carte' | 'product' | 'ateliers';
+  productName?: string;
+  productDescription?: string;
+  productPrice?: number;
+  productImage?: string;
+  breadcrumbs?: BreadcrumbItem[];
+}
+
+const {
+  page,
+  productName,
+  productDescription,
+  productPrice,
+  productImage,
+  breadcrumbs = [],
+} = Astro.props;
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Bakery',
+  name: SITE_NAME,
+  description:
+    "Boulangerie artisanale bio à Suresnes. Pains au levain naturel, fabriqués à la demande avec des farines bio locales et semences paysannes.",
+  url: SITE_URL,
+  logo: `${SITE_URL}/miches_blanc.png`,
+  image: `${SITE_URL}/og/index.png`,
+  telephone: '+33652394879',
+  email: 'lesmichesamicha@gmail.com',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '29 Rue Gambetta',
+    addressLocality: 'Suresnes',
+    postalCode: '92150',
+    addressRegion: 'Île-de-France',
+    addressCountry: 'FR',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 48.8714,
+    longitude: 2.2247,
+  },
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '07:00',
+      closes: '13:00',
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Saturday', 'Sunday'],
+      opens: '07:00',
+      closes: '12:30',
+    },
+  ],
+  priceRange: '$$',
+  servesCuisine: 'Boulangerie artisanale',
+  hasMenu: {
+    '@type': 'Menu',
+    url: `${SITE_URL}/carte`,
+  },
+  sameAs: [
+    'https://www.instagram.com/lesmichesamicha/',
+    'https://g.page/r/CQP-U6UnJ-McEB0/review',
+  ],
+  founder: {
+    '@type': 'Person',
+    name: 'Micha',
+  },
+  foundingDate: '2020',
+  areaServed: {
+    '@type': 'GeoCircle',
+    geoMidpoint: {
+      '@type': 'GeoCoordinates',
+      latitude: 48.8714,
+      longitude: 2.2247,
+    },
+    geoRadius: '10000',
+  },
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE_NAME,
+  url: SITE_URL,
+  inLanguage: 'fr',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: `${SITE_URL}/carte?q={search_term_string}`,
+    },
+    'query-input': 'required name=search_term_string',
+  },
+};
+
+const productSchema =
+  page === 'product' && productName
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: productName,
+        description: productDescription || '',
+        image: productImage ? `${SITE_URL}${productImage}` : `${SITE_URL}/og/index.png`,
+        offers: {
+          '@type': 'Offer',
+          price: productPrice,
+          priceCurrency: 'EUR',
+          availability: 'https://schema.org/InStock',
+          seller: {
+            '@type': 'Organization',
+            name: SITE_NAME,
+          },
+        },
+        brand: {
+          '@type': 'Organization',
+          name: SITE_NAME,
+        },
+      }
+    : null;
+
+const breadcrumbSchema =
+  breadcrumbs.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: breadcrumbs.map((item, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          name: item.name,
+          item: `${SITE_URL}${item.url}`,
+        })),
+      }
+    : null;
+
+const schemas = [organizationSchema, websiteSchema, productSchema, breadcrumbSchema].filter(
+  Boolean
+);
+---
+
+{schemas.map((schema) => (
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+))}

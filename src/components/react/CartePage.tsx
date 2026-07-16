@@ -3,12 +3,8 @@ import Footer from '@/components/react/Footer';
 import Header from '@/components/react/Header';
 import { Filter } from '@/components/react/Filter';
 import ProductBox from '@/components/react/Product';
+import { ToastProvider } from '@/components/react/ToastProvider';
 import carte from '@/data/carte.json';
-import {
-  ChakraProvider,
-  Flex,
-  SimpleGrid,
-} from '@chakra-ui/react';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import { useState } from 'react';
@@ -37,59 +33,47 @@ export default function CartePage() {
   };
 
   return (
-    <ChakraProvider>
+    <ToastProvider>
       <SpeedInsights />
       <Analytics />
       <Header />
-      <Flex
-        as={'main'}
-        m={0}
-        p={0}
-        paddingTop={20}
-        paddingBottom={2}
-        paddingInline={4}
-        minH={'calc(calc(100vh - calc(100vh - 100%)) - 56px)'}
-        bgGradient="linear(yellow.800 0%, orange.100 25%, whiteAlpha.300 50%)"
-        justifyContent={'center'}
-      >
-        <ContainerBox>
-          <Flex as={'h1'} justify={'center'}>
-            <img
-              src={'/miches_blanc.png'}
-              alt={''}
-              width={260}
-              height={260}
-              loading="eager"
-              style={{ objectFit: 'cover', width: '260px', height: '260px' }}
-            />
-          </Flex>
-          <Filter
-            categories={categories}
-            filteredProducts={filteredProducts}
-            onClick={changeFilteredProducts}
-          />
-          {carte && (
-            <SimpleGrid minChildWidth="260px" spacing="20" paddingTop={16}>
-              {carteList.map((prod) => {
-                return (
-                  prod.visible && (
-                    <ProductBox
-                      key={prod.id}
-                      id={prod.id}
-                      title={prod.title}
-                      category={prod.category}
-                      images={prod.images}
-                      poids={prod.poids}
-                      prix={prod.prix}
-                    />
-                  )
-                );
-              })}
-            </SimpleGrid>
-          )}
-        </ContainerBox>
-      </Flex>
+      <main className="min-h-screen pt-24 pb-12 px-margin-mobile md:px-margin-desktop flex justify-center">
+        <div className="w-full max-w-container-max">
+          <div className="text-center mb-12">
+            <h1 className="font-headline text-hxl-mobile md:text-hxl text-aged-parchment ember-glow">La carte</h1>
+            <div className="w-24 h-1 bg-fired-gold mx-auto mt-4" />
+          </div>
+          <ContainerBox>
+            <div className="mb-8">
+              <Filter
+                categories={categories}
+                filteredProducts={filteredProducts}
+                onClick={changeFilteredProducts}
+              />
+            </div>
+            {carte && (
+              <div className="grid grid-cols-[repeat(auto-fill,minmax(260px,1fr))] gap-8 pt-8">
+                {carteList.map((prod) => {
+                  return (
+                    prod.visible && (
+                      <ProductBox
+                        key={prod.id}
+                        id={prod.id}
+                        title={prod.title}
+                        category={prod.category}
+                        images={prod.images}
+                        poids={prod.poids}
+                        prix={prod.prix}
+                      />
+                    )
+                  );
+                })}
+              </div>
+            )}
+          </ContainerBox>
+        </div>
+      </main>
       <Footer />
-    </ChakraProvider>
+    </ToastProvider>
   );
 }

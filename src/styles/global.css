@@ -1,0 +1,201 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+  /* Forge palette */
+  --color-aged-parchment: #F5E6D3;
+  --color-fired-gold: #D4AF37;
+  --color-ember-orange: #E65100;
+  --color-iron-rim: #4A4A4A;
+
+  /* Surfaces */
+  --color-surface: #141313;
+  --color-surface-dim: #141313;
+  --color-surface-bright: #3a3939;
+  --color-surface-container-lowest: #0e0e0e;
+  --color-surface-container-low: #1c1b1b;
+  --color-surface-container: #201f1f;
+  --color-surface-container-high: #2b2a2a;
+  --color-surface-container-highest: #353434;
+  --color-surface-variant: #353434;
+  --color-on-surface: #e5e2e1;
+  --color-on-surface-variant: #c4c7c7;
+  --color-on-background: #e5e2e1;
+  --color-outline: #8e9192;
+  --color-outline-variant: #444748;
+
+  /* Tertiary / fixed */
+  --color-tertiary: #cac6c3;
+  --color-tertiary-fixed: #e6e1df;
+  --color-tertiary-fixed-dim: #cac6c3;
+  --color-on-tertiary: #32302f;
+  --color-on-tertiary-container: #807d7b;
+  --color-on-tertiary-fixed: #1c1b1a;
+  --color-on-tertiary-fixed-variant: #484645;
+
+  /* Primary fixed */
+  --color-primary-fixed: #e5e2e1;
+  --color-primary-fixed-dim: #c8c6c5;
+  --color-on-primary-fixed: #1c1b1b;
+  --color-on-primary-fixed-variant: #474646;
+
+  /* Secondary */
+  --color-secondary: #c8c6c5;
+  --color-secondary-fixed: #e4e2e1;
+  --color-secondary-fixed-dim: #c8c6c5;
+  --color-secondary-container: #474747;
+  --color-on-secondary: #303030;
+  --color-on-secondary-container: #b6b5b4;
+  --color-on-secondary-fixed: #1b1c1c;
+  --color-on-secondary-fixed-variant: #474747;
+
+  /* Inverse */
+  --color-inverse-surface: #e5e2e1;
+  --color-inverse-on-surface: #313030;
+  --color-inverse-primary: #5f5e5e;
+  --color-surface-tint: #c8c6c5;
+
+  /* Typography */
+  --font-headline: "Space Grotesk", sans-serif;
+  --font-body: "Source Serif 4", serif;
+  --font-label: "JetBrains Mono", monospace;
+
+  /* Font sizes */
+  --font-size-hxl: 48px;
+  --font-size-hxl-mobile: 36px;
+  --font-size-hlg: 32px;
+  --font-size-hmd: 24px;
+  --font-size-body: 16px;
+  --font-size-body-lg: 18px;
+  --font-size-label: 12px;
+
+  /* Spacing */
+  --spacing-container-max: 1200px;
+  --spacing-gutter: 24px;
+  --spacing-margin-desktop: 64px;
+  --spacing-margin-mobile: 16px;
+}
+
+/* Override daisyUI light theme with dark forge palette */
+:root {
+  --color-primary: #c8c6c5;
+  --color-primary-content: #313030;
+  --color-secondary: #c8c6c5;
+  --color-secondary-content: #303030;
+  --color-accent: #D4AF37;
+  --color-accent-content: #141313;
+  --color-neutral: #4A4A4A;
+  --color-neutral-content: #F5E6D3;
+  --color-base-100: #141313;
+  --color-base-200: #201f1f;
+  --color-base-300: #2b2a2a;
+  --color-base-content: #F5E6D3;
+  --color-info: #8e9192;
+  --color-info-content: #141313;
+  --color-success: #D4AF37;
+  --color-success-content: #141313;
+  --color-warning: #E65100;
+  --color-warning-content: #F5E6D3;
+  --color-error: #ffb4ab;
+  --color-error-content: #690005;
+}
+
+body {
+  background-color: #141313;
+  background-image:
+    radial-gradient(circle at 50% -20%, rgba(230, 81, 0, 0.15) 0%, transparent 50%),
+    url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+  background-attachment: fixed;
+  background-size: auto, auto;
+  color: #F5E6D3;
+  font-family: "Source Serif 4", serif;
+}
+
+/* ── Custom component classes ── */
+
+@utility stone-slab {
+  background: rgba(20, 19, 19, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid #4A4A4A;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+@utility stone-slab-texture {
+  @apply stone-slab;
+}
+
+.stone-slab::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("https://www.transparenttextures.com/patterns/stardust.png");
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+@utility ember-glow {
+  text-shadow: 0 0 10px rgba(230, 81, 0, 0.6), 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+@utility forged-btn {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #4A4A4A;
+  background: #141313;
+  position: relative;
+}
+
+.forged-btn:hover {
+  border-color: #D4AF37;
+  color: #D4AF37 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(230, 81, 0, 0.2);
+}
+
+.forged-btn:active {
+  transform: scale(0.95);
+}
+
+@utility forged-btn-primary {
+  background: #E65100;
+  border-color: #D4AF37;
+  color: #F5E6D3;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.forged-btn-primary:hover {
+  background: #D4AF37 !important;
+  color: #141313 !important;
+}
+
+@utility status-pulse {
+  animation: flicker 3s infinite;
+}
+
+@utility separator {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #4A4A4A, transparent);
+  width: 100%;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@utility animate-slide-up {
+  animation: slide-up 0.3s ease-out;
+}

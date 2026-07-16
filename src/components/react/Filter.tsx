@@ -1,38 +1,36 @@
-import { HStack, Tag, Text } from '@chakra-ui/react';
-
 interface FilterProps {
   categories: string[];
   filteredProducts: number;
   onClick: (index: number) => void;
 }
 
-export const Filter = ({
-  categories,
-  filteredProducts,
-  onClick,
-}: FilterProps) => {
+export const Filter = ({ categories, filteredProducts, onClick }: FilterProps) => {
   return (
-    <HStack wrap={'wrap'}>
-      <Text>Filtrer par :</Text>
-      <Tag
-        size={'lg'}
-        variant={filteredProducts === -1 ? 'solid' : 'subtle'}
-        colorScheme="yellow"
+    <div className="flex flex-wrap items-center gap-3">
+      <span className="font-label text-label text-aged-parchment/70 uppercase tracking-[0.1em]">Filtrer par :</span>
+      <button
+        className={`px-3 py-1 font-label text-xs uppercase tracking-[0.1em] border transition-all duration-300 cursor-pointer ${
+          filteredProducts === -1
+            ? 'bg-ember-orange border-fired-gold text-aged-parchment'
+            : 'border-iron-rim text-aged-parchment/70 hover:border-fired-gold hover:text-fired-gold'
+        }`}
         onClick={() => onClick(-1)}
-        cursor={'pointer'}>
+      >
         tous
-      </Tag>
+      </button>
       {categories.map((category, index) => (
-        <Tag
+        <button
           key={category}
-          size={'lg'}
-          variant={filteredProducts === index ? 'solid' : 'subtle'}
-          colorScheme="yellow"
+          className={`px-3 py-1 font-label text-xs uppercase tracking-[0.1em] border transition-all duration-300 cursor-pointer ${
+            filteredProducts === index
+              ? 'bg-ember-orange border-fired-gold text-aged-parchment'
+              : 'border-iron-rim text-aged-parchment/70 hover:border-fired-gold hover:text-fired-gold'
+          }`}
           onClick={() => onClick(index)}
-          cursor={'pointer'}>
+        >
           {category}
-        </Tag>
+        </button>
       ))}
-    </HStack>
+    </div>
   );
 };

@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+Allow: /api/og.png
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
+Disallow: /
+
+Sitemap: https://les-miches-a-micha.vercel.app/sitemap.xml

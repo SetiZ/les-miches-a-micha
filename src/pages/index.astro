@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SEO from '../components/SEO.astro';
 import HomePage from '../components/react/HomePage';
 import { getEntry } from 'astro:content';
 import { marked } from 'marked';
@@ -11,6 +12,16 @@ const { title, tagline, intro } = page?.data || {};
 const introHtml = intro ? await marked.parse(intro) : '';
 ---
 
-<Layout>
+<Layout
+  title="Accueil"
+  description="Boulangerie artisanale bio à Suresnes. Pains au levain naturel, livraison à domicile, commande personnalisée. Tout est fait main avec des farines bio locales et semences paysannes."
+  canonical="/"
+>
+  <SEO
+    page="home"
+    breadcrumbs={[
+      { name: 'Accueil', url: '/' },
+    ]}
+  />
   <HomePage client:load title={title} tagline={tagline} introHtml={introHtml} />
 </Layout>
