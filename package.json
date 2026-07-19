@@ -1,6 +1,6 @@
 {
   "name": "les-miches-a-micha",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "private": true,
   "scripts": {
     "prebuild": "node scripts/generate-llms-txt.mjs",
