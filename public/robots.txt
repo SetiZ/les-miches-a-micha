@@ -17,4 +17,4 @@ Allow: /
 User-agent: Bytespider
 Disallow: /
 
-Sitemap: https://les-miches-a-micha.vercel.app/sitemap.xml
+Sitemap: https://les-miches-a-micha.vercel.app/api/sitemap.xml

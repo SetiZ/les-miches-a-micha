@@ -7,6 +7,7 @@ export default defineConfig({
   integrations: [react()],
   output: 'server',
   adapter: vercel(),
+  site: 'https://les-miches-a-micha.vercel.app',
   vite: {
     plugins: [tailwindcss()],
     server: {
