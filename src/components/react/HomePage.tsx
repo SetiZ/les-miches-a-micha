@@ -28,7 +28,7 @@ export default function HomePage({ title, tagline, introHtml }: HomePageProps) {
         </div>
         <div className="relative z-20 max-w-4xl text-center space-y-8">
           <div className="flex justify-center mb-4">
-            <img src="/miches_blanc.png" alt="M" className="w-64 h-auto drop-shadow-[0_0_20px_rgba(212,175,55,0.4)] animate-pulse invert" />
+            <img src="/miches_blanc.png" alt="Les Miches à Micha" className="w-64 h-auto drop-shadow-[0_0_20px_rgba(212,175,55,0.4)] animate-pulse invert" />
           </div>
           <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-ember-orange/30 bg-ember-orange/10 status-pulse">
             <span className="w-2 h-2 rounded-full bg-ember-orange shadow-[0_0_8px_#E65100]" />

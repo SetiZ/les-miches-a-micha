@@ -23,7 +23,7 @@ const ProductBox = ({ id, images, title, category, prix, poids }: ProductProps) 
         <img
           loading="lazy"
           src={images ? `/images/${images}` : `/images/${fallbackSrc}`}
-          alt=""
+          alt={title}
           width={260}
           height={260}
           className="object-cover w-[260px] h-[260px] transition-transform duration-500 group-hover:scale-105"
