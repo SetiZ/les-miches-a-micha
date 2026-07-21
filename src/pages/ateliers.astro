@@ -1,13 +1,22 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import SEO from '../components/SEO.astro';
-import AteliersPage from '../components/react/Ateliers';
 import { getEntry } from 'astro:content';
+import AteliersPage from '../components/react/Ateliers';
+import SEO from '../components/SEO.astro';
+import Layout from '../layouts/Layout.astro';
 
 export const prerender = true;
 
 const page = await getEntry('pages', 'ateliers');
-const { title, subtitle, intro, workshops, formats, contactPhone, contactEmail, outro } = page?.data || {};
+const {
+  title,
+  subtitle,
+  intro,
+  workshops,
+  formats,
+  contactPhone,
+  contactEmail,
+  outro,
+} = page?.data || {};
 ---
 
 <Layout

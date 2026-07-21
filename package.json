@@ -5,6 +5,9 @@
   "scripts": {
     "prebuild": "node scripts/generate-llms-txt.mjs",
     "dev": "astro dev",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write .",
+    "format": "biome check --write .",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
@@ -26,14 +29,15 @@
     "framer-motion": "^12.42.2",
     "marked": "^18.0.7",
     "nodemailer": "^9.0.3",
-    "react": "^19.2.7",
-    "react-dom": "^19.2.7",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
     "react-icons": "^5.7.0",
     "tailwindcss": "^4.3.3",
     "typescript": "^6.0.3",
     "zustand": "^5.0.14"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.5.5",
     "@types/node": "^24.13.3",
     "@types/nodemailer": "^8.0.1",
     "@types/react": "^19.2.17",

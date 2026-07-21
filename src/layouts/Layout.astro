@@ -8,7 +8,7 @@ interface Props {
   canonical?: string;
   ogImage?: string;
   ogType?: string;
-  structuredData?: Record<string, any>[];
+  structuredData?: Record<string, unknown>[];
 }
 
 const SITE_URL =
@@ -17,7 +17,7 @@ const SITE_URL =
   'https://les-miches-a-micha.vercel.app';
 const SITE_NAME = 'Les Miches à Micha';
 const SITE_DESCRIPTION =
-  "Boulangerie artisanale bio à Suresnes. Pains au levain, viennoiseries et pâtisseries faits main avec des farines bio locales.";
+  'Boulangerie artisanale bio à Suresnes. Pains au levain, viennoiseries et pâtisseries faits main avec des farines bio locales.';
 
 const {
   title,
@@ -28,9 +28,13 @@ const {
   structuredData = [],
 } = Astro.props;
 
-const pageTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} – Boulangerie artisanale bio à Suresnes`;
+const pageTitle = title
+  ? `${title} | ${SITE_NAME}`
+  : `${SITE_NAME} – Boulangerie artisanale bio à Suresnes`;
 const pageDescription = description || SITE_DESCRIPTION;
-const pageUrl = canonical ? `${SITE_URL}${canonical}` : `${SITE_URL}${Astro.url.pathname}`;
+const pageUrl = canonical
+  ? `${SITE_URL}${canonical}`
+  : `${SITE_URL}${Astro.url.pathname}`;
 const pageOgImage = ogImage || `${SITE_URL}/og/index.png`;
 ---
 
@@ -70,7 +74,7 @@ const pageOgImage = ogImage || `${SITE_URL}/og/index.png`;
     <script>
       document.addEventListener('astro:before-swap', () => {
         if (location.pathname === '/carte') {
-          sessionStorage.setItem('carte-scroll', window.scrollY);
+          sessionStorage.setItem('carte-scroll', String(window.scrollY));
         }
       });
 

@@ -33,7 +33,7 @@ const organizationSchema = {
   '@type': 'Bakery',
   name: SITE_NAME,
   description:
-    "Boulangerie artisanale bio à Suresnes. Pains au levain naturel, fabriqués à la demande avec des farines bio locales et semences paysannes.",
+    'Boulangerie artisanale bio à Suresnes. Pains au levain naturel, fabriqués à la demande avec des farines bio locales et semences paysannes.',
   url: SITE_URL,
   logo: `${SITE_URL}/miches_blanc.png`,
   image: `${SITE_URL}/og/index.png`,
@@ -115,7 +115,9 @@ const productSchema =
         '@type': 'Product',
         name: productName,
         description: productDescription || '',
-        image: productImage ? `${SITE_URL}${productImage}` : `${SITE_URL}/og/index.png`,
+        image: productImage
+          ? `${SITE_URL}${productImage}`
+          : `${SITE_URL}/og/index.png`,
         offers: {
           '@type': 'Offer',
           price: productPrice,
@@ -147,9 +149,12 @@ const breadcrumbSchema =
       }
     : null;
 
-const schemas = [organizationSchema, websiteSchema, productSchema, breadcrumbSchema].filter(
-  Boolean
-);
+const schemas = [
+  organizationSchema,
+  websiteSchema,
+  productSchema,
+  breadcrumbSchema,
+].filter(Boolean);
 ---
 
 {schemas.map((schema) => (

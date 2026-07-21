@@ -1,4 +1,10 @@
-import { createContext, useContext, useState, useCallback, type ReactNode } from 'react';
+import {
+  createContext,
+  type ReactNode,
+  useCallback,
+  useContext,
+  useState,
+} from 'react';
 
 interface Toast {
   id: number;
@@ -40,15 +46,23 @@ export function ToastProvider({ children }: { children: ReactNode }) {
           <div
             key={t.id}
             className={`px-4 py-3 shadow-lg max-w-sm animate-slide-up border font-body ${
-              t.status === 'success' ? 'bg-surface border-fired-gold text-aged-parchment' : 'bg-surface border-ember-orange text-aged-parchment'
-            }`}
-          >
+              t.status === 'success'
+                ? 'bg-surface border-fired-gold text-aged-parchment'
+                : 'bg-surface border-ember-orange text-aged-parchment'
+            }`}>
             <div className="flex justify-between items-start gap-2">
               <div>
                 <p className="font-headline text-hmd">{t.title}</p>
-                {t.description && <p className="text-sm mt-1 opacity-70">{t.description}</p>}
+                {t.description && (
+                  <p className="text-sm mt-1 opacity-70">{t.description}</p>
+                )}
               </div>
-              <button onClick={() => remove(t.id)} className="text-aged-parchment/50 hover:text-aged-parchment text-lg leading-none">&times;</button>
+              <button
+                type="button"
+                onClick={() => remove(t.id)}
+                className="text-aged-parchment/50 hover:text-aged-parchment text-lg leading-none">
+                &times;
+              </button>
             </div>
           </div>
         ))}

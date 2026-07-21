@@ -10,15 +10,17 @@ export const { getStaticPaths, GET } = await OGImageRoute({
     },
     carte: {
       title: 'La Carte',
-      description: 'Découvrez nos pains artisanaux, viennoiseries et pâtisseries.',
+      description:
+        'Découvrez nos pains artisanaux, viennoiseries et pâtisseries.',
     },
-    'ateliers': {
+    ateliers: {
       title: 'Les Ateliers',
-      description: "Apprenez l'art de la boulangerie avec nos ateliers participatifs.",
+      description:
+        "Apprenez l'art de la boulangerie avec nos ateliers participatifs.",
     },
   },
 
-  getImageOptions: (path, page) => ({
+  getImageOptions: (_path, page) => ({
     title: page.title,
     description: page.description,
     logo: {

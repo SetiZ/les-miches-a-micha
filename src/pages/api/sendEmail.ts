@@ -1,8 +1,11 @@
-import type { APIRoute } from 'astro';
 import { render } from '@react-email/render';
+import type { APIRoute } from 'astro';
 import nodemailer from 'nodemailer';
-import { EmailTemplate, CustomerEmailTemplate } from '../../components/react/EmailTemplate';
 import { createElement } from 'react';
+import {
+  CustomerEmailTemplate,
+  EmailTemplate,
+} from '../../components/react/EmailTemplate';
 
 const GMAIL_USER = process.env.GMAIL_USER || 'lesmichesamicha@gmail.com';
 const GMAIL_PASS = process.env.GMAIL_API_PASS;
@@ -15,10 +18,13 @@ const SITE_URL =
 export const POST: APIRoute = async ({ request }) => {
   if (!GMAIL_PASS) {
     console.error('GMAIL_API_PASS is not set');
-    return new Response(JSON.stringify({ error: 'Email service misconfigured' }), {
-      status: 500,
-      headers: { 'Content-Type': 'application/json' },
-    });
+    return new Response(
+      JSON.stringify({ error: 'Email service misconfigured' }),
+      {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' },
+      },
+    );
   }
 
   const transporter = nodemailer.createTransport({
@@ -36,10 +42,13 @@ export const POST: APIRoute = async ({ request }) => {
     const parsed = await request.json();
 
     if (!parsed.name || !parsed.email || !parsed.date) {
-      return new Response(JSON.stringify({ error: 'Missing required fields' }), {
-        status: 400,
-        headers: { 'Content-Type': 'application/json' },
-      });
+      return new Response(
+        JSON.stringify({ error: 'Missing required fields' }),
+        {
+          status: 400,
+          headers: { 'Content-Type': 'application/json' },
+        },
+      );
     }
 
     const orderDate = new Date().toLocaleTimeString('fr-FR', {
@@ -93,9 +102,12 @@ export const POST: APIRoute = async ({ request }) => {
     });
   } catch (error) {
     console.error('Failed to send order email:', error);
-    return new Response(JSON.stringify({ error: 'Failed to send order email' }), {
-      status: 500,
-      headers: { 'Content-Type': 'application/json' },
-    });
+    return new Response(
+      JSON.stringify({ error: 'Failed to send order email' }),
+      {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' },
+      },
+    );
   }
 };

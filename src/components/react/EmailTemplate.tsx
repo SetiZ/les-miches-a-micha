@@ -94,12 +94,10 @@ export const CustomerEmailTemplate: React.FC<
     <div>
       <h1>Confirmation de commande</h1>
       <p>Bonjour {name},</p>
+      <p>Nous avons bien reçu votre commande et nous vous en remercions !</p>
       <p>
-        Nous avons bien reçu votre commande et nous vous en remercions !
-      </p>
-      <p>
-        Votre boulanger vous contactera rapidement pour confirmer le créneau
-        de livraison.
+        Votre boulanger vous contactera rapidement pour confirmer le créneau de
+        livraison.
       </p>
       <h2>Récapitulatif de votre commande</h2>
       <p>
@@ -134,11 +132,12 @@ export const CustomerEmailTemplate: React.FC<
       </table>
       <h2>Total : {total.toFixed(2)}€</h2>
       <p>
-        Ce total est donné à titre indicatif. Des frais de livraison
-        pourront être ajoutés le cas échéant.
+        Ce total est donné à titre indicatif. Des frais de livraison pourront
+        être ajoutés le cas échéant.
       </p>
       <p>
-        À très bientôt,<br />
+        À très bientôt,
+        <br />
         <strong>L&rsquo;équipe des Miches à Micha</strong>
       </p>
       <p>

@@ -1,13 +1,13 @@
-import ContainerBox from '@/components/react/ContainerBox';
-import Footer from '@/components/react/Footer';
-import Header from '@/components/react/Header';
-import { Filter } from '@/components/react/Filter';
-import ProductBox from '@/components/react/Product';
-import { ToastProvider } from '@/components/react/ToastProvider';
-import carte from '@/data/carte.json';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import { useState } from 'react';
+import ContainerBox from '@/components/react/ContainerBox';
+import { Filter } from '@/components/react/Filter';
+import Footer from '@/components/react/Footer';
+import Header from '@/components/react/Header';
+import ProductBox from '@/components/react/Product';
+import { ToastProvider } from '@/components/react/ToastProvider';
+import carte from '@/data/carte.json';
 
 export default function CartePage() {
   const [filteredProducts, setFilteredProducts] = useState(-1);
@@ -40,7 +40,9 @@ export default function CartePage() {
       <main className="min-h-screen pt-24 pb-12 px-margin-mobile md:px-margin-desktop flex justify-center">
         <div className="w-full max-w-container-max">
           <div className="text-center mb-12">
-            <h1 className="font-headline text-hxl-mobile md:text-hxl text-aged-parchment ember-glow">La carte</h1>
+            <h1 className="font-headline text-hxl-mobile md:text-hxl text-aged-parchment ember-glow">
+              La carte
+            </h1>
             <div className="w-24 h-1 bg-fired-gold mx-auto mt-4" />
           </div>
           <ContainerBox>

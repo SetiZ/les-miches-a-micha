@@ -1,4 +1,4 @@
-import { z, defineCollection } from 'astro:content';
+import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
 const pages = defineCollection({
@@ -9,15 +9,23 @@ const pages = defineCollection({
     tagline: z.string().optional(),
     intro: z.string().optional(),
     outro: z.string().optional(),
-    workshops: z.array(z.object({
-      title: z.string(),
-      description: z.string(),
-    })).optional(),
-    formats: z.array(z.object({
-      title: z.string(),
-      description: z.string(),
-      price: z.string(),
-    })).optional(),
+    workshops: z
+      .array(
+        z.object({
+          title: z.string(),
+          description: z.string(),
+        }),
+      )
+      .optional(),
+    formats: z
+      .array(
+        z.object({
+          title: z.string(),
+          description: z.string(),
+          price: z.string(),
+        }),
+      )
+      .optional(),
     contactPhone: z.string().optional(),
     contactEmail: z.string().optional(),
   }),

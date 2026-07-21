@@ -23,7 +23,7 @@ ${allPages
     <loc>${SITE_URL}${page}</loc>
     <changefreq>${page === '/' ? 'weekly' : page === '/carte' ? 'weekly' : 'monthly'}</changefreq>
     <priority>${page === '/' ? '1.0' : page === '/carte' ? '0.9' : '0.7'}</priority>
-  </url>`
+  </url>`,
   )
   .join('\n')}
 </urlset>`;

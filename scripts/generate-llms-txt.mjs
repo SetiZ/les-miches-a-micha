@@ -1,12 +1,14 @@
 import { readFileSync, writeFileSync } from 'node:fs';
-import { resolve, dirname } from 'node:path';
+import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
 const SITE_URL = 'https://les-miches-a-micha.vercel.app';
 
-const carte = JSON.parse(readFileSync(resolve(ROOT, 'src/data/carte.json'), 'utf-8'));
+const carte = JSON.parse(
+  readFileSync(resolve(ROOT, 'src/data/carte.json'), 'utf-8'),
+);
 
 function parseFrontmatter(file) {
   const match = file.match(/^---\n([\s\S]*?)\n---/);
@@ -23,12 +25,18 @@ function parseFrontmatter(file) {
   return fm;
 }
 
-const home = parseFrontmatter(readFileSync(resolve(ROOT, 'src/content/pages/home.md'), 'utf-8'));
-const ateliers = parseFrontmatter(readFileSync(resolve(ROOT, 'src/content/pages/ateliers.md'), 'utf-8'));
+const home = parseFrontmatter(
+  readFileSync(resolve(ROOT, 'src/content/pages/home.md'), 'utf-8'),
+);
+const ateliers = parseFrontmatter(
+  readFileSync(resolve(ROOT, 'src/content/pages/ateliers.md'), 'utf-8'),
+);
 
 const featured = [101, 202, 401, 402, 501, 601, 909];
 
-const products = carte.products.filter((p) => p.visible && featured.includes(p.id));
+const products = carte.products.filter(
+  (p) => p.visible && featured.includes(p.id),
+);
 
 const lines = [
   `# Les Miches à Micha`,
@@ -56,7 +64,9 @@ lines.push('');
 lines.push('## Optional');
 lines.push('');
 
-const optional = carte.products.filter((p) => p.visible && !featured.includes(p.id));
+const optional = carte.products.filter(
+  (p) => p.visible && !featured.includes(p.id),
+);
 for (const p of optional.slice(0, 10)) {
   const desc = p.description?.split('.')[0] || p.category;
   lines.push(`- [${p.title}](${SITE_URL}/carte/${p.id}): ${desc}`);
@@ -65,4 +75,6 @@ for (const p of optional.slice(0, 10)) {
 lines.push('');
 
 writeFileSync(resolve(ROOT, 'public/llms.txt'), lines.join('\n'), 'utf-8');
-console.log(`Generated llms.txt with ${products.length + optional.slice(0, 10).length} product links`);
+console.log(
+  `Generated llms.txt with ${products.length + optional.slice(0, 10).length} product links`,
+);
