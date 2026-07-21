@@ -45,6 +45,6 @@
     "fsevents@2.3.3": true
   },
   "overrides": {
-    "path-to-regexp": "6.1.0"
+    "path-to-regexp": "^6.3.0"
   }
 }
