@@ -65,6 +65,9 @@ export const POST: APIRoute = async ({ request }) => {
         phoneNumber: parsed.phoneNumber,
         email: parsed.email,
         date: parsed.date,
+        timeSlot: parsed.timeSlot,
+        deliveryMode: parsed.deliveryMode,
+        address: parsed.address,
         comment: parsed.comment,
         total: parsed.total,
         cart: parsed.cart,
@@ -75,6 +78,8 @@ export const POST: APIRoute = async ({ request }) => {
       createElement(CustomerEmailTemplate, {
         name: parsed.name,
         date: parsed.date,
+        timeSlot: parsed.timeSlot,
+        deliveryMode: parsed.deliveryMode,
         total: parsed.total,
         cart: parsed.cart,
         siteUrl: SITE_URL,

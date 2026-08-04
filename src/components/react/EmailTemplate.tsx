@@ -12,20 +12,39 @@ interface EmailTemplateProps {
   phoneNumber: string;
   email: string;
   date: string;
+  timeSlot: string;
+  deliveryMode: 'pickup' | 'delivery';
+  address: string;
   comment: string;
   total: number;
   cart: CartItem[];
 }
+
+const TIME_SLOT_LABELS: Record<string, string> = {
+  matin: 'Matinée',
+  aprem: 'Après-midi',
+  soir: 'Soirée',
+};
 
 export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
   name,
   phoneNumber,
   email,
   date,
+  timeSlot,
+  deliveryMode,
+  address,
   comment,
   total,
   cart,
 }) => {
+  const formattedDate = new Date(date).toLocaleDateString('fr-FR', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+
   return (
     <div>
       <h1>Nouvelle commande !</h1>
@@ -38,14 +57,16 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
         <dd>{email}</dd>
         <dt>Date de livraison</dt>
         <dd>
-          {new Date(date).toLocaleTimeString('fr-FR', {
-            year: 'numeric',
-            month: 'numeric',
-            day: 'numeric',
-            hour: '2-digit',
-            minute: '2-digit',
-          })}
+          {formattedDate} — {TIME_SLOT_LABELS[timeSlot] || timeSlot}
         </dd>
+        <dt>Mode de réception</dt>
+        <dd>{deliveryMode === 'pickup' ? 'En magasin' : 'Livraison'}</dd>
+        {deliveryMode === 'delivery' && address && (
+          <>
+            <dt>Adresse de livraison</dt>
+            <dd>{address}</dd>
+          </>
+        )}
         {comment && (
           <>
             <dt>Commentaire</dt>
@@ -82,6 +103,8 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
 interface CustomerEmailTemplateProps {
   name: string;
   date: string;
+  timeSlot: string;
+  deliveryMode: 'pickup' | 'delivery';
   total: number;
   cart: CartItem[];
   siteUrl: string;
@@ -89,7 +112,14 @@ interface CustomerEmailTemplateProps {
 
 export const CustomerEmailTemplate: React.FC<
   Readonly<CustomerEmailTemplateProps>
-> = ({ name, date, total, cart, siteUrl }) => {
+> = ({ name, date, timeSlot, deliveryMode, total, cart, siteUrl }) => {
+  const formattedDate = new Date(date).toLocaleDateString('fr-FR', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+
   return (
     <div>
       <h1>Confirmation de commande</h1>
@@ -102,13 +132,11 @@ export const CustomerEmailTemplate: React.FC<
       <h2>Récapitulatif de votre commande</h2>
       <p>
         <strong>Date de livraison souhaitée :</strong>{' '}
-        {new Date(date).toLocaleTimeString('fr-FR', {
-          year: 'numeric',
-          month: 'numeric',
-          day: 'numeric',
-          hour: '2-digit',
-          minute: '2-digit',
-        })}
+        {formattedDate} — {TIME_SLOT_LABELS[timeSlot] || timeSlot}
+      </p>
+      <p>
+        <strong>Mode de réception :</strong>{' '}
+        {deliveryMode === 'pickup' ? 'En magasin' : 'Livraison'}
       </p>
       <table>
         <thead>
