@@ -23,5 +23,7 @@ const introHtml = intro ? await marked.parse(intro) : '';
       { name: 'Accueil', url: '/' },
     ]}
   />
-  <HomePage client:load title={title} tagline={tagline} introHtml={introHtml} />
+  <HomePage client:load title={title} tagline={tagline}>
+    <Fragment set:html={introHtml} />
+  </HomePage>
 </Layout>
