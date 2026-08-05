@@ -44,9 +44,11 @@ export default function HomePage({ tagline, introHtml }: HomePageProps) {
             &ldquo;{tagline}&rdquo;
           </p>
           <div className="separator" />
-          <p className="font-body text-body-lg text-aged-parchment/90 max-w-3xl mx-auto">
-            <span>{introHtml || ''}</span>
-          </p>
+          <div
+            className="font-body text-body-lg text-aged-parchment/90 max-w-3xl mx-auto"
+            // biome-ignore lint/security/noDangerouslySetInnerHtml: introHtml comes from trusted static content (src/content/pages/home.md)
+            dangerouslySetInnerHTML={{ __html: introHtml || '' }}
+          />
           <div className="flex flex-wrap justify-center gap-4 pt-8">
             <a
               href="/carte"
