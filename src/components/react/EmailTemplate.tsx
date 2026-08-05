@@ -160,8 +160,9 @@ export const CustomerEmailTemplate: React.FC<
       </table>
       <h2>Total : {total.toFixed(2)}€</h2>
       <p>
-        Ce total est donné à titre indicatif. Des frais de livraison pourront
-        être ajoutés le cas échéant.
+        Ce total est donné à titre indicatif, en fonction de la personnalisation
+        de vos produits notamment. Des frais de livraison pourront être ajoutés
+        le cas échéant.
       </p>
       <p>
         À très bientôt,
