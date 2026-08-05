@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import Footer from '@/components/react/Footer';
@@ -8,10 +9,10 @@ import trusted from '@/data/trusted.json';
 interface HomePageProps {
   title: string;
   tagline?: string;
-  introHtml?: string;
+  children?: ReactNode;
 }
 
-export default function HomePage({ tagline, introHtml }: HomePageProps) {
+export default function HomePage({ tagline, children }: HomePageProps) {
   return (
     <ToastProvider>
       <SpeedInsights />
@@ -44,11 +45,9 @@ export default function HomePage({ tagline, introHtml }: HomePageProps) {
             &ldquo;{tagline}&rdquo;
           </p>
           <div className="separator" />
-          <div
-            className="font-body text-body-lg text-aged-parchment/90 max-w-3xl mx-auto"
-            // biome-ignore lint/security/noDangerouslySetInnerHtml: introHtml comes from trusted static content (src/content/pages/home.md)
-            dangerouslySetInnerHTML={{ __html: introHtml || '' }}
-          />
+          <div className="font-body text-body-lg text-aged-parchment/90 max-w-3xl mx-auto">
+            {children}
+          </div>
           <div className="flex flex-wrap justify-center gap-4 pt-8">
             <a
               href="/carte"
