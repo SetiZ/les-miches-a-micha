@@ -35,7 +35,7 @@ export default function HomePage({ tagline, children }: HomePageProps) {
           <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-ember-orange/30 bg-ember-orange/10 status-pulse">
             <span className="w-2 h-2 rounded-full bg-ember-orange shadow-[0_0_8px_#E65100]" />
             <span className="font-label text-[10px] text-ember-orange tracking-widest uppercase font-bold">
-              Le fournil est ouvert !
+              Le fournil est fermé ! Réouverture le 19/08.
             </span>
           </div>
           <h1 className="font-headline text-hxl-mobile md:text-hxl text-aged-parchment ember-glow leading-none">
