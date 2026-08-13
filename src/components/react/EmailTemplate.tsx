@@ -131,8 +131,8 @@ export const CustomerEmailTemplate: React.FC<
       </p>
       <h2>Récapitulatif de votre commande</h2>
       <p>
-        <strong>Date de livraison souhaitée :</strong>{' '}
-        {formattedDate} — {TIME_SLOT_LABELS[timeSlot] || timeSlot}
+        <strong>Date de livraison souhaitée :</strong> {formattedDate} —{' '}
+        {TIME_SLOT_LABELS[timeSlot] || timeSlot}
       </p>
       <p>
         <strong>Mode de réception :</strong>{' '}

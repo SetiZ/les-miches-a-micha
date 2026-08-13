@@ -1,13 +1,13 @@
+import { fr } from 'date-fns/locale';
 import { type FormEvent, useState } from 'react';
 import { DayPicker } from 'react-day-picker';
-import { fr } from 'date-fns/locale';
 import {
   CgAdd,
   CgCalendarDates,
   CgInfo,
-  CgPin,
   CgMail,
   CgPhone,
+  CgPin,
   CgRemove,
 } from 'react-icons/cg';
 import { useToast } from '@/components/react/ToastProvider';
