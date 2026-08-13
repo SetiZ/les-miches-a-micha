@@ -51,7 +51,8 @@ export default function ProductDetailPage({ id }: ProductPageProps) {
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center lg:items-start">
               <div className="flex-1 max-w-full lg:max-w-125 border border-iron-rim overflow-hidden">
                 <img
-                  loading="lazy"
+                  loading="eager"
+                  fetchPriority="high"
                   src={
                     product.images && product.images.length > 0
                       ? `/images/${product.images}`

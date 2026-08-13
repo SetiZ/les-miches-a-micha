@@ -8,6 +8,7 @@ interface ProductProps {
   category: string;
   prix: number;
   poids?: number | null;
+  eager?: boolean;
 }
 
 const ProductBox = ({
@@ -17,6 +18,7 @@ const ProductBox = ({
   category,
   prix,
   poids,
+  eager = false,
 }: ProductProps) => {
   const { add: handleAddToCart } = useCartStore();
   const fallbackSrc = '0000_miches.png';
@@ -27,7 +29,7 @@ const ProductBox = ({
       className="stone-slab w-65 justify-self-center block group">
       <div className="relative overflow-hidden">
         <img
-          loading="lazy"
+          loading={eager ? 'eager' : 'lazy'}
           src={images ? `/images/${images}` : `/images/${fallbackSrc}`}
           alt={title}
           width={260}

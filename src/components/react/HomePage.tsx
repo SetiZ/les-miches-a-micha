@@ -9,10 +9,15 @@ import trusted from '@/data/trusted.json';
 interface HomePageProps {
   title: string;
   tagline?: string;
+  faq?: { question: string; answer: string }[];
   children?: ReactNode;
 }
 
-export default function HomePage({ tagline, children }: HomePageProps) {
+export default function HomePage({
+  tagline,
+  faq = [],
+  children,
+}: HomePageProps) {
   return (
     <ToastProvider>
       <SpeedInsights />
@@ -237,6 +242,34 @@ export default function HomePage({ tagline, children }: HomePageProps) {
           </div>
         </div>
       </section>
+
+      {/* FAQ */}
+      {faq.length > 0 && (
+        <section className="px-margin-mobile md:px-margin-desktop py-24 bg-surface-container-lowest">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-headline text-hlg text-aged-parchment text-center mb-12">
+              Questions fréquentes
+            </h2>
+            <div className="space-y-4">
+              {faq.map((item) => (
+                <details
+                  key={item.question}
+                  className="group stone-slab p-6 [&_summary]:list-none">
+                  <summary className="flex items-center justify-between gap-4 cursor-pointer font-headline text-hmd text-aged-parchment">
+                    {item.question}
+                    <span className="text-fired-gold transition-transform group-open:rotate-45">
+                      +
+                    </span>
+                  </summary>
+                  <p className="mt-4 font-body text-body-lg text-primary-fixed-dim leading-relaxed">
+                    {item.answer}
+                  </p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <Footer />
     </ToastProvider>

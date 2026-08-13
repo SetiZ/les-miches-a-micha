@@ -35,7 +35,9 @@ const pageDescription = description || SITE_DESCRIPTION;
 const pageUrl = canonical
   ? `${SITE_URL}${canonical}`
   : `${SITE_URL}${Astro.url.pathname}`;
-const pageOgImage = ogImage || `${SITE_URL}/og/index.png`;
+const pageOgImage = ogImage
+  ? `${SITE_URL}${ogImage}`
+  : `${SITE_URL}/og/index.png`;
 ---
 
 <!doctype html>

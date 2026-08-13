@@ -25,6 +25,7 @@ const product = carte.products.find((p: { id: number }) => p.id === Number(id));
   description={product?.description || `Découvrez le ${product?.title || 'produit'} de Les Miches à Micha, boulangerie artisanale bio à Suresnes.`}
   canonical={`/carte/${id}`}
   ogType="product"
+  ogImage={`/og/carte/${id}.png`}
 >
   <SEO
     page="product"

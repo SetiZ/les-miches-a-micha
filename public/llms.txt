@@ -1,14 +1,14 @@
 # Les Miches à Micha
 
-> Boulangerie artisanale à Suresnes : pains bio au levain, livraison à domicile et ateliers boulangers.
+> Boulangerie artisanale bio à Suresnes (92150). Commandes en ligne, livraison à domicile et ateliers boulangers.
 
-Micro-fournil artisanal spécialisé dans les pains au levain naturel, fabriqués à la demande à partir de farines bio, locales et semences paysannes. Livraison à domicile sur Suresnes et alentours, ateliers boulangers pour apprendre à faire son pain.
+Micro-fournil artisanal spécialisé dans les pains au levain naturel, fabriqués à la demande à partir de farines bio, locales et semences paysannes. Ouvert du lundi au vendredi de 7h à 13h et le week-end de 7h à 12h30, au 29 rue Gambetta, Suresnes. Commandez en ligne ou par téléphone au 06 52 39 48 79.
 
 ## Pages principales
 
-- [Accueil](https://les-miches-a-micha.vercel.app/): N'allez plus à la boulangerie c'est elle qui vient à vous !
+- [Accueil](https://les-miches-a-micha.vercel.app/): Présentation du micro-fournil, livraison à domicile et commande personnalisée
 - [La Carte](https://les-miches-a-micha.vercel.app/carte): Catalogue complet des pains, viennoiseries et gourmandises avec prix
-- [Ateliers Boulangers](https://les-miches-a-micha.vercel.app/ateliers): Offrez un moment de gourmandise et de savoir-faire !
+- [Ateliers Boulangers](https://les-miches-a-micha.vercel.app/ateliers): Ateliers de boulangerie artisanale pour apprendre à faire son pain
 
 ## Nos spécialités
 
@@ -20,7 +20,7 @@ Micro-fournil artisanal spécialisé dans les pains au levain naturel, fabriqué
 - [Croissant](https://les-miches-a-micha.vercel.app/carte/601): viennoiseries
 - [Canelés bordelais](https://les-miches-a-micha.vercel.app/carte/909): Vanille et pointe de rhum
 
-## Optional
+## Catalogue complet
 
 - [Babka salée](https://les-miches-a-micha.vercel.app/carte/1): Babka revisitée en version salée, au zaatar et sésame
 - [Roulés au zaatar](https://les-miches-a-micha.vercel.app/carte/2): La déclinaison individuelle, en chignons
@@ -32,3 +32,46 @@ Micro-fournil artisanal spécialisé dans les pains au levain naturel, fabriqué
 - [Pain de Méteil](https://les-miches-a-micha.vercel.app/carte/203): Le pain de méteil, ancré dans l'histoire française, est né dans les campagnes aux XVIIIe et XIXe siècles avec le mélange naturel dans les champs de blé et de seigle
 - [Pain brié](https://les-miches-a-micha.vercel.app/carte/204): Un pain originaire de Normandie, reconnaissable à sa croûte blonde et striée comme la coque d'un bâteau
 - [Pain viking](https://les-miches-a-micha.vercel.app/carte/301): Un pavé riche en graines, à la mie brune et au cœur tendre, entre farines de froment, d’orge et de seigle
+- [Pavés en mélanges, sur base de pain de campagne](https://les-miches-a-micha.vercel.app/carte/302): Noix, figues, raisins sec et noisettes
+- [Pain du sportif](https://les-miches-a-micha.vercel.app/carte/303): Pain au fruits secs et aux graines, idéal au petit déjeuner, au goûter ou après le sport : un mélange de farines nobles (sarrasin, orge, seigle et petit épeautre), de graines (tournesol, sésame, lins brun et jaune), de fruits secs (figues, abricots, cranberries, raisins secs, noisettes grillées), comme une tar- tine de muesli pleine d’énergie !
+- [Pain au maïs](https://les-miches-a-micha.vercel.app/carte/304): Un pavé généreux, à la mie dorée et à la croûte tigrée
+- [Pain de châtaigne](https://les-miches-a-micha.vercel.app/carte/305): Naturellement sucrée, la farine de châtaigne va libérer des arômes doux et délicats, soulignés par des éclats de marrons à l’intérieur!
+- [Pain sans sel](https://les-miches-a-micha.vercel.app/carte/306): Farine complète et graines toastées, entièrement sans sel
+- [Pavé au petit épeautre](https://les-miches-a-micha.vercel.app/carte/403): Riche en protéines, pauvre en gluten, aidant la digestion, à l’indice glycé- mique très bas, rempli de minéraux
+- [Boule de campagne au blé rouge de Bordeaux](https://les-miches-a-micha.vercel.app/carte/404): Originaire du Gers, le blé rouge est une variété de blé rustique et ancienne qui avait quasiment disparue, pour être remise au goût du jour par quelques passionnés, sensibles à ses qualités boulangères, gustatives et nutritives, ex- cellentes
+- [Tourte de seigle](https://les-miches-a-micha.vercel.app/carte/405): La Face Nord de la boulangerie ! 100% de seigle intégral, très riche en miné- raux et en fibres, naturellement pauvre en gluten, fabuleusement aromatique, aux saveurs uniques et puissantes
+- [Brioche au chocolat](https://les-miches-a-micha.vercel.app/carte/502): brioches
+- [Brioche à la praline](https://les-miches-a-micha.vercel.app/carte/503): brioches
+- [Brioche individuelle](https://les-miches-a-micha.vercel.app/carte/504): brioches
+- [Baguette viennoise nature ou au chocolat](https://les-miches-a-micha.vercel.app/carte/505): brioches
+- [Petit pain au lait, façonné en «picot»](https://les-miches-a-micha.vercel.app/carte/506): brioches
+- [Kanelbullar](https://les-miches-a-micha.vercel.app/carte/507): brioches
+- ['Halla, aux deux sésames](https://les-miches-a-micha.vercel.app/carte/508): Délicieux pain moelleux avec une croûte croustillante et une mie tendre, proche de la brioche, c’est un pain traditionnel juif consommé lors du shab- bat
+- [Babka à la cannelle](https://les-miches-a-micha.vercel.app/carte/509): Brioche au beurre, tressée et originaire de Pologne, étymologiquement « grand-mère », fourrée ici avec une pâte à la cannelle et à la cardamome, rappelant celle des Kannelbullar scandinaves
+- [Pompe à l'huile](https://les-miches-a-micha.vercel.app/carte/510): Galette briochée typiquement provençale, parfumée à l’eau de fleur d’oranger, réalisée pour le réveillon de Noël et faisant partie des 13 desserts traditionnels
+- [Pain au chocolat](https://les-miches-a-micha.vercel.app/carte/602): trois barrettes de chocolat par pure gourmandise ico- noclaste
+- [Pain aux raisins](https://les-miches-a-micha.vercel.app/carte/603): avec possibilité d’aromatiser au rhum
+- [Pain suisse](https://les-miches-a-micha.vercel.app/carte/604): au feuilletage orthogonal, façon Cédric Grolet
+- [Mini-viennoiseries](https://les-miches-a-micha.vercel.app/carte/605): Mini-croissants et pains au chocolat, pour le team-building lors des morning meetings en présentiel, ou pour soudoyer vos amis et les remercier de vous aider à déménager un samedi matin !
+- [Cruffin choco / pistache](https://les-miches-a-micha.vercel.app/carte/606): Un mélange moderne entre le croissant et le muffin, création personnelle, fourrage pâte à pistache grillées et ganache au chocolat et noisettes toastées, entre chaque feuillet
+- [Pâte feuilletée - taille et format à préciser](https://les-miches-a-micha.vercel.app/carte/607): Pâte feuilletée, qualité boulangère
+- [Pain au cacao](https://les-miches-a-micha.vercel.app/carte/701): Une gourmandise qui saura remplacer la viennoiserie d’un goûter : vrai pain pétri avec une pâte de cacao et des morceaux de chocolat, il sera délicieux tiédi, lorsque le chocolat est encore fondant
+- [Pavé au cacao - cranberries ou oranges confites sur demande](https://les-miches-a-micha.vercel.app/carte/702): Pavé plein de gourmandise, sur base de tradition, avec de la pâte de cacao et sans sucre ajouté
+- [Pain à la pistache](https://les-miches-a-micha.vercel.app/carte/703): Sur base de tradition, pétrie avec une pâte à pistache maison, des pistaches grillées, abricots secs et cranberries
+- [Grignette apéro](https://les-miches-a-micha.vercel.app/carte/801): Une baguette de tradition entière, généreusement fourrée, l’idéal pour vos apéritifs – compter 1⁄2 par personne
+- [Préfou](https://les-miches-a-micha.vercel.app/carte/802): pur beurre aillé
+- [Focaccia](https://les-miches-a-micha.vercel.app/carte/803): Une plaque de 1,5 kg, avec du romarin incorporé dans une pâte fondante et épaisse ; tomates cerises ou séchées, mozzarella, jambon de Parme sur de- mande (supp
+- [Samoussas](https://les-miches-a-micha.vercel.app/carte/804): Triangles de feuille de brick maison, sans huile de palme, pliés à la main, far- cis et frits
+- [Crackers de levain](https://les-miches-a-micha.vercel.app/carte/805): Plutôt que de servir des habituels biscuits apéritifs, pourquoi ne pas vous laisser surprendre par cette recette saine, digeste et savoureuse? Réalisés exclusivement à partir de Zoë, le levain de blé de 5 ans maintenant, et agré- mentés de fleur de sel et d’herbes de Provence, qui équilibreront l’acidité délicate et caractéristique du levain, ils se garderont sans soucis trois jours dans leur joli sachet !
+- [Fricassées tunisiennes](https://les-miches-a-micha.vercel.app/carte/806): Avec ou sans harissa
+- [Pain de mie, nature](https://les-miches-a-micha.vercel.app/carte/901): Façonné en pavé pour des canapés, ou bombé pour des croque-monsieur
+- [Pain de mie, aux graines](https://les-miches-a-micha.vercel.app/carte/902): Pour plus de caractère
+- [Pain de mie, pointe de seigle et figues séchée](https://les-miches-a-micha.vercel.app/carte/903): fondant, légèrement sucré, savoureux et délicieux pour des toasts ou des canapés raffinés !
+- [Bretzels](https://les-miches-a-micha.vercel.app/carte/904): nature, au gros sel ou au sésame
+- [Buns](https://les-miches-a-micha.vercel.app/carte/905): Légèrement briochés, pour les burgers maison
+- [Mini-buns](https://les-miches-a-micha.vercel.app/carte/906): Légèrement briochés, pour les burgers maison
+- [Pâte à pizza](https://les-miches-a-micha.vercel.app/carte/907): Il n’y a plus qu’à l’étaler, la garnir et la réchauffer ! Livrée fraîchement pétrie pour une utilisation dans la journée, ou surgelée
+- [Pain sans gluten](https://les-miches-a-micha.vercel.app/carte/908): Confectionné exclusivement avec des farines dépourvues de gluten – riz, pois chiche, sarrasin, quinoa ; mélange maison de graines toastées
+- [Mini-canelés](https://les-miches-a-micha.vercel.app/carte/910): Vanille et pointe de rhum
+- [Macarons](https://les-miches-a-micha.vercel.app/carte/911): Parfums selon demande
+- [Quiche - parfum à définir ensemble](https://les-miches-a-micha.vercel.app/carte/912): Epinards, thon
