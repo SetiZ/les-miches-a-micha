@@ -7,7 +7,6 @@ import { ToastProvider } from '@/components/react/ToastProvider';
 import trusted from '@/data/trusted.json';
 
 interface HomePageProps {
-  title: string;
   tagline?: string;
   faq?: { question: string; answer: string }[];
   children?: ReactNode;
@@ -156,7 +155,7 @@ export default function HomePage({
                   </>
                 ) : trust.order === 'post' ? (
                   <>
-                    <span className="font-label text-[10px] text-primary-fixed-dim block mb-2 uppercase tracking-[0.1em]">
+                    <span className="font-label text-[10px] text-primary-fixed-dim block mb-2 uppercase tracking-widest">
                       {trust.description}
                     </span>
                     {title}

@@ -8,6 +8,7 @@
     "lint": "biome lint .",
     "lint:fix": "biome lint --write .",
     "format": "biome check --write .",
+    "check": "astro check",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
@@ -36,6 +37,7 @@
     "zustand": "^5.0.15"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.10",
     "@biomejs/biome": "^2.5.8",
     "@types/node": "^24.13.3",
     "@types/nodemailer": "^8.0.1",

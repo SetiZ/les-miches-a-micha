@@ -8,13 +8,13 @@ import Layout from '../layouts/Layout.astro';
 export const prerender = true;
 
 const page = await getEntry('pages', 'home');
-const { title, tagline, intro, faq = [] } = page?.data || {};
+const { tagline, intro, faq = [] } = page?.data || {};
 const introHtml = intro ? await marked.parse(intro) : '';
 
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: faq.map((item) => ({
+  mainEntity: faq.map((item: { question: string; answer: string }) => ({
     '@type': 'Question',
     name: item.question,
     acceptedAnswer: {
@@ -37,7 +37,7 @@ const faqSchema = {
       { name: 'Accueil', url: '/' },
     ]}
   />
-  <HomePage client:load title={title} tagline={tagline} faq={faq}>
+  <HomePage client:load tagline={tagline} faq={faq}>
     <Fragment set:html={introHtml} />
   </HomePage>
 </Layout>

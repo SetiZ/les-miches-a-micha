@@ -18,7 +18,7 @@ interface Format {
 }
 
 interface AteliersPageProps {
-  title: string;
+  title?: string;
   subtitle?: string;
   intro?: string;
   workshops?: Workshop[];

@@ -67,7 +67,7 @@ const pageOgImage = ogImage
       rel="stylesheet"
     />
     {structuredData.map((data) => (
-      <script type="application/ld+json" set:html={JSON.stringify(data)} />
+      <script type="application/ld+json" is:inline set:html={JSON.stringify(data)} />
     ))}
     <ClientRouter />
   </head>

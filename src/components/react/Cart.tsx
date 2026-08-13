@@ -1,5 +1,5 @@
 import { fr } from 'date-fns/locale';
-import { type FormEvent, useState } from 'react';
+import { type SubmitEvent, useState } from 'react';
 import { DayPicker } from 'react-day-picker';
 import {
   CgAdd,
@@ -36,7 +36,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
   const { cart, total, count, add, remove, removeAll } = useCartStore();
   const toast = useToast();
 
-  async function sendOrder(e: FormEvent<HTMLFormElement>) {
+  async function sendOrder(e: SubmitEvent<HTMLFormElement>) {
     e.preventDefault();
     setIsLoading(true);
     const formData = new FormData(e.currentTarget);
