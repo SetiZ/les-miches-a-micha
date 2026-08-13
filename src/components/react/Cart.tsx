@@ -36,12 +36,11 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
   const { cart, total, count, add, remove, removeAll } = useCartStore();
   const toast = useToast();
 
-  function sendOrder(e: FormEvent<HTMLFormElement>) {
+  async function sendOrder(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setIsLoading(true);
     const formData = new FormData(e.currentTarget);
-
-    const postData = async () => {
+    try {
       const data = {
         name: formData.get('nom'),
         phoneNumber: formData.get('tel'),
@@ -61,34 +60,31 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
-      return response.json();
-    };
-    postData()
-      .then((data) => {
-        if (data.id) {
-          toast({
-            title: 'Commande envoyée !',
-            description: 'Vous allez bientôt recevoir un email de confirmation',
-            status: 'success',
-          });
-          removeAll();
-          onClose();
-        } else {
-          toast({
-            title: 'Erreur',
-            description: data.error || 'Une erreur est survenue.',
-            status: 'error',
-          });
-        }
-      })
-      .catch(() => {
+      const result = await response.json();
+      if (result.id) {
+        toast({
+          title: 'Commande envoyée !',
+          description: 'Vous allez bientôt recevoir un email de confirmation',
+          status: 'success',
+        });
+        removeAll();
+        onClose();
+      } else {
         toast({
           title: 'Erreur',
-          description: "Impossible d'envoyer la commande.",
+          description: result.error || 'Une erreur est survenue.',
           status: 'error',
         });
-      })
-      .finally(() => setIsLoading(false));
+      }
+    } catch {
+      toast({
+        title: 'Erreur',
+        description: "Impossible d'envoyer la commande.",
+        status: 'error',
+      });
+    } finally {
+      setIsLoading(false);
+    }
   }
 
   return (
@@ -268,7 +264,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
             <div
               popover="auto"
               id="rdp-popover"
-              className="dropdown"
+              className="relative"
               style={{ positionAnchor: '--rdp' } as React.CSSProperties}>
               <DayPicker
                 className="react-day-picker"

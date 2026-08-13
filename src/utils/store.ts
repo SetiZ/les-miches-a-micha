@@ -24,22 +24,9 @@ export const useCartStore = create<CartStore>()(
   persist<CartStore>(
     (set, get) => ({
       cart: [],
-      count: () => {
-        const { cart } = get();
-        if (cart.length)
-          return cart
-            .map((item) => item.count)
-            .reduce((prev, curr) => prev + curr);
-        return 0;
-      },
-      total: () => {
-        const { cart } = get();
-        if (cart.length)
-          return cart
-            .map((item) => item.count * item.price)
-            .reduce((prev, curr) => prev + curr);
-        return 0;
-      },
+      count: () => get().cart.reduce((sum, item) => sum + item.count, 0),
+      total: () =>
+        get().cart.reduce((sum, item) => sum + item.count * item.price, 0),
       add: (product: Product) => {
         const { cart } = get();
         const updatedCart = updateCart(product, cart);
@@ -62,7 +49,7 @@ export const useCartStore = create<CartStore>()(
 function updateCart(product: Product, cart: CartItem[]): CartItem[] {
   const cartItem = { ...product, count: 1 } as CartItem;
 
-  const productOnCart = cart.map((item) => item.id).includes(product.id);
+  const productOnCart = cart.some((item) => item.id === product.id);
 
   if (!productOnCart) cart.push(cartItem);
   else {

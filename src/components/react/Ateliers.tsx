@@ -121,7 +121,7 @@ export default function AteliersPage({
                     text="Téléchargez notre carte ateliers"
                     link="Ateliers_boulanj.pdf"
                     icon={<CgSmileMouthOpen />}
-                    options={{ download: true }}
+                    download
                   />
                 </div>
               </div>
