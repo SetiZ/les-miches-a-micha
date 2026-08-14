@@ -13,25 +13,40 @@ const Footer = () => {
       </div>
       <div className="flex flex-col gap-2 items-center md:items-start">
         <a
+          href="/"
+          className="font-label text-label text-aged-parchment opacity-70 hover:text-fired-gold transition-all uppercase tracking-widest">
+          Accueil
+        </a>
+        <a
+          href="/carte"
+          className="font-label text-label text-aged-parchment opacity-70 hover:text-fired-gold transition-all uppercase tracking-widest">
+          Carte des pains
+        </a>
+        <a
+          href="/ateliers"
+          className="font-label text-label text-aged-parchment opacity-70 hover:text-fired-gold transition-all uppercase tracking-widest">
+          Ateliers boulangerie
+        </a>
+        <a
           href="https://www.instagram.com/lesmichesamicha/"
           target="_blank"
           rel="noopener noreferrer"
-          className="font-label text-label text-aged-parchment opacity-70 hover:text-fired-gold transition-all uppercase tracking-[0.1em]">
+          className="font-label text-label text-aged-parchment opacity-70 hover:text-fired-gold transition-all uppercase tracking-widest">
           Instagram
         </a>
         <a
           href="https://g.page/r/CQP-U6UnJ-McEB0/review"
           target="_blank"
           rel="noopener noreferrer"
-          className="font-label text-label text-aged-parchment opacity-70 hover:text-fired-gold transition-all uppercase tracking-[0.1em]">
-          Google Maps
+          className="font-label text-label text-aged-parchment opacity-70 hover:text-fired-gold transition-all uppercase tracking-widest">
+          Avis Google
         </a>
         <span className="font-label text-label text-aged-parchment opacity-70">
           Contact: 06 52 39 48 79
         </span>
       </div>
       <div className="md:text-right space-y-4">
-        <p className="font-label text-[10px] text-aged-parchment opacity-50 uppercase leading-relaxed tracking-[0.1em]">
+        <p className="font-label text-[10px] text-aged-parchment opacity-50 uppercase leading-relaxed tracking-widest">
           &copy; Les Miches à Micha
           <br />
           SIRET: 90464809400020

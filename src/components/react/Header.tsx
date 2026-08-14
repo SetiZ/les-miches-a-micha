@@ -31,12 +31,12 @@ const Header = () => {
             <a
               href="/carte"
               className="font-label text-label text-aged-parchment hover:text-fired-gold transition-colors duration-300 uppercase tracking-widest">
-              CARTE
+              CARTE DES PAINS
             </a>
             <a
               href="/ateliers"
               className="font-label text-label text-aged-parchment hover:text-fired-gold transition-colors duration-300 uppercase tracking-widest">
-              ATELIERS
+              ATELIERS BOULANGERIE
             </a>
           </div>
           <button

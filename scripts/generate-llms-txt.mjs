@@ -10,28 +10,6 @@ const carte = JSON.parse(
   readFileSync(resolve(ROOT, 'src/data/carte.json'), 'utf-8'),
 );
 
-function parseFrontmatter(file) {
-  const match = file.match(/^---\n([\s\S]*?)\n---/);
-  if (!match) return {};
-  const fm = {};
-  for (const line of match[1].split('\n')) {
-    const idx = line.indexOf(':');
-    if (idx === -1) continue;
-    const key = line.slice(0, idx).trim();
-    let val = line.slice(idx + 1).trim();
-    if (val.startsWith('"') && val.endsWith('"')) val = val.slice(1, -1);
-    fm[key] = val;
-  }
-  return fm;
-}
-
-const home = parseFrontmatter(
-  readFileSync(resolve(ROOT, 'src/content/pages/home.md'), 'utf-8'),
-);
-const ateliers = parseFrontmatter(
-  readFileSync(resolve(ROOT, 'src/content/pages/ateliers.md'), 'utf-8'),
-);
-
 const featured = [101, 202, 401, 402, 501, 601, 909];
 
 const products = carte.products.filter(
@@ -41,15 +19,15 @@ const products = carte.products.filter(
 const lines = [
   `# Les Miches à Micha`,
   '',
-  '> Boulangerie artisanale à Suresnes : pains bio au levain, livraison à domicile et ateliers boulangers.',
+  '> Boulangerie artisanale bio à Suresnes (92150). Commandes en ligne, livraison à domicile et ateliers boulangers.',
   '',
-  'Micro-fournil artisanal spécialisé dans les pains au levain naturel, fabriqués à la demande à partir de farines bio, locales et semences paysannes. Livraison à domicile sur Suresnes et alentours, ateliers boulangers pour apprendre à faire son pain.',
+  'Micro-fournil artisanal spécialisé dans les pains au levain naturel, fabriqués à la demande à partir de farines bio, locales et semences paysannes. Ouvert du lundi au vendredi de 7h à 13h et le week-end de 7h à 12h30, au 29 rue Gambetta, Suresnes. Commandez en ligne ou par téléphone au 06 52 39 48 79.',
   '',
   '## Pages principales',
   '',
-  `- [Accueil](${SITE_URL}/): ${home.tagline?.replace(/\\n/g, ' ') || 'Présentation du micro-fournil'}`,
+  `- [Accueil](${SITE_URL}/): Présentation du micro-fournil, livraison à domicile et commande personnalisée`,
   `- [La Carte](${SITE_URL}/carte): Catalogue complet des pains, viennoiseries et gourmandises avec prix`,
-  `- [Ateliers Boulangers](${SITE_URL}/ateliers): ${ateliers.subtitle || 'Ateliers de boulangerie artisanale'}`,
+  `- [Ateliers Boulangers](${SITE_URL}/ateliers): Ateliers de boulangerie artisanale pour apprendre à faire son pain`,
   '',
   '## Nos spécialités',
   '',
@@ -61,13 +39,13 @@ for (const p of products) {
 }
 
 lines.push('');
-lines.push('## Optional');
+lines.push('## Catalogue complet');
 lines.push('');
 
-const optional = carte.products.filter(
+const catalog = carte.products.filter(
   (p) => p.visible && !featured.includes(p.id),
 );
-for (const p of optional.slice(0, 10)) {
+for (const p of catalog) {
   const desc = p.description?.split('.')[0] || p.category;
   lines.push(`- [${p.title}](${SITE_URL}/carte/${p.id}): ${desc}`);
 }
@@ -76,5 +54,5 @@ lines.push('');
 
 writeFileSync(resolve(ROOT, 'public/llms.txt'), lines.join('\n'), 'utf-8');
 console.log(
-  `Generated llms.txt with ${products.length + optional.slice(0, 10).length} product links`,
+  `Generated llms.txt with ${products.length + catalog.length} product links`,
 );

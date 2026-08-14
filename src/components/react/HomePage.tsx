@@ -7,12 +7,16 @@ import { ToastProvider } from '@/components/react/ToastProvider';
 import trusted from '@/data/trusted.json';
 
 interface HomePageProps {
-  title: string;
   tagline?: string;
+  faq?: { question: string; answer: string }[];
   children?: ReactNode;
 }
 
-export default function HomePage({ tagline, children }: HomePageProps) {
+export default function HomePage({
+  tagline,
+  faq = [],
+  children,
+}: HomePageProps) {
   return (
     <ToastProvider>
       <SpeedInsights />
@@ -119,32 +123,30 @@ export default function HomePage({ tagline, children }: HomePageProps) {
           <div className="w-24 h-1 bg-fired-gold mx-auto mt-6" />
         </div>
         <div className="max-w-container-max mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 opacity-80">
-          {trusted.trusted.map(
-            (trust: {
-              id: number;
-              title?: string;
-              url?: string;
-              description?: string;
-              order?: string;
-            }) => (
+          {trusted.trusted.map((trust) => {
+            const title = trust.title ? (
+              trust.url ? (
+                <a
+                  href={trust.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-body text-body font-medium text-aged-parchment hover:text-fired-gold transition-colors">
+                  {trust.title}
+                </a>
+              ) : (
+                <span className="font-body text-body font-medium text-aged-parchment">
+                  {trust.title}
+                </span>
+              )
+            ) : null;
+
+            return (
               <div
                 key={trust.id}
                 className="text-center p-4 stone-slab hover:border-fired-gold transition-colors duration-500">
                 {trust.order === 'pre' ? (
                   <>
-                    {trust.url ? (
-                      <a
-                        href={trust.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="font-body text-body font-medium text-aged-parchment hover:text-fired-gold transition-colors">
-                        {trust.title}
-                      </a>
-                    ) : (
-                      <span className="font-body text-body font-medium text-aged-parchment">
-                        {trust.title}
-                      </span>
-                    )}
+                    {title}
                     {trust.description && (
                       <span className="font-label text-[10px] text-primary-fixed-dim block mt-2 uppercase tracking-widest">
                         {trust.description}
@@ -153,43 +155,21 @@ export default function HomePage({ tagline, children }: HomePageProps) {
                   </>
                 ) : trust.order === 'post' ? (
                   <>
-                    <span className="font-label text-[10px] text-primary-fixed-dim block mb-2 uppercase tracking-[0.1em">
+                    <span className="font-label text-[10px] text-primary-fixed-dim block mb-2 uppercase tracking-widest">
                       {trust.description}
                     </span>
-                    {trust.url ? (
-                      <a
-                        href={trust.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="font-body text-body font-medium text-aged-parchment hover:text-fired-gold transition-colors">
-                        {trust.title}
-                      </a>
-                    ) : (
-                      <span className="font-body text-body font-medium text-aged-parchment">
-                        {trust.title}
-                      </span>
-                    )}
+                    {title}
                   </>
-                ) : trust.url ? (
-                  <a
-                    href={trust.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-body text-body font-medium text-aged-parchment hover:text-fired-gold transition-colors">
-                    {trust.title}
-                  </a>
                 ) : trust.title ? (
-                  <span className="font-body text-body font-medium text-aged-parchment">
-                    {trust.title}
-                  </span>
-                ) : (
+                  title
+                ) : trust.description ? (
                   <span className="font-label text-[10px] text-primary-fixed-dim uppercase tracking-widest">
                     {trust.description}
                   </span>
-                )}
+                ) : null}
               </div>
-            ),
-          )}
+            );
+          })}
         </div>
       </section>
 
@@ -237,6 +217,34 @@ export default function HomePage({ tagline, children }: HomePageProps) {
           </div>
         </div>
       </section>
+
+      {/* FAQ */}
+      {faq.length > 0 && (
+        <section className="px-margin-mobile md:px-margin-desktop py-24 bg-surface-container-lowest">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-headline text-hlg text-aged-parchment text-center mb-12">
+              Questions fréquentes
+            </h2>
+            <div className="space-y-4">
+              {faq.map((item) => (
+                <details
+                  key={item.question}
+                  className="group stone-slab p-6 [&_summary]:list-none">
+                  <summary className="flex items-center justify-between gap-4 cursor-pointer font-headline text-hmd text-aged-parchment">
+                    {item.question}
+                    <span className="text-fired-gold transition-transform group-open:rotate-45">
+                      +
+                    </span>
+                  </summary>
+                  <p className="mt-4 font-body text-body-lg text-primary-fixed-dim leading-relaxed">
+                    {item.answer}
+                  </p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <Footer />
     </ToastProvider>

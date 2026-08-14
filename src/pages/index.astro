@@ -8,14 +8,28 @@ import Layout from '../layouts/Layout.astro';
 export const prerender = true;
 
 const page = await getEntry('pages', 'home');
-const { title, tagline, intro } = page?.data || {};
+const { tagline, intro, faq = [] } = page?.data || {};
 const introHtml = intro ? await marked.parse(intro) : '';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item: { question: string; answer: string }) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
 ---
 
 <Layout
-  title="Accueil"
+  title="Boulangerie bio artisanale à Suresnes"
   description="Boulangerie artisanale bio à Suresnes. Pains au levain naturel, livraison à domicile, commande personnalisée. Tout est fait main avec des farines bio locales et semences paysannes."
   canonical="/"
+  structuredData={[faqSchema]}
 >
   <SEO
     page="home"
@@ -23,7 +37,7 @@ const introHtml = intro ? await marked.parse(intro) : '';
       { name: 'Accueil', url: '/' },
     ]}
   />
-  <HomePage client:load title={title} tagline={tagline}>
+  <HomePage client:load tagline={tagline} faq={faq}>
     <Fragment set:html={introHtml} />
   </HomePage>
 </Layout>

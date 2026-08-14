@@ -55,7 +55,7 @@ export default function CartePage() {
             </div>
             {carte && (
               <div className="grid grid-cols-[repeat(auto-fill,minmax(260px,1fr))] gap-8 pt-8">
-                {carteList.map((prod) => {
+                {carteList.map((prod, index) => {
                   return (
                     prod.visible && (
                       <ProductBox
@@ -66,6 +66,7 @@ export default function CartePage() {
                         images={prod.images}
                         poids={prod.poids}
                         prix={prod.prix}
+                        eager={index < 6}
                       />
                     )
                   );

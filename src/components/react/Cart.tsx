@@ -1,5 +1,5 @@
 import { fr } from 'date-fns/locale';
-import { type FormEvent, useState } from 'react';
+import { type SubmitEvent, useRef, useState } from 'react';
 import { DayPicker } from 'react-day-picker';
 import {
   CgAdd,
@@ -35,13 +35,28 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
   const [address, setAddress] = useState('');
   const { cart, total, count, add, remove, removeAll } = useCartStore();
   const toast = useToast();
+  const dateBtnRef = useRef<HTMLButtonElement>(null);
 
-  function sendOrder(e: FormEvent<HTMLFormElement>) {
+  function positionDatePicker(e: React.ToggleEvent<HTMLDivElement>) {
+    if (e.newState !== 'open') return;
+    const btn = dateBtnRef.current;
+    if (!btn) return;
+    const pop = e.currentTarget;
+    const br = btn.getBoundingClientRect();
+    const h = pop.getBoundingClientRect().height;
+    const below = br.bottom + h <= window.innerHeight;
+    const space = (below ? window.innerHeight - br.bottom : br.top) - 8;
+    pop.style.top = below ? 'anchor(bottom)' : 'auto';
+    pop.style.bottom = below ? '' : 'anchor(top)';
+    pop.style.maxHeight = `${Math.max(160, space)}px`;
+    pop.style.overflowY = 'auto';
+  }
+
+  async function sendOrder(e: SubmitEvent<HTMLFormElement>) {
     e.preventDefault();
     setIsLoading(true);
     const formData = new FormData(e.currentTarget);
-
-    const postData = async () => {
+    try {
       const data = {
         name: formData.get('nom'),
         phoneNumber: formData.get('tel'),
@@ -61,34 +76,31 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
-      return response.json();
-    };
-    postData()
-      .then((data) => {
-        if (data.id) {
-          toast({
-            title: 'Commande envoyée !',
-            description: 'Vous allez bientôt recevoir un email de confirmation',
-            status: 'success',
-          });
-          removeAll();
-          onClose();
-        } else {
-          toast({
-            title: 'Erreur',
-            description: data.error || 'Une erreur est survenue.',
-            status: 'error',
-          });
-        }
-      })
-      .catch(() => {
+      const result = await response.json();
+      if (result.id) {
+        toast({
+          title: 'Commande envoyée !',
+          description: 'Vous allez bientôt recevoir un email de confirmation',
+          status: 'success',
+        });
+        removeAll();
+        onClose();
+      } else {
         toast({
           title: 'Erreur',
-          description: "Impossible d'envoyer la commande.",
+          description: result.error || 'Une erreur est survenue.',
           status: 'error',
         });
-      })
-      .finally(() => setIsLoading(false));
+      }
+    } catch {
+      toast({
+        title: 'Erreur',
+        description: "Impossible d'envoyer la commande.",
+        status: 'error',
+      });
+    } finally {
+      setIsLoading(false);
+    }
   }
 
   return (
@@ -252,6 +264,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
               <CgCalendarDates className="text-iron-rim size-5 shrink-0" />
               <button
                 type="button"
+                ref={dateBtnRef}
                 popoverTarget="rdp-popover"
                 className="bg-transparent text-aged-parchment w-full text-left font-body"
                 style={{ anchorName: '--rdp' } as React.CSSProperties}>
@@ -268,10 +281,25 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
             <div
               popover="auto"
               id="rdp-popover"
-              className="dropdown"
-              style={{ positionAnchor: '--rdp' } as React.CSSProperties}>
+              onToggle={positionDatePicker}
+              className="bg-surface-container border border-iron-rim rounded-lg shadow-xl p-2 text-aged-parchment"
+              style={
+                {
+                  positionAnchor: '--rdp',
+                  top: 'anchor(bottom)',
+                  left: 'anchor(left)',
+                  margin: 0,
+                } as React.CSSProperties
+              }>
               <DayPicker
                 className="react-day-picker"
+                style={
+                  {
+                    '--rdp-accent-color': '#d4af37',
+                    '--rdp-accent-background-color': 'rgba(212, 175, 55, 0.15)',
+                    '--rdp-day_button-border-radius': '0.5rem',
+                  } as React.CSSProperties
+                }
                 mode="single"
                 selected={selectedDate}
                 onSelect={setSelectedDate}

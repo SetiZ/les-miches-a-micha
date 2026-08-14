@@ -18,7 +18,7 @@ interface Format {
 }
 
 interface AteliersPageProps {
-  title: string;
+  title?: string;
   subtitle?: string;
   intro?: string;
   workshops?: Workshop[];
@@ -121,7 +121,7 @@ export default function AteliersPage({
                     text="Téléchargez notre carte ateliers"
                     link="Ateliers_boulanj.pdf"
                     icon={<CgSmileMouthOpen />}
-                    options={{ download: true }}
+                    download
                   />
                 </div>
               </div>
