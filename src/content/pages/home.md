@@ -1,7 +1,7 @@
 ---
 title: "Micro-fournil artisanal"
 tagline: "N'allez plus à la boulangerie\nc'est elle qui vient à vous !"
-intro: "Livraison à domicile, commande personnalisée, conseils de dégustation, créativité… Ici, tout est fait main, à partir de matières premières bio, locales et nobles, pour vous proposer des pains savoureux, sains et originaux.\n\n**Le fournil est ouvert !**"
+intro: "Livraison à domicile, commande personnalisée, conseils de dégustation, créativité… Ici, tout est fait main, à partir de matières premières bio, locales et nobles, pour vous proposer des pains savoureux, sains et originaux."
 faq:
   - question: "Où livrez-vous ?"
     answer: "Livraison à domicile sur Suresnes et alentours (jusqu'à environ 10 km), et retrait au fournil au 29 rue Gambetta, à Suresnes."
