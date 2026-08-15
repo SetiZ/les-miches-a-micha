@@ -21,7 +21,8 @@ export default function CartePage() {
   );
 
   const carteList = carte.products.filter(
-    (it) => filteredProducts < 0 || it.category === categories[filteredProducts],
+    (it) =>
+      filteredProducts < 0 || it.category === categories[filteredProducts],
   );
 
   const changeFilteredProducts = (index: number) => {
