@@ -63,7 +63,7 @@ const productPages: Record<string, OgPageData> = Object.fromEntries(
 
 export const prerender = true;
 
-export const { getStaticPaths, GET } = await OGImageRoute({
+export const { getStaticPaths, GET: ogGET } = await OGImageRoute({
   pages: { ...staticPages, ...productPages },
 
   getImageOptions: async (path, page) => {
@@ -114,3 +114,17 @@ export const { getStaticPaths, GET } = await OGImageRoute({
     };
   },
 });
+
+export async function GET(ctx: Parameters<typeof ogGET>[0]) {
+  const res = await ogGET(ctx);
+  const png = await sharp(await res.arrayBuffer())
+    .flatten({ background: '#141313' })
+    .png()
+    .toBuffer();
+  return new Response(new Uint8Array(png), {
+    headers: {
+      'Content-Type': 'image/png',
+      'Cache-Control': 'public, max-age=31536000, immutable',
+    },
+  });
+}
