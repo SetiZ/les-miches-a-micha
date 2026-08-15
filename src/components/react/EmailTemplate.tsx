@@ -1,4 +1,5 @@
 import type * as React from 'react';
+import { TIME_SLOT_LABELS } from '@/utils/timeSlots';
 
 interface CartItem {
   id: number;
@@ -19,12 +20,6 @@ interface EmailTemplateProps {
   total: number;
   cart: CartItem[];
 }
-
-const TIME_SLOT_LABELS: Record<string, string> = {
-  matin: 'Matinée',
-  aprem: 'Après-midi',
-  soir: 'Soirée',
-};
 
 export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
   name,

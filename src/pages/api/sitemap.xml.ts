@@ -1,9 +1,5 @@
 import type { APIRoute } from 'astro';
-
-const SITE_URL =
-  import.meta.env.SITE ||
-  (import.meta.env.VERCEL_URL && `https://${import.meta.env.VERCEL_URL}`) ||
-  'https://les-miches-a-micha.vercel.app';
+import { SITE_URL } from '../../utils/site';
 
 const staticPages = [
   { path: '/', priority: '1.0', changefreq: 'weekly' },

@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Allow: /og/index.png
 
 User-agent: GPTBot
 Allow: /
@@ -18,3 +17,6 @@ User-agent: Bytespider
 Disallow: /
 
 Sitemap: https://les-miches-a-micha.vercel.app/api/sitemap.xml
+
+# https://llmstxt.org/
+LLMs.txt: https://les-miches-a-micha.vercel.app/llms.txt

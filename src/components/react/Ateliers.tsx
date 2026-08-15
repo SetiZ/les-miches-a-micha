@@ -1,11 +1,7 @@
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/react';
 import { CgMail, CgPhone, CgSmileMouthOpen } from 'react-icons/cg';
 import ContainerBox from '@/components/react/ContainerBox';
-import Footer from '@/components/react/Footer';
-import Header from '@/components/react/Header';
+import PageShell from '@/components/react/PageShell';
 import SocialButton from '@/components/react/SocialButton';
-import { ToastProvider } from '@/components/react/ToastProvider';
 
 interface Workshop {
   title: string;
@@ -39,10 +35,7 @@ export default function AteliersPage({
   outro,
 }: AteliersPageProps) {
   return (
-    <ToastProvider>
-      <SpeedInsights />
-      <Analytics />
-      <Header />
+    <PageShell>
       <main className="min-h-screen pt-24 pb-12 px-margin-mobile md:px-margin-desktop flex justify-center">
         <div className="w-full max-w-container-max">
           <div className="text-center mb-12">
@@ -134,7 +127,6 @@ export default function AteliersPage({
           </ContainerBox>
         </div>
       </main>
-      <Footer />
-    </ToastProvider>
+    </PageShell>
   );
 }

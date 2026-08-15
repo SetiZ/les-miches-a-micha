@@ -1,10 +1,6 @@
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/react';
 import { CgAdd } from 'react-icons/cg';
 import ContainerBox from '@/components/react/ContainerBox';
-import Footer from '@/components/react/Footer';
-import Header from '@/components/react/Header';
-import { ToastProvider } from '@/components/react/ToastProvider';
+import PageShell from '@/components/react/PageShell';
 import carte from '@/data/carte.json';
 import { useCartStore } from '@/utils/store';
 
@@ -19,25 +15,18 @@ export default function ProductDetailPage({ id }: ProductPageProps) {
 
   if (!product) {
     return (
-      <ToastProvider>
-        <SpeedInsights />
-        <Analytics />
-        <Header />
+      <PageShell>
         <main className="min-h-screen pt-24 pb-12 px-margin-mobile md:px-margin-desktop flex justify-center">
           <p className="font-headline text-hmd text-aged-parchment">
             Produit introuvable
           </p>
         </main>
-        <Footer />
-      </ToastProvider>
+      </PageShell>
     );
   }
 
   return (
-    <ToastProvider>
-      <SpeedInsights />
-      <Analytics />
-      <Header />
+    <PageShell>
       <main className="min-h-screen pt-24 pb-12 px-margin-mobile md:px-margin-desktop flex justify-center">
         <div className="w-full max-w-container-max">
           <div className="mb-6">
@@ -104,7 +93,6 @@ export default function ProductDetailPage({ id }: ProductPageProps) {
           </ContainerBox>
         </div>
       </main>
-      <Footer />
-    </ToastProvider>
+    </PageShell>
   );
 }

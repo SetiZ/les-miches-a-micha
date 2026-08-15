@@ -1,6 +1,5 @@
 ---
 import { getEntry } from 'astro:content';
-import { marked } from 'marked';
 import HomePage from '../components/react/HomePage';
 import SEO from '../components/SEO.astro';
 import Layout from '../layouts/Layout.astro';
@@ -9,7 +8,6 @@ export const prerender = true;
 
 const page = await getEntry('pages', 'home');
 const { tagline, intro, faq = [] } = page?.data || {};
-const introHtml = intro ? await marked.parse(intro) : '';
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -38,6 +36,6 @@ const faqSchema = {
     ]}
   />
   <HomePage client:load tagline={tagline} faq={faq}>
-    <Fragment set:html={introHtml} />
+    {intro}
   </HomePage>
 </Layout>

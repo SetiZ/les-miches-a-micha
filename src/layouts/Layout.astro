@@ -1,5 +1,6 @@
 ---
 import { ClientRouter } from 'astro:transitions';
+import { SITE_URL } from '@/utils/site';
 import '@/styles/global.css';
 
 interface Props {
@@ -11,10 +12,6 @@ interface Props {
   structuredData?: Record<string, unknown>[];
 }
 
-const SITE_URL =
-  import.meta.env.SITE ||
-  (import.meta.env.VERCEL_URL && `https://${import.meta.env.VERCEL_URL}`) ||
-  'https://les-miches-a-micha.vercel.app';
 const SITE_NAME = 'Les Miches à Micha';
 const SITE_DESCRIPTION =
   'Boulangerie artisanale bio à Suresnes. Pains au levain, viennoiseries et pâtisseries faits main avec des farines bio locales.';
@@ -48,6 +45,7 @@ const pageOgImage = ogImage
     <title>{pageTitle}</title>
     <meta name="description" content={pageDescription} />
     <link rel="canonical" href={pageUrl} />
+    <link rel="llms.txt" type="text/plain" href={`${SITE_URL}/llms.txt`} />
     <meta property="og:image" content={pageOgImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />

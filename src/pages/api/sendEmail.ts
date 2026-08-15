@@ -6,14 +6,11 @@ import {
   CustomerEmailTemplate,
   EmailTemplate,
 } from '../../components/react/EmailTemplate';
+import { SITE_URL } from '../../utils/site';
 
 const GMAIL_USER = process.env.GMAIL_USER || 'lesmichesamicha@gmail.com';
 const GMAIL_PASS = process.env.GMAIL_API_PASS;
 const BAKERY_EMAIL = process.env.BAKERY_EMAIL || 'lesmichesamicha@gmail.com';
-const SITE_URL =
-  import.meta.env.SITE ||
-  (import.meta.env.VERCEL_URL && `https://${import.meta.env.VERCEL_URL}`) ||
-  'https://les-miches-a-micha.vercel.app';
 
 export const POST: APIRoute = async ({ request }) => {
   if (!GMAIL_PASS) {

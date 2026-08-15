@@ -1,12 +1,8 @@
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/react';
 import { useState } from 'react';
 import ContainerBox from '@/components/react/ContainerBox';
 import { Filter } from '@/components/react/Filter';
-import Footer from '@/components/react/Footer';
-import Header from '@/components/react/Header';
+import PageShell from '@/components/react/PageShell';
 import ProductBox from '@/components/react/Product';
-import { ToastProvider } from '@/components/react/ToastProvider';
 import carte from '@/data/carte.json';
 
 export default function CartePage() {
@@ -33,10 +29,7 @@ export default function CartePage() {
   };
 
   return (
-    <ToastProvider>
-      <SpeedInsights />
-      <Analytics />
-      <Header />
+    <PageShell>
       <main className="min-h-screen pt-24 pb-12 px-margin-mobile md:px-margin-desktop flex justify-center">
         <div className="w-full max-w-container-max">
           <div className="text-center mb-12">
@@ -76,7 +69,6 @@ export default function CartePage() {
           </ContainerBox>
         </div>
       </main>
-      <Footer />
-    </ToastProvider>
+    </PageShell>
   );
 }

@@ -1,9 +1,5 @@
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/react';
 import type { ReactNode } from 'react';
-import Footer from '@/components/react/Footer';
-import Header from '@/components/react/Header';
-import { ToastProvider } from '@/components/react/ToastProvider';
+import PageShell from '@/components/react/PageShell';
 import trusted from '@/data/trusted.json';
 
 interface HomePageProps {
@@ -18,11 +14,7 @@ export default function HomePage({
   children,
 }: HomePageProps) {
   return (
-    <ToastProvider>
-      <SpeedInsights />
-      <Analytics />
-      <Header />
-
+    <PageShell>
       {/* Hero */}
       <section className="relative min-h-[90vh] flex items-center justify-center px-margin-mobile md:px-margin-desktop py-16 overflow-hidden mt-20">
         <div className="absolute inset-0 z-0">
@@ -245,8 +237,6 @@ export default function HomePage({
           </div>
         </section>
       )}
-
-      <Footer />
-    </ToastProvider>
+    </PageShell>
   );
 }

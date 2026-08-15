@@ -1,6 +1,6 @@
-import { fr } from 'date-fns/locale';
 import { type SubmitEvent, useRef, useState } from 'react';
 import { DayPicker } from 'react-day-picker';
+import { fr } from 'react-day-picker/locale';
 import {
   CgAdd,
   CgCalendarDates,
@@ -12,18 +12,13 @@ import {
 } from 'react-icons/cg';
 import { useToast } from '@/components/react/ToastProvider';
 import { useCartStore } from '@/utils/store';
+import { TIME_SLOTS } from '@/utils/timeSlots';
 import 'react-day-picker/style.css';
 
 interface CartProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
-const TIME_SLOTS = [
-  { value: 'matin', label: 'Matinée' },
-  { value: 'aprem', label: 'Après-midi' },
-  { value: 'soir', label: 'Soirée' },
-] as const;
 
 const Cart = ({ isOpen, onClose }: CartProps) => {
   const [isLoading, setIsLoading] = useState(false);
