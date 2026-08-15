@@ -79,9 +79,13 @@ const pageOgImage = ogImage
       });
 
       document.addEventListener('astro:page-load', () => {
-        if (location.pathname === '/carte') {
-          const saved = sessionStorage.getItem('carte-scroll');
-          if (saved) requestAnimationFrame(() => window.scrollTo(0, +saved));
+        if (location.pathname.startsWith('/carte')) {
+          if (location.pathname === '/carte') {
+            const saved = sessionStorage.getItem('carte-scroll');
+            if (saved) requestAnimationFrame(() => window.scrollTo(0, +saved));
+          }
+        } else {
+          sessionStorage.removeItem('carte-filter');
         }
       });
     </script>

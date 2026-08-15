@@ -51,7 +51,6 @@ export default function ProductDetailPage({ id }: ProductPageProps) {
                   width={500}
                   height={500}
                   className="object-cover w-full h-auto"
-                  style={{ viewTransitionName: `product-${id}` }}
                 />
               </div>
               <div className="flex flex-col items-start gap-6 flex-1">

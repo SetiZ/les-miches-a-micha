@@ -6,10 +6,11 @@ import ProductBox from '@/components/react/Product';
 import carte from '@/data/carte.json';
 
 export default function CartePage() {
-  const [filteredProducts, setFilteredProducts] = useState(-1);
-  const [carteList, setCarteList] = useState<typeof carte.products>(
-    carte.products || [],
-  );
+  const [filteredProducts, setFilteredProducts] = useState(() => {
+    if (typeof sessionStorage === 'undefined') return -1;
+    const saved = sessionStorage.getItem('carte-filter');
+    return saved !== null ? Number(saved) : -1;
+  });
 
   const categories = Array.from(
     new Set(
@@ -19,13 +20,13 @@ export default function CartePage() {
     ),
   );
 
-  const changeFilteredProducts = async (index: number) => {
+  const carteList = carte.products.filter(
+    (it) => filteredProducts < 0 || it.category === categories[filteredProducts],
+  );
+
+  const changeFilteredProducts = (index: number) => {
     setFilteredProducts(index);
-    setCarteList(
-      carte.products.filter(
-        (it) => index < 0 || it.category === categories[index],
-      ),
-    );
+    sessionStorage.setItem('carte-filter', String(index));
   };
 
   return (
