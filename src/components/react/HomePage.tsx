@@ -28,10 +28,10 @@ export default function HomePage({
               className="w-64 h-auto drop-shadow-[0_0_20px_rgba(212,175,55,0.4)] animate-pulse invert"
             />
           </div>
-          <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-ember-orange/30 bg-ember-orange/10 status-pulse">
-            <span className="w-2 h-2 rounded-full bg-ember-orange shadow-[0_0_8px_#E65100]" />
-            <span className="font-label text-[10px] text-ember-orange tracking-widest uppercase font-bold">
-              Le fournil est fermé ! Réouverture le 19/08.
+          <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-ember-green/30 bg-ember-green/10 status-pulse">
+            <span className="w-2 h-2 rounded-full bg-ember-green shadow-[0_0_8px_#2E7D32]" />
+            <span className="font-label text-[10px] text-ember-green tracking-widest uppercase font-bold">
+              Le fournil est ouvert !
             </span>
           </div>
           <h1 className="font-headline text-hxl-mobile md:text-hxl text-aged-parchment ember-glow leading-none">
