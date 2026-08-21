@@ -251,9 +251,9 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
               </label>
             )}
             <p className="font-body text-sm text-aged-parchment/70">
-              Veuillez spécifier le créneau de livraison souhaité - comptez un
-              minimum de 12h pour laisser au boulanger le temps de faire votre
-              pain !
+              Veuillez spécifier le créneau de livraison souhaité. Comptez un
+              minimum de 12h pour laisser au boulanger le temps de préparer
+              votre commande !
             </p>
             <label className="flex items-center gap-2 border border-iron-rim p-3">
               <CgCalendarDates className="text-iron-rim size-5 shrink-0" />
