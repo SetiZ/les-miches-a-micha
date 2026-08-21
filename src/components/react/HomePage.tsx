@@ -28,9 +28,9 @@ export default function HomePage({
               className="w-64 h-auto drop-shadow-[0_0_20px_rgba(212,175,55,0.4)] animate-pulse invert"
             />
           </div>
-          <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-ember-green/30 bg-ember-green/10 status-pulse">
-            <span className="w-2 h-2 rounded-full bg-ember-green shadow-[0_0_8px_#2E7D32]" />
-            <span className="font-label text-[10px] text-ember-green tracking-widest uppercase font-bold">
+          <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-fired-gold/30 bg-/10 status-pulse">
+            <span className="w-2 h-2 rounded-full bg-fired-gold shadow-[0_0_8px_#D4AF37]" />
+            <span className="font-label text-[10px] text-fired-gold tracking-widest uppercase font-bold">
               Le fournil est ouvert !
             </span>
           </div>
