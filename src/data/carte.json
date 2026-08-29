@@ -2,30 +2,11 @@
   "products": [
     {
       "id": 1,
-      "title": "Babka salée",
-      "prix": 9,
-      "poids": 600,
-      "description": "Babka revisitée en version salée, au zaatar et sésame",
-      "images": "999-babka_salee.png",
-      "category": "pain du mois",
-      "visible": true
-    },
-    {
-      "id": 2,
-      "title": "Roulés au zaatar",
-      "prix": 2.25,
-      "poids": 120,
-      "description": "La déclinaison individuelle, en chignons",
-      "images": "999-roules_zaatar.png",
-      "category": "pain du mois",
-      "visible": true
-    },
-    {
-      "id": 3,
-      "title": "Pain méditerranéen",
-      "prix": 7,
-      "description": "Un pain méditerranéen, dés d'abricot et romrain, et un moelleux assuré par une touche d'huile d’olive",
-      "images": "999-abricot_romarin.png",
+      "title": "Pain de la rentrée",
+      "prix": 3,
+      "poids": 200,
+      "description": "Ficelle à la noisette, myrtilles et cacao, parfaite pour se glisser dans un cartable !",
+      "images": "",
       "category": "pain du mois",
       "visible": true
     },
