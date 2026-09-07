@@ -22,9 +22,7 @@ Micro-fournil artisanal spécialisé dans les pains au levain naturel, fabriqué
 
 ## Catalogue complet
 
-- [Babka salée](https://les-miches-a-micha.vercel.app/carte/1): Babka revisitée en version salée, au zaatar et sésame
-- [Roulés au zaatar](https://les-miches-a-micha.vercel.app/carte/2): La déclinaison individuelle, en chignons
-- [Pain méditerranéen](https://les-miches-a-micha.vercel.app/carte/3): Un pain méditerranéen, dés d'abricot et romrain, et un moelleux assuré par une touche d'huile d’olive
+- [Pain de la rentrée](https://les-miches-a-micha.vercel.app/carte/1): Ficelle à la noisette, myrtilles et cacao, parfaite pour se glisser dans un cartable !
 - [Vente de farines bio - sur demande](https://les-miches-a-micha.vercel.app/carte/99): Voir formulaire de commande de farines sur la page principale
 - [Pains serviette](https://les-miches-a-micha.vercel.app/carte/103): Pains-serviette individuels, tous façonnés différemment, idéal pour donner un cachet « gastronomique » à vos soirées
 - [Tradition céréales](https://les-miches-a-micha.vercel.app/carte/102): La baguette de tradition, avec un assortiment soigneusement choisi de graines (lin, tournesol, soja, courge, millet, quinoa, sésame), ou simplement du sésame grillé
