@@ -32,7 +32,7 @@ content:
             options:
               path: public/images/
               output: /
-              extensions: [ jpg, jpeg, png ]
+              extensions: [jpg, jpeg, png]
           - name: category
             label: Catégorie
             type: select
