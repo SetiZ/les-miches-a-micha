@@ -22,7 +22,8 @@ export default function CartePage() {
 
   const carteList = carte.products.filter(
     (it) =>
-      filteredProducts < 0 || it.category === categories[filteredProducts],
+      it.visible &&
+      (filteredProducts < 0 || it.category === categories[filteredProducts]),
   );
 
   const changeFilteredProducts = (index: number) => {
@@ -52,18 +53,17 @@ export default function CartePage() {
               <div className="grid grid-cols-[repeat(auto-fill,minmax(260px,1fr))] gap-8 pt-8">
                 {carteList.map((prod, index) => {
                   return (
-                    prod.visible && (
-                      <ProductBox
-                        key={prod.id}
-                        id={prod.id}
-                        title={prod.title}
-                        category={prod.category}
-                        images={prod.images}
-                        poids={prod.poids}
-                        prix={prod.prix}
-                        eager={index < 6}
-                      />
-                    )
+                    <ProductBox
+                      key={prod.id}
+                      id={prod.id}
+                      title={prod.title}
+                      category={prod.category}
+                      images={prod.images}
+                      poids={prod.poids}
+                      prix={prod.prix}
+                      eager={index < 6}
+                      priority={index === 0}
+                    />
                   );
                 })}
               </div>

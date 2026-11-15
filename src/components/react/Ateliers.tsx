@@ -112,7 +112,7 @@ export default function AteliersPage({
                   />
                   <SocialButton
                     text="Téléchargez notre carte ateliers"
-                    link="Ateliers_boulanj.pdf"
+                    link="/Ateliers_boulanj.pdf"
                     icon={<CgSmileMouthOpen />}
                     download
                   />

@@ -3,6 +3,8 @@ import {
   type ReactNode,
   useCallback,
   useContext,
+  useEffect,
+  useRef,
   useState,
 } from 'react';
 
@@ -25,13 +27,23 @@ export function useToast() {
 
 export function ToastProvider({ children }: { children: ReactNode }) {
   const [toasts, setToasts] = useState<Toast[]>([]);
+  const timers = useRef(new Set<ReturnType<typeof setTimeout>>());
+
+  useEffect(
+    () => () => {
+      for (const id of timers.current) clearTimeout(id);
+    },
+    [],
+  );
 
   const toast = useCallback((t: Omit<Toast, 'id'>) => {
     const id = Date.now();
     setToasts((prev) => [...prev, { ...t, id }]);
-    setTimeout(() => {
+    const timer = setTimeout(() => {
+      timers.current.delete(timer);
       setToasts((prev) => prev.filter((toast) => toast.id !== id));
     }, 5000);
+    timers.current.add(timer);
   }, []);
 
   const remove = useCallback((id: number) => {
@@ -41,10 +53,13 @@ export function ToastProvider({ children }: { children: ReactNode }) {
   return (
     <ToastContext.Provider value={{ toast }}>
       {children}
-      <div className="fixed bottom-4 right-4 z-50 flex flex-col gap-2">
+      <section
+        aria-label="Notifications"
+        className="fixed bottom-4 right-4 z-50 flex flex-col gap-2">
         {toasts.map((t) => (
           <div
             key={t.id}
+            role={t.status === 'error' ? 'alert' : 'status'}
             className={`px-4 py-3 shadow-lg max-w-sm animate-slide-up border font-body ${
               t.status === 'success'
                 ? 'bg-surface border-fired-gold text-aged-parchment'
@@ -60,13 +75,14 @@ export function ToastProvider({ children }: { children: ReactNode }) {
               <button
                 type="button"
                 onClick={() => remove(t.id)}
+                aria-label="Fermer la notification"
                 className="text-aged-parchment/50 hover:text-aged-parchment text-lg leading-none">
                 &times;
               </button>
             </div>
           </div>
         ))}
-      </div>
+      </section>
     </ToastContext.Provider>
   );
 }
