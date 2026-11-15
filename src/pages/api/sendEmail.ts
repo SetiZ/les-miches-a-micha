@@ -7,6 +7,7 @@ import {
   EmailTemplate,
 } from '../../components/react/EmailTemplate';
 import { SITE_URL } from '../../utils/site';
+import carte from '../../data/carte.json';
 
 const GMAIL_USER = process.env.GMAIL_USER || 'lesmichesamicha@gmail.com';
 const GMAIL_PASS = process.env.GMAIL_API_PASS;
@@ -38,7 +39,37 @@ export const POST: APIRoute = async ({ request }) => {
   try {
     const parsed = await request.json();
 
-    if (!parsed.name || !parsed.email || !parsed.date) {
+    const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // Rebuild the cart from carte.json so names, prices and the total shown in
+    // the emails can never be forged by the client.
+    const rawCart: { id?: unknown; count?: unknown }[] =
+      Array.isArray(parsed.cart) && parsed.cart.length <= 200
+        ? parsed.cart
+        : [];
+    const trustedCart = rawCart.flatMap((item) => {
+      const product = carte.products.find((p) => p.id === item.id);
+      const count = typeof item.count === 'number' ? Math.floor(item.count) : 0;
+      if (!product || count < 1) return [];
+      return [
+        {
+          id: product.id,
+          name: product.title,
+          price: product.prix,
+          // shortcut: count clamped to 99, raise if a real order ever needs more
+          count: Math.min(count, 99),
+        },
+      ];
+    });
+
+    if (
+      !parsed.name ||
+      typeof parsed.name !== 'string' ||
+      !parsed.date ||
+      typeof parsed.email !== 'string' ||
+      !EMAIL_RE.test(parsed.email) ||
+      trustedCart.length === 0 ||
+      (parsed.deliveryMode === 'delivery' && !parsed.address)
+    ) {
       return new Response(
         JSON.stringify({ error: 'Missing required fields' }),
         {
@@ -47,8 +78,16 @@ export const POST: APIRoute = async ({ request }) => {
         },
       );
     }
+    const deliveryMode =
+      parsed.deliveryMode === 'delivery' ? 'delivery' : 'pickup';
 
-    const orderDate = new Date().toLocaleTimeString('fr-FR', {
+    const total = trustedCart.reduce(
+      (sum, item) => sum + item.price * item.count,
+      0,
+    );
+
+    const orderDate = new Date().toLocaleString('fr-FR', {
+      timeZone: 'Europe/Paris',
       year: 'numeric',
       month: 'numeric',
       day: 'numeric',
@@ -63,11 +102,11 @@ export const POST: APIRoute = async ({ request }) => {
         email: parsed.email,
         date: parsed.date,
         timeSlot: parsed.timeSlot,
-        deliveryMode: parsed.deliveryMode,
+        deliveryMode,
         address: parsed.address,
         comment: parsed.comment,
-        total: parsed.total,
-        cart: parsed.cart,
+        total,
+        cart: trustedCart,
       }),
     );
 
@@ -76,9 +115,9 @@ export const POST: APIRoute = async ({ request }) => {
         name: parsed.name,
         date: parsed.date,
         timeSlot: parsed.timeSlot,
-        deliveryMode: parsed.deliveryMode,
-        total: parsed.total,
-        cart: parsed.cart,
+        deliveryMode,
+        total,
+        cart: trustedCart,
         siteUrl: SITE_URL,
       }),
     );

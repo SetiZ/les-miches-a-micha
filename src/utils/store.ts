@@ -47,20 +47,15 @@ export const useCartStore = create<CartStore>()(
 );
 
 function updateCart(product: Product, cart: CartItem[]): CartItem[] {
-  const cartItem = { ...product, count: 1 } as CartItem;
-
   const productOnCart = cart.some((item) => item.id === product.id);
 
-  if (!productOnCart) cart.push(cartItem);
-  else {
-    return cart.map((item) => {
-      if (item.id === product.id)
-        return { ...item, count: item.count + 1 } as CartItem;
-      return item;
-    });
-  }
+  if (!productOnCart) return [...cart, { ...product, count: 1 }];
 
-  return cart;
+  return cart.map((item) => {
+    if (item.id === product.id)
+      return { ...item, count: item.count + 1 } as CartItem;
+    return item;
+  });
 }
 
 function removeCart(idProduct: number, cart: CartItem[]): CartItem[] {

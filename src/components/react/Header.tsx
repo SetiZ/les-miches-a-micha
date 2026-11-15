@@ -5,8 +5,10 @@ import { useCartStore } from '@/utils/store';
 
 const Header = () => {
   const [hydrated, setHydrated] = useState(false);
+  const [pathname, setPathname] = useState('');
   useEffect(() => {
     setHydrated(true);
+    setPathname(window.location.pathname);
   }, []);
   const { count: cartCount } = useCartStore();
   const [cartOpen, setCartOpen] = useState(false);
@@ -30,11 +32,13 @@ const Header = () => {
           <div className="hidden md:flex gap-8">
             <a
               href="/carte"
+              aria-current={pathname === '/carte' ? 'page' : undefined}
               className="font-label text-label text-aged-parchment hover:text-fired-gold transition-colors duration-300 uppercase tracking-widest">
               CARTE DES PAINS
             </a>
             <a
               href="/ateliers"
+              aria-current={pathname === '/ateliers' ? 'page' : undefined}
               className="font-label text-label text-aged-parchment hover:text-fired-gold transition-colors duration-300 uppercase tracking-widest">
               ATELIERS BOULANGERIE
             </a>
@@ -43,7 +47,9 @@ const Header = () => {
             type="button"
             onClick={() => setCartOpen(true)}
             className="text-aged-parchment hover:text-fired-gold transition-transform active:scale-95 relative"
-            aria-label="Panier">
+            aria-label="Panier"
+            aria-expanded={cartOpen}
+            aria-controls="cart-dialog">
             <CgShoppingCart className="size-6" />
             {hydrated && cartCount() > 0 ? (
               <span className="absolute -right-2 -top-2 text-xs bg-ember-orange text-aged-parchment rounded-full w-5 h-5 flex items-center justify-center font-label">

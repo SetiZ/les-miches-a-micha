@@ -181,3 +181,48 @@ body {
 @utility animate-slide-up {
   animation: slide-up 0.3s ease-out;
 }
+
+/* ── Cart drawer as native modal dialog ── */
+
+.cart-dialog {
+  margin: 0 0 0 auto;
+  width: 100%;
+  max-width: min(100%, 32rem);
+  height: 100dvh;
+  max-height: none;
+  border: 0;
+  border-left: 2px solid var(--color-iron-rim);
+  padding: 0;
+  background: var(--color-surface);
+  color: var(--color-aged-parchment);
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+  transform: translateX(100%);
+  transition:
+    transform 0.3s ease,
+    display 0.3s,
+    overlay 0.3s;
+  transition-behavior: allow-discrete;
+  overscroll-behavior: contain;
+}
+
+.cart-dialog[open] {
+  transform: translateX(0);
+  @starting-style {
+    transform: translateX(100%);
+  }
+}
+
+.cart-dialog::backdrop {
+  background: rgb(0 0 0 / 0.6);
+  /* ::backdrop must be a scroll container for overscroll-behavior to apply */
+  overflow: hidden;
+  overscroll-behavior: contain;
+}
+
+/* Current page indicator in header/footer navigation */
+nav a[aria-current='page'],
+footer a[aria-current='page'] {
+  color: var(--color-fired-gold);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}

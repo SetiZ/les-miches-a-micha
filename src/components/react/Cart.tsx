@@ -1,4 +1,4 @@
-import { type SubmitEvent, useRef, useState } from 'react';
+import { type SubmitEvent, useEffect, useRef, useState } from 'react';
 import { DayPicker } from 'react-day-picker';
 import { fr } from 'react-day-picker/locale';
 import {
@@ -28,9 +28,58 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
     'pickup',
   );
   const [address, setAddress] = useState('');
+  // Prerendered HTML always shows an empty cart; render the real one only
+  // after mount so hydration matches on load and on client-side navigation.
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
   const { cart, total, count, add, remove, removeAll } = useCartStore();
   const toast = useToast();
   const dateBtnRef = useRef<HTMLButtonElement>(null);
+  const dialogRef = useRef<HTMLDialogElement>(null);
+  const showEmpty = !mounted || count() === 0;
+
+  useEffect(() => {
+    const dlg = dialogRef.current;
+    if (!dlg) return;
+    if (isOpen && !dlg.open) dlg.showModal();
+    else if (!isOpen && dlg.open) dlg.close();
+  }, [isOpen]);
+
+  // closedby="any" fallback: light-dismiss where the attribute is unsupported (Safari)
+  useEffect(() => {
+    const dlg = dialogRef.current;
+    if (!dlg || 'closedBy' in HTMLDialogElement.prototype) return;
+    const outside = (e: PointerEvent) => {
+      const r = dlg.getBoundingClientRect();
+      return (
+        e.clientX < r.left ||
+        e.clientX > r.right ||
+        e.clientY < r.top ||
+        e.clientY > r.bottom
+      );
+    };
+    let pressedOutside = false;
+    const down = (e: PointerEvent) => {
+      pressedOutside = outside(e);
+    };
+    const up = (e: PointerEvent) => {
+      if (pressedOutside && outside(e)) dlg.close();
+    };
+    dlg.addEventListener('pointerdown', down);
+    dlg.addEventListener('pointerup', up);
+    return () => {
+      dlg.removeEventListener('pointerdown', down);
+      dlg.removeEventListener('pointerup', up);
+    };
+  }, []);
+
+  // Native close event fires for Esc, light-dismiss and programmatic close
+  useEffect(() => {
+    const dlg = dialogRef.current;
+    if (!dlg) return;
+    dlg.addEventListener('close', onClose);
+    return () => dlg.removeEventListener('close', onClose);
+  }, [onClose]);
 
   function positionDatePicker(e: React.ToggleEvent<HTMLDivElement>) {
     if (e.newState !== 'open') return;
@@ -49,6 +98,14 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
 
   async function sendOrder(e: SubmitEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (!selectedDate) {
+      toast({
+        title: 'Date manquante',
+        description: 'Veuillez choisir une date de retrait ou de livraison.',
+        status: 'error',
+      });
+      return;
+    }
     setIsLoading(true);
     const formData = new FormData(e.currentTarget);
     try {
@@ -98,36 +155,31 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
     }
   }
 
+  const tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+
   return (
-    <>
-      {isOpen && (
+    <dialog
+      id="cart-dialog"
+      ref={dialogRef}
+      aria-labelledby="cart-title"
+      {...({ closedby: 'any' } as Record<string, string>)}
+      className="cart-dialog">
+      <div className="flex items-center justify-between p-4 border-b border-iron-rim">
+        <h2 id="cart-title" className="font-headline text-hmd text-fired-gold">
+          Panier
+        </h2>
         <button
           type="button"
-          aria-label="Fermer le panier"
-          className="fixed inset-0 z-40"
           onClick={onClose}
-          onKeyDown={(event) => {
-            if (event.key === 'Enter' || event.key === ' ') onClose();
-          }}>
-          <div className="absolute inset-0 bg-black/60" />
+          aria-label="Fermer le panier"
+          className="text-aged-parchment hover:text-fired-gold transition-colors">
+          ✕
         </button>
-      )}
-      <div
-        className={`fixed top-0 right-0 z-50 h-full w-full max-w-lg bg-surface border-l-2 border-iron-rim shadow-2xl text-aged-parchment transform transition-transform duration-300 ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}>
-        <div className="flex items-center justify-between p-4 border-b border-iron-rim">
-          <h2 className="font-headline text-hmd text-fired-gold">Panier</h2>
-          <button
-            type="button"
-            onClick={onClose}
-            className="text-aged-parchment hover:text-fired-gold transition-colors">
-            ✕
-          </button>
-        </div>
+      </div>
 
         <div className="p-4 overflow-y-auto h-[calc(100%-4rem)] space-y-6">
-          {count() === 0 ? (
+          {showEmpty ? (
             <div className="text-center py-8 text-aged-parchment/50 font-headline">
               Panier vide
             </div>
@@ -190,6 +242,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                 type="text"
                 placeholder="nom"
                 name="nom"
+                autoComplete="name"
                 className="bg-transparent text-aged-parchment w-full outline-none font-body placeholder:text-aged-parchment/30"
                 required
               />
@@ -199,6 +252,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
               <input
                 type="tel"
                 name="tel"
+                autoComplete="tel"
                 placeholder="numéro de téléphone"
                 className="bg-transparent text-aged-parchment w-full outline-none font-body placeholder:text-aged-parchment/30"
                 required
@@ -209,6 +263,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
               <input
                 type="email"
                 name="email"
+                autoComplete="email"
                 placeholder="email"
                 className="bg-transparent text-aged-parchment w-full outline-none font-body placeholder:text-aged-parchment/30"
                 required
@@ -242,6 +297,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                 <input
                   type="text"
                   name="address"
+                  autoComplete="street-address"
                   placeholder="adresse de livraison"
                   value={address}
                   onChange={(e) => setAddress(e.target.value)}
@@ -299,7 +355,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                 selected={selectedDate}
                 onSelect={setSelectedDate}
                 locale={fr}
-                disabled={{ before: new Date() }}
+                disabled={{ before: tomorrow }}
               />
             </div>
             <select
@@ -325,13 +381,18 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
             />
             <button
               type="submit"
-              className={`forged-btn-primary w-full py-4 font-label text-label tracking-widest uppercase ${isLoading ? 'opacity-50 pointer-events-none' : ''}`}>
+              disabled={showEmpty || isLoading}
+              className="forged-btn-primary w-full py-4 font-label text-label tracking-widest uppercase disabled:opacity-50 disabled:pointer-events-none">
               {isLoading ? 'Envoi...' : 'Envoyer'}
             </button>
+            {showEmpty && (
+              <p className="font-body text-sm text-ember-orange text-center">
+                Ajoutez des produits à votre panier pour commander.
+              </p>
+            )}
           </form>
         </div>
-      </div>
-    </>
+    </dialog>
   );
 };
 

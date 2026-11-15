@@ -23,6 +23,7 @@ export const Filter = ({
         <button
           key={label}
           type="button"
+          aria-pressed={filteredProducts === value}
           className={`px-3 py-1 font-label text-xs uppercase tracking-widest border transition-all duration-300 cursor-pointer ${
             filteredProducts === value
               ? 'bg-ember-orange border-fired-gold text-aged-parchment'

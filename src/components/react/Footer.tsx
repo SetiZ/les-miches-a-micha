@@ -1,4 +1,11 @@
+import { useEffect, useState } from 'react';
+
 const Footer = () => {
+  const [pathname, setPathname] = useState('');
+  useEffect(() => {
+    setPathname(window.location.pathname);
+  }, []);
+
   return (
     <footer className="w-full py-16 px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter items-center text-center md:text-left bg-surface-container-lowest border-t-2 border-iron-rim">
       <div className="space-y-4">
@@ -14,16 +21,19 @@ const Footer = () => {
       <div className="flex flex-col gap-2 items-center md:items-start">
         <a
           href="/"
+          aria-current={pathname === '/' ? 'page' : undefined}
           className="font-label text-label text-aged-parchment opacity-70 hover:text-fired-gold transition-all uppercase tracking-widest">
           Accueil
         </a>
         <a
           href="/carte"
+          aria-current={pathname === '/carte' ? 'page' : undefined}
           className="font-label text-label text-aged-parchment opacity-70 hover:text-fired-gold transition-all uppercase tracking-widest">
           Carte des pains
         </a>
         <a
           href="/ateliers"
+          aria-current={pathname === '/ateliers' ? 'page' : undefined}
           className="font-label text-label text-aged-parchment opacity-70 hover:text-fired-gold transition-all uppercase tracking-widest">
           Ateliers boulangerie
         </a>
