@@ -47,8 +47,8 @@ export const POST: APIRoute = async ({ request }) => {
         ? parsed.cart
         : [];
     const trustedCart = rawCart.flatMap((item) => {
-      const product = carte.products.find((p) => p.id === item.id);
-      const count = typeof item.count === 'number' ? Math.floor(item.count) : 0;
+      const product = item ? carte.products.find((p) => p.id === item.id) : undefined;
+      const count = typeof item?.count === 'number' ? Math.floor(item.count) : 0;
       if (!product || count < 1) return [];
       return [
         {
