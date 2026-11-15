@@ -17,13 +17,13 @@
     "node": "^24.x"
   },
   "dependencies": {
-    "@astrojs/react": "^7.1.8",
-    "@astrojs/vercel": "^11.0.21",
+    "@astrojs/react": "^7.1.9",
+    "@astrojs/vercel": "^11.0.22",
     "@react-email/render": "^2.3.1",
     "@tailwindcss/vite": "^4.3.5",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.1.0",
-    "astro": "^7.4.11",
+    "astro": "^7.4.12",
     "astro-og-canvas": "^0.13.3",
     "nodemailer": "^10.5.0",
     "react": "^19.3.1",

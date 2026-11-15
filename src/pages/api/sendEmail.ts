@@ -6,8 +6,8 @@ import {
   CustomerEmailTemplate,
   EmailTemplate,
 } from '../../components/react/EmailTemplate';
-import { SITE_URL } from '../../utils/site';
 import carte from '../../data/carte.json';
+import { SITE_URL } from '../../utils/site';
 
 const GMAIL_USER = process.env.GMAIL_USER || 'lesmichesamicha@gmail.com';
 const GMAIL_PASS = process.env.GMAIL_API_PASS;
@@ -47,8 +47,11 @@ export const POST: APIRoute = async ({ request }) => {
         ? parsed.cart
         : [];
     const trustedCart = rawCart.flatMap((item) => {
-      const product = item ? carte.products.find((p) => p.id === item.id) : undefined;
-      const count = typeof item?.count === 'number' ? Math.floor(item.count) : 0;
+      const product = item
+        ? carte.products.find((p) => p.id === item.id)
+        : undefined;
+      const count =
+        typeof item?.count === 'number' ? Math.floor(item.count) : 0;
       if (!product || count < 1) return [];
       return [
         {

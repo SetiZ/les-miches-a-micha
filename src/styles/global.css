@@ -220,9 +220,16 @@ body {
 }
 
 /* Current page indicator in header/footer navigation */
-nav a[aria-current='page'],
-footer a[aria-current='page'] {
+nav a[aria-current="page"],
+footer a[aria-current="page"] {
   color: var(--color-fired-gold);
   text-decoration: underline;
   text-underline-offset: 4px;
+}
+
+/* Keyboard focus indicator; unlayered so it wins over the outline-none
+   utilities on inputs, per DESIGN.md's "Fired Gold on focus" */
+:focus-visible {
+  outline: 2px solid var(--color-fired-gold);
+  outline-offset: 2px;
 }

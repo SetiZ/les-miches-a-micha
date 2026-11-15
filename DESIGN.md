@@ -134,7 +134,7 @@ All headings should be treated as "etched" into the UI, often paired with subtle
 
 The layout follows a **fixed-grid** model that feels architectural. Content is centered, resembling the symmetrical layouts of ancient stone tablets or album covers.
 
-- **Grid:** A 12-column grid on desktop with generous 64px outer margins to focus the eye on the "artifact" (content).
+- **Grid:** Content lives in centered, max-width (1200px) containers with generous 64px outer margins to focus the eye on the "artifact" (content). Sections compose their own full-width card grids (bento-style).
 - **Rhythm:** Vertical spacing is aggressive. Large gaps (80px+) between sections create a sense of scale and importance.
 - **Mobile:** Elements reflow into a single-column "scroll," maintaining the centered alignment and ensuring buttons remain full-width for a "heavy" feel.
 
@@ -153,12 +153,15 @@ The shape language is strictly **Sharp (0px)**.
 
 To evoke the feeling of forged metal and hewn stone, avoid all rounded corners. Every button, input, and container must have 90-degree angles. This reinforces the "Metal" and "Brutalist" aesthetic, making the UI feel uncompromising and durable. For decorative elements, use diagonal "clipped" corners to mimic runes or chiseled stone.
 
+Exceptions: small status badges and pills use fully rounded corners (cart count, "hearth is lit" indicators), and floating overlays such as the date picker use a slight radius — sharpness is for structural containers, buttons and cards.
+
 ## Components
 
 ### Buttons
 - **Base:** Sharp corners, `Iron Black` background, `Iron Rim` border.
 - **Text:** `Aged Parchment`, Uppercase, `JetBrains Mono`.
-- **Hover State:** Background shifts to `Ember Orange` with a `Fired Gold` border. A subtle outer glow mimics heat.
+- **Hover State (outline variant):** Border and text turn `Fired Gold`, with a slight upward lift and a soft ember outer glow.
+- **Hover State (filled primary variant):** Background shifts to `Fired Gold` with `Iron Black` text.
 
 ### Cards (The "Stone Slab")
 - Surfaces use `Smoky Charcoal` with a subtle stone texture overlay. 
@@ -166,17 +169,19 @@ To evoke the feeling of forged metal and hewn stone, avoid all rounded corners. 
 - Headers within cards are separated by a horizontal rule that looks like a forged metal line.
 
 ### Input Fields
-- Darker than the card surface (`Iron Black`).
-- Bottom-border only (2px) in `Iron Rim`, turning `Fired Gold` on focus.
+- Transparent over the `Iron Black` surface (darker than the card they sit in).
+- Full 1px border in `Iron Rim` on all sides.
+- Keyboard focus shows a 2px `Fired Gold` focus-visible ring.
 - Placeholder text in muted `Aged Parchment`.
 
 ### Chips / Filters
 - Used for bread categories. Sharp, rectangular boxes.
-- "Inactive" looks like etched stone; "Active" glows with `Ember Orange` text and border.
+- "Inactive" looks like etched stone; "Active" is filled with `Ember Orange`, bordered in `Fired Gold`, with `Aged Parchment` text.
 
 ### Navigation
-- A centered, minimalist bar. The "M" logo is the central anchor. 
-- Links are `Aged Parchment` with no underlines; hover state triggers a `Fired Gold` strike-through or underline.
+- A fixed bar with the "M" logo on the left and links on the right (desktop); mobile shows the logo and cart only.
+- Links are `Aged Parchment` with no underlines; hover turns them `Fired Gold`.
+- The current page's link is underlined in `Fired Gold`.
 
 ### Icons
 - Icons must be stroke-based, appearing hand-etched or drawn with a fine-point ink pen. Use the `Aged Parchment` color for all iconography.
