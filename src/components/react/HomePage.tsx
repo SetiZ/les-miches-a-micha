@@ -60,6 +60,12 @@ export default function HomePage({
               className="forged-btn px-8 py-4 font-label text-label tracking-widest uppercase text-aged-parchment">
               T&Eacute;L&Eacute;CHARGER LE MENU
             </a>
+            <a
+              href="/carte_fetes_2026.pdf"
+              download
+              className="forged-btn px-8 py-4 font-label text-label tracking-widest uppercase text-aged-parchment">
+              CARTE SPECIALE FETES 2026
+            </a>
           </div>
         </div>
       </section>
