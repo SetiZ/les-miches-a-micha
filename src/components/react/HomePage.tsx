@@ -34,7 +34,7 @@ export default function HomePage({
           <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-fired-gold/30 bg-fired-gold/10 status-pulse">
             <span className="w-2 h-2 rounded-full bg-fired-gold shadow-[0_0_8px_#D4AF37]" />
             <span className="font-label text-[10px] text-fired-gold tracking-widest uppercase font-bold">
-              Le fournil est ouvert !
+              Le fournil est FERME !
             </span>
           </div>
           <h1 className="font-headline text-hxl-mobile md:text-hxl text-aged-parchment ember-glow leading-none">
